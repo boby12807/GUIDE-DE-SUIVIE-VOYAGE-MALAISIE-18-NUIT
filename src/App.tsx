@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   BedDouble,
   Calendar,
@@ -259,11 +259,10 @@ function slotForPart(part: TripPlanPart, index: number) {
 
 function displaySlotForPart(part: TripPlanPart, index: number) {
   const text = `${part.period} ${part.time} ${part.visit}`.toLowerCase();
-  if (/diner|d..ner|dernier repas|dinner|sacs|billets|valises|cloture|preparation du lendemain/.test(text)) {
+  if (/diner|d..ner|dernier repas|dinner|sacs|billets|valises|cloture|preparation du lendemain|soir/.test(text)) {
     return daySlots.dinner;
   }
-  if (/midi|lunch|dejeuner|repas/.test(text)) return daySlots.lunch;
-  if (/soir/.test(text)) return daySlots.afternoon;
+  if (/\bmidi\b|lunch|dejeuner|repas/.test(text)) return daySlots.lunch;
   if (/apres|plage|check-in|installation|cafe|pause/.test(text)) return daySlots.afternoon;
   if (/matin|depart|arrivee|transfert|vol|ferry|train|ets/.test(text)) return daySlots.morning;
   return index === 0 ? daySlots.morning : index === 1 ? daySlots.afternoon : daySlots.dinner;
@@ -335,7 +334,7 @@ function buildDayParts(day: Day): DisplayPart[] {
       }));
 
   const hasPeriod = (needle: string) => parts.some((part) => part.period.toLowerCase().includes(needle));
-  const hasLunchSlot = parts.some((part) => /midi|repas du midi|lunch|dejeuner|déjeuner/i.test(`${part.period} ${part.visit}`));
+  const hasLunchSlot = parts.some((part) => /\bmidi\b|repas du midi|lunch|dejeuner|déjeuner/i.test(`${part.period} ${part.visit}`));
   if (!hasLunchSlot) {
     parts.push(makeSupplementPart(day, "Repas du midi"));
   }
@@ -352,7 +351,7 @@ function buildDayParts(day: Day): DisplayPart[] {
       return {
         ...finalPart,
         displayPeriod: finalSlot.label,
-        displayTime: finalSlot.time,
+        displayTime: part.time || finalSlot.time,
         sortOrder: finalSlot.order,
       };
     });
@@ -538,25 +537,6 @@ export default function App() {
           </div>
         </div>
 
-        <aside className="grid gap-3 rounded-2xl border border-white/10 bg-white/[0.06] p-3 shadow-2xl shadow-black/20 lg:grid-cols-[1fr_1.3fr]">
-          <div className="hidden">
-            {(tripData.media.hero || []).slice(0, 4).map((image: { src: string; alt: string; label: string }, index: number) => (
-              <figure key={image.src} className={`relative m-0 overflow-hidden rounded-2xl ${index === 0 ? "col-span-2" : ""}`}>
-                <img src={image.src} alt={image.alt} className="h-36 w-full object-cover md:h-44" />
-                <figcaption className="absolute bottom-2 left-2 rounded-full bg-slate-950/70 px-3 py-1 text-xs font-bold text-white">
-                  {image.label}
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 gap-2">
-            <Stat label="Durée" value={`${tripData.days.length} jours`} />
-            <Stat label="Budget pour 2" value={formatBoth(stats.totalMyr)} />
-            <Stat label="Étapes" value={`${tripData.route.length} blocs`} />
-            <Stat label="Prix vérifiés" value={`${stats.officialLines}+`} />
-          </div>
-          <WeatherPanel {...liveWeather} />
-        </aside>
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-12">
@@ -567,9 +547,6 @@ export default function App() {
             days={filteredDays}
             expandedDay={expandedDay}
             setExpandedDay={setExpandedDay}
-            weather={liveWeather.weather}
-            weatherLoading={liveWeather.loading}
-            weatherError={liveWeather.error}
           />
         )}
         {activeSection === "budget" && <Budget stats={stats} />}
@@ -673,18 +650,12 @@ function Itinerary({
   days,
   expandedDay,
   setExpandedDay,
-  weather,
-  weatherLoading,
-  weatherError,
 }: {
   filter: string;
   setFilter: (value: string) => void;
   days: readonly Day[];
   expandedDay: number;
   setExpandedDay: (value: number) => void;
-  weather: WeatherData[];
-  weatherLoading: boolean;
-  weatherError: string | null;
 }) {
   return (
     <div className="space-y-5">
@@ -712,15 +683,11 @@ function Itinerary({
       <div className="grid gap-5">
         {days.map((day) => {
           const open = expandedDay === day.id;
-          const dayWeather = weather.find((item) => item.label === weatherKeyForDay(day));
           return (
             <DayCard
               key={day.id}
               day={day}
               open={open}
-              weather={dayWeather}
-              weatherLoading={weatherLoading}
-              weatherError={weatherError}
               onToggle={() => setExpandedDay(open ? 0 : day.id)}
             />
           );
@@ -733,24 +700,30 @@ function Itinerary({
 function DayCard({
   day,
   open,
-  weather,
-  weatherLoading,
-  weatherError,
   onToggle,
 }: {
   day: Day;
   open: boolean;
-  weather?: WeatherData;
-  weatherLoading: boolean;
-  weatherError: string | null;
   onToggle: () => void;
 }) {
   const parts = buildDayParts(day);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  const handleToggle = () => {
+    const wasOpen = open;
+    onToggle();
+    if (!wasOpen) {
+      // Scroll vers le contenu déroulé après l'animation
+      setTimeout(() => {
+        contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 80);
+    }
+  };
 
   return (
-    <article className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] shadow-2xl shadow-black/20">
+    <article ref={contentRef} className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] shadow-2xl shadow-black/20">
       {day.photo && <img src={day.photo} alt={day.photoAlt || day.city} className="h-56 w-full object-cover" />}
-      <button type="button" onClick={onToggle} className="flex w-full flex-col gap-4 p-5 text-left md:flex-row md:items-start md:justify-between">
+      <button type="button" onClick={handleToggle} className="flex w-full flex-col gap-4 p-5 text-left md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-xs font-black uppercase tracking-widest text-amber-300">{day.dayLabel} - {day.dateLabel}</p>
           <h3 className="font-display mt-2 text-2xl font-bold text-white md:text-3xl">{day.city}</h3>
@@ -772,8 +745,6 @@ function DayCard({
             <MiniFact icon={Car} label="Transport" value={day.transportSummary} />
             <MiniFact icon={Euro} label="Total jour" value={formatBoth(dayTotal(day))} />
           </div>
-
-          <DayWeather weather={weather} loading={weatherLoading} error={weatherError} />
 
           <section className="rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.06] p-4">
             <h4 className="font-display mb-3 text-xl font-bold text-white">Déroulement de la journée</h4>

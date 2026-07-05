@@ -71,7 +71,7 @@ export const tripData: TripData = {
     "title": "Malaisie 2026",
     "subtitle": "Carnet d'itineraire final a valider avant export PDF",
     "travelers": "2 adultes",
-    "travelWindow": "16 aout 2026 -> 5 septembre 2026",
+    "travelWindow": "16 aout 2026 -> 3 septembre 2026",
     "exchangeRateMyrPerEur": 4.6605,
     "exchangeRateLabel": "1 EUR = 4,6605 MYR",
     "exchangeRateDate": "3 juillet 2026",
@@ -101,19 +101,19 @@ export const tripData: TripData = {
     },
     {
       "city": "Kuala Lumpur final",
-      "days": "31 aout-3 sept.",
-      "nights": 4,
+      "days": "31 aout-2 sept.",
+      "nights": 2,
       "color": "teal"
     }
   ],
   "citySummaries": [
     {
       "name": "Kuala Lumpur",
-      "nights": "4 nuits a l'aller + 4 nuits a la fin",
+      "nights": "4 nuits a l'aller + 2 nuits a la fin",
       "vibe": "Base urbaine tres simple pour alterner metro, temples, musees, quartiers vivants et fermeture sans stress avant le vol retour.",
-      "stay": "4 premières nuits : The Platinum Kuala Lumpur by Whitfield du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 4 septembre.",
+      "stay": "4 premières nuits : The Platinum Kuala Lumpur by Whitfield du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 2 septembre.",
       "move": "MRT/LRT quand la station est proche, Grab pour les temples et les transferts avec bagages.",
-      "budgetHint": "Platinum Suites: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 199 EUR / environ 927 MYR pour 4 nuits (232 MYR / nuit). Total KL = 424 EUR.",
+      "budgetHint": "Platinum Suites: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits (232 MYR / nuit). Total KL = 325 EUR.",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
       "photoAlt": "Vue sur la skyline de Kuala Lumpur"
     },
@@ -180,10 +180,10 @@ export const tripData: TripData = {
       "city": "Kuala Lumpur",
       "name": "The Colony By Infinitum KLCC - Aura Suites",
       "subtitle": "Studio avec lit queen size et balcon - Résidence 4 étoiles avec rooftop infinity pool",
-      "dates": "31 aout 2026 -> 4 septembre 2026",
-      "nights": "4 nuits",
-      "price": "199 EUR au total",
-      "priceMyr": "Environ 927 MYR au total, soit 232 MYR / nuit",
+      "dates": "31 aout 2026 -> 2 septembre 2026",
+      "nights": "2 nuits",
+      "price": "100 EUR au total",
+      "priceMyr": "Environ 464 MYR au total, soit 232 MYR / nuit",
       "link": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Piscine à débordement sur le toit avec vue spectaculaire sur les tours Petronas",
@@ -195,7 +195,7 @@ export const tripData: TripData = {
       "area": "Jalan Dewan Sultan Sulaiman, Kuala Lumpur - Emplacement central",
       "route": "Depuis la gare de KL Sentral (après l'ETS Ipoh -> KL) : Grab vers l'hôtel. Pour le retour : Grab ou KLIA Ekspres via KL Sentral.",
       "highlights": [
-        "Tarif excellent à 199 EUR pour les 4 dernières nuits.",
+        "Tarif excellent à 100 EUR pour les 2 dernières nuits.",
         "Superbe piscine à débordement sur le toit avec vue panoramique sur les tours jumelles Petronas.",
         "Hébergement classé 9,1/10 (Excellent) avec balcon privé.",
         "Situation centrale très pratique pour boucler les valises et faire les derniers achats."
@@ -205,9 +205,7 @@ export const tripData: TripData = {
       ],
       "usedForDays": [
         15,
-        16,
-        17,
-        18
+        16
       ]
     },
     {
@@ -387,14 +385,14 @@ export const tripData: TripData = {
     ]
   },
   "bookingChecklist": [
-    "Vols long-courriers Genève -> Kuala Lumpur: 1 600 EUR pour 2 (7 454 MYR) + Parking et péage (Genève): 150 EUR (699 MYR).",
-    "The Platinum Kuala Lumpur by Whitfield (Suite Premier) réservé pour les 4 premières nuits (225 EUR) + The Colony By Infinitum KLCC (Studio) réservé pour les 4 dernières nuits (199 EUR).",
+    "Vols long-courriers Genève -> Kuala Lumpur: 1 489 EUR pour 2 (environ 6 940 MYR) via Saudi Arabian Airlines + Parking et péage (Genève): 150 EUR (699 MYR).",
+    "The Platinum Kuala Lumpur by Whitfield (Suite Premier) réservé pour les 4 premières nuits (225 EUR) + The Colony By Infinitum KLCC (Studio) réservé pour les 2 dernières nuits (100 EUR).",
     "Rebungan Resort Langkawi (Chambre Lits Jumeaux de Luxe) réservé pour le 21 -> 26 aout: 159 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
     "The Horizon Ipoh By Iconique Espace (Studio) réservé pour le 26 -> 31 aout: 212 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
     "Vol AirAsia Kuala Lumpur -> Langkawi avec bagages inclus dans le prix final, pas seulement le tarif d'appel.",
     "Ferry Kuah -> Kuala Perlis et ETS Arau -> Ipoh a reverifier ensemble avant achat.",
     "Train ETS Ipoh -> Kuala Lumpur a reserver des que les billets ouvrent.",
-    "Hebergements en quartiers valides, avec annulation souple autour du 31 aout.",
+    "Hebergements en quartiers valides, avec annulation souple autour du 2 septembre.",
     "Assurance voyage, permis international si scooter, photos du scooter et casque correct a verifier.",
     "Prevoir un plan pluie pour Langkawi: SkyCab et sorties bateau dependent beaucoup de la meteo."
   ],
@@ -707,7 +705,7 @@ export const tripData: TripData = {
     {
       "title": "Booking - The Colony By Infinitum KLCC - Aura Suites",
       "url": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
-      "note": "Studio réservé pour les 4 dernières nuits à Kuala Lumpur, du 31 août au 4 septembre 2026 (199 EUR)."
+      "note": "Studio réservé pour les 2 dernières nuits à Kuala Lumpur, du 31 août au 2 septembre 2026 (100 EUR)."
     },
     {
       "title": "Booking - Rebungan Resort Langkawi",
@@ -728,7 +726,7 @@ export const tripData: TripData = {
       "dateLabel": "Dimanche 16 aout 2026 -> Lundi 17 aout 2026",
       "city": "Genève -> Kuala Lumpur",
       "overnight": "The Platinum Kuala Lumpur by Whitfield",
-      "highlight": "Vol de nuit au départ de Genève puis arrivée à Kuala Lumpur le 17 au matin, avec installation douce.",
+      "highlight": "Vol au départ de Genève puis arrivée à Kuala Lumpur en fin d'après-midi, avec installation douce.",
       "transportSummary": "Vol international (Genève) + KLIA Ekspres + Grab",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
       "photoAlt": "Skyline de Kuala Lumpur au debut du voyage",
@@ -744,11 +742,11 @@ export const tripData: TripData = {
           ]
         },
         {
-          "label": "17 aout matin",
+          "label": "17 aout fin d'après-midi",
           "title": "Arrivee a KL",
           "bullets": [
-            "SIM, retrait de cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers The Platinum Kuala Lumpur.",
-            "Brunch simple, douche et sieste courte si necessaire."
+            "Atterrissage à 16h50.",
+            "SIM, retrait de cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers The Platinum Kuala Lumpur."
           ]
         },
         {
@@ -814,7 +812,7 @@ export const tripData: TripData = {
       "visitCards": [
         {
           "name": "KLIA -> KL Sentral",
-          "timing": "17 aout au matin",
+          "timing": "17 aout fin d'après-midi",
           "ticket": "RM55/adulte observe",
           "gettingThere": "KLIA Ekspres jusqu'a KL Sentral, puis Grab vers The Platinum Kuala Lumpur",
           "whyGo": "La sortie la plus fiable apres un long-courrier, avec un seul changement avant le logement."
@@ -829,8 +827,8 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
-          "period": "17 aout matin",
-          "time": "Arrivee",
+          "period": "17 aout fin d'après-midi",
+          "time": "16h50 -> 19h00",
           "visit": "KLIA, SIM et transfert",
           "address": "Kuala Lumpur International Airport, Sepang",
           "metro": "KLIA Ekspres: KLIA -> KL Sentral, puis Grab KL Sentral -> The Platinum Kuala Lumpur.",
@@ -843,8 +841,8 @@ export const tripData: TripData = {
           "note": "Parcours simple: aeroport -> KL Sentral -> logement. Ne pas ajouter de visite avant d'avoir pose les sacs."
         },
         {
-          "period": "Apres-midi",
-          "time": "Installation",
+          "period": "Soir",
+          "time": "Installation et repas",
           "visit": "The Platinum Kuala Lumpur by Whitfield",
           "address": "The Platinum Kuala Lumpur by Whitfield, KLCC",
           "metro": "Aucun besoin si vous venez avec les sacs.",
@@ -2847,274 +2845,6 @@ export const tripData: TripData = {
       "slug": "jour-17",
       "dayLabel": "Jour 17",
       "dateLabel": "Mercredi 2 septembre 2026",
-      "city": "Kuala Lumpur",
-      "overnight": "The Colony By Infinitum KLCC - Aura Suites",
-      "highlight": "Journee simple autour de Bukit Bintang: achats utiles, pauses, massage et bon diner.",
-      "transportSummary": "Marche + metro court + Grab ponctuel",
-      "photo": "assets/photos/visits/bukit-bintang.jpg",
-      "photoAlt": "Ambiance de Bukit Bintang",
-      "deepDive": "Le voyage commence a se fermer. Cette journee sert de marge confortable et pratique.",
-      "segments": [
-        {
-          "label": "Matin",
-          "title": "Bukit Bintang et Pavilion",
-          "bullets": [
-            "Brunch ou cafe.",
-            "Achats utiles si besoin."
-          ]
-        },
-        {
-          "label": "Apres-midi",
-          "title": "Temps libre",
-          "bullets": [
-            "Massage, lessive ou pause.",
-            "Ne rien forcer."
-          ]
-        },
-        {
-          "label": "Soir",
-          "title": "Diner plaisir",
-          "bullets": [
-            "Un vrai bon repas suffit.",
-            "Pas besoin de traverser toute la ville."
-          ]
-        }
-      ],
-      "access": {
-        "metro": "Monorail et MRT utiles si vous sortez un peu du quartier.",
-        "taxi": "Grab seulement si vous coupez la chaleur ou la fatigue."
-      },
-      "tips": [
-        "Journee volontairement facile.",
-        "Bonne marge si une course utile manque encore."
-      ],
-      "budget": [
-        {
-          "label": "Nuit The Colony KLCC",
-          "myr": 232,
-          "kind": "estimate"
-        },
-        {
-          "label": "Pauses / cafes",
-          "myr": 30,
-          "kind": "estimate"
-        },
-        {
-          "label": "Micro-transports KL",
-          "myr": 30,
-          "kind": "estimate"
-        },
-        {
-          "label": "Repas du jour",
-          "myr": 160,
-          "kind": "estimate"
-        },
-        {
-          "label": "Shopping utile / marge (supprimée)",
-          "myr": 0,
-          "kind": "estimate"
-        }
-      ],
-      "visitCards": [
-        {
-          "name": "Bukit Bintang",
-          "timing": "Journee tres simple",
-          "ticket": "Libre",
-          "gettingThere": "Direct depuis votre base",
-          "whyGo": "Le quartier le plus pratique pour une journee finale sans logistique."
-        },
-        {
-          "name": "Pavilion / pauses",
-          "timing": "Flexible",
-          "ticket": "Selon achats",
-          "gettingThere": "A pied",
-          "whyGo": "Laisser de l'air au voyage tout en restant actif si besoin."
-        }
-      ],
-      "ultraPlan": [
-        {
-          "period": "Matin",
-          "time": "Matin souple",
-          "visit": "Bukit Bintang + Pavilion",
-          "address": "Bukit Bintang, Kuala Lumpur",
-          "metro": "Tout peut se faire a pied selon base.",
-          "taxi": "Grab uniquement si vous changez de quartier.",
-          "visitCost": "Libre",
-          "eat": "Brunch ou cafe climatise.",
-          "foodAddress": "Bukit Bintang / Pavilion",
-          "foodCost": "85 MYR pour 2",
-          "drink": "Cafe lent ou boisson froide.",
-          "note": "Cette marge fait partie de la qualite de fin de voyage."
-        },
-        {
-          "period": "Apres-midi",
-          "time": "13h30 -> 17h30",
-          "visit": "Massage, piscine ou pause logement",
-          "address": "Bukit Bintang / KLCC",
-          "metro": "Marche ou metro court uniquement.",
-          "taxi": "Grab si chaleur ou pluie.",
-          "visitCost": "Libre hors massage",
-          "eat": "Repas deja cale; pause dessert ou cafe si besoin.",
-          "foodAddress": "Bukit Bintang / KLCC",
-          "foodCost": "65 MYR pour 2",
-          "drink": "Boisson froide ou cafe.",
-          "note": "Après-midi volontairement calme: courses utiles, massage ou piscine, pas de grosse visite."
-        },
-        {
-          "period": "Soir / diner",
-          "time": "19h30 -> 21h30",
-          "visit": "Diner plaisir",
-          "address": "Bukit Bintang / KLCC selon choix",
-          "metro": "Metro ou marche locale.",
-          "taxi": "Grab seulement si changement de zone.",
-          "visitCost": "Libre",
-          "eat": "Vrai bon diner du voyage.",
-          "foodAddress": "Zone retenue",
-          "foodCost": "110 MYR pour 2",
-          "drink": "Dessert ou boisson de cloture.",
-          "note": "Rien n'oblige a faire plus."
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "slug": "jour-18",
-      "dayLabel": "Jour 18",
-      "dateLabel": "Jeudi 3 septembre 2026",
-      "city": "Kuala Lumpur",
-      "overnight": "The Colony By Infinitum KLCC - Aura Suites",
-      "highlight": "Central Market si envie, valises, souvenirs alimentaires et diner de cloture.",
-      "transportSummary": "Metro + marche + Grab ponctuel",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur%27s_skyline_(18793166678).jpg",
-      "photoAlt": "Derniere vue sur Kuala Lumpur avant le depart",
-      "deepDive": "Le luxe aujourd'hui, c'est de ne pas courir: un bloc simple, des sacs propres et une derniere soiree choisie.",
-      "segments": [
-        {
-          "label": "Matin",
-          "title": "Pasar Seni / Central Market",
-          "bullets": [
-            "Bloc optionnel.",
-            "Sinon brunch long et matinee vide."
-          ]
-        },
-        {
-          "label": "Apres-midi",
-          "title": "Valises",
-          "bullets": [
-            "Refaire les sacs proprement.",
-            "Verifier le retour du lendemain."
-          ]
-        },
-        {
-          "label": "Soir",
-          "title": "Diner de cloture",
-          "bullets": [
-            "Bon diner sans courir.",
-            "Coucher raisonnable."
-          ]
-        }
-      ],
-      "access": {
-        "metro": "Pasar Seni, Bukit Bintang et KLCC se gerent bien en MRT/LRT.",
-        "taxi": "Grab si vous preferez garder vos forces."
-      },
-      "tips": [
-        "Faire les souvenirs alimentaires aujourd'hui plutot qu'a l'aeroport.",
-        "Preparer une pochette retour avec passeports, billets et couches legeres."
-      ],
-      "budget": [
-        {
-          "label": "Dernière nuit The Colony KLCC",
-          "myr": 232,
-          "kind": "estimate"
-        },
-        {
-          "label": "Micro-transports KL",
-          "myr": 30,
-          "kind": "estimate"
-        },
-        {
-          "label": "Repas du jour",
-          "myr": 160,
-          "kind": "estimate"
-        },
-        {
-          "label": "Boissons / cafes / marge douce (supprimée)",
-          "myr": 0,
-          "kind": "estimate"
-        },
-        {
-          "label": "Souvenirs alimentaires utiles",
-          "myr": 30,
-          "kind": "estimate"
-        }
-      ],
-      "visitCards": [
-        {
-          "name": "Central Market / Pasar Seni",
-          "timing": "1h a 2h si envie",
-          "ticket": "Libre",
-          "gettingThere": "MRT Pasar Seni ou Grab court",
-          "whyGo": "Dernier bloc lisible sans fatigue."
-        },
-        {
-          "name": "Temps tampon + valises",
-          "timing": "Grosse partie de l'apres-midi",
-          "ticket": "Libre",
-          "gettingThere": "Retour hotel",
-          "whyGo": "Assumer le temps de fermeture avant le vol retour."
-        }
-      ],
-      "ultraPlan": [
-        {
-          "period": "Matin",
-          "time": "10h00 -> 12h30",
-          "visit": "Pasar Seni / Central Market",
-          "address": "Pasar Seni, Kuala Lumpur",
-          "metro": "MRT Pasar Seni.",
-          "taxi": "Grab court si besoin.",
-          "visitCost": "Libre hors achats",
-          "eat": "Brunch ou cafe.",
-          "foodAddress": "Pasar Seni / Central Market",
-          "foodCost": "70 MYR pour 2",
-          "drink": "Boisson fraiche climatisee.",
-          "note": "Optionnel: si vous n'avez pas envie, gardez une matinee vide."
-        },
-        {
-          "period": "Apres-midi",
-          "time": "13h30 -> 17h30",
-          "visit": "Valises, souvenirs utiles et pause logement",
-          "address": "The Colony KLCC / quartier final",
-          "metro": "Retour simple au logement.",
-          "taxi": "Grab si vous avez des achats ou s'il pleut.",
-          "visitCost": "Libre hors souvenirs",
-          "eat": "Repas deja cale; cafe ou boisson si sortie courte.",
-          "foodAddress": "KLCC / Bukit Bintang",
-          "foodCost": "65 MYR pour 2",
-          "drink": "Eau, cafe ou boisson froide.",
-          "note": "Préparer sacs, passeports, billets et marge aeroport sans rajouter de visite."
-        },
-        {
-          "period": "Soir / diner",
-          "time": "19h30 -> 21h30",
-          "visit": "Dernier diner de cloture",
-          "address": "Bukit Bintang / KLCC selon envie",
-          "metro": "Metro ou marche locale.",
-          "taxi": "Grab si changement de quartier.",
-          "visitCost": "Libre",
-          "eat": "Dernier bon diner.",
-          "foodAddress": "Zone finale retenue",
-          "foodCost": "110 MYR pour 2",
-          "drink": "Cafe ou dessert de cloture.",
-          "note": "Couchez-vous raisonnablement."
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "slug": "jour-19",
-      "dayLabel": "Jour 19",
-      "dateLabel": "Vendredi 4 septembre 2026",
       "city": "Kuala Lumpur -> vol retour",
       "overnight": "Nuit en vol",
       "highlight": "Dernier jour a Kuala Lumpur, sortie propre vers KLIA et vol retour.",
@@ -3240,13 +2970,13 @@ export const tripData: TripData = {
       ]
     },
     {
-      "id": 20,
-      "slug": "jour-20",
-      "dayLabel": "Jour 20",
-      "dateLabel": "Samedi 5 septembre 2026",
+      "id": 18,
+      "slug": "jour-18",
+      "dayLabel": "Jour 18",
+      "dateLabel": "Jeudi 3 septembre 2026",
       "city": "Retour a Genève",
       "overnight": "Maison",
-      "highlight": "Atterrissage le 5 septembre, retour a Genève (récupération voiture) et journée blanche.",
+      "highlight": "Atterrissage le 3 septembre, retour a Genève (récupération voiture) et journée blanche.",
       "transportSummary": "Arrivee Suisse",
       "photo": "assets/photos/visits/geneve.jpg",
       "photoAlt": "Retour a Genève",
