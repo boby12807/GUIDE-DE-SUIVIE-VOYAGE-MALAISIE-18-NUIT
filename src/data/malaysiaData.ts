@@ -122,7 +122,7 @@ export const tripData: TripData = {
       "nights": "5 nuits",
       "vibe": "Bloc ile actif: plage, cable car, mangroves, artisanat et routes faciles, avec une marge meteo assumee.",
       "stay": "Rebungan Resort Langkawi du 21 au 26 aout 2026, base ile pour les 5 nuits.",
-      "move": "Scooter si vous etes a l'aise et assures; sinon Grab ou taxi prive pour les longues boucles.",
+      "move": "Location de scooter prévue pour être tranquille et explorer l'île librement.",
       "budgetHint": "Rebungan Resort Langkawi: 159 EUR pour 5 nuits, soit 31.8 EUR / nuit et environ 148 MYR / nuit.",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
       "photoAlt": "Plage de Langkawi et palmiers"
@@ -226,7 +226,7 @@ export const tripData: TripData = {
       "checkInOut": "Arrivee et depart a confirmer dans la reservation Booking.",
       "cancellation": "Annulation gratuite indiquee dans le plan initial, a reconfirmer dans Booking.",
       "area": "Base ile pour rayonner vers Cenang, SkyCab, Kilim, Kuah et le nord.",
-      "route": "Depuis l'aeroport de Langkawi: Grab vers le resort, puis scooter seulement si vous etes assures et a l'aise; sinon Grab ou taxi reserve.",
+      "route": "Depuis l'aeroport de Langkawi: Grab vers le resort, puis location du scooter pour toute la durée du séjour sur l'île.",
       "highlights": [
         "Bloc coherent avec le budget final: 159 EUR pour 5 nuits, soit environ 148 MYR par nuit.",
         "Couvre toutes les nuits Langkawi du 21 au 26 aout.",
@@ -402,7 +402,7 @@ export const tripData: TripData = {
       "lines": [
         "KL: metro utile sur les axes principaux, Grab pour les visites dispersees et les sacs.",
         "KL -> Langkawi: vol direct depuis KLIA2, avec marge aeroport et bagages inclus au devis.",
-        "Langkawi: scooter seulement si vous etes a l'aise; sinon Grab/taxi prive pour SkyCab, Kilim et le nord.",
+        "Langkawi: scooter loué pour rayonner en toute liberté vers SkyCab, Kilim et le nord.",
         "Langkawi -> Ipoh: ferry Kuah -> Kuala Perlis, taxi/Grab vers Arau, puis ETS vers Ipoh.",
         "Ipoh -> KL: l'ETS garde la fin de voyage simple et peu fatigante."
       ]
@@ -578,7 +578,7 @@ export const tripData: TripData = {
     {
       "title": "Scooter ou Grab a Langkawi",
       "trigger": "Avant de payer une location",
-      "decision": "Scooter seulement avec assurance, permis adapte, casque correct, photos du vehicule et vraie aisance sur route humide.",
+      "decision": "Location confirmée. Assurez-vous d'avoir le permis international, un casque correct et prenez des photos du scooter au départ.",
       "fallback": "Sinon, garder Grab pour les trajets courts et taxi prive demi-journee pour SkyCab, Kilim ou la boucle nord."
     },
     {
