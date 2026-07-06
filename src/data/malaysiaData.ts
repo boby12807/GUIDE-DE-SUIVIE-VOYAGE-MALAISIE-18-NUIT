@@ -1072,8 +1072,8 @@ export const tripData: TripData = {
       "overnight": "The Platinum Kuala Lumpur by Whitfield",
       "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et spectacle Lake Symphony le soir.",
       "transportSummary": "Monorail/LRT + marche KLCC + Grab ponctuel",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Petronas_Twin_Towers_Kuala_Lumpur_Malaysia.jpg",
-      "photoAlt": "Tours Petronas et skyline de Kuala Lumpur",
+      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquaria_KLCC_fish_tank.jpg",
+      "photoAlt": "Aquarium et poissons a Aquaria KLCC",
       "deepDive": "Journee construite avec les classiques de la video: vue haute sur la ville, aquarium, KLCC/Petronas et spectacle des jets d'eau Lake Symphony. Tout reste proche du logement pour eviter les grands trajets deux jours de suite.",
       "segments": [
         {
@@ -1545,11 +1545,11 @@ export const tripData: TripData = {
       "dateLabel": "Samedi 22 aout 2026",
       "city": "Langkawi",
       "overnight": "Rebungan Resort Langkawi",
-      "highlight": "SkyCab, SkyBridge et plage: la grande image de Langkawi.",
-      "transportSummary": "Scooter ou Grab",
+      "highlight": "SkyCab, SkyBridge, Telaga Tujuh et boucle scooter cote ouest: une vraie journee Langkawi.",
+      "transportSummary": "Scooter toute la journee",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_(Unsplash).jpg",
       "photoAlt": "Relief et ciel de Langkawi",
-      "deepDive": "SkyCab d'abord, plage ensuite: l'ordre garde la journee lisible et laisse une option meteo si les sommets sont couverts.",
+      "deepDive": "Avec le scooter deja recupere, cette journee devient une boucle complete mais logique: SkyCab/SkyBridge le matin, cascade Telaga Tujuh juste a cote, puis Pantai Kok ou Telaga Harbour avant un retour simple vers Cenang.",
       "segments": [
         {
           "label": "Matin",
@@ -1561,28 +1561,29 @@ export const tripData: TripData = {
         },
         {
           "label": "Apres-midi",
-          "title": "Pantai Kok ou Tanjung Rhu",
+          "title": "Telaga Tujuh + Pantai Kok",
           "bullets": [
-            "Pause dejeuner puis plage.",
-            "Ne pas empiler trop d'arrets secondaires."
+            "Apres SkyCab, aller aux Seven Wells / Telaga Tujuh Waterfall: c'est juste a cote.",
+            "Pause dejeuner puis plage calme a Pantai Kok ou stop photo a Telaga Harbour."
           ]
         },
         {
           "label": "Soir",
-          "title": "Sunset Cenang",
+          "title": "Retour Cenang en scooter",
           "bullets": [
-            "Retour avant la fatigue.",
-            "Diner simple et coucher raisonnable."
+            "Rentrer avant la conduite de nuit si vous etes fatigues.",
+            "Diner simple a Cenang ou proche du logement."
           ]
         }
       ],
       "access": {
         "metro": "Aucun transport collectif lourd.",
-        "taxi": "Sans scooter, faire SkyCab en Grab puis plage avec second trajet."
+        "taxi": "Scooter recommande ce jour-la; sans scooter, faire SkyCab/Telaga Tujuh en Grab puis rentrer a Cenang."
       },
       "tips": [
-        "La meteo decide beaucoup ce jour-la.",
-        "Arriver avant 11h si possible."
+        "La meteo decide beaucoup ce jour-la: si les sommets sont couverts, commencer par Telaga Tujuh ou Pantai Kok et monter plus tard.",
+        "Arriver avant 10h30 si possible pour limiter l'attente a SkyCab.",
+        "Telaga Tujuh demande des marches: bonnes chaussures, eau et rythme tranquille."
       ],
       "budget": [
         {
@@ -1596,8 +1597,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Scooter / Grab du jour",
-          "myr": 70,
+          "label": "Scooter du jour + essence / parking",
+          "myr": 45,
           "kind": "estimate"
         },
         {
@@ -1607,7 +1608,7 @@ export const tripData: TripData = {
         },
         {
           "label": "Carburant / parking (optimisé)",
-          "myr": 10,
+          "myr": 25,
           "kind": "estimate"
         }
       ],
@@ -1627,11 +1628,18 @@ export const tripData: TripData = {
           "whyGo": "Le prolongement naturel si la meteo est bonne."
         },
         {
-          "name": "Plage en deuxieme temps",
+          "name": "Telaga Tujuh Waterfall",
+          "timing": "1h a 1h30 selon chaleur",
+          "ticket": "Acces general libre; prevoir parking/boisson",
+          "gettingThere": "Quelques minutes en scooter depuis Oriental Village",
+          "whyGo": "Completer SkyCab avec une cascade proche sans traverser toute l'ile."
+        },
+        {
+          "name": "Pantai Kok / Telaga Harbour",
           "timing": "2h souples",
           "ticket": "Libre",
-          "gettingThere": "Route vers Pantai Kok, Tanjung Rhu ou Cenang",
-          "whyGo": "Redonner de l'air apres la montagne."
+          "gettingThere": "Scooter depuis Telaga Tujuh",
+          "whyGo": "Redonner de l'air apres la montagne, avec plage et stop photo faciles sur la cote ouest."
         }
       ],
       "ultraPlan": [
@@ -1641,27 +1649,41 @@ export const tripData: TripData = {
           "visit": "SkyCab et SkyBridge",
           "address": "Oriental Village, Langkawi",
           "metro": "Sans objet.",
-          "taxi": "Scooter ou Grab depuis Cenang.",
+          "taxi": "Scooter depuis le logement; Grab seulement en plan B.",
           "visitCost": "180 MYR pour 2 en enveloppe prudente selon package",
           "eat": "Petit-dej avant depart.",
           "foodAddress": "Cenang / Oriental Village",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau et boisson fraiche.",
-          "note": "Si les sommets sont couverts, inverser avec une plage."
+          "note": "Si les sommets sont couverts, inverser avec Telaga Tujuh ou Pantai Kok."
         },
         {
           "period": "Apres-midi",
           "time": "13h00 -> 17h30",
-          "visit": "Pantai Kok ou Tanjung Rhu",
-          "address": "Cote ouest ou nord de Langkawi",
+          "visit": "Telaga Tujuh Waterfall + Pantai Kok / Telaga Harbour",
+          "address": "Telaga Tujuh Waterfall -> Pantai Kok -> Telaga Harbour, Langkawi",
           "metro": "Sans objet.",
-          "taxi": "Scooter ou Grab.",
-          "visitCost": "Libre",
-          "eat": "Lunch simple en route: warung, nasi campur ou Tomato Nasi Kandar au retour vers Cenang.",
-          "foodAddress": "Pantai Kok / Cenang",
+          "taxi": "Scooter: la boucle est courte et logique depuis SkyCab.",
+          "visitCost": "Libre hors parking/boissons",
+          "eat": "Lunch simple a Oriental Village, Pantai Kok ou sur la route du retour.",
+          "foodAddress": "Oriental Village / Pantai Kok / Cenang",
           "foodCost": "55 MYR pour 2",
           "drink": "Noix de coco ou jus frais.",
-          "note": "Une seule vraie plage suffit."
+          "note": "Faire Telaga Tujuh seulement si vous avez encore de l'energie: il y a des marches et il peut faire tres chaud."
+        },
+        {
+          "period": "Soir",
+          "time": "18h00 -> 21h00",
+          "visit": "Retour Cenang / diner simple",
+          "address": "Pantai Cenang ou proche Rebungan Resort Langkawi",
+          "metro": "Sans objet.",
+          "taxi": "Retour scooter avant nuit noire si possible.",
+          "visitCost": "Libre",
+          "eat": "Warung, grillades simples ou food court de Cenang.",
+          "foodAddress": "Pantai Cenang",
+          "foodCost": "85 MYR pour 2",
+          "drink": "Boisson fraiche, eau pour le retour.",
+          "note": "Le scooter sert a rayonner, mais pas a forcer une conduite fatiguee le soir."
         }
       ]
     },
