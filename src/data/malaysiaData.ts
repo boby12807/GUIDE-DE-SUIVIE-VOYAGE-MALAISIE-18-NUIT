@@ -1253,7 +1253,7 @@ export const tripData: TripData = {
       "overnight": "The Platinum Kuala Lumpur by Whitfield",
       "highlight": "Batu Caves le matin, puis Chinatown / Petaling Street et Central Market en apres-midi souple.",
       "transportSummary": "KTM/MRT + marche + Grab ponctuel",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu_Caves_stairs_2022.jpg",
+      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu_Caves_stairs_2022-05.jpg",
       "photoAlt": "Escaliers colores de Batu Caves",
       "deepDive": "Cette journee garde Batu Caves en premier, car c'est le deplacement le plus long et la chaleur monte vite. L'apres-midi revient vers Chinatown, Petaling Street et Central Market: plus facile, plus urbain, et simple a couper si vous devez preparer Langkawi.",
       "segments": [
