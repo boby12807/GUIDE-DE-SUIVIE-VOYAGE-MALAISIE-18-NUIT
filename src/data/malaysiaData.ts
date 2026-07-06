@@ -1694,11 +1694,11 @@ export const tripData: TripData = {
       "dateLabel": "Dimanche 23 aout 2026",
       "city": "Langkawi",
       "overnight": "Rebungan Resort Langkawi",
-      "highlight": "Kilim Geoforest le matin, puis plage a Tanjung Rhu l'apres-midi pour souffler.",
+      "highlight": "Kilim Geoforest le matin, plage a Tanjung Rhu l'apres-midi, puis Kuah / Eagle Square en option du soir.",
       "transportSummary": "Scooter + bateau",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
       "photoAlt": "Plage tropicale a Langkawi",
-      "deepDive": "La journee garde le gros morceau nature le matin avec Kilim Geoforest, puis bascule en recuperation plage. Avec le scooter, Tanjung Rhu est logique apres Kilim et evite de transformer l'apres-midi en course.",
+      "deepDive": "La journee garde le gros morceau nature le matin avec Kilim Geoforest, puis bascule en recuperation plage. Avec le scooter, Tanjung Rhu est logique apres Kilim; Kuah et Eagle Square peuvent se faire en debut de soiree seulement si vous avez encore l'energie de rouler.",
       "segments": [
         {
           "label": "Matin",
@@ -1721,7 +1721,15 @@ export const tripData: TripData = {
           "title": "Plage Tanjung Rhu",
           "bullets": [
             "Pause plage apres les mangroves: baignade, repos, photos.",
-            "Retour vers Cenang avant la nuit si vous etes fatigues en scooter."
+            "Garder de l'energie si vous voulez pousser jusqu'a Kuah ensuite."
+          ]
+        },
+        {
+          "label": "Soir",
+          "title": "Kuah / Eagle Square",
+          "bullets": [
+            "Option du soir: Dataran Lang pour les photos et diner simple a Kuah.",
+            "A faire seulement si la conduite retour en scooter vous semble confortable."
           ]
         }
       ],
@@ -1732,7 +1740,8 @@ export const tripData: TripData = {
       "tips": [
         "Prevoir cash et protection etanche.",
         "Si la mer est agitee, enlever les options annexes.",
-        "Tanjung Rhu est le choix logique apres Kilim; si vous voulez moins rouler, rentrer directement vers Cenang."
+        "Tanjung Rhu est le choix logique apres Kilim; si vous voulez moins rouler, rentrer directement vers Cenang.",
+        "Kuah / Eagle Square le soir est optionnel: ne pas forcer si fatigue, pluie ou route de nuit inconfortable."
       ],
       "budget": [
         {
@@ -1773,8 +1782,15 @@ export const tripData: TripData = {
           "name": "Tanjung Rhu Beach",
           "timing": "Apres-midi souple",
           "ticket": "Libre",
-          "gettingThere": "Scooter depuis Kilim, puis retour vers Cenang avant la nuit",
+          "gettingThere": "Scooter depuis Kilim, puis Kuah ou retour Cenang selon fatigue",
           "whyGo": "Faire une vraie pause plage apres la matinee mangroves, sans rajouter une visite urbaine."
+        },
+        {
+          "name": "Kuah et Eagle Square",
+          "timing": "Debut de soiree optionnel",
+          "ticket": "Libre",
+          "gettingThere": "Scooter depuis Tanjung Rhu ou retour direct si fatigue",
+          "whyGo": "Ajouter le repere photo de Langkawi et un diner simple a Kuah sans prendre l'apres-midi plage."
         }
       ],
       "ultraPlan": [
@@ -1804,7 +1820,21 @@ export const tripData: TripData = {
           "foodAddress": "Kilim / Tanjung Rhu",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau, noix de coco ou boisson fraiche.",
-          "note": "Objectif repos: plage, baignade et retour avant la nuit noire."
+          "note": "Objectif repos: plage, baignade, puis decision simple: Kuah si vous etes frais, retour Cenang sinon."
+        },
+        {
+          "period": "Soir",
+          "time": "18h15 -> 20h30",
+          "visit": "Kuah / Eagle Square",
+          "address": "Dataran Lang, Kuah",
+          "metro": "Sans objet.",
+          "taxi": "Scooter si vous etes a l'aise; sinon annuler ce bloc ou rentrer en Grab.",
+          "visitCost": "Libre",
+          "eat": "Diner simple a Kuah: nasi campur, roti, noodles ou seafood raisonnable.",
+          "foodAddress": "Kuah",
+          "foodCost": "85 MYR pour 2",
+          "drink": "Eau ou boisson fraiche avant le retour.",
+          "note": "Bloc optionnel: photo courte a Eagle Square, diner, puis retour sans trainer tard."
         }
       ]
     },
