@@ -1410,11 +1410,11 @@ export const tripData: TripData = {
       "dateLabel": "Vendredi 21 aout 2026",
       "city": "Kuala Lumpur -> Langkawi",
       "overnight": "Rebungan Resort Langkawi",
-      "highlight": "Vol court vers Langkawi, installation, scooter ou Grab, puis premiere plage.",
+      "highlight": "Vol court vers Langkawi, depot des affaires a l'hotel, recuperation du scooter, puis premiere plage.",
       "transportSummary": "Grab + vol AirAsia + scooter/Grab",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_Pantai_Cenang.jpg",
       "photoAlt": "Bord de plage a Pantai Cenang",
-      "deepDive": "Le changement de rythme doit rester respirable: aeroport, check-in, plage douce et aucune grosse boucle le premier soir.",
+      "deepDive": "Le changement de rythme doit rester respirable: aeroport, depot des affaires au Rebungan Resort Langkawi, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
       "segments": [
         {
           "label": "Matin",
@@ -1426,10 +1426,11 @@ export const tripData: TripData = {
         },
         {
           "label": "Apres-midi",
-          "title": "Installation a Langkawi",
+          "title": "Depot hotel puis scooter",
           "bullets": [
-            "Recuperer scooter seulement si vous etes frais.",
-            "Check-in puis plage douce."
+            "Aller d'abord au Rebungan Resort Langkawi pour poser les affaires.",
+            "Ensuite recuperer le scooter chez Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah.",
+            "Faire photos/video du scooter avant depart: rayures, compteur, pneus, freins, casque et niveau d'essence."
           ]
         },
         {
@@ -1443,9 +1444,11 @@ export const tripData: TripData = {
       ],
       "access": {
         "metro": "A KL, Grab jusqu'a KLIA2 avec les sacs.",
-        "taxi": "A Langkawi, Grab aeroport -> logement si vous louez le scooter le lendemain."
+        "taxi": "A Langkawi: Grab aeroport -> Rebungan Resort pour poser les sacs, puis Grab court vers Langkawi Paradise Enterprise si le scooter n'est pas livre a l'hotel."
       },
       "tips": [
+        "Loueur retenu: Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah; bon volume d'avis positifs, environ 4,8/5 avec plus de 160 avis Google selon Wanderlog.",
+        "Contacter le loueur avant l'arrivee pour confirmer disponibilite, prix, caution, permis demande et possibilite de livraison au Rebungan Resort.",
         "Verifier freins, pneus, casque, photos et caution du scooter.",
         "Ne pas conduire de nuit si vous ne le sentez pas."
       ],
@@ -1466,8 +1469,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Transfert Langkawi / scooter jour 1",
-          "myr": 60,
+          "label": "Transfert Langkawi + scooter jour 1",
+          "myr": 75,
           "kind": "estimate"
         },
         {
@@ -1490,10 +1493,17 @@ export const tripData: TripData = {
           "whyGo": "La bascule la plus nette du bloc urbain au bloc ile."
         },
         {
+          "name": "Langkawi Paradise Enterprise",
+          "timing": "Apres depot des affaires a l'hotel",
+          "ticket": "Scooter a confirmer avant arrivee; prix/caution selon modele",
+          "gettingThere": "Grab depuis Rebungan Resort ou livraison a l'hotel si le loueur accepte",
+          "whyGo": "Loueur a Pantai Cenang avec beaucoup d'avis positifs, pratique pour demarrer les 5 nuits sur l'ile."
+        },
+        {
           "name": "Pantai Cenang",
           "timing": "Fin d'apres-midi libre",
           "ticket": "Libre",
-          "gettingThere": "Scooter ou Grab depuis l'aeroport",
+          "gettingThere": "Scooter depuis le loueur ou Grab si vous preferez attendre",
           "whyGo": "La plage la plus simple pour commencer Langkawi."
         }
       ],
@@ -1515,16 +1525,16 @@ export const tripData: TripData = {
         {
           "period": "Apres-midi",
           "time": "14h00 -> 18h00",
-          "visit": "Check-in et Pantai Cenang",
-          "address": "Pantai Cenang / Pantai Tengah",
+          "visit": "Depot hotel, recuperation scooter, puis Pantai Cenang",
+          "address": "Rebungan Resort Langkawi -> Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah -> Pantai Cenang",
           "metro": "Aucun transport lourd.",
-          "taxi": "Grab ou scooter selon choix.",
-          "visitCost": "Transfert / scooter: 60 MYR pour 2",
+          "taxi": "Grab aeroport -> hotel, puis Grab court vers le loueur si le scooter n'est pas livre.",
+          "visitCost": "Transfert + scooter jour 1: 75 MYR pour 2",
           "eat": "Lunch tardif simple: Tomato Nasi Kandar, Amani Cafeteria ou warung de Cenang.",
           "foodAddress": "Pantai Cenang",
           "foodCost": "55 MYR pour 2",
           "drink": "Noix de coco ou boisson froide.",
-          "note": "La plage suffit pour ce premier jour."
+          "note": "Ordre important: sacs poses a l'hotel d'abord, scooter ensuite, puis plage seulement si vous etes encore frais."
         }
       ]
     },
