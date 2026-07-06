@@ -791,6 +791,33 @@ function DayCard({
             <InfoBox title="Budget utile" lines={day.budget.filter((item) => item.myr > 0).map((item) => `${item.label}: ${formatBoth(item.myr)}`)} />
           </div>
 
+          {day.toiletStops?.length ? (
+            <article className="rounded-2xl border border-cyan-300/25 bg-cyan-300/[0.08] p-4">
+              <div className="mb-3 flex items-center gap-2">
+                <MapPin className="h-5 w-5 text-cyan-200" />
+                <h4 className="font-display text-xl font-bold text-white">Toilettes proches</h4>
+              </div>
+              <div className="grid gap-3 md:grid-cols-2">
+                {day.toiletStops.map((stop) => (
+                  <a
+                    key={`${day.slug}-${stop.label}`}
+                    className="rounded-xl border border-white/10 bg-slate-950/45 p-4 transition hover:border-cyan-300/50 hover:bg-cyan-300/10"
+                    href={mapUrl(stop.query)}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="flex items-center gap-2 text-sm font-black text-cyan-100">
+                      <MapPin className="h-4 w-4" />
+                      {stop.label}
+                    </span>
+                    <span className="mt-2 block text-sm leading-6 text-slate-300">{stop.note}</span>
+                    <span className="mt-3 inline-flex text-xs font-black uppercase tracking-widest text-cyan-200">Ouvrir Maps</span>
+                  </a>
+                ))}
+              </div>
+            </article>
+          ) : null}
+
           <article className="rounded-2xl border border-amber-300/25 bg-amber-300/[0.08] p-4">
             <div className="mb-3 flex items-center gap-2">
               <Utensils className="h-5 w-5 text-amber-200" />

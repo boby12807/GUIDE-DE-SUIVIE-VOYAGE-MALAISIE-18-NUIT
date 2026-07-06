@@ -19,6 +19,12 @@ export type TripPlanPart = {
   note: string;
 };
 
+export type ToiletStop = {
+  label: string;
+  query: string;
+  note: string;
+};
+
 export type TripDay = {
   id: number;
   slug: string;
@@ -34,6 +40,7 @@ export type TripDay = {
   segments: { label: string; title: string; bullets: string[] }[];
   access: { metro: string; taxi: string };
   tips: string[];
+  toiletStops?: ToiletStop[];
   budget: TripBudgetLine[];
   visitCards: { name: string; timing: string; ticket: string; gettingThere: string; whyGo: string }[];
   ultraPlan: TripPlanPart[];
@@ -658,6 +665,11 @@ export const tripData: TripData = {
       "note": "Repere officiel pour integrer Aquaria KLCC comme visite interieure climatisee."
     },
     {
+      "title": "Suria KLCC - Esplanade Lake Symphony",
+      "url": "https://www.suriaklcc.com.my/attractions/esplanade-lake-symphony/",
+      "note": "Repere officiel pour le spectacle jets d'eau, lumieres et musique devant les tours Petronas."
+    },
+    {
       "title": "KL Tower - official website",
       "url": "https://kltower.com.my/",
       "note": "Repere officiel pour KL Tower / Menara Kuala Lumpur et les vues panoramiques."
@@ -781,6 +793,23 @@ export const tripData: TripData = {
         "Ne programme rien de culturel ce premier jour reel.",
         "Garde billets et adresse du logement accessibles hors ligne.",
         "Retire un peu de cash des l'aeroport pour les petites depenses."
+      ],
+      "toiletStops": [
+        {
+          "label": "KLIA - toilettes terminal",
+          "query": "toilets near KLIA Terminal Kuala Lumpur International Airport",
+          "note": "A utiliser avant KLIA Ekspres ou Grab: le plus fiable juste apres le vol."
+        },
+        {
+          "label": "KL Sentral / NU Sentral",
+          "query": "toilets near KL Sentral NU Sentral Kuala Lumpur",
+          "note": "Point de securite pendant la correspondance train / Grab."
+        },
+        {
+          "label": "The Platinum / logement",
+          "query": "toilets near The Platinum Kuala Lumpur by Whitfield",
+          "note": "Repere proche du logement pour le premier soir."
+        }
       ],
       "budget": [
         {
@@ -917,6 +946,23 @@ export const tripData: TripData = {
         "Eau, chapeau et chaussures qui accrochent.",
         "Le jour 3 se concentre sur KL Tower, Aquaria KLCC, Petronas/KLCC et Jalan Alor."
       ],
+      "toiletStops": [
+        {
+          "label": "Avant KL Forest Eco Park",
+          "query": "toilets near KL Forest Eco Park Kuala Lumpur",
+          "note": "A verifier avant d'entrer dans le parc; ne pas attendre d'etre au milieu de la balade."
+        },
+        {
+          "label": "Perdana Botanical Gardens",
+          "query": "toilets near Perdana Botanical Gardens Kuala Lumpur",
+          "note": "Repere principal pour la partie jardins / pause verte."
+        },
+        {
+          "label": "Retour Bukit Bintang / Lot 10",
+          "query": "toilets near Lot 10 Hutong Bukit Bintang",
+          "note": "Option plus propre et facile si vous revenez manger ou faire une pause en ville."
+        }
+      ],
       "budget": [
         {
           "label": "Nuit The Platinum KL",
@@ -1024,11 +1070,11 @@ export const tripData: TripData = {
       "dateLabel": "Mercredi 19 aout 2026",
       "city": "Kuala Lumpur",
       "overnight": "The Platinum Kuala Lumpur by Whitfield",
-      "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et Jalan Alor le soir.",
+      "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et spectacle Lake Symphony le soir.",
       "transportSummary": "Monorail/LRT + marche KLCC + Grab ponctuel",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Petronas_Twin_Towers_Kuala_Lumpur_Malaysia.jpg",
       "photoAlt": "Tours Petronas et skyline de Kuala Lumpur",
-      "deepDive": "Journee construite avec les classiques de la video: vue haute sur la ville, aquarium, KLCC/Petronas et food street. Tout reste proche du logement pour eviter les grands trajets deux jours de suite.",
+      "deepDive": "Journee construite avec les classiques de la video: vue haute sur la ville, aquarium, KLCC/Petronas et spectacle des jets d'eau Lake Symphony. Tout reste proche du logement pour eviter les grands trajets deux jours de suite.",
       "segments": [
         {
           "label": "Matin",
@@ -1053,6 +1099,14 @@ export const tripData: TripData = {
             "Aquaria au frais pendant les heures chaudes.",
             "Finir par KLCC Park et les tours Petronas quand la lumiere baisse."
           ]
+        },
+        {
+          "label": "Soir",
+          "title": "Lake Symphony / jets d'eau Petronas",
+          "bullets": [
+            "Se placer cote esplanade de Suria KLCC.",
+            "Viser le show son et lumiere de 20h00 ou 20h30, puis retour simple au logement."
+          ]
         }
       ],
       "access": {
@@ -1061,7 +1115,25 @@ export const tripData: TripData = {
       },
       "tips": [
         "Aquaria KLCC remplace les visites exterieures pendant les heures chaudes.",
-        "Garder Petronas / KLCC pour la fin de journee: meilleur rendu visuel et trajet simple depuis l'hotel."
+        "Garder Petronas / KLCC pour la fin de journee: meilleur rendu visuel et trajet simple depuis l'hotel.",
+        "Pour Lake Symphony, viser 20h00 ou 20h30 et verifier les horaires le jour meme."
+      ],
+      "toiletStops": [
+        {
+          "label": "KL Tower",
+          "query": "toilets near KL Tower Kuala Lumpur",
+          "note": "A utiliser pendant le bloc du matin avant de redescendre vers Bukit Bintang."
+        },
+        {
+          "label": "Aquaria KLCC / Convention Centre",
+          "query": "toilets near Aquaria KLCC Kuala Lumpur Convention Centre",
+          "note": "Point le plus pratique pendant la visite climatisee."
+        },
+        {
+          "label": "Suria KLCC / Lake Symphony",
+          "query": "toilets near Suria KLCC Lake Symphony",
+          "note": "Le meilleur repere avant le spectacle des jets d'eau et le retour hotel."
+        }
       ],
       "budget": [
         {
@@ -1106,11 +1178,11 @@ export const tripData: TripData = {
           "whyGo": "Bonne visite interieure et climatisee, parfaite entre deux blocs exterieurs."
         },
         {
-          "name": "Petronas / KLCC Park / Jalan Alor",
-          "timing": "Fin de journee et soiree",
-          "ticket": "Exterieur libre; diner selon consommation",
+          "name": "Lake Symphony / Petronas de nuit",
+          "timing": "Soir, viser 20h00 ou 20h30",
+          "ticket": "Spectacle libre; diner selon consommation",
           "gettingThere": "A pied / Grab court depuis KLCC ou logement",
-          "whyGo": "Le combo le plus simple pour finir la journee: tours, parc, lumiere du soir et food street."
+          "whyGo": "Voir les tours Petronas de nuit avec le spectacle des jets d'eau, lumieres et musique de KLCC."
         }
       ],
       "ultraPlan": [
@@ -1150,11 +1222,25 @@ export const tripData: TripData = {
           "metro": "MRT/LRT vers KLCC ou Grab court depuis Bukit Bintang.",
           "taxi": "Grab court si pluie ou fatigue.",
           "visitCost": "Aquaria KLCC: billet a verifier selon date et promo",
-          "eat": "Diner simple ensuite a Suria KLCC, Lot 10 Hutong ou Jalan Alor.",
+          "eat": "Pause ou boisson a Suria KLCC; diner cale apres le spectacle.",
           "foodAddress": "KLCC / Bukit Bintang",
-          "foodCost": "85 MYR pour 2",
+          "foodCost": "45 MYR pour 2",
           "drink": "Dessert ou boisson climatisee.",
           "note": "Aquaria sert de pause fraiche; Petronas et KLCC Park se gardent pour la lumiere du soir."
+        },
+        {
+          "period": "Soir / diner",
+          "time": "19h30 -> 21h30",
+          "visit": "Lake Symphony / spectacle jets d'eau KLCC",
+          "address": "Esplanade, Suria KLCC / KLCC Park",
+          "metro": "A pied depuis KLCC ou retour simple via LRT KLCC.",
+          "taxi": "Grab court au retour si pluie, fatigue ou forte affluence.",
+          "visitCost": "Spectacle libre; show son et lumiere indique a 20h00, 20h30, 21h00, 21h30 et 22h00 selon Suria KLCC",
+          "eat": "Diner simple a Suria KLCC avant/apres le show, ou Jalan Alor si vous voulez prolonger.",
+          "foodAddress": "Suria KLCC / Jalan Alor",
+          "foodCost": "85 MYR pour 2",
+          "drink": "Eau ou boisson douce.",
+          "note": "Se placer cote esplanade du lac pour voir les jets d'eau avec les tours Petronas en arriere-plan."
         }
       ]
     },
@@ -1204,6 +1290,23 @@ export const tripData: TripData = {
         "Tenue respectueuse pour Batu Caves: epaules couvertes et short tres court a eviter.",
         "Apres Batu Caves, Chinatown / Central Market reste optionnel si la chaleur ou la fatigue montent.",
         "Verifier bagages AirAsia avant de dormir."
+      ],
+      "toiletStops": [
+        {
+          "label": "Batu Caves",
+          "query": "toilets near Batu Caves Kuala Lumpur",
+          "note": "A reperer en arrivant; qualite variable, prevoir mouchoirs et gel."
+        },
+        {
+          "label": "Central Market",
+          "query": "toilets near Central Market Kuala Lumpur",
+          "note": "Meilleur point toilette pour Chinatown / Petaling Street."
+        },
+        {
+          "label": "NU Sentral / KL Sentral",
+          "query": "toilets near NU Sentral KL Sentral",
+          "note": "Plan de secours fiable si vous repassez par KL Sentral."
+        }
       ],
       "budget": [
         {
@@ -2650,6 +2753,23 @@ export const tripData: TripData = {
         "Journee bascule, pas journee visite.",
         "Si KL est chargee le soir, rester autour du logement / KLCC suffit."
       ],
+      "toiletStops": [
+        {
+          "label": "Gare d'Ipoh avant ETS",
+          "query": "toilets near Ipoh Railway Station",
+          "note": "A utiliser avant de monter dans le train."
+        },
+        {
+          "label": "KL Sentral / NU Sentral",
+          "query": "toilets near KL Sentral NU Sentral Kuala Lumpur",
+          "note": "Repere important a l'arrivee avec les sacs."
+        },
+        {
+          "label": "The Colony KLCC / logement",
+          "query": "toilets near The Colony By Infinitum KLCC Kuala Lumpur",
+          "note": "Point proche du logement final."
+        }
+      ],
       "budget": [
         {
           "label": "Nuit The Colony KLCC",
@@ -2769,6 +2889,23 @@ export const tripData: TripData = {
       "tips": [
         "Tenue respectueuse pour la mosquee.",
         "Ne rajoutez pas un second musee."
+      ],
+      "toiletStops": [
+        {
+          "label": "Merdeka / Masjid Jamek",
+          "query": "toilets near Masjid Jamek LRT Dataran Merdeka Kuala Lumpur",
+          "note": "A chercher au debut de la boucle patrimoine."
+        },
+        {
+          "label": "Islamic Arts Museum Malaysia",
+          "query": "toilets near Islamic Arts Museum Malaysia Kuala Lumpur",
+          "note": "Repere le plus fiable pendant le bloc musee / Masjid Negara."
+        },
+        {
+          "label": "Central Market / Pasar Seni",
+          "query": "toilets near Central Market Pasar Seni Kuala Lumpur",
+          "note": "Plan de secours propre si vous revenez vers Pasar Seni."
+        }
       ],
       "budget": [
         {
@@ -2901,6 +3038,23 @@ export const tripData: TripData = {
       "tips": [
         "Aucun rendez-vous fixe ce jour-la.",
         "Garder veste legere et accessoires sommeil en cabine."
+      ],
+      "toiletStops": [
+        {
+          "label": "The Colony / KLCC matin",
+          "query": "toilets near The Colony By Infinitum KLCC Kuala Lumpur",
+          "note": "Point de depart avant check-out ou dernier achat."
+        },
+        {
+          "label": "KL Sentral avant KLIA Ekspres",
+          "query": "toilets near KL Sentral KLIA Ekspres",
+          "note": "A utiliser avant le train aeroport."
+        },
+        {
+          "label": "KLIA depart international",
+          "query": "toilets near KLIA international departures",
+          "note": "Dernier repere fiable avant controles, repas et embarquement."
+        }
       ],
       "budget": [
         {
