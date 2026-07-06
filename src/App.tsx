@@ -209,13 +209,16 @@ function cheapFoodIdeas(day: Day) {
   const key = cityKey(day.city);
   const cityIdeas: Record<string, string[]> = {
     kuala: [
-      "Lot 10 Hutong (Bukit Bintang): food court climatise, pratique pour char kway teow, hokkien mee, noodles ou rice plates sans traverser la ville.",
+      "Lot 10 Hutong (Bukit Bintang): food court climatise, viser noodles, rice plates ou char kway teow; enveloppe midi 45 a 55 MYR pour 2.",
       "Nasi Lemak Wanjo (Kampung Baru): bon repere local pour nasi lemak, surtout sur une journee Chow Kit / Kampung Baru.",
+      "Petaling Street / Pasar Seni: kopitiam, chicken rice ou noodles avant Central Market, plus economique qu'un cafe touristique.",
       "Jalan Alor Food Street: utile le soir si vous voulez du choix facile; viser satay, noodles, ailes de poulet et jus frais.",
       "Malaysia Food Village by Yong Kee (Four Seasons / KLCC): option food court pratique si vous terminez autour de KLCC.",
     ],
     langkawi: [
       "Tomato Nasi Kandar (Cenang): repere simple pour nasi kandar, roti et plats rapides sans exploser le budget.",
+      "Nasi Campur Kak Yan: bon choix midi si vous passez en voiture/scooter, assiettes locales et budget facile sous 55 MYR pour 2.",
+      "Amani Cafeteria / warungs de Cenang: nasi campur ou plat du jour local, meilleur rapport prix que les restos de plage.",
       "Langkawi Night Market: choisir le marche du soir selon le jour et la zone; souvent le meilleur plan pour diner pas cher.",
       "Wonderland Food Store (Kuah): option connue pour seafood simple, logique les jours Kuah / Eagle Square.",
       "Warungs de Pantai Cenang / Pantai Tengah: preferer les petites tables locales aux restaurants de front de mer trop touristiques.",
@@ -226,6 +229,7 @@ function cheapFoodIdeas(day: Day) {
     ipoh: [
       "Sin Yoon Loong ou Nam Heong: white coffee, kaya toast et oeufs mollets, parfait le matin dans Old Town.",
       "Thean Chun + Kong Heng: kai si hor fun, chee cheong fun, caramel custard et popiah; tres logique les jours Old Town.",
+      "Yee Fatt Tea Shop ou Kedai Kopi Keng Nam: noodles, rice plates ou dim sum simple, bon cadrage midi autour de 45 a 55 MYR pour 2.",
       "Lou Wong ou Onn Kee: bean sprout chicken si vous voulez un diner Ipoh classique sans chercher longtemps.",
       "Funny Mountain Soya Beancurd: pause dessert rapide et pas chere apres une balade dans le centre.",
       "Old Town: kopitiam, white coffee, toast kaya et nouilles, parfait pour petit budget.",
@@ -272,9 +276,9 @@ function makeSupplementPart(day: Day, period: "Repas du midi" | "Apres-midi" | "
   const key = cityKey(day.city);
   const cityLabel = key === "langkawi" ? "Langkawi" : key === "ipoh" ? "Ipoh Old Town" : key === "kuala" ? "Kuala Lumpur" : day.city;
   const cityFood: Record<string, string> = {
-    kuala: "Lot 10 Hutong, Nasi Lemak Wanjo, Jalan Alor ou Malaysia Food Village by Yong Kee selon le quartier.",
-    langkawi: "Tomato Nasi Kandar, night market de Langkawi, Wonderland Food Store a Kuah ou warung proche de Cenang.",
-    ipoh: "Sin Yoon Loong, Nam Heong, Thean Chun, Kong Heng, Lou Wong / Onn Kee ou Funny Mountain selon l'heure.",
+    kuala: "Lot 10 Hutong, Nasi Lemak Wanjo, kopitiam de Petaling Street ou Malaysia Food Village selon le quartier.",
+    langkawi: "Tomato Nasi Kandar, Nasi Campur Kak Yan, Amani Cafeteria ou warung proche de Cenang.",
+    ipoh: "Sin Yoon Loong, Nam Heong, Thean Chun, Kong Heng, Yee Fatt Tea Shop ou Kedai Kopi Keng Nam selon l'heure.",
     transit: "KL Sentral, KLIA, gare, jetty ou food court le plus proche: rester simple et pres du trajet.",
   };
   const visitByPeriod = {
@@ -298,7 +302,7 @@ function makeSupplementPart(day: Day, period: "Repas du midi" | "Apres-midi" | "
     visitCost: "Libre",
     eat: cityFood[key] || cityFood.transit,
     foodAddress: cityLabel,
-    foodCost: period === "Soir / diner" ? "90 MYR pour 2" : "65 MYR pour 2",
+    foodCost: period === "Soir / diner" ? "90 MYR pour 2" : "55 MYR pour 2",
     drink: "Eau, cafe, jus frais ou boisson froide.",
     note: period === "Soir / diner" ? "Diner vers 19h30/20h, petit marche proche, piscine/logement et repos." : "Bloc ajoute pour garder une journee complete sans la surcharger.",
   };

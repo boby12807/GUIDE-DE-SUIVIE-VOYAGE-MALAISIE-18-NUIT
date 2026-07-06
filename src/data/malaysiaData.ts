@@ -287,8 +287,8 @@ export const tripData: TripData = {
   "media": {
     "hero": [
       {
-        "src": "assets/photos/thean-hou.jpg",
-        "alt": "Cour et lanternes du temple Thean Hou a Kuala Lumpur",
+        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Petronas_Twin_Towers_Kuala_Lumpur_Malaysia.jpg",
+        "alt": "Tours Petronas a Kuala Lumpur",
         "label": "Kuala Lumpur"
       },
       {
@@ -527,7 +527,7 @@ export const tripData: TripData = {
       "details": [
         "Le premier soir reste volontairement vide: la reussite du voyage commence par une bonne arrivee.",
         "Les visites KL sont organisees par zones pour eviter de traverser la ville trois fois dans la meme journee.",
-        "Grab est assume pour Thean Hou, les jardins Perdana et les retours fatigues; le metro sert surtout quand il evite vraiment du trafic."
+        "Grab est assume pour les jardins Perdana, Batu Caves et les retours fatigues; le metro sert surtout quand il evite vraiment du trafic."
       ],
       "planB": "Si la chaleur tape trop fort, garder seulement un gros bloc le matin et remplacer le reste par cafe, KLCC ou retour piscine."
     },
@@ -646,6 +646,21 @@ export const tripData: TripData = {
       "title": "KL Forest Eco Park - Malaysia.travel",
       "url": "https://www.malaysia.travel/explore/kl-forest-eco-park-2",
       "note": "Repere officiel pour horaires; entree non-MyKad observee a RM40/adulte via references tarifaires locales."
+    },
+    {
+      "title": "YouTube - 10 Best Things to do in Kuala Lumpur Malaysia",
+      "url": "https://www.youtube.com/watch?v=u2VZQgY47LE",
+      "note": "Video utilisee comme inspiration pour recaler les incontournables KL, en respectant les exclusions demandees."
+    },
+    {
+      "title": "Aquaria KLCC - official website",
+      "url": "https://aquariaklcc.com/",
+      "note": "Repere officiel pour integrer Aquaria KLCC comme visite interieure climatisee."
+    },
+    {
+      "title": "KL Tower - official website",
+      "url": "https://kltower.com.my/",
+      "note": "Repere officiel pour KL Tower / Menara Kuala Lumpur et les vues panoramiques."
     },
     {
       "title": "Perdana Botanical Garden - Kuala Lumpur",
@@ -900,7 +915,7 @@ export const tripData: TripData = {
       },
       "tips": [
         "Eau, chapeau et chaussures qui accrochent.",
-        "Garder Thean Hou pour le jour 3 en fin d'apres-midi."
+        "Le jour 3 se concentre sur KL Tower, Aquaria KLCC, Petronas/KLCC et Jalan Alor."
       ],
       "budget": [
         {
@@ -980,9 +995,9 @@ export const tripData: TripData = {
           "metro": "Peu pratique en transport lourd.",
           "taxi": "Grab direct depuis le parc forestier.",
           "visitCost": "20 MYR pour 2 en marge prudente",
-          "eat": "Repas deja cale avant le bloc; boisson ou snack simple si besoin.",
-          "foodAddress": "Perdana Botanical Gardens",
-          "foodCost": "75 MYR pour 2",
+          "eat": "Lunch local simple avant Perdana: Lot 10 Hutong, food court proche Bukit Bintang ou kopitiam sur le trajet.",
+          "foodAddress": "Lot 10 Hutong / Bukit Bintang",
+          "foodCost": "55 MYR pour 2",
           "drink": "Boissons fraiches et pause a l'ombre.",
           "note": "On garde une vraie respiration verte sans payer une visite secondaire trop chere."
         },
@@ -1009,44 +1024,44 @@ export const tripData: TripData = {
       "dateLabel": "Mercredi 19 aout 2026",
       "city": "Kuala Lumpur",
       "overnight": "The Platinum Kuala Lumpur by Whitfield",
-      "highlight": "Chow Kit, Kampung Baru et Thean Hou Temple: Kuala Lumpur local, simple et photogenique.",
-      "transportSummary": "Monorail/LRT + Grab",
-      "photo": "assets/photos/visits/kampung-baru.jpg",
-      "photoAlt": "Maisons et skyline a Kampung Baru",
-      "deepDive": "La journee montre le KL quotidien: marche populaire, village malais et tours modernes dans un meme rayon.",
+      "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et Jalan Alor le soir.",
+      "transportSummary": "Monorail/LRT + marche KLCC + Grab ponctuel",
+      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Petronas_Twin_Towers_Kuala_Lumpur_Malaysia.jpg",
+      "photoAlt": "Tours Petronas et skyline de Kuala Lumpur",
+      "deepDive": "Journee construite avec les classiques de la video: vue haute sur la ville, aquarium, KLCC/Petronas et food street. Tout reste proche du logement pour eviter les grands trajets deux jours de suite.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Chow Kit Market",
+          "title": "KL Tower / Menara Kuala Lumpur",
           "bullets": [
-            "Commencer tot pour le marche.",
-            "Passage court mais dense: fruits, epices, petit-dej local."
+            "Partir le matin pour la vue sur la skyline.",
+            "Choisir observation deck simple; Sky Deck seulement si meteo claire."
+          ]
+        },
+        {
+          "label": "Repas du midi",
+          "title": "Bukit Bintang / Lot 10 Hutong",
+          "bullets": [
+            "Food court local et simple pour garder le budget.",
+            "Revenir ensuite vers KLCC pour Aquaria."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "Kampung Baru",
+          "title": "Aquaria KLCC + KLCC Park",
           "bullets": [
-            "Balade a pied et nasi lemak.",
-            "Pause cafe climatisee si la chaleur monte."
-          ]
-        },
-        {
-          "label": "Fin d'apres-midi",
-          "title": "Thean Hou Temple",
-          "bullets": [
-            "Monter en fin d'apres-midi pour la lumiere dorée.",
-            "Retour tranquille vers le logement avant le diner."
+            "Aquaria au frais pendant les heures chaudes.",
+            "Finir par KLCC Park et les tours Petronas quand la lumiere baisse."
           ]
         }
       ],
       "access": {
-        "metro": "Monorail Chow Kit puis LRT vers Kampung Baru; Grab conseille pour Thean Hou.",
-        "taxi": "Grab utile en cas d'orage, de chaleur forte ou pour rejoindre Thean Hou."
+        "metro": "Monorail Raja Chulan / Bukit Nanas pour KL Tower, puis LRT ou marche vers KLCC selon chaleur.",
+        "taxi": "Grab court utile entre KL Tower, Bukit Bintang et KLCC si humidite ou pluie."
       },
       "tips": [
-        "Journee ideale pour rester souple.",
-        "Thean Hou est plus beau en fin d'apres-midi."
+        "Aquaria KLCC remplace les visites exterieures pendant les heures chaudes.",
+        "Garder Petronas / KLCC pour la fin de journee: meilleur rendu visuel et trajet simple depuis l'hotel."
       ],
       "budget": [
         {
@@ -1065,8 +1080,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Petit budget visites libres",
-          "myr": 30,
+          "label": "KL Tower + Aquaria KLCC",
+          "myr": 260,
           "kind": "estimate"
         },
         {
@@ -1077,69 +1092,69 @@ export const tripData: TripData = {
       ],
       "visitCards": [
         {
-          "name": "Chow Kit Market",
-          "timing": "45 min a 1h",
-          "ticket": "Entree libre",
-          "gettingThere": "Monorail Chow Kit",
-          "whyGo": "Sentir le rythme local de Kuala Lumpur."
+          "name": "KL Tower / Menara Kuala Lumpur",
+          "timing": "Matin, 1h a 1h30",
+          "ticket": "Observation deck ou Sky Deck selon budget et meteo",
+          "gettingThere": "Monorail Raja Chulan / Bukit Nanas puis marche ou Grab court",
+          "whyGo": "Vue panoramique sur Kuala Lumpur, bon repere pour comprendre la ville."
         },
         {
-          "name": "Kampung Baru",
-          "timing": "1h30 a 2h",
-          "ticket": "Entree libre",
-          "gettingThere": "LRT Kampung Baru",
-          "whyGo": "Le contraste le plus parlant entre ancien village et skyline."
+          "name": "Aquaria KLCC",
+          "timing": "Apres-midi, 1h30 a 2h",
+          "ticket": "Billets a reserver/verifier selon promo",
+          "gettingThere": "KLCC / Kuala Lumpur Convention Centre",
+          "whyGo": "Bonne visite interieure et climatisee, parfaite entre deux blocs exterieurs."
         },
         {
-          "name": "Thean Hou Temple",
-          "timing": "45 min a 1h30",
-          "ticket": "Entree libre",
-          "gettingThere": "Grab conseille depuis Kampung Baru ou le logement",
-          "whyGo": "Un des meilleurs spots de fin d'apres-midi a Kuala Lumpur, ouvert tot le matin aussi."
+          "name": "Petronas / KLCC Park / Jalan Alor",
+          "timing": "Fin de journee et soiree",
+          "ticket": "Exterieur libre; diner selon consommation",
+          "gettingThere": "A pied / Grab court depuis KLCC ou logement",
+          "whyGo": "Le combo le plus simple pour finir la journee: tours, parc, lumiere du soir et food street."
         }
       ],
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "08h00 -> 10h30",
-          "visit": "Chow Kit Market",
-          "address": "Jalan Raja Alang, Chow Kit",
-          "metro": "Monorail Chow Kit.",
-          "taxi": "Grab depuis logement: 10 a 15 MYR.",
-          "visitCost": "Entree libre",
-          "eat": "Roti ou nasi lemak dans le secteur.",
-          "foodAddress": "Autour de Jalan Raja Alang",
+          "time": "08h30 -> 11h00",
+          "visit": "KL Tower / Menara Kuala Lumpur",
+          "address": "2 Jalan Punchak, Kuala Lumpur",
+          "metro": "Monorail Raja Chulan ou Bukit Nanas, puis marche courte si la chaleur reste correcte.",
+          "taxi": "Grab court depuis l'hotel si vous voulez eviter la montee.",
+          "visitCost": "Prevoir selon niveau choisi: observation deck simple ou Sky Deck",
+          "eat": "Petit-dej simple avant depart ou cafe proche KL Tower.",
+          "foodAddress": "Hotel / KL Tower",
           "foodCost": "35 MYR pour 2",
-          "drink": "Teh tarik ou kopi ais.",
-          "note": "Le marche est meilleur court et vivant que long et fatigant."
+          "drink": "Eau, cafe ou boisson fraiche.",
+          "note": "Vue le matin avant chaleur et nuages de fin de journee."
         },
         {
           "period": "Repas du midi",
           "time": "12h30 -> 13h30",
-          "visit": "Nasi Lemak Wanjo / Kampung Baru",
-          "address": "Kampung Baru, Kuala Lumpur",
-          "metro": "LRT Kampung Baru ou Grab court depuis Chow Kit.",
-          "taxi": "Grab Chow Kit -> Kampung Baru si chaleur.",
+          "visit": "Lot 10 Hutong / Bukit Bintang",
+          "address": "Lot 10 Hutong, Bukit Bintang",
+          "metro": "Monorail Bukit Bintang ou Grab court depuis KL Tower.",
+          "taxi": "Grab court si chaleur.",
           "visitCost": "Libre",
-          "eat": "Nasi Lemak Wanjo ou adresse locale.",
-          "foodAddress": "Jalan Raja Muda Musa",
-          "foodCost": "50 MYR pour 2",
+          "eat": "Char kway teow, noodles, rice plate ou chicken rice au food court.",
+          "foodAddress": "Lot 10 Hutong",
+          "foodCost": "55 MYR pour 2",
           "drink": "Jus frais ou teh ais.",
-          "note": "Repas court et local: garder l'energie pour Thean Hou l'apres-midi."
+          "note": "Repas local simple avant Aquaria KLCC."
         },
         {
           "period": "Apres-midi",
-          "time": "16h00 -> 18h00",
-          "visit": "Thean Hou Temple",
-          "address": "65 Persiaran Endah, Kuala Lumpur",
-          "metro": "Pas de metro direct pratique.",
-          "taxi": "Grab Kampung Baru -> Thean Hou -> logement.",
-          "visitCost": "Libre",
-          "eat": "Diner simple pres du logement, Lot 10 Hutong ou Jalan Alor.",
-          "foodAddress": "Bukit Bintang",
+          "time": "14h00 -> 18h00",
+          "visit": "Aquaria KLCC + KLCC Park / Petronas",
+          "address": "Kuala Lumpur Convention Centre / KLCC Park",
+          "metro": "MRT/LRT vers KLCC ou Grab court depuis Bukit Bintang.",
+          "taxi": "Grab court si pluie ou fatigue.",
+          "visitCost": "Aquaria KLCC: billet a verifier selon date et promo",
+          "eat": "Diner simple ensuite a Suria KLCC, Lot 10 Hutong ou Jalan Alor.",
+          "foodAddress": "KLCC / Bukit Bintang",
           "foodCost": "85 MYR pour 2",
           "drink": "Dessert ou boisson climatisee.",
-          "note": "Le temple se fait avant le soir; ensuite retour calme et diner."
+          "note": "Aquaria sert de pause fraiche; Petronas et KLCC Park se gardent pour la lumiere du soir."
         }
       ]
     },
@@ -1150,43 +1165,44 @@ export const tripData: TripData = {
       "dateLabel": "Jeudi 20 aout 2026",
       "city": "Kuala Lumpur",
       "overnight": "The Platinum Kuala Lumpur by Whitfield",
-      "highlight": "Petite boucle Merdeka + Central Market avant Langkawi: on garde IAMM et Masjid Negara pour le jour 16.",
-      "transportSummary": "MRT/LRT + Grab ponctuel",
-      "photo": "assets/photos/visits/masjid-negara.jpg",
-      "photoAlt": "Architecture de la Mosquee nationale",
-      "deepDive": "Une journee volontairement plus legere avant le vol: historique court le matin, pause fraiche et preparation Langkawi.",
+      "highlight": "Batu Caves le matin, puis Chinatown / Petaling Street et Central Market en apres-midi souple.",
+      "transportSummary": "KTM/MRT + marche + Grab ponctuel",
+      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu_Caves_stairs_2022.jpg",
+      "photoAlt": "Escaliers colores de Batu Caves",
+      "deepDive": "Cette journee garde Batu Caves en premier, car c'est le deplacement le plus long et la chaleur monte vite. L'apres-midi revient vers Chinatown, Petaling Street et Central Market: plus facile, plus urbain, et simple a couper si vous devez preparer Langkawi.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Merdeka Square",
+          "title": "Batu Caves",
           "bullets": [
-            "Commencer par la place et Sultan Abdul Samad.",
-            "Rester sur une boucle courte: Sultan Abdul Samad, River of Life, Masjid Jamek exterieur."
+            "Partir tot directement depuis l'hotel.",
+            "Monter les 272 marches avant la grosse chaleur."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "Central Market / Pasar Seni",
+          "title": "Chinatown / Petaling Street / Central Market",
           "bullets": [
-            "Bloc climatise et simple apres le repas.",
-            "Souvenirs utiles, cafe, puis retour logement."
+            "Retour en ville pour une boucle courte et vivante.",
+            "Central Market au frais si la chaleur ou la pluie montent."
           ]
         },
         {
           "label": "Soir",
-          "title": "Preparation Langkawi",
+          "title": "Retour logement / preparation Langkawi",
           "bullets": [
-            "Retour tot au logement.",
+            "Diner simple proche logement ou Jalan Alor si energie.",
             "Verifier vol, bagages et depart KLIA2."
           ]
         }
       ],
       "access": {
-        "metro": "Pasar Seni ou Masjid Jamek pour Merdeka Square.",
-        "taxi": "Grab court utile entre la place, Pasar Seni et le logement."
+        "metro": "KTM Komuter jusqu'a Batu Caves via KL Sentral; retour possible vers Pasar Seni pour Chinatown / Central Market.",
+        "taxi": "Grab possible hotel -> Batu Caves le matin, puis Grab ou MRT/KTM selon fatigue au retour."
       },
       "tips": [
-            "Ne pas ajouter IAMM ici: il est garde pour le jour 16.",
+        "Tenue respectueuse pour Batu Caves: epaules couvertes et short tres court a eviter.",
+        "Apres Batu Caves, Chinatown / Central Market reste optionnel si la chaleur ou la fatigue montent.",
         "Verifier bagages AirAsia avant de dormir."
       ],
       "budget": [
@@ -1196,8 +1212,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Central Market / souvenirs utiles",
-          "myr": 30,
+          "label": "Batu Caves / petites donations",
+          "myr": 20,
           "kind": "estimate"
         },
         {
@@ -1206,8 +1222,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Transports urbains / Grab",
-          "myr": 45,
+          "label": "Transports Batu Caves / KLCC",
+          "myr": 80,
           "kind": "estimate"
         },
         {
@@ -1218,69 +1234,69 @@ export const tripData: TripData = {
       ],
       "visitCards": [
         {
-          "name": "Merdeka Square",
-          "timing": "45 min a 1h",
-          "ticket": "Libre",
-          "gettingThere": "Masjid Jamek ou Pasar Seni",
-          "whyGo": "La lecture historique la plus immediate de KL."
+          "name": "Batu Caves",
+          "timing": "Matin, 1h30 a 2h",
+          "ticket": "Temple Cave libre; petites donations / grottes annexes selon envie",
+          "gettingThere": "KTM Komuter jusqu'a Batu Caves ou Grab tot depuis l'hotel",
+          "whyGo": "Un des sites les plus iconiques de Kuala Lumpur: grottes calcaires, temple hindou et escaliers colores."
         },
         {
-          "name": "River of Life / Masjid Jamek exterieur",
-          "timing": "30 a 45 min",
-          "ticket": "Libre",
-          "gettingThere": "A pied depuis Merdeka",
-          "whyGo": "Compléter la lecture historique sans lancer une grosse visite."
-        },
-        {
-          "name": "Central Market / Pasar Seni",
-          "timing": "1h a 1h30",
+          "name": "Chinatown / Petaling Street / Central Market",
+          "timing": "Apres-midi, 1h30 a 2h",
           "ticket": "Libre hors achats",
-          "gettingThere": "MRT Pasar Seni ou marche courte",
-          "whyGo": "Bloc frais, pratique et facile avant les sacs."
+          "gettingThere": "MRT Pasar Seni ou retour via KL Sentral",
+          "whyGo": "Quartier vivant, marche, street food, temples de quartier et option climatisee a Central Market."
+        },
+        {
+          "name": "Retour hotel / Jalan Alor si energie",
+          "timing": "Soiree courte",
+          "ticket": "Libre hors repas",
+          "gettingThere": "Grab court ou monorail selon fatigue",
+          "whyGo": "Proteger le vol vers Langkawi du lendemain sans perdre la derniere soiree KL."
         }
       ],
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "08h30 -> 11h00",
-          "visit": "Merdeka Square",
-          "address": "Jalan Raja, Kuala Lumpur",
-          "metro": "Pasar Seni ou Masjid Jamek.",
-          "taxi": "Grab depuis Bukit Bintang: 12 a 18 MYR.",
-          "visitCost": "Libre",
-          "eat": "Petit-dej dans le secteur Petaling / Pasar Seni.",
-          "foodAddress": "Centre heritage",
-          "foodCost": "55 MYR pour 2",
-          "drink": "Cafe ou boisson froide.",
-          "note": "Faire l'historique avant la chaleur."
+          "time": "07h30 -> 11h30",
+          "visit": "Batu Caves",
+          "address": "Gombak, Batu Caves, Selangor",
+          "metro": "KTM Komuter vers Batu Caves via KL Sentral si vous voulez eviter le trafic.",
+          "taxi": "Grab tot depuis l'hotel possible; retour en Grab si chaleur.",
+          "visitCost": "Temple Cave libre; prevoir 20 MYR de marge pour donation / grotte annexe",
+          "eat": "Petit-dej simple avant depart ou roti / boisson pres de Batu Caves.",
+          "foodAddress": "Hotel / Batu Caves",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Eau avant les marches.",
+          "note": "Visite a faire en premier: long deplacement, escaliers et chaleur."
         },
         {
           "period": "Apres-midi",
-          "time": "13h30 -> 16h00",
-          "visit": "Central Market / Pasar Seni",
-          "address": "Central Market, Kuala Lumpur",
-          "metro": "MRT Pasar Seni ou marche depuis Merdeka si la chaleur reste correcte.",
-          "taxi": "Grab court si chaleur.",
+          "time": "13h00 -> 16h00",
+          "visit": "Chinatown / Petaling Street / Central Market",
+          "address": "Petaling Street / Central Market, Kuala Lumpur",
+          "metro": "Retour via KL Sentral puis MRT Pasar Seni si l'energie suit.",
+          "taxi": "Grab Batu Caves -> Pasar Seni si vous voulez simplifier.",
           "visitCost": "Libre hors achats",
-          "eat": "Cafe ou boisson fraiche; repas deja cale avant ce bloc.",
-          "foodAddress": "Pasar Seni / Central Market",
-          "foodCost": "65 MYR pour 2",
-          "drink": "Boisson froide ou dessert simple.",
-          "note": "Bloc volontairement court pour ne pas fatiguer la veille du depart Langkawi."
+          "eat": "Lunch local simple autour de Petaling Street: chicken rice, noodles ou kopitiam.",
+          "foodAddress": "Petaling Street / Pasar Seni",
+          "foodCost": "55 MYR pour 2",
+          "drink": "Boisson froide, cafe ou pause climatisee.",
+          "note": "Option modulable: si Batu Caves a fatigue, couper Chinatown et rentrer piscine/logement."
         },
         {
           "period": "Soir / diner",
           "time": "19h30 -> 21h30",
           "visit": "Diner proche + preparation Langkawi",
-          "address": "Logement KL",
-          "metro": "Metro possible, Grab si fatigue.",
-          "taxi": "Grab Central Market -> logement si fatigue.",
-          "visitCost": "Sans entree",
-          "eat": "Diner proche du logement.",
-          "foodAddress": "Bukit Bintang / Chow Kit",
+          "address": "The Platinum / Bukit Bintang",
+          "metro": "Monorail ou Grab selon fatigue.",
+          "taxi": "Grab court au retour si pluie.",
+          "visitCost": "Libre",
+          "eat": "Diner simple proche logement ou Jalan Alor si vous voulez une derniere ambiance street food.",
+          "foodAddress": "Bukit Bintang / Jalan Alor",
           "foodCost": "75 MYR pour 2",
-          "drink": "Boisson douce, pas de grande soiree.",
-          "note": "La valeur de ce soir, c'est de proteger le vol du lendemain."
+          "drink": "Boisson douce, puis retour sacs.",
+          "note": "Soiree courte: sacs, vol AirAsia, depart KLIA2 et repos."
         }
       ]
     },
@@ -1401,9 +1417,9 @@ export const tripData: TripData = {
           "metro": "Aucun transport lourd.",
           "taxi": "Grab ou scooter selon choix.",
           "visitCost": "Transfert / scooter: 60 MYR pour 2",
-          "eat": "Lunch tardif proche plage.",
+          "eat": "Lunch tardif simple: Tomato Nasi Kandar, Amani Cafeteria ou warung de Cenang.",
           "foodAddress": "Pantai Cenang",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Noix de coco ou boisson froide.",
           "note": "La plage suffit pour ce premier jour."
         }
@@ -1528,9 +1544,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Scooter ou Grab.",
           "visitCost": "Libre",
-          "eat": "Lunch simple en route.",
+          "eat": "Lunch simple en route: warung, nasi campur ou Tomato Nasi Kandar au retour vers Cenang.",
           "foodAddress": "Pantai Kok / Cenang",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Noix de coco ou jus frais.",
           "note": "Une seule vraie plage suffit."
         }
@@ -1648,9 +1664,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Retour Grab si conduite de nuit inconfortable.",
           "visitCost": "Libre",
-          "eat": "Snack ou boisson a Kuah; diner plus tard pres du logement.",
+          "eat": "Lunch ou snack local a Kuah: nasi campur, roti ou plat simple avant retour vers Cenang.",
           "foodAddress": "Kuah / Cenang",
-          "foodCost": "90 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Boisson legere.",
           "note": "Bloc photo court apres Kilim: retour avant 18h pour eviter conduite de nuit et fatigue."
         }
@@ -1768,9 +1784,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Scooter ou Grab.",
           "visitCost": "Kota Mahsuri: 40 a 50 MYR pour 2 selon formule",
-          "eat": "Repas deja cale avant la route; snack local seulement si besoin.",
+          "eat": "Repas local avant la route: Nasi Campur Kak Yan ou warung proche de Cenang selon timing.",
           "foodAddress": "Route centrale de Langkawi",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Boisson fraiche.",
           "note": "Visite courte apres le repas, puis retour plage/logement sans ajouter d'autres stops."
         }
@@ -1888,9 +1904,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Scooter ou taxi prive, retour logement avant 17h.",
           "visitCost": "Libre",
-          "eat": "Repas deja cale; boisson froide ou snack de plage si besoin.",
+          "eat": "Repas local simple ou snack de plage: warung, roti ou nasi campur selon la zone.",
           "foodAddress": "Tanjung Rhu / Pantai Cenang",
-          "foodCost": "65 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Eau, noix de coco ou jus frais.",
           "note": "Bloc souple: plage si la meteo est bonne, sinon pause Cenang et sacs sans courir."
         },
@@ -2028,9 +2044,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Taxi/Grab direct jusqu'a Arau puis Grab final a Ipoh.",
           "visitCost": "ETS + transferts: 240 MYR pour 2",
-          "eat": "Repas court en transit; garder snacks et eau pour le train.",
+          "eat": "Repas court en transit: nasi kandar, roti ou rice plate simple; garder snacks et eau pour le train.",
           "foodAddress": "Arau station / Ipoh",
-          "foodCost": "85 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "White coffee de reprise a Ipoh.",
           "note": "Le gain du jour est la marge, pas la performance."
         }
@@ -2153,9 +2169,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Grab court puis retour centre.",
           "visitCost": "Donation / petit budget: 20 MYR pour 2",
-          "eat": "Repas deja cale; cafe ou dessert en Old Town au retour.",
+          "eat": "Lunch Old Town au retour: Thean Chun, Kong Heng, Nam Heong ou kopitiam simple.",
           "foodAddress": "Old Town Ipoh",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "White coffee ou boisson fraiche.",
           "note": "Un seul temple, puis retour en ville."
         },
@@ -2292,9 +2308,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Suite logique du meme Grab si possible.",
           "visitCost": "46 MYR pour 2",
-          "eat": "Repas court apres la grotte; garder eau et snack dans le sac.",
+          "eat": "Repas court apres la grotte: warung, mamak ou rice plate sur Batu Gajah / retour Ipoh.",
           "foodAddress": "Batu Gajah / retour Ipoh",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Boisson fraiche avant retour.",
           "note": "Option seulement si le retour Grab est clair et si Gua Tempurung n'a pas deborde."
         }
@@ -2424,9 +2440,9 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Grab court uniquement si vous choisissez Gunung Lang.",
           "visitCost": "0 a 30 MYR pour 2 selon option",
-          "eat": "Repas deja cale; dessert, soya beancurd ou cafe blanc si pause Old Town.",
+          "eat": "Lunch Old Town: noodles, chicken rice, dim sum simple ou kopitiam avant la pause cafe.",
           "foodAddress": "Old Town Ipoh",
-          "foodCost": "65 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "White coffee, jus ou eau.",
           "note": "Choisir un seul scenario: Gunung Lang court ou repos/cafe, pas les deux."
         },
@@ -2567,7 +2583,7 @@ export const tripData: TripData = {
           "visitCost": "Libre",
           "eat": "Lunch simple en Old Town.",
           "foodAddress": "Old Town Ipoh",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Longue pause climatisee.",
           "note": "Cette journee sert a respirer avant la derniere semaine."
         },
@@ -2700,9 +2716,9 @@ export const tripData: TripData = {
           "metro": "MRT possible selon sacs.",
           "taxi": "Grab KL Sentral -> logement.",
           "visitCost": "Transferts: 55 MYR pour 2",
-          "eat": "Repas deja cale; cafe de retour si besoin.",
+          "eat": "Lunch de retour simple: KL Sentral food court, NU Sentral ou rice plate proche du logement.",
           "foodAddress": "KLCC / autour du logement",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Boisson climatisee.",
           "note": "Ne relancez pas une grosse visite aujourd'hui."
         }
@@ -2832,9 +2848,9 @@ export const tripData: TripData = {
           "metro": "Marche logique depuis Merdeka.",
           "taxi": "Grab court si besoin.",
           "visitCost": "IAMM: 40 MYR pour 2",
-          "eat": "Repas deja cale; cafe ou boisson fraiche avant le musee.",
+          "eat": "Lunch heritage simple: kopitiam autour de Pasar Seni / Masjid Negara avant le musee.",
           "foodAddress": "Secteur Masjid Negara / IAMM",
-          "foodCost": "75 MYR pour 2",
+          "foodCost": "55 MYR pour 2",
           "drink": "Boisson fraiche avant le musee.",
           "note": "Une seule grande boucle patrimoine."
         }
