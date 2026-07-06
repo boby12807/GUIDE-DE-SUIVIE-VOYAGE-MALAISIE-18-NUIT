@@ -1694,11 +1694,11 @@ export const tripData: TripData = {
       "dateLabel": "Dimanche 23 aout 2026",
       "city": "Langkawi",
       "overnight": "Rebungan Resort Langkawi",
-      "highlight": "Kilim Geoforest le matin, puis Kuah et Eagle Square en apres-midi court, retour avant le diner.",
+      "highlight": "Kilim Geoforest le matin, puis plage a Tanjung Rhu l'apres-midi pour souffler.",
       "transportSummary": "Scooter + bateau",
-      "photo": "assets/photos/visits/eagle-square.jpg",
-      "photoAlt": "Eagle Square a Kuah",
-      "deepDive": "La journee donne deux visages de Langkawi: mangroves et relief karstique, puis Kuah plus urbain et local.",
+      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+      "photoAlt": "Plage tropicale a Langkawi",
+      "deepDive": "La journee garde le gros morceau nature le matin avec Kilim Geoforest, puis bascule en recuperation plage. Avec le scooter, Tanjung Rhu est logique apres Kilim et evite de transformer l'apres-midi en course.",
       "segments": [
         {
           "label": "Matin",
@@ -1713,15 +1713,15 @@ export const tripData: TripData = {
           "title": "Tour mangroves Kilim",
           "bullets": [
             "Compter 3 a 4h selon formule.",
-            "Retour via Kuah si l'energie suit."
+            "Dejeuner simple apres le tour avant d'aller vers la plage."
           ]
         },
         {
-          "label": "Fin d'apres-midi",
-          "title": "Eagle Square",
+          "label": "Apres-midi",
+          "title": "Plage Tanjung Rhu",
           "bullets": [
-            "Bloc photo court apres Kilim, pas une sortie de nuit.",
-            "Retour avant le diner si scooter."
+            "Pause plage apres les mangroves: baignade, repos, photos.",
+            "Retour vers Cenang avant la nuit si vous etes fatigues en scooter."
           ]
         }
       ],
@@ -1731,7 +1731,8 @@ export const tripData: TripData = {
       },
       "tips": [
         "Prevoir cash et protection etanche.",
-        "Si la mer est agitee, enlever les options annexes."
+        "Si la mer est agitee, enlever les options annexes.",
+        "Tanjung Rhu est le choix logique apres Kilim; si vous voulez moins rouler, rentrer directement vers Cenang."
       ],
       "budget": [
         {
@@ -1769,11 +1770,11 @@ export const tripData: TripData = {
           "whyGo": "Voir une autre Langkawi: eau, mangroves et relief karstique."
         },
         {
-          "name": "Kuah et Eagle Square",
-          "timing": "Fin d'apres-midi",
+          "name": "Tanjung Rhu Beach",
+          "timing": "Apres-midi souple",
           "ticket": "Libre",
-          "gettingThere": "Route logique apres Kilim",
-          "whyGo": "Ajouter un visage plus local et urbain a l'ile."
+          "gettingThere": "Scooter depuis Kilim, puis retour vers Cenang avant la nuit",
+          "whyGo": "Faire une vraie pause plage apres la matinee mangroves, sans rajouter une visite urbaine."
         }
       ],
       "ultraPlan": [
@@ -1794,16 +1795,16 @@ export const tripData: TripData = {
         {
           "period": "Apres-midi",
           "time": "14h30 -> 17h30",
-          "visit": "Kuah et Eagle Square",
-          "address": "Dataran Lang, Kuah",
+          "visit": "Tanjung Rhu Beach",
+          "address": "Tanjung Rhu Beach, Langkawi",
           "metro": "Sans objet.",
-          "taxi": "Retour Grab si conduite de nuit inconfortable.",
+          "taxi": "Scooter depuis Kilim; retour Grab seulement si fatigue ou pluie.",
           "visitCost": "Libre",
-          "eat": "Lunch ou snack local a Kuah: nasi campur, roti ou plat simple avant retour vers Cenang.",
-          "foodAddress": "Kuah / Cenang",
+          "eat": "Lunch simple apres Kilim ou snack pres de Tanjung Rhu selon timing.",
+          "foodAddress": "Kilim / Tanjung Rhu",
           "foodCost": "55 MYR pour 2",
-          "drink": "Boisson legere.",
-          "note": "Bloc photo court apres Kilim: retour avant 18h pour eviter conduite de nuit et fatigue."
+          "drink": "Eau, noix de coco ou boisson fraiche.",
+          "note": "Objectif repos: plage, baignade et retour avant la nuit noire."
         }
       ]
     },
