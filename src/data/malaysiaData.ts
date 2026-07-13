@@ -76,7 +76,7 @@ export type TripData = {
 export const tripData: TripData = {
   "meta": {
     "title": "Malaisie 2026",
-    "subtitle": "Carnet d'itineraire final a valider avant export PDF",
+    "subtitle": "18 nuits au total: 16 nuits en hébergement et 2 nuits en vol",
     "travelers": "2 adultes",
     "travelWindow": "16 aout 2026 -> 3 septembre 2026",
     "exchangeRateMyrPerEur": 4.6605,
@@ -84,7 +84,7 @@ export const tripData: TripData = {
     "exchangeRateDate": "3 juillet 2026",
     "verifiedOn": "4 juillet 2026",
     "budgetStyle": "Budgets affiches pour 2 personnes",
-    "budgetLimitEur": 3400,
+    "budgetLimitEur": 3750,
     "disclaimer": "Tarifs publics, horaires et trajets reverifies le 4 juillet 2026 quand une source officielle est disponible. Les vols, logements, Grab, meteo et disponibilites restent dynamiques: verifier a nouveau avant paiement."
   },
   "route": [
@@ -118,9 +118,9 @@ export const tripData: TripData = {
       "name": "Kuala Lumpur",
       "nights": "4 nuits a l'aller + 2 nuits a la fin",
       "vibe": "Base urbaine tres simple pour alterner metro, temples, musees, quartiers vivants et fermeture sans stress avant le vol retour.",
-      "stay": "4 premières nuits : The Platinum Kuala Lumpur by Whitfield du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 2 septembre.",
+      "stay": "4 premières nuits : Airbnb The Robertson, 2 Jalan Robertson, du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 2 septembre.",
       "move": "MRT/LRT quand la station est proche, Grab pour les temples et les transferts avec bagages.",
-      "budgetHint": "Platinum Suites: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits (232 MYR / nuit). Total KL = 325 EUR.",
+      "budgetHint": "Airbnb The Robertson: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits (232 MYR / nuit). Total KL = 325 EUR.",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
       "photoAlt": "Vue sur la skyline de Kuala Lumpur"
     },
@@ -129,7 +129,7 @@ export const tripData: TripData = {
       "nights": "5 nuits",
       "vibe": "Bloc ile actif: plage, cable car, mangroves, artisanat et routes faciles, avec une marge meteo assumee.",
       "stay": "Rebungan Resort Langkawi du 21 au 26 aout 2026, base ile pour les 5 nuits.",
-      "move": "Location de scooter prévue pour être tranquille et explorer l'île librement.",
+      "move": "Scooter uniquement avec permis moto valable, permis international et assurance confirmée; sinon Grab et taxi privé.",
       "budgetHint": "Rebungan Resort Langkawi: 159 EUR pour 5 nuits, soit 31.8 EUR / nuit et environ 148 MYR / nuit.",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
       "photoAlt": "Plage de Langkawi et palmiers"
@@ -147,33 +147,33 @@ export const tripData: TripData = {
   ],
   "accommodations": [
     {
-      "id": "kl-arrival-platinum",
+      "id": "kl-arrival-robertson",
       "city": "Kuala Lumpur",
-      "name": "The Platinum Kuala Lumpur by Whitfield",
-      "subtitle": "Suite Premier - Appartement de 79 m² proche des tours Petronas",
+      "name": "Airbnb The Robertson Kuala Lumpur",
+      "subtitle": "45:1-BR with Balcony | Unblocked Merdeka 118",
       "dates": "17 aout 2026 -> 21 aout 2026",
       "nights": "4 nuits",
       "price": "225 EUR au total",
       "priceMyr": "Environ 1 048 MYR au total, soit 262 MYR / nuit",
-      "link": "https://www.booking.com/searchresults.fr.html?ss=The+Platinum+Kuala+Lumpur+by+Whitfield",
+      "link": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
-      "photoAlt": "Infinity pool rooftop avec vue spectaculaire sur la KL Tower",
-      "host": "Whitfield (Géré par professionnel)",
-      "rating": "8,3 / 10 Très bien (587 avis sur Booking)",
-      "capacity": "Suite de 79 m², 1 chambre à coucher, 1 lit king size, 1 salle de bain",
-      "checkInOut": "Arrivée à partir de 15h00, départ avant 12h00 (à confirmer)",
-      "cancellation": "Selon conditions de la promotion sur Booking",
-      "area": "Proximité de Petronas Twin Towers et de Pavilion Kuala Lumpur",
-      "route": "Depuis KLIA : SIM/cash, KLIA Ekspres jusqu'à KL Sentral, puis Grab vers l'hôtel. Confort : Grab direct KLIA -> The Platinum.",
+      "photoAlt": "Vue sur la skyline de Kuala Lumpur depuis une piscine en hauteur",
+      "host": "Tiang Sin",
+      "rating": "Réservation Airbnb confirmée; note non visible sur la capture fournie",
+      "capacity": "Appartement 1 chambre avec balcon; capacité et literie à relire dans la réservation Airbnb",
+      "checkInOut": "Départ le vendredi 21 août à 12h00; heure d'arrivée à confirmer dans Airbnb",
+      "cancellation": "Selon les conditions de la réservation Airbnb",
+      "area": "2, Jalan Robertson, Kuala Lumpur - secteur Bukit Bintang / Jalan Pudu",
+      "route": "Depuis KLIA : SIM/cash, KLIA Ekspres jusqu'à KL Sentral, puis Grab vers 2, Jalan Robertson. Avec les bagages, Grab direct depuis KLIA reste l'option confort.",
       "highlights": [
-        "Infinity pool rooftop remarquable avec vue imprenable sur la skyline et la KL Tower.",
-        "Suite Premier très spacieuse de 79 m² avec chambre séparée et lit king size.",
-        "Rapport qualité/prix exceptionnel à 225 EUR les 4 nuits (promotion de -46%).",
-        "Emplacement idéal à proximité immédiate des Petronas Twin Towers et de Pavilion."
+        "Adresse centrale à The Robertson, proche de Jalan Alor, Bukit Bintang et Chinatown.",
+        "Appartement 1 chambre avec balcon et vue dégagée vers Merdeka 118 selon l'intitulé Airbnb.",
+        "Tarif conservé à 225 EUR pour les 4 nuits d'après le budget de réservation existant.",
+        "Accès simple en Grab depuis KL Sentral ou directement depuis KLIA."
       ],
       "watchouts": [
-        "Vérifier les frais, taxes et conditions d'annulation applicables sur Booking.",
-        "Disponibilités limitées à ce prix promotionnel."
+        "Sauvegarder dans les téléphones l'adresse exacte: 2, Jalan Robertson, Kuala Lumpur.",
+        "Relire dans Airbnb le numéro d'unité, les consignes d'arrivée, la caution et la literie avant le départ."
       ],
       "usedForDays": [
         1,
@@ -393,14 +393,17 @@ export const tripData: TripData = {
   },
   "bookingChecklist": [
     "Vols long-courriers Genève -> Kuala Lumpur: 1 489 EUR pour 2 (environ 6 940 MYR) via Saudi Arabian Airlines + Parking et péage (Genève): 150 EUR (699 MYR).",
-    "The Platinum Kuala Lumpur by Whitfield (Suite Premier) réservé pour les 4 premières nuits (225 EUR) + The Colony By Infinitum KLCC (Studio) réservé pour les 2 dernières nuits (100 EUR).",
+    "Vérifier les vols Saudia et les correspondances dans l'application à J-7, J-2 et le jour du départ; ne partir vers l'aéroport que si les segments sont confirmés.",
+    "Airbnb The Robertson, 2 Jalan Robertson, hôte Tiang Sin, réservé pour les 4 premières nuits (225 EUR, départ le 21 août à 12h00) + The Colony By Infinitum KLCC réservé pour les 2 dernières nuits (100 EUR).",
     "Rebungan Resort Langkawi (Chambre Lits Jumeaux de Luxe) réservé pour le 21 -> 26 aout: 159 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
     "The Horizon Ipoh By Iconique Espace (Studio) réservé pour le 26 -> 31 aout: 212 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
     "Vol AirAsia Kuala Lumpur -> Langkawi avec bagages inclus dans le prix final, pas seulement le tarif d'appel.",
     "Ferry Kuah -> Kuala Perlis et ETS Arau -> Ipoh a reverifier ensemble avant achat.",
     "Train ETS Ipoh -> Kuala Lumpur a reserver des que les billets ouvrent.",
     "Hebergements en quartiers valides, avec annulation souple autour du 2 septembre.",
-    "Assurance voyage, permis international si scooter, photos du scooter et casque correct a verifier.",
+    "Scooter seulement avec permis moto catégorie A, permis international et assurance couvrant le deux-roues; sinon prévoir Grab/taxi. Vérifier casque, freins, pneus et faire des photos au départ.",
+    "Le 25 aout est un jour ferie national et le 31 aout est Hari Merdeka: anticiper fermetures, affluence et billets ETS.",
+    "Passeports en bon état et valables au moins 6 mois après la fin du séjour, billets retour et confirmations de logement accessibles hors ligne.",
     "Prevoir un plan pluie pour Langkawi: SkyCab et sorties bateau dependent beaucoup de la meteo."
   ],
   "practicalBlocks": [
@@ -409,7 +412,7 @@ export const tripData: TripData = {
       "lines": [
         "KL: metro utile sur les axes principaux, Grab pour les visites dispersees et les sacs.",
         "KL -> Langkawi: vol direct depuis KLIA2, avec marge aeroport et bagages inclus au devis.",
-        "Langkawi: scooter loué pour rayonner en toute liberté vers SkyCab, Kilim et le nord.",
+        "Langkawi: scooter seulement si permis moto et assurance valides; sinon Grab et taxi privé pour SkyCab, Kilim et le nord.",
         "Langkawi -> Ipoh: ferry Kuah -> Kuala Perlis, taxi/Grab vers Arau, puis ETS vers Ipoh.",
         "Ipoh -> KL: l'ETS garde la fin de voyage simple et peu fatigante."
       ]
@@ -426,9 +429,9 @@ export const tripData: TripData = {
     {
       "title": "Budget et marges",
       "lines": [
-        "Tous les budgets sont pour 2 personnes et incluent une marge de prudence plus forte qu'avant.",
+        "Tous les budgets sont pour 2 personnes; l'objectif réaliste inclut désormais une enveloppe d'imprévus.",
         "Les vols internes peuvent grimper avec bagages, horaires pratiques et frais AirAsia.",
-        "Prevoir 20 a 40% de marge logement autour du 31 aout et des week-ends.",
+        "Les logements déjà réservés sont comptés à leur prix indiqué; contrôler seulement taxes, cautions et frais annexes.",
         "Garder une enveloppe imprevus pour pluie, Grab plus chers, lessive, snacks et petits tickets."
       ]
     },
@@ -453,7 +456,7 @@ export const tripData: TripData = {
       "lines": [
         "Passeports, assurance, billets hors ligne, confirmations logement et moyen de paiement secondaire.",
         "Captures des horaires ferry/ETS, cartes hors ligne et adresses de logements en favoris.",
-        "Photos du scooter au depart et au retour si location a Langkawi."
+        "Permis moto original + permis international + preuve d'assurance, puis photos du scooter au depart et au retour si location a Langkawi."
       ]
     }
   ],
@@ -464,7 +467,7 @@ export const tripData: TripData = {
       "lines": [
         "Bloquer les vols long-courriers avec une arrivee KL assez tot pour garder le 17 aout leger.",
         "Confirmer les deux blocs logement de Kuala Lumpur, puis Langkawi et Ipoh avec annulation lisible.",
-        "Verifier passeports, assurance voyage, plafonds carte bancaire et conditions scooter si Langkawi se fait en deux-roues.",
+        "Verifier passeports, assurance voyage, plafonds carte bancaire et permis moto catégorie A + permis international si Langkawi se fait en deux-roues.",
         "Garder une enveloppe de marge pour bagages AirAsia, Grab plus chers, pluie et petits tickets."
       ],
       "action": "Objectif: figer les bases sans figer chaque minute."
@@ -474,7 +477,7 @@ export const tripData: TripData = {
       "kicker": "Preparer le terrain",
       "lines": [
         "Telecharger cartes hors ligne KL, Langkawi et Ipoh, puis sauvegarder toutes les adresses de logements.",
-        "Creer une pochette numerique: passeports, assurances, vols, logements, billets train/ferry, permis international si scooter.",
+        "Creer une pochette numerique: passeports, assurances, vols, logements, billets train/ferry, permis moto original et permis international si scooter.",
         "Regarder les horaires KLIA, AirAsia, ferry Kuah -> Kuala Perlis et ETS Arau -> Ipoh sur une meme feuille.",
         "Lister les restaurants utiles par zone au lieu de chercher au hasard quand la fatigue monte."
       ],
@@ -564,7 +567,7 @@ export const tripData: TripData = {
     },
     {
       "city": "Kuala Lumpur final",
-      "days": "Jours 15 a 19",
+      "days": "Jours 15 a 18",
       "role": "Fermeture simple avant le vol retour.",
       "rhythm": "Encore une vraie journee patrimoine, puis achats, valises, dernier diner et sortie aeroport avec marge.",
       "details": [
@@ -585,8 +588,8 @@ export const tripData: TripData = {
     {
       "title": "Scooter ou Grab a Langkawi",
       "trigger": "Avant de payer une location",
-      "decision": "Location confirmée. Assurez-vous d'avoir le permis international, un casque correct et prenez des photos du scooter au départ.",
-      "fallback": "Sinon, garder Grab pour les trajets courts et taxi prive demi-journee pour SkyCab, Kilim ou la boucle nord."
+      "decision": "Ne prendre le scooter qu'avec permis moto catégorie A, permis international, assurance confirmée et casque correct; photographier le véhicule au départ.",
+      "fallback": "Avec un simple permis B ou sans couverture d'assurance explicite, garder Grab pour les trajets courts et un taxi privé à la demi-journée pour SkyCab, Kilim ou la boucle nord."
     },
     {
       "title": "SkyCab",
@@ -725,9 +728,29 @@ export const tripData: TripData = {
       "note": "Horaires observes: 09h30-22h00, derniere entree 21h30; tarif etranger a verifier au paiement."
     },
     {
-      "title": "Booking - The Platinum Kuala Lumpur by Whitfield",
-      "url": "https://www.booking.com/searchresults.fr.html?ss=The+Platinum+Kuala+Lumpur+by+Whitfield",
-      "note": "Suite Premier retenue pour les 4 premieres nuits a Kuala Lumpur, du 17 au 21 aout 2026 (225 EUR)."
+      "title": "France Diplomatie - Malaisie, informations utiles",
+      "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/malaisie/conseils-aux-voyageurs-informations-utiles",
+      "note": "Référence pour le permis international, l'obligation d'un permis moto catégorie A et les risques liés au deux-roues."
+    },
+    {
+      "title": "France Diplomatie - Malaisie, entrée et séjour",
+      "url": "https://www.diplomatie.gouv.fr/fr/information-par-pays/malaisie/conseils-aux-voyageurs-entree-sejour",
+      "note": "Référence pour la MDAC, la validité du passeport et les conditions d'entrée."
+    },
+    {
+      "title": "Gouvernement de Malaisie - calendrier 2026",
+      "url": "https://www.malaysia.gov.my/en/calendar",
+      "note": "Confirme les jours fériés nationaux du 25 et du 31 août 2026."
+    },
+    {
+      "title": "MET Malaysia - tendance météo mai à octobre 2026",
+      "url": "https://www.met.gov.my/data/climate/tinjauancuacajangkapanjang_en.pdf",
+      "note": "Prévision saisonnière utilisée pour maintenir Langkawi flexible face aux pluies d'août."
+    },
+    {
+      "title": "Airbnb - The Robertson Kuala Lumpur",
+      "url": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
+      "note": "Appartement 1 chambre avec balcon, hôte Tiang Sin, réservé du 17 au 21 août 2026 à 2, Jalan Robertson (225 EUR dans le budget)."
     },
     {
       "title": "Booking - The Colony By Infinitum KLCC - Aura Suites",
@@ -752,7 +775,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 1",
       "dateLabel": "Dimanche 16 aout 2026 -> Lundi 17 aout 2026",
       "city": "Genève -> Kuala Lumpur",
-      "overnight": "The Platinum Kuala Lumpur by Whitfield",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Vol au départ de Genève puis arrivée à Kuala Lumpur en fin d'après-midi, avec installation douce.",
       "transportSummary": "Vol international (Genève) + KLIA Ekspres + Grab",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
@@ -773,7 +796,7 @@ export const tripData: TripData = {
           "title": "Arrivee a KL",
           "bullets": [
             "Atterrissage à 16h50.",
-            "SIM, retrait de cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers The Platinum Kuala Lumpur."
+            "SIM, retrait de cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers l'Airbnb au 2, Jalan Robertson."
           ]
         },
         {
@@ -786,7 +809,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Parcours conseille: départ de Genève, arrivée KLIA, SIM / cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers The Platinum Kuala Lumpur.",
+        "metro": "Parcours conseille: départ de Genève, arrivée KLIA, SIM / cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers 2, Jalan Robertson.",
         "taxi": "Option confort: Grab direct KLIA -> logement si vous etes tres charges ou trop fatigues, plus simple mais nettement plus cher."
       },
       "tips": [
@@ -806,15 +829,15 @@ export const tripData: TripData = {
           "note": "Point de securite pendant la correspondance train / Grab."
         },
         {
-          "label": "The Platinum / logement",
-          "query": "toilets near The Platinum Kuala Lumpur by Whitfield",
+          "label": "Airbnb The Robertson / logement",
+          "query": "toilets near The Robertson Residences 2 Jalan Robertson Kuala Lumpur",
           "note": "Repere proche du logement pour le premier soir."
         }
       ],
       "budget": [
         {
           "label": "Vols long-courriers Genève -> Kuala Lumpur (2 adultes)",
-          "myr": 7454,
+          "myr": 6940,
           "kind": "estimate"
         },
         {
@@ -838,7 +861,7 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Première nuit The Platinum KL",
+          "label": "Première nuit Airbnb The Robertson",
           "myr": 262,
           "kind": "estimate"
         },
@@ -848,8 +871,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge arrivee (supprimée)",
-          "myr": 0,
+          "label": "Marge arrivée / imprévus",
+          "myr": 60,
           "kind": "estimate"
         }
       ],
@@ -858,15 +881,15 @@ export const tripData: TripData = {
           "name": "KLIA -> KL Sentral",
           "timing": "17 aout fin d'après-midi",
           "ticket": "RM55/adulte observe",
-          "gettingThere": "KLIA Ekspres jusqu'a KL Sentral, puis Grab vers The Platinum Kuala Lumpur",
+          "gettingThere": "KLIA Ekspres jusqu'a KL Sentral, puis Grab vers 2, Jalan Robertson",
           "whyGo": "La sortie la plus fiable apres un long-courrier, avec un seul changement avant le logement."
         },
         {
-          "name": "The Platinum Kuala Lumpur by Whitfield",
+          "name": "Airbnb The Robertson Kuala Lumpur",
           "timing": "Installation du 17 aout",
           "ticket": "225 EUR / environ 1 048 MYR pour 4 nuits, soit 262 MYR / nuit",
           "gettingThere": "Grab direct depuis KL Sentral",
-          "whyGo": "Base retenue pour les 4 premieres nuits, avec vue KLCC et piscine."
+          "whyGo": "Base centrale retenue pour les 4 premières nuits, avec une chambre, un balcon et une vue dégagée vers Merdeka 118 selon l'annonce."
         }
       ],
       "ultraPlan": [
@@ -875,7 +898,7 @@ export const tripData: TripData = {
           "time": "16h50 -> 19h00",
           "visit": "KLIA, SIM et transfert",
           "address": "Kuala Lumpur International Airport, Sepang",
-          "metro": "KLIA Ekspres: KLIA -> KL Sentral, puis Grab KL Sentral -> The Platinum Kuala Lumpur.",
+          "metro": "KLIA Ekspres: KLIA -> KL Sentral, puis Grab KL Sentral -> 2, Jalan Robertson.",
           "taxi": "Alternative directe: Grab KLIA -> logement si les sacs ou la fatigue rendent le train penible.",
           "visitCost": "KLIA Ekspres: 110 MYR pour 2 + Grab KL Sentral -> logement: environ 30 MYR",
           "eat": "Snack ou repas rapide a KL Sentral.",
@@ -887,8 +910,8 @@ export const tripData: TripData = {
         {
           "period": "Soir",
           "time": "Installation et repas",
-          "visit": "The Platinum Kuala Lumpur by Whitfield",
-          "address": "The Platinum Kuala Lumpur by Whitfield, KLCC",
+          "visit": "Airbnb The Robertson Kuala Lumpur",
+          "address": "2, Jalan Robertson, Kuala Lumpur",
           "metro": "Aucun besoin si vous venez avec les sacs.",
           "taxi": "Grab depuis KL Sentral.",
           "visitCost": "Transfert urbain: 30 MYR pour 2",
@@ -906,7 +929,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 2",
       "dateLabel": "Mardi 18 aout 2026",
       "city": "Kuala Lumpur",
-      "overnight": "The Platinum Kuala Lumpur by Whitfield",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Foret urbaine et jardins Perdana pour lancer KL sans se disperser ni payer une visite trop chere.",
       "transportSummary": "Monorail/MRT + Grab",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/KL_Perdana_Botanical_Garden_5.jpg",
@@ -944,7 +967,7 @@ export const tripData: TripData = {
       },
       "tips": [
         "Eau, chapeau et chaussures qui accrochent.",
-        "Le jour 3 se concentre sur KL Tower, Aquaria KLCC, Petronas/KLCC et Jalan Alor."
+        "Cette journée se concentre sur KL Forest Eco Park et les jardins Perdana, avec retour simple vers The Robertson."
       ],
       "toiletStops": [
         {
@@ -965,7 +988,7 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "Nuit The Platinum KL",
+          "label": "Nuit Airbnb The Robertson",
           "myr": 262,
           "kind": "estimate"
         },
@@ -990,8 +1013,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge chaleur / pauses (supprimée)",
-          "myr": 0,
+          "label": "Marge chaleur / pauses",
+          "myr": 50,
           "kind": "estimate"
         }
       ],
@@ -1051,7 +1074,7 @@ export const tripData: TripData = {
           "period": "Soir / diner",
           "time": "19h30 -> 21h30",
           "visit": "Diner simple + piscine/logement",
-          "address": "The Platinum Kuala Lumpur by Whitfield",
+          "address": "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
           "metro": "Retour simple selon fatigue.",
           "taxi": "Grab Perdana Gardens -> logement.",
           "visitCost": "Libre",
@@ -1069,7 +1092,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 3",
       "dateLabel": "Mercredi 19 aout 2026",
       "city": "Kuala Lumpur",
-      "overnight": "The Platinum Kuala Lumpur by Whitfield",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et spectacle Lake Symphony le soir.",
       "transportSummary": "Monorail/LRT + marche KLCC + Grab ponctuel",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquaria_KLCC_fish_tank.jpg",
@@ -1115,7 +1138,7 @@ export const tripData: TripData = {
       },
       "tips": [
         "Aquaria KLCC remplace les visites exterieures pendant les heures chaudes.",
-        "Garder Petronas / KLCC pour la fin de journee: meilleur rendu visuel et trajet simple depuis l'hotel.",
+        "Garder Petronas / KLCC pour la fin de journée: meilleur rendu visuel et retour simple vers le logement.",
         "Pour Lake Symphony, viser 20h00 ou 20h30 et verifier les horaires le jour meme."
       ],
       "toiletStops": [
@@ -1137,7 +1160,7 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "Nuit The Platinum KL",
+          "label": "Nuit Airbnb The Robertson",
           "myr": 262,
           "kind": "estimate"
         },
@@ -1157,8 +1180,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge pluie / pauses (supprimée)",
-          "myr": 0,
+          "label": "Marge pluie / pauses",
+          "myr": 60,
           "kind": "estimate"
         }
       ],
@@ -1250,7 +1273,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 4",
       "dateLabel": "Jeudi 20 aout 2026",
       "city": "Kuala Lumpur",
-      "overnight": "The Platinum Kuala Lumpur by Whitfield",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Batu Caves le matin, puis Chinatown / Petaling Street et Central Market en apres-midi souple.",
       "transportSummary": "KTM/MRT + marche + Grab ponctuel",
       "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu_Caves_stairs_2022-05.jpg",
@@ -1310,7 +1333,7 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "Nuit The Platinum KL",
+          "label": "Nuit Airbnb The Robertson",
           "myr": 262,
           "kind": "estimate"
         },
@@ -1325,13 +1348,13 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Transports Batu Caves / KLCC",
+          "label": "Transports Batu Caves / centre de KL",
           "myr": 80,
           "kind": "estimate"
         },
         {
-          "label": "Marge bagages / courses utiles (supprimée)",
-          "myr": 0,
+          "label": "Marge bagages / courses utiles",
+          "myr": 50,
           "kind": "estimate"
         }
       ],
@@ -1391,7 +1414,7 @@ export const tripData: TripData = {
           "period": "Soir / diner",
           "time": "19h30 -> 21h30",
           "visit": "Diner proche + preparation Langkawi",
-          "address": "The Platinum / Bukit Bintang",
+          "address": "Airbnb The Robertson / Bukit Bintang",
           "metro": "Monorail ou Grab selon fatigue.",
           "taxi": "Grab court au retour si pluie.",
           "visitCost": "Libre",
@@ -1604,11 +1627,6 @@ export const tripData: TripData = {
         {
           "label": "Repas du jour",
           "myr": 140,
-          "kind": "estimate"
-        },
-        {
-          "label": "Carburant / parking (optimisé)",
-          "myr": 25,
           "kind": "estimate"
         }
       ],
@@ -1906,8 +1924,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge meteo / achats (supprimée)",
-          "myr": 0,
+          "label": "Marge météo / achats",
+          "myr": 80,
           "kind": "estimate"
         }
       ],
@@ -2001,6 +2019,7 @@ export const tripData: TripData = {
         "taxi": "Sans scooter, taxi prive demi-journee plus confortable que plusieurs Grabs isoles."
       },
       "tips": [
+        "Le 25 août 2026 est un jour férié national: vérifier les horaires et prévoir davantage d'affluence.",
         "Verifier ferry et ETS avant la veille au soir.",
         "Rendre le scooter ce soir si le depart du lendemain est matinal."
       ],
@@ -2026,8 +2045,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge billets / achats utiles (supprimée)",
-          "myr": 0,
+          "label": "Marge billets / achats utiles",
+          "myr": 60,
           "kind": "estimate"
         }
       ],
@@ -2136,6 +2155,7 @@ export const tripData: TripData = {
       },
       "tips": [
         "Reverifier les horaires reels ferry + ETS avant achat.",
+        "Être dans le terminal de Kuah une heure avant le ferry et conserver au moins deux heures entre l'arrivée théorique à Kuala Perlis et le départ de l'ETS à Arau.",
         "Garder l'ETS de secours si le ferry glisse.",
         "Aucune grosse visite prevue ce soir."
       ],
@@ -2166,8 +2186,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge horaire / billets (supprimée)",
-          "myr": 0,
+          "label": "Marge horaire / billets",
+          "myr": 140,
           "kind": "estimate"
         }
       ],
@@ -2291,8 +2311,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge chaleur / pluie (supprimée)",
-          "myr": 0,
+          "label": "Marge chaleur / pluie",
+          "myr": 60,
           "kind": "estimate"
         }
       ],
@@ -2430,8 +2450,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge retour / eau (supprimée)",
-          "myr": 0,
+          "label": "Marge retour / eau",
+          "myr": 90,
           "kind": "estimate"
         }
       ],
@@ -2555,8 +2575,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge derniere soiree (supprimée)",
-          "myr": 0,
+          "label": "Marge dernière soirée",
+          "myr": 40,
           "kind": "estimate"
         }
       ],
@@ -2696,8 +2716,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge massage / pluie (supprimée)",
-          "myr": 0,
+          "label": "Marge massage / pluie",
+          "myr": 100,
           "kind": "estimate"
         }
       ],
@@ -2855,8 +2875,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Lessive / marge douce (supprimée)",
-          "myr": 0,
+          "label": "Lessive / marge douce",
+          "myr": 50,
           "kind": "estimate"
         }
       ],
@@ -2871,7 +2891,7 @@ export const tripData: TripData = {
         {
           "name": "The Colony By Infinitum KLCC - Aura Suites",
           "timing": "Apres-midi souple",
-          "ticket": "199 EUR / environ 927 MYR pour 4 nuits, soit 232 MYR / nuit",
+          "ticket": "100 EUR / environ 464 MYR pour 2 nuits, soit 232 MYR / nuit",
           "gettingThere": "Grab depuis KL Sentral",
           "whyGo": "Base simple pour fermer le voyage."
         }
@@ -2997,8 +3017,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Marge chaleur (supprimée)",
-          "myr": 0,
+          "label": "Marge chaleur",
+          "myr": 40,
           "kind": "estimate"
         }
       ],

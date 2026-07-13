@@ -398,7 +398,7 @@ function classifyBudget(label: string) {
   if (/vol|parking|péage|peage|aeroport|airport|train|grab|transport|ferry|taxi|klia|ets/.test(text)) {
     return "Transports";
   }
-  if (/nuit|hotel|hôtel|platinum|casa|logement|airbnb/.test(text)) {
+  if (/nuit|hotel|hôtel|robertson|colony|horizon|rebungan|logement|airbnb/.test(text)) {
     return "Hotels";
   }
   if (/repas|boisson|snack|cafe|déjeuner|diner|food|manger/.test(text)) {
