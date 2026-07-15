@@ -121,7 +121,7 @@ export const tripData: TripData = {
       "stay": "4 premières nuits : Airbnb The Robertson, 2 Jalan Robertson, du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 2 septembre.",
       "move": "MRT/LRT quand la station est proche, Grab pour les temples et les transferts avec bagages.",
       "budgetHint": "Airbnb The Robertson: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits (232 MYR / nuit). Total KL = 325 EUR.",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
+      "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Vue sur la skyline de Kuala Lumpur"
     },
     {
@@ -131,7 +131,7 @@ export const tripData: TripData = {
       "stay": "Rebungan Resort Langkawi du 21 au 26 aout 2026, base ile pour les 5 nuits.",
       "move": "Scooter uniquement avec permis moto valable, permis international et assurance confirmée; sinon Grab et taxi privé.",
       "budgetHint": "Rebungan Resort Langkawi: 159 EUR pour 5 nuits, soit 31.8 EUR / nuit et environ 148 MYR / nuit.",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+      "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Plage de Langkawi et palmiers"
     },
     {
@@ -225,7 +225,7 @@ export const tripData: TripData = {
       "price": "159 EUR au total",
       "priceMyr": "Environ 741 MYR au total, soit 148 MYR / nuit",
       "link": "https://www.booking.com/searchresults.fr.html?ss=Rebungan+Resort+Langkawi",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+      "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Plage de Langkawi et palmiers",
       "host": "Rebungan Resort Langkawi",
       "rating": "Note Booking a reverifier avant paiement final",
@@ -294,12 +294,12 @@ export const tripData: TripData = {
   "media": {
     "hero": [
       {
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Petronas_Twin_Towers_Kuala_Lumpur_Malaysia.jpg",
+        "src": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
         "alt": "Tours Petronas a Kuala Lumpur",
         "label": "Kuala Lumpur"
       },
       {
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+        "src": "assets/photos/visits/eagle-square.jpg",
         "alt": "Plage et eau turquoise a Langkawi",
         "label": "Langkawi"
       },
@@ -316,13 +316,13 @@ export const tripData: TripData = {
     ],
     "gallery": [
       {
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
+        "src": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
         "alt": "Skyline de Kuala Lumpur",
         "title": "Kuala Lumpur",
         "text": "La base urbaine du voyage, entre tours, forets en pleine ville et quartiers contrastes."
       },
       {
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+        "src": "assets/photos/visits/eagle-square.jpg",
         "alt": "Plage de Langkawi",
         "title": "Langkawi",
         "text": "La respiration ile: plage, cable car, mangroves et sorties modulables selon la meteo."
@@ -343,7 +343,7 @@ export const tripData: TripData = {
     "featuredVisits": [
       {
         "title": "KL Forest Eco Park",
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/KL_Perdana_Botanical_Garden_5.jpg",
+        "src": "assets/photos/visits/kampung-baru.jpg",
         "alt": "Vegetation luxuriante a Kuala Lumpur",
         "city": "Kuala Lumpur",
         "text": "Une poche de foret tropicale dans la ville, interessante tot le matin.",
@@ -351,7 +351,7 @@ export const tripData: TripData = {
       },
       {
         "title": "SkyCab et SkyBridge",
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_(Unsplash).jpg",
+        "src": "assets/photos/visits/eagle-square.jpg",
         "alt": "Relief et vegetation de Langkawi",
         "city": "Langkawi",
         "text": "L'image carte postale du voyage, a placer en debut de journee.",
@@ -359,7 +359,7 @@ export const tripData: TripData = {
       },
       {
         "title": "Kilim Geoforest",
-        "src": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+        "src": "assets/photos/visits/eagle-square.jpg",
         "alt": "Paysage tropical a Langkawi",
         "city": "Langkawi",
         "text": "La sortie nature qui equilibre les plages et donne une autre lecture de l'ile.",
@@ -778,7 +778,7 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Vol au départ de Genève puis arrivée à Kuala Lumpur en fin d'après-midi, avec installation douce.",
       "transportSummary": "Vol international (Genève) + KLIA Ekspres + Grab",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
+      "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Skyline de Kuala Lumpur au debut du voyage",
       "deepDive": "Ce jour sert de sas: sortir proprement de l'aeroport, recuperer une SIM, manger simple et poser les sacs sans ajouter de grosse visite.",
       "segments": [
@@ -932,7 +932,7 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Foret urbaine et jardins Perdana pour lancer KL sans se disperser ni payer une visite trop chere.",
       "transportSummary": "Monorail/MRT + Grab",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/KL_Perdana_Botanical_Garden_5.jpg",
+      "photo": "assets/photos/visits/kampung-baru.jpg",
       "photoAlt": "Vegetation luxuriante au KL Forest Eco Park et jardins Perdana",
       "deepDive": "Beaucoup de vert, une visite forte et un temple photogenique: la journee installe KL tout en restant simple.",
       "segments": [
@@ -1095,7 +1095,7 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et spectacle Lake Symphony le soir.",
       "transportSummary": "Monorail/LRT + marche KLCC + Grab ponctuel",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Aquaria_KLCC_fish_tank.jpg",
+      "photo": "assets/photos/visits/bukit-bintang.jpg",
       "photoAlt": "Aquarium et poissons a Aquaria KLCC",
       "deepDive": "Journee construite avec les classiques de la video: vue haute sur la ville, aquarium, KLCC/Petronas et spectacle des jets d'eau Lake Symphony. Tout reste proche du logement pour eviter les grands trajets deux jours de suite.",
       "segments": [
@@ -1276,7 +1276,7 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Batu Caves le matin, puis Chinatown / Petaling Street et Central Market en apres-midi souple.",
       "transportSummary": "KTM/MRT + marche + Grab ponctuel",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Batu_Caves_stairs_2022-05.jpg",
+      "photo": "assets/photos/thean-hou.jpg",
       "photoAlt": "Escaliers colores de Batu Caves",
       "deepDive": "Cette journee garde Batu Caves en premier, car c'est le deplacement le plus long et la chaleur monte vite. L'apres-midi revient vers Chinatown, Petaling Street et Central Market: plus facile, plus urbain, et simple a couper si vous devez preparer Langkawi.",
       "segments": [
@@ -1435,7 +1435,7 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Vol court vers Langkawi, depot des affaires a l'hotel, recuperation du scooter, puis premiere plage.",
       "transportSummary": "Grab + vol AirAsia + scooter/Grab",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_Pantai_Cenang.jpg",
+      "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Bord de plage a Pantai Cenang",
       "deepDive": "Le changement de rythme doit rester respirable: aeroport, depot des affaires au Rebungan Resort Langkawi, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
       "segments": [
@@ -1570,7 +1570,7 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "SkyCab, SkyBridge, Telaga Tujuh et boucle scooter cote ouest: une vraie journee Langkawi.",
       "transportSummary": "Scooter toute la journee",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_(Unsplash).jpg",
+      "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Relief et ciel de Langkawi",
       "deepDive": "Avec le scooter deja recupere, cette journee devient une boucle complete mais logique: SkyCab/SkyBridge le matin, cascade Telaga Tujuh juste a cote, puis Pantai Kok ou Telaga Harbour avant un retour simple vers Cenang.",
       "segments": [
@@ -1714,7 +1714,7 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Kilim Geoforest le matin, plage a Tanjung Rhu l'apres-midi, puis Kuah / Eagle Square en option du soir.",
       "transportSummary": "Scooter + bateau",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+      "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Plage tropicale a Langkawi",
       "deepDive": "La journee garde le gros morceau nature le matin avec Kilim Geoforest, puis bascule en recuperation plage. Avec le scooter, Tanjung Rhu est logique apres Kilim; Kuah et Eagle Square peuvent se faire en debut de soiree seulement si vous avez encore l'energie de rouler.",
       "segments": [
@@ -1865,7 +1865,7 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Laman Padi, Kota Mahsuri et temps plage: culture locale sans surcharger.",
       "transportSummary": "Scooter ou Grab",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Langkawi_beach.jpg",
+      "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Ambiance insulaire a Langkawi",
       "deepDive": "Cette journee ajoute une touche locale a Langkawi sans redevenir une course aux attractions.",
       "segments": [
@@ -2798,7 +2798,7 @@ export const tripData: TripData = {
       "overnight": "The Colony By Infinitum KLCC - Aura Suites",
       "highlight": "Retour simple vers Kuala Lumpur en ETS, installation à l'hôtel The Colony KLCC pour fermer le séjour et soirée très légère.",
       "transportSummary": "Grab + ETS + Grab",
-      "photo": "https://commons.wikimedia.org/wiki/Special:FilePath/Kuala_Lumpur_Malaysia_Skyline-01.jpg",
+      "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Retour sur Kuala Lumpur",
       "deepDive": "Le 31 aout devient la bascule Ipoh -> KL: on garde le benefice du jour ajoute a Ipoh et on reduit Kuala Lumpur final sans fragiliser le retour.",
       "segments": [

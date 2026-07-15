@@ -541,6 +541,12 @@ export default function App() {
           </div>
         </div>
 
+        <WeatherPanel
+          weather={liveWeather.weather}
+          loading={liveWeather.loading}
+          error={liveWeather.error}
+          refresh={liveWeather.refresh}
+        />
       </section>
 
       <section className="mx-auto max-w-7xl px-4 pb-12">
