@@ -79,8 +79,16 @@ function formatBothForTwo(myr: number) {
   return `${formatBoth(myr)} pour 2`;
 }
 
+function isAccommodationBudget(label: string) {
+  return /nuit|hotel|hôtel|robertson|colony|horizon|rebungan|logement|airbnb/i.test(label);
+}
+
+function dayActivityBudget(day: Day) {
+  return day.budget.filter((item) => !isAccommodationBudget(item.label));
+}
+
 function dayTotal(day: Day) {
-  return day.budget.reduce((sum, item) => sum + item.myr, 0);
+  return dayActivityBudget(day).reduce((sum, item) => sum + item.myr, 0);
 }
 
 function cityKey(city: string) {
@@ -402,7 +410,7 @@ function classifyBudget(label: string) {
   if (/vol|parking|péage|peage|aeroport|airport|train|grab|transport|ferry|taxi|klia|ets/.test(text)) {
     return "Transports";
   }
-  if (/nuit|hotel|hôtel|robertson|colony|horizon|rebungan|logement|airbnb/.test(text)) {
+  if (isAccommodationBudget(label)) {
     return "Hotels";
   }
   if (/repas|boisson|snack|cafe|déjeuner|diner|food|manger/.test(text)) {
@@ -445,9 +453,10 @@ export default function App() {
 
   const stats = useMemo(() => {
     const totalMyr = tripData.days.reduce((sum, day) => sum + dayTotal(day), 0);
-    const officialLines = tripData.days.flatMap((day) => day.budget).filter((line) => line.kind === "official").length;
+    const activityBudgets = tripData.days.flatMap((day) => dayActivityBudget(day));
+    const officialLines = activityBudgets.filter((line) => line.kind === "official").length;
     const categories = tripData.days
-      .flatMap((day) => day.budget)
+      .flatMap((day) => dayActivityBudget(day))
       .reduce<Record<string, number>>((acc, item) => {
         const key = classifyBudget(item.label);
         acc[key] = (acc[key] || 0) + item.myr;
