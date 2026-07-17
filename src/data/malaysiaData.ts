@@ -749,6 +749,21 @@ export const tripData: TripData = {
       "note": "Prévision saisonnière utilisée pour maintenir Langkawi flexible face aux pluies d'août."
     },
     {
+      "title": "KWC Fashion Wholesale - site officiel",
+      "url": "https://www.kenangacity.com.my/en/getting-here/",
+      "note": "Centre de grossistes mode à Pudu, ouvert le mercredi de 10h00 à 19h00; accès depuis Hang Tuah."
+    },
+    {
+      "title": "Sungei Wang Plaza - site officiel",
+      "url": "https://www.sungeiwang.com/",
+      "note": "Centre de Bukit Bintang avec boutiques indépendantes, ouvert de 10h00 à 22h00."
+    },
+    {
+      "title": "Tourism Malaysia - shopping à Kuala Lumpur",
+      "url": "https://ebrochures.malaysia.travel/en/kuala-lumpur/38-44-sensational-shopping/",
+      "note": "Jalan Tuanku Abdul Rahman est recommandé pour les achats à bon rapport qualité-prix et les boutiques locales."
+    },
+    {
       "title": "Airbnb - The Robertson Kuala Lumpur",
       "url": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
       "note": "Appartement 1 chambre avec balcon, hôte Tiang Sin, réservé du 17 au 21 août 2026 à 2, Jalan Robertson (225 EUR dans le budget)."
@@ -3084,51 +3099,59 @@ export const tripData: TripData = {
       "dateLabel": "Mercredi 2 septembre 2026",
       "city": "Kuala Lumpur -> vol retour",
       "overnight": "The Colony By Infinitum KLCC - Aura Suites jusqu'au depart tardif vers KLIA",
-      "highlight": "Dernier jour a Kuala Lumpur, chambre disponible jusqu'au depart tardif vers KLIA pour le vol du 3 septembre a 02h15.",
-      "transportSummary": "Grab / metro local + KLIA Ekspres + vol",
-      "photo": "assets/photos/visits/klia.jpg",
-      "photoAlt": "Terminal aeroportuaire de Kuala Lumpur",
-      "deepDive": "Ne rien programmer de fixe. Le but est de sortir de KL proprement et d'arriver a l'aeroport avec de la marge.",
+      "highlight": "Journee shopping economique: Jalan TAR, KWC Fashion Wholesale et Sungei Wang, puis retour a l'hotel avant le vol du 3 septembre a 02h15.",
+      "transportSummary": "Marche + Grab / monorail + KLIA Ekspres + vol",
+      "photo": "assets/photos/visits/bukit-bintang.jpg",
+      "photoAlt": "Boutiques et stands de shopping a Kuala Lumpur",
+      "deepDive": "Chercher les boutiques locales, les fins de serie et les prix de gros. Eviter Pavilion, Suria KLCC et les enseignes internationales: si le prix ressemble a celui de la France, ne pas acheter.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Matinee souple",
+          "title": "Jalan TAR puis KWC Fashion Wholesale",
           "bullets": [
-            "Petit-dej sans stress.",
-            "Garder la chambre si la nuit du 2 au 3 septembre est bien ajoutee ou confirmee."
+            "Commencer par les boutiques locales de Jalan Tuanku Abdul Rahman.",
+            "Continuer a KWC pour comparer les vetements homme et femme aux prix grossistes."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "Route vers KLIA",
+          "title": "KWC puis Sungei Wang",
           "bullets": [
-            "Repos, douche, valises et diner tot.",
-            "Depart vers KLIA en fin de soiree pour arriver environ 3h avant le vol international."
+            "Finir les achats principaux a KWC, puis aller a Sungei Wang seulement pour completer ce qui manque.",
+            "Retour a l'hotel vers 18h00 pour douche, valises et diner tot."
           ]
         },
         {
           "label": "Soir",
-          "title": "Vol de retour",
+          "title": "Hotel puis route vers KLIA",
           "bullets": [
-            "Repas aeroport.",
-            "Sommeil fragmente et escale."
+            "Quitter l'hotel vers 22h00.",
+            "KLIA Ekspres et arrivee environ 3h avant le vol."
           ]
         }
       ],
       "access": {
-        "metro": "MRT/Grab vers KL Sentral, puis KLIA Ekspres.",
-        "taxi": "Avec valises, Grab vers KL Sentral puis train aeroport reste simple."
+        "metro": "Jalan TAR est proche du logement; KWC est a 5 minutes a pied de Hang Tuah. KWC -> Sungei Wang par monorail Hang Tuah -> Bukit Bintang.",
+        "taxi": "Grab court entre Jalan TAR et KWC si les sacs deviennent lourds; retour Sungei Wang -> hotel en Grab."
       },
       "tips": [
         "Point critique: verifier que The Colony couvre bien la nuit du 2 au 3 septembre, meme si vous quittez la chambre avant l'aube.",
-        "Aucun rendez-vous fixe ce jour-la.",
+        "Plafonds conseilles: tee-shirt ou top 35 MYR, chemise ou blouse 60 MYR, pantalon, jean ou robe 90 MYR. Au-dessus, comparer avant d'acheter.",
+        "A KWC, demander le prix a l'unite et le prix pour 2 ou 3 pieces; certains tarifs de gros exigent plusieurs articles.",
+        "Essayer les vetements: les tailles asiatiques peuvent etre plus petites. Verifier tissu, coutures, fermeture et conditions d'echange.",
+        "Eviter les fausses marques et garder les recus. Fixer une enveloppe shopping avant de partir.",
         "Garder veste legere et accessoires sommeil en cabine."
       ],
       "toiletStops": [
         {
-          "label": "The Colony / KLCC matin",
-          "query": "toilets near The Colony By Infinitum KLCC Kuala Lumpur",
-          "note": "Point de depart avant repos, bagages et depart tardif vers KLIA."
+          "label": "KWC Fashion Wholesale",
+          "query": "toilets KWC Fashion Wholesale Kuala Lumpur",
+          "note": "Pause pratique pendant le principal bloc shopping."
+        },
+        {
+          "label": "Sungei Wang Plaza",
+          "query": "toilets Sungei Wang Plaza Kuala Lumpur",
+          "note": "Dernier repere avant le retour a l'hotel."
         },
         {
           "label": "KL Sentral avant KLIA Ekspres",
@@ -3149,12 +3172,17 @@ export const tripData: TripData = {
         },
         {
           "label": "Repas du jour",
-          "myr": 100,
+          "myr": 120,
           "kind": "estimate"
         },
         {
-          "label": "Transfert urbain vers KL Sentral",
-          "myr": 40,
+          "label": "Transports shopping + transfert vers KL Sentral",
+          "myr": 70,
+          "kind": "estimate"
+        },
+        {
+          "label": "Plafond shopping conseille pour 2",
+          "myr": 400,
           "kind": "estimate"
         },
         {
@@ -3164,6 +3192,20 @@ export const tripData: TripData = {
         }
       ],
       "visitCards": [
+        {
+          "name": "KWC Fashion Wholesale",
+          "timing": "10h00-19h00 le mercredi; prevoir 3h environ",
+          "ticket": "Entree libre; achats selon budget",
+          "gettingThere": "Grab ou station Hang Tuah puis 5 minutes a pied",
+          "whyGo": "Arret principal pour comparer vetements homme et femme dans plus de 800 boutiques de mode."
+        },
+        {
+          "name": "Sungei Wang Plaza",
+          "timing": "10h00-22h00; visite courte en fin d'apres-midi",
+          "ticket": "Entree libre; ne garder que les boutiques independantes",
+          "gettingThere": "Monorail Hang Tuah -> Bukit Bintang",
+          "whyGo": "Bon complement pour les petits magasins, sans perdre du temps dans les enseignes internationales."
+        },
         {
           "name": "KL Sentral -> KLIA",
           "timing": "3h avant le vol international",
@@ -3182,45 +3224,45 @@ export const tripData: TripData = {
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "09h00 -> 12h30",
-          "visit": "Matinee souple, chambre gardee et bagages",
-          "address": "The Colony KLCC / quartier final",
-          "metro": "Rester proche du logement.",
-          "taxi": "Grab seulement si dernier achat utile.",
+          "time": "09h30 -> 12h00",
+          "visit": "Jalan TAR puis debut de KWC Fashion Wholesale",
+          "address": "Jalan Tuanku Abdul Rahman puis No. 2, Jalan Gelugor, Pudu",
+          "metro": "Marche depuis l'hotel vers Jalan TAR, puis monorail ou Grab vers Hang Tuah / KWC.",
+          "taxi": "Grab direct vers KWC apres Jalan TAR si vous avez deja des sacs.",
           "visitCost": "Libre",
-          "eat": "Petit-dej simple ou brunch proche.",
-          "foodAddress": "KLCC / Bukit Bintang",
+          "eat": "Petit-dej simple pres de Jalan TAR.",
+          "foodAddress": "Jalan TAR / Chow Kit",
           "foodCost": "45 MYR pour 2",
-          "drink": "Cafe, eau et hydratation avant vol.",
-          "note": "Aucune visite fixe: garder l'energie pour le trajet aeroport et conserver la chambre si la nuit du 2 au 3 est confirmee."
+          "drink": "Cafe et eau.",
+          "note": "Jalan TAR sert de premier comparatif; garder le plus gros du budget pour KWC."
         },
         {
           "period": "Apres-midi",
-          "time": "14h00 -> 18h00",
-          "visit": "Repos final a KL",
-          "address": "The Colony KLCC / quartier final",
-          "metro": "Rester proche du logement.",
-          "taxi": "Grab court seulement si utile.",
+          "time": "12h00 -> 18h00",
+          "visit": "KWC Fashion Wholesale puis Sungei Wang Plaza",
+          "address": "KWC, Pudu -> Sungei Wang, Bukit Bintang",
+          "metro": "KWC est pres de Hang Tuah; monorail jusqu'a Bukit Bintang pour Sungei Wang.",
+          "taxi": "Grab retour vers The Colony vers 17h30-18h00 avec les achats.",
           "visitCost": "Libre",
-          "eat": "Dernier repas simple proche du logement.",
-          "foodAddress": "KLCC / autour du logement",
-          "foodCost": "80 MYR pour 2",
-          "drink": "Eau pour le vol.",
-          "note": "L'interet de la nuit d'hotel est de pouvoir se poser avant le depart vers l'aeroport."
+          "eat": "Dejeuner simple a KWC avant de reprendre les achats.",
+          "foodAddress": "KWC Fashion Wholesale",
+          "foodCost": "75 MYR pour 2",
+          "drink": "Eau; garder de l'energie pour le vol.",
+          "note": "Priorite a KWC. Sungei Wang est un complement, a supprimer si les achats sont deja termines ou si vous etes fatigues."
         },
         {
           "period": "Soir / diner",
-          "time": "22h00 -> 23h30",
-          "visit": "KL Sentral puis KLIA Ekspres",
-          "address": "KL Sentral -> KLIA",
+          "time": "18h00 -> 23h30",
+          "visit": "Hotel, valises, diner puis KLIA Ekspres",
+          "address": "The Colony -> KL Sentral -> KLIA",
           "metro": "MRT ou Grab vers KL Sentral, puis KLIA Ekspres.",
-          "taxi": "Grab si vous avez les valises.",
+          "taxi": "Retour hotel en Grab, puis Grab vers KL Sentral avec les valises.",
           "visitCost": "KLIA Ekspres: 110 MYR pour 2",
-          "eat": "Snack ou repas leger a KLIA avant l'embarquement.",
-          "foodAddress": "KLIA",
+          "eat": "Diner tot pres de l'hotel, puis snack leger a KLIA si besoin.",
+          "foodAddress": "Autour de The Colony / KLIA",
           "foodCost": "80 MYR pour 2",
           "drink": "Eau pour le vol.",
-          "note": "Vol retour Kuala Lumpur -> Geneve le jeudi 3 septembre a 02h15."
+          "note": "Fin du shopping a 18h00 maximum. Quitter l'hotel vers 22h00 pour le vol Kuala Lumpur -> Geneve du jeudi 3 septembre a 02h15."
         }
       ]
     },
