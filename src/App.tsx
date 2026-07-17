@@ -351,7 +351,8 @@ function buildDayParts(day: Day): DisplayPart[] {
       const slot = displaySlotForPart(part, index);
       const finalSlot = slot.label === daySlots.lunch.label && lunchAlreadyUsed ? daySlots.afternoon : slot;
       if (finalSlot.label === daySlots.lunch.label) lunchAlreadyUsed = true;
-      const finalPart = finalSlot.label === daySlots.dinner.label ? makeEveningRelaxed(part) : part;
+      const isSupplementalEvening = part.visit === "Soiree tranquille pres du logement";
+      const finalPart = finalSlot.label === daySlots.dinner.label && isSupplementalEvening ? makeEveningRelaxed(part) : part;
       return {
         ...finalPart,
         displayPeriod: finalSlot.label,
