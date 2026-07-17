@@ -3113,9 +3113,9 @@ export const tripData: TripData = {
       "dayLabel": "Jour 17",
       "dateLabel": "Mercredi 2 septembre 2026",
       "city": "Shopping à Kuala Lumpur",
-      "overnight": "The Colony By Infinitum KLCC - Aura Suites jusqu'au depart tardif vers KLIA",
+      "overnight": "The Colony By Infinitum KLCC - Aura Suites",
       "highlight": "Deux centres seulement: KWC pour les vêtements neufs à prix grossiste, puis Sungei Wang pour les outlets et l'occasion homme et femme.",
-      "transportSummary": "Grab + monorail ou Grab + KLIA Ekspres + vol",
+      "transportSummary": "Grab + monorail pour le parcours shopping",
       "photo": "assets/photos/visits/bukit-bintang.jpg",
       "photoAlt": "Boutiques et stands de shopping a Kuala Lumpur",
       "deepDive": "Parcours volontairement simple: comparer d'abord le neuf à KWC, puis terminer par cinq boutiques précises à Sungei Wang. Aucun détour par Pavilion ou Suria KLCC. Acheter seulement si le prix est nettement inférieur à la France et si la taille a été vérifiée.",
@@ -3146,10 +3146,10 @@ export const tripData: TripData = {
         },
         {
           "label": "Soir",
-          "title": "Tri des achats, valises puis KLIA",
+          "title": "Retour à l'hôtel, tri des achats et dîner",
           "bullets": [
-            "Peser et ranger les achats, se doucher, dîner et se reposer.",
-            "Quitter l'hôtel vers 21h45 pour rejoindre KL Sentral puis KLIA."
+            "Peser et ranger les achats, puis terminer les valises.",
+            "Dîner près de l'hôtel, se doucher et se reposer."
           ]
         }
       ],
@@ -3177,32 +3177,17 @@ export const tripData: TripData = {
           "label": "Sungei Wang Plaza",
           "query": "toilets Sungei Wang Plaza Kuala Lumpur",
           "note": "Repérer les sanitaires sur le plan du centre dès l'arrivée."
-        },
-        {
-          "label": "KL Sentral avant KLIA Ekspres",
-          "query": "toilets near KL Sentral KLIA Ekspres",
-          "note": "A utiliser avant le train aeroport."
-        },
-        {
-          "label": "KLIA depart international",
-          "query": "toilets near KLIA international departures",
-          "note": "Dernier repere pratique a KLIA avant le vol."
         }
       ],
       "budget": [
-        {
-          "label": "KLIA Ekspres (2 adultes)",
-          "myr": 110,
-          "kind": "official"
-        },
         {
           "label": "Repas du jour",
           "myr": 120,
           "kind": "estimate"
         },
         {
-          "label": "Transports shopping + transfert vers KL Sentral",
-          "myr": 70,
+          "label": "Transports du parcours shopping",
+          "myr": 45,
           "kind": "estimate"
         },
         {
@@ -3213,11 +3198,6 @@ export const tripData: TripData = {
         {
           "label": "Plafond vêtements femme",
           "myr": 200,
-          "kind": "estimate"
-        },
-        {
-          "label": "Marge aeroport / snacks",
-          "myr": 80,
           "kind": "estimate"
         }
       ],
@@ -3256,13 +3236,6 @@ export const tripData: TripData = {
           "ticket": "Seconde main; comparer avec les achats déjà trouvés",
           "gettingThere": "Monter directement au 4e étage, lot E50",
           "whyGo": "Dernier magasin du parcours pour homme et femme; ne prendre que ce qui reste moins cher que KWC et la France."
-        },
-        {
-          "name": "KL Sentral -> KLIA",
-          "timing": "Départ de l'hôtel vers 21h45",
-          "ticket": "RM55/adulte observe",
-          "gettingThere": "KLIA Ekspres",
-          "whyGo": "Arriver à KLIA avec environ 3 heures de marge avant le vol de 02h15."
         }
       ],
       "ultraPlan": [
@@ -3310,17 +3283,17 @@ export const tripData: TripData = {
         },
         {
           "period": "Soir / diner",
-          "time": "18h00 -> 23h15",
-          "visit": "Hôtel, tri des achats, dîner puis KLIA",
-          "address": "The Colony -> KL Sentral -> KLIA",
-          "metro": "KLIA Ekspres depuis KL Sentral après récupération des valises.",
-          "taxi": "Grab Sungei Wang -> hôtel vers 17h30, puis Grab hôtel -> KL Sentral vers 21h45.",
-          "visitCost": "KLIA Ekspres: 110 MYR pour 2",
-          "eat": "Dîner vers 19h00 près de l'hôtel, puis snack léger à KLIA si besoin.",
+          "time": "18h00 -> 21h30",
+          "visit": "Hôtel, tri des achats, dîner et repos",
+          "address": "The Colony By Infinitum KLCC - Aura Suites",
+          "metro": "Aucun trajet prévu après le retour à l'hôtel.",
+          "taxi": "Grab Sungei Wang -> hôtel vers 17h30.",
+          "visitCost": "Grab retour inclus dans les transports shopping: 45 MYR pour 2",
+          "eat": "Dîner vers 19h00 près de l'hôtel.",
           "foodAddress": "Autour de The Colony",
           "foodCost": "80 MYR pour 2",
-          "drink": "Eau pour le vol.",
-          "note": "18h00-19h00: trier et peser les achats. 19h00-20h00: dîner. 20h00-21h30: douche, valises et repos. Départ hôtel vers 21h45 pour le vol du jeudi 3 septembre à 02h15."
+          "drink": "Eau ou boisson fraîche.",
+          "note": "18h00-19h00: trier et peser les achats. 19h00-20h00: dîner. 20h00-21h30: douche, valises et repos. La journée shopping se termine ici."
         }
       ]
     },
@@ -3331,12 +3304,20 @@ export const tripData: TripData = {
       "dateLabel": "Jeudi 3 septembre 2026",
       "city": "Retour a Genève",
       "overnight": "Maison",
-      "highlight": "Atterrissage à Genève le 3 septembre à 14h35, récupération de la voiture et retour tranquille à la maison.",
-      "transportSummary": "Vol retour puis arrivée en Suisse à 14h35",
+      "highlight": "Départ de l'hôtel le 2 septembre à 21h45, KLIA Ekspres, vol à 02h15 puis atterrissage à Genève le 3 septembre à 14h35.",
+      "transportSummary": "Grab + KLIA Ekspres + vol retour + voiture",
       "photo": "assets/photos/visits/geneve.jpg",
       "photoAlt": "Retour a Genève",
       "deepDive": "Le site garde ce jour pour respecter les vraies dates du retour et ne rien programmer d'important.",
       "segments": [
+        {
+          "label": "Nuit du 2 au 3 septembre",
+          "title": "The Colony, KL Sentral puis KLIA",
+          "bullets": [
+            "Quitter l'hôtel le 2 septembre vers 21h45 et rejoindre KL Sentral en Grab.",
+            "Prendre le KLIA Ekspres puis le vol retour du 3 septembre à 02h15."
+          ]
+        },
         {
           "label": "Matin",
           "title": "Vol retour vers Genève",
@@ -3363,20 +3344,49 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Pas de transport malaisien ce jour-la.",
-        "taxi": "Budget voyage considere clos a l'arrivee en France/Suisse."
+        "metro": "Grab The Colony -> KL Sentral, puis KLIA Ekspres jusqu'à l'aéroport.",
+        "taxi": "Option confort: Grab direct de The Colony à KLIA si les bagages rendent le changement difficile."
       },
       "tips": [
         "Ne rien programmer d'important le jour du retour."
       ],
+      "toiletStops": [
+        {
+          "label": "KL Sentral avant KLIA Ekspres",
+          "query": "toilets near KL Sentral KLIA Ekspres",
+          "note": "A utiliser avant le train pour l'aéroport."
+        },
+        {
+          "label": "KLIA départ international",
+          "query": "toilets near KLIA international departures",
+          "note": "Dernier repère pratique à KLIA avant le vol."
+        }
+      ],
       "budget": [
         {
-          "label": "Budget du jour",
-          "myr": 0,
+          "label": "KLIA Ekspres (2 adultes)",
+          "myr": 110,
+          "kind": "official"
+        },
+        {
+          "label": "Grab hôtel -> KL Sentral",
+          "myr": 25,
+          "kind": "estimate"
+        },
+        {
+          "label": "Marge aéroport / snacks",
+          "myr": 80,
           "kind": "estimate"
         }
       ],
       "visitCards": [
+        {
+          "name": "The Colony -> KL Sentral -> KLIA",
+          "timing": "Départ de l'hôtel le 2 septembre vers 21h45",
+          "ticket": "KLIA Ekspres: RM55 par adulte",
+          "gettingThere": "Grab jusqu'à KL Sentral, puis KLIA Ekspres",
+          "whyGo": "Arriver à KLIA avec environ 3 heures de marge avant le vol du 3 septembre à 02h15."
+        },
         {
           "name": "Retour a Genève",
           "timing": "Selon vol retour",
@@ -3386,6 +3396,20 @@ export const tripData: TripData = {
         }
       ],
       "ultraPlan": [
+        {
+          "period": "Nuit du 2 au 3",
+          "time": "21h45 le 2 sept. -> 02h15 le 3 sept.",
+          "visit": "Départ de l'hôtel, KLIA et vol retour",
+          "address": "The Colony -> KL Sentral -> KLIA",
+          "metro": "KLIA Ekspres depuis KL Sentral.",
+          "taxi": "Grab de l'hôtel vers KL Sentral à 21h45; option confort: Grab direct jusqu'à KLIA.",
+          "visitCost": "Grab: 25 MYR + KLIA Ekspres: 110 MYR pour 2",
+          "eat": "Snack léger à KLIA si besoin.",
+          "foodAddress": "KLIA, zone des départs internationaux",
+          "foodCost": "80 MYR maximum pour 2",
+          "drink": "Eau pour le vol.",
+          "note": "Ce trajet commence le soir du 2 septembre, mais il appartient au retour du jeudi 3 septembre: départ hôtel à 21h45 et décollage à 02h15."
+        },
         {
           "period": "Matin",
           "time": "En vol jusqu'a 14h35",
