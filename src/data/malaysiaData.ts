@@ -76,7 +76,7 @@ export type TripData = {
 export const tripData: TripData = {
   "meta": {
     "title": "Malaisie 2026",
-    "subtitle": "18 nuits au total: 16 nuits en hébergement et 2 nuits en vol",
+    "subtitle": "18 nuits au total: 17 nuits en hébergement et 1 nuit en vol",
     "travelers": "2 adultes",
     "travelWindow": "16 aout 2026 -> 3 septembre 2026",
     "exchangeRateMyrPerEur": 4.6605,
@@ -108,19 +108,19 @@ export const tripData: TripData = {
     },
     {
       "city": "Kuala Lumpur final",
-      "days": "31 aout-2 sept.",
-      "nights": 2,
+      "days": "31 aout-3 sept.",
+      "nights": 3,
       "color": "teal"
     }
   ],
   "citySummaries": [
     {
       "name": "Kuala Lumpur",
-      "nights": "4 nuits a l'aller + 2 nuits a la fin",
+      "nights": "4 nuits a l'aller + 3 nuits a la fin",
       "vibe": "Base urbaine tres simple pour alterner metro, temples, musees, quartiers vivants et fermeture sans stress avant le vol retour.",
-      "stay": "4 premières nuits : Airbnb The Robertson, 2 Jalan Robertson, du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 2 septembre.",
+      "stay": "4 premières nuits : Airbnb The Robertson, 2 Jalan Robertson, du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 3 septembre, car le vol retour part le 3 septembre à 02h15.",
       "move": "MRT/LRT quand la station est proche, Grab pour les temples et les transferts avec bagages.",
-      "budgetHint": "Airbnb The Robertson: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits (232 MYR / nuit). Total KL = 325 EUR.",
+      "budgetHint": "Airbnb The Robertson: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits confirmées; ajouter ou confirmer la nuit du 2 au 3 septembre.",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Vue sur la skyline de Kuala Lumpur"
     },
@@ -187,10 +187,10 @@ export const tripData: TripData = {
       "city": "Kuala Lumpur",
       "name": "The Colony By Infinitum KLCC - Aura Suites",
       "subtitle": "Studio avec lit queen size et balcon - Résidence 4 étoiles avec rooftop infinity pool",
-      "dates": "31 aout 2026 -> 2 septembre 2026",
-      "nights": "2 nuits",
-      "price": "100 EUR au total",
-      "priceMyr": "Environ 464 MYR au total, soit 232 MYR / nuit",
+      "dates": "31 aout 2026 -> 3 septembre 2026",
+      "nights": "3 nuits",
+      "price": "100 EUR pour les 2 nuits confirmées + nuit du 2 au 3 septembre à ajouter/confirmer",
+      "priceMyr": "Environ 464 MYR pour les 2 nuits confirmées; total à recalculer avec la nuit du 2 au 3 septembre",
       "link": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Piscine à débordement sur le toit avec vue spectaculaire sur les tours Petronas",
@@ -202,7 +202,7 @@ export const tripData: TripData = {
       "area": "Jalan Dewan Sultan Sulaiman, Kuala Lumpur - Emplacement central",
       "route": "Depuis la gare de KL Sentral (après l'ETS Ipoh -> KL) : Grab vers l'hôtel. Pour le retour : Grab ou KLIA Ekspres via KL Sentral.",
       "highlights": [
-        "Tarif excellent à 100 EUR pour les 2 dernières nuits.",
+        "Les 2 premières nuits finales sont notées à 100 EUR; la nuit du 2 au 3 septembre doit être ajoutée ou confirmée.",
         "Superbe piscine à débordement sur le toit avec vue panoramique sur les tours jumelles Petronas.",
         "Hébergement classé 9,1/10 (Excellent) avec balcon privé.",
         "Situation centrale très pratique pour boucler les valises et faire les derniers achats."
@@ -212,7 +212,8 @@ export const tripData: TripData = {
       ],
       "usedForDays": [
         15,
-        16
+        16,
+        17
       ]
     },
     {
@@ -394,13 +395,13 @@ export const tripData: TripData = {
   "bookingChecklist": [
     "Vols long-courriers Genève -> Kuala Lumpur: 1 489 EUR pour 2 (environ 6 940 MYR) via Saudi Arabian Airlines + Parking et péage (Genève): 150 EUR (699 MYR).",
     "Vérifier les vols Saudia et les correspondances dans l'application à J-7, J-2 et le jour du départ; ne partir vers l'aéroport que si les segments sont confirmés.",
-    "Airbnb The Robertson, 2 Jalan Robertson, hôte Tiang Sin, réservé pour les 4 premières nuits (225 EUR, départ le 21 août à 12h00) + The Colony By Infinitum KLCC réservé pour les 2 dernières nuits (100 EUR).",
+    "Airbnb The Robertson, 2 Jalan Robertson, hôte Tiang Sin, réservé pour les 4 premières nuits (225 EUR, départ le 21 août à 12h00) + The Colony By Infinitum KLCC noté pour les 2 premières nuits finales (100 EUR); ajouter ou confirmer la nuit du 2 au 3 septembre pour le vol de 02h15.",
     "Rebungan Resort Langkawi (Chambre Lits Jumeaux de Luxe) réservé pour le 21 -> 26 aout: 159 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
     "The Horizon Ipoh By Iconique Espace (Studio) réservé pour le 26 -> 31 aout: 212 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
     "Vol AirAsia Kuala Lumpur -> Langkawi avec bagages inclus dans le prix final, pas seulement le tarif d'appel.",
     "Ferry Kuah -> Kuala Perlis et ETS Arau -> Ipoh a reverifier ensemble avant achat.",
     "Train ETS Ipoh -> Kuala Lumpur a reserver des que les billets ouvrent.",
-    "Hebergements en quartiers valides, avec annulation souple autour du 2 septembre.",
+    "Hebergements en quartiers valides, avec point critique a verifier: chambre disponible la nuit du 2 au 3 septembre avant le vol de 02h15.",
     "Scooter seulement avec permis moto catégorie A, permis international et assurance couvrant le deux-roues; sinon prévoir Grab/taxi. Vérifier casque, freins, pneus et faire des photos au départ.",
     "Le 25 aout est un jour ferie national et le 31 aout est Hari Merdeka: anticiper fermetures, affluence et billets ETS.",
     "Passeports en bon état et valables au moins 6 mois après la fin du séjour, billets retour et confirmations de logement accessibles hors ligne.",
@@ -755,7 +756,7 @@ export const tripData: TripData = {
     {
       "title": "Booking - The Colony By Infinitum KLCC - Aura Suites",
       "url": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
-      "note": "Studio réservé pour les 2 dernières nuits à Kuala Lumpur, du 31 août au 2 septembre 2026 (100 EUR)."
+      "note": "Studio noté pour les 2 premières nuits finales à Kuala Lumpur, du 31 août au 2 septembre 2026 (100 EUR); nuit du 2 au 3 septembre à ajouter ou confirmer pour le vol de 02h15."
     },
     {
       "title": "Booking - Rebungan Resort Langkawi",
@@ -2891,7 +2892,7 @@ export const tripData: TripData = {
         {
           "name": "The Colony By Infinitum KLCC - Aura Suites",
           "timing": "Apres-midi souple",
-          "ticket": "100 EUR / environ 464 MYR pour 2 nuits, soit 232 MYR / nuit",
+          "ticket": "100 EUR / environ 464 MYR pour 2 nuits confirmées; ajouter ou confirmer la nuit du 2 au 3 septembre",
           "gettingThere": "Grab depuis KL Sentral",
           "whyGo": "Base simple pour fermer le voyage."
         }
@@ -3082,8 +3083,8 @@ export const tripData: TripData = {
       "dayLabel": "Jour 17",
       "dateLabel": "Mercredi 2 septembre 2026",
       "city": "Kuala Lumpur -> vol retour",
-      "overnight": "Nuit en vol",
-      "highlight": "Dernier jour a Kuala Lumpur, sortie propre vers KLIA et vol retour.",
+      "overnight": "The Colony By Infinitum KLCC - Aura Suites jusqu'au depart tardif vers KLIA",
+      "highlight": "Dernier jour a Kuala Lumpur, chambre disponible jusqu'au depart tardif vers KLIA pour le vol du 3 septembre a 02h15.",
       "transportSummary": "Grab / metro local + KLIA Ekspres + vol",
       "photo": "assets/photos/visits/klia.jpg",
       "photoAlt": "Terminal aeroportuaire de Kuala Lumpur",
@@ -3094,15 +3095,15 @@ export const tripData: TripData = {
           "title": "Matinee souple",
           "bullets": [
             "Petit-dej sans stress.",
-            "Check-out et depot bagages si necessaire."
+            "Garder la chambre si la nuit du 2 au 3 septembre est bien ajoutee ou confirmee."
           ]
         },
         {
           "label": "Apres-midi",
           "title": "Route vers KLIA",
           "bullets": [
-            "KL Sentral puis KLIA Ekspres.",
-            "Arriver 3h avant vol international."
+            "Repos, douche, valises et diner tot.",
+            "Depart vers KLIA en fin de soiree pour arriver environ 3h avant le vol international."
           ]
         },
         {
@@ -3119,6 +3120,7 @@ export const tripData: TripData = {
         "taxi": "Avec valises, Grab vers KL Sentral puis train aeroport reste simple."
       },
       "tips": [
+        "Point critique: verifier que The Colony couvre bien la nuit du 2 au 3 septembre, meme si vous quittez la chambre avant l'aube.",
         "Aucun rendez-vous fixe ce jour-la.",
         "Garder veste legere et accessoires sommeil en cabine."
       ],
@@ -3126,7 +3128,7 @@ export const tripData: TripData = {
         {
           "label": "The Colony / KLCC matin",
           "query": "toilets near The Colony By Infinitum KLCC Kuala Lumpur",
-          "note": "Point de depart avant check-out ou dernier achat."
+          "note": "Point de depart avant repos, bagages et depart tardif vers KLIA."
         },
         {
           "label": "KL Sentral avant KLIA Ekspres",
@@ -3181,44 +3183,44 @@ export const tripData: TripData = {
         {
           "period": "Matin",
           "time": "09h00 -> 12h30",
-          "visit": "Matinee souple, check-out et bagages",
+          "visit": "Matinee souple, chambre gardee et bagages",
           "address": "The Colony KLCC / quartier final",
           "metro": "Rester proche du logement.",
-          "taxi": "Grab seulement si depot bagages ou dernier achat utile.",
+          "taxi": "Grab seulement si dernier achat utile.",
           "visitCost": "Libre",
           "eat": "Petit-dej simple ou brunch proche.",
           "foodAddress": "KLCC / Bukit Bintang",
           "foodCost": "45 MYR pour 2",
           "drink": "Cafe, eau et hydratation avant vol.",
-          "note": "Aucune visite fixe: garder l'energie pour le trajet aeroport."
+          "note": "Aucune visite fixe: garder l'energie pour le trajet aeroport et conserver la chambre si la nuit du 2 au 3 est confirmee."
         },
         {
           "period": "Apres-midi",
-          "time": "H-4 -> H-3",
-          "visit": "KL Sentral puis KLIA Ekspres",
-          "address": "KL Sentral -> KLIA",
-          "metro": "MRT ou Grab vers KL Sentral.",
-          "taxi": "Grab si vous avez les valises.",
-          "visitCost": "KLIA Ekspres: 110 MYR pour 2",
-          "eat": "Dernier repas simple a l'aeroport.",
-          "foodAddress": "KLIA",
+          "time": "14h00 -> 18h00",
+          "visit": "Repos final a KL",
+          "address": "The Colony KLCC / quartier final",
+          "metro": "Rester proche du logement.",
+          "taxi": "Grab court seulement si utile.",
+          "visitCost": "Libre",
+          "eat": "Dernier repas simple proche du logement.",
+          "foodAddress": "KLCC / autour du logement",
           "foodCost": "80 MYR pour 2",
           "drink": "Eau pour le vol.",
-          "note": "Le confort vient de la marge, pas d'une derniere visite."
+          "note": "L'interet de la nuit d'hotel est de pouvoir se poser avant le depart vers l'aeroport."
         },
         {
           "period": "Soir / diner",
-          "time": "19h30 -> 21h30",
-          "visit": "Repas aeroport et embarquement",
-          "address": "KLIA",
-          "metro": "Deja a l'aeroport.",
-          "taxi": "Sans objet une fois a KLIA.",
-          "visitCost": "Inclus dans marge aeroport",
-          "eat": "Repas simple a KLIA avant l'embarquement.",
+          "time": "22h00 -> 23h30",
+          "visit": "KL Sentral puis KLIA Ekspres",
+          "address": "KL Sentral -> KLIA",
+          "metro": "MRT ou Grab vers KL Sentral, puis KLIA Ekspres.",
+          "taxi": "Grab si vous avez les valises.",
+          "visitCost": "KLIA Ekspres: 110 MYR pour 2",
+          "eat": "Snack ou repas leger a KLIA avant l'embarquement.",
           "foodAddress": "KLIA",
           "foodCost": "80 MYR pour 2",
           "drink": "Eau pour le vol.",
-          "note": "Diner aeroport, controles, embarquement et nuit en vol."
+          "note": "Vol retour Kuala Lumpur -> Geneve le jeudi 3 septembre a 02h15."
         }
       ]
     },
@@ -3229,26 +3231,26 @@ export const tripData: TripData = {
       "dateLabel": "Jeudi 3 septembre 2026",
       "city": "Retour a Genève",
       "overnight": "Maison",
-      "highlight": "Atterrissage le 3 septembre, retour a Genève (récupération voiture) et journée blanche.",
-      "transportSummary": "Arrivee Suisse",
+      "highlight": "Atterrissage à Genève le 3 septembre à 14h35, récupération de la voiture et retour tranquille à la maison.",
+      "transportSummary": "Vol retour puis arrivée en Suisse à 14h35",
       "photo": "assets/photos/visits/geneve.jpg",
       "photoAlt": "Retour a Genève",
       "deepDive": "Le site garde ce jour pour respecter les vraies dates du retour et ne rien programmer d'important.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Arrivee et bagages",
+          "title": "Vol retour vers Genève",
           "bullets": [
-            "Formalites et recuperation des sacs.",
-            "Recuperation voiture au parking et retour maison tranquille."
+            "Correspondance et trajet vers Genève.",
+            "Atterrissage prévu à 14h35."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "Debrief a chaud",
+          "title": "Arrivee, bagages et retour maison",
           "bullets": [
-            "Ranger papiers et souvenirs fragiles.",
-            "Verifier les derniers debits."
+            "Formalités et récupération des sacs.",
+            "Récupération de la voiture au parking et retour maison tranquille."
           ]
         },
         {
@@ -3286,25 +3288,25 @@ export const tripData: TripData = {
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "Selon arrivee",
-          "visit": "Arrivee, bagages et retour maison",
-          "address": "Geneve / domicile",
-          "metro": "Selon votre retour local.",
-          "taxi": "Voiture ou navette depuis l'aéroport de Genève.",
+          "time": "En vol jusqu'a 14h35",
+          "visit": "Vol retour vers Geneve",
+          "address": "Correspondance -> Geneve",
+          "metro": "Sans objet pendant le vol.",
+          "taxi": "Sans objet pendant le vol.",
           "visitCost": "Budget clos",
-          "eat": "Repas simple a l'arrivee si besoin.",
-          "foodAddress": "Maison",
+          "eat": "Repas selon le service a bord.",
+          "foodAddress": "En vol",
           "foodCost": "0 MYR",
           "drink": "Hydratation et repos.",
-          "note": "La meilleure decision est de garder une vraie journee blanche."
+          "note": "Arrivee prevue a Geneve le jeudi 3 septembre a 14h35."
         },
         {
           "period": "Apres-midi",
-          "time": "Repos",
-          "visit": "Journee blanche",
-          "address": "Maison",
-          "metro": "Aucun.",
-          "taxi": "Aucun.",
+          "time": "14h35 -> retour maison",
+          "visit": "Bagages, voiture et retour maison",
+          "address": "Aeroport de Geneve -> domicile",
+          "metro": "Selon votre retour local.",
+          "taxi": "Voiture recuperee au parking de l'aeroport.",
           "visitCost": "Budget clos",
           "eat": "Rien a prevoir dans le budget Malaisie.",
           "foodAddress": "Maison",
