@@ -255,8 +255,8 @@ const daySlots = {
 function slotForPart(part: TripPlanPart, index: number) {
   const text = `${part.period} ${part.time} ${part.visit}`.toLowerCase();
   if (/soir|diner|dîner|dernier repas|dinner/.test(text)) return daySlots.dinner;
-  if (/midi|lunch|dejeuner|déjeuner|repas/.test(text)) return daySlots.lunch;
   if (/apres|après|plage|check-in|installation|cafe|pause|retour calme/.test(text)) return daySlots.afternoon;
+  if (/midi|lunch|dejeuner|déjeuner|repas/.test(text)) return daySlots.lunch;
   if (/matin|depart|départ|arrivee|arrivée|transfert|vol|ferry|train|ets/.test(text)) return daySlots.morning;
   return index === 0 ? daySlots.morning : index === 1 ? daySlots.afternoon : daySlots.dinner;
 }
@@ -266,8 +266,8 @@ function displaySlotForPart(part: TripPlanPart, index: number) {
   if (/diner|d..ner|dernier repas|dinner|sacs|billets|valises|cloture|preparation du lendemain|soir/.test(text)) {
     return daySlots.dinner;
   }
-  if (/\bmidi\b|lunch|dejeuner|repas/.test(text)) return daySlots.lunch;
   if (/apres|plage|check-in|installation|cafe|pause/.test(text)) return daySlots.afternoon;
+  if (/\bmidi\b|lunch|dejeuner|repas/.test(text)) return daySlots.lunch;
   if (/matin|depart|arrivee|transfert|vol|ferry|train|ets/.test(text)) return daySlots.morning;
   return index === 0 ? daySlots.morning : index === 1 ? daySlots.afternoon : daySlots.dinner;
 }

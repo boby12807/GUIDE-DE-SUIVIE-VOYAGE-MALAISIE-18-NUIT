@@ -756,7 +756,22 @@ export const tripData: TripData = {
     {
       "title": "Sungei Wang Plaza - site officiel",
       "url": "https://www.sungeiwang.com/",
-      "note": "Centre de Bukit Bintang avec boutiques indépendantes, ouvert de 10h00 à 22h00."
+      "note": "Centre de Bukit Bintang avec boutiques indépendantes, ouvert de 10h00 à 22h00; accès direct depuis la station Bukit Bintang."
+    },
+    {
+      "title": "Sungei Wang - QQ Outlet et boutiques d'occasion",
+      "url": "https://www.sungeiwang.com/shop/qq-outlet/",
+      "note": "QQ Outlet est au niveau Lower Ground, lot LG152; l'annuaire officiel confirme aussi REFASH au 1er étage et Thrifted! au 2e."
+    },
+    {
+      "title": "2nd Market - Sungei Wang",
+      "url": "https://2ndmarketmy.com/",
+      "note": "Boutique de vêtements d'occasion homme et femme au niveau 3, lots T084A et 079/080, ouverte de 10h00 à 22h00."
+    },
+    {
+      "title": "2nd STREET Malaysia - Sungei Wang",
+      "url": "https://www.2ndstreet.global/store/?pageID=2",
+      "note": "Boutique d'occasion au niveau 4, lot E50, ouverte de 10h00 à 22h00."
     },
     {
       "title": "Tourism Malaysia - shopping à Kuala Lumpur",
@@ -3099,59 +3114,69 @@ export const tripData: TripData = {
       "dateLabel": "Mercredi 2 septembre 2026",
       "city": "Shopping à Kuala Lumpur",
       "overnight": "The Colony By Infinitum KLCC - Aura Suites jusqu'au depart tardif vers KLIA",
-      "highlight": "Journee shopping economique: Jalan TAR, KWC Fashion Wholesale et Sungei Wang, puis retour a l'hotel avant le vol du 3 septembre a 02h15.",
-      "transportSummary": "Marche + Grab / monorail + KLIA Ekspres + vol",
+      "highlight": "Deux centres seulement: KWC pour les vêtements neufs à prix grossiste, puis Sungei Wang pour les outlets et l'occasion homme et femme.",
+      "transportSummary": "Grab + monorail ou Grab + KLIA Ekspres + vol",
       "photo": "assets/photos/visits/bukit-bintang.jpg",
       "photoAlt": "Boutiques et stands de shopping a Kuala Lumpur",
-      "deepDive": "Chercher les boutiques locales, les fins de serie et les prix de gros. Eviter Pavilion, Suria KLCC et les enseignes internationales: si le prix ressemble a celui de la France, ne pas acheter.",
+      "deepDive": "Parcours volontairement simple: comparer d'abord le neuf à KWC, puis terminer par cinq boutiques précises à Sungei Wang. Aucun détour par Pavilion ou Suria KLCC. Acheter seulement si le prix est nettement inférieur à la France et si la taille a été vérifiée.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Jalan TAR puis KWC Fashion Wholesale",
+          "title": "KWC: vêtements neufs homme et femme",
           "bullets": [
-            "Commencer par les boutiques locales de Jalan Tuanku Abdul Rahman.",
-            "Continuer a KWC pour comparer les vetements homme et femme aux prix grossistes."
+            "10h00-11h30: rayon homme, comparer au moins 3 boutiques avant d'acheter.",
+            "11h30-13h00: rayon femme, même méthode et demande du prix à l'unité."
+          ]
+        },
+        {
+          "label": "Repas du midi",
+          "title": "Pause à KWC et contrôle du budget",
+          "bullets": [
+            "Déjeuner sur place de 13h00 à 13h45.",
+            "Compter les achats et garder au moins la moitié du budget pour Sungei Wang."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "KWC puis Sungei Wang",
+          "title": "Sungei Wang: outlets et seconde main",
           "bullets": [
-            "Finir les achats principaux a KWC, puis aller a Sungei Wang seulement pour completer ce qui manque.",
-            "Retour a l'hotel vers 18h00 pour douche, valises et diner tot."
+            "Suivre les étages dans l'ordre: QQ Outlet, REFASH, Thrifted!, 2nd Market puis 2nd STREET.",
+            "Quitter le centre à 17h30 au plus tard et rentrer à l'hôtel en Grab."
           ]
         },
         {
           "label": "Soir",
-          "title": "Hotel puis route vers KLIA",
+          "title": "Tri des achats, valises puis KLIA",
           "bullets": [
-            "Quitter l'hotel vers 22h00.",
-            "KLIA Ekspres et arrivee environ 3h avant le vol."
+            "Peser et ranger les achats, se doucher, dîner et se reposer.",
+            "Quitter l'hôtel vers 21h45 pour rejoindre KL Sentral puis KLIA."
           ]
         }
       ],
       "access": {
-        "metro": "Jalan TAR est proche du logement; KWC est a 5 minutes a pied de Hang Tuah. KWC -> Sungei Wang par monorail Hang Tuah -> Bukit Bintang.",
-        "taxi": "Grab court entre Jalan TAR et KWC si les sacs deviennent lourds; retour Sungei Wang -> hotel en Grab."
+        "metro": "KWC est à environ 5 minutes à pied de Hang Tuah. Pour Sungei Wang: monorail Hang Tuah -> Bukit Bintang, puis accès par la passerelle.",
+        "taxi": "Option la plus simple avec les achats: Grab hôtel -> KWC, Grab KWC -> Sungei Wang, puis Grab Sungei Wang -> hôtel."
       },
       "tips": [
         "Point critique: verifier que The Colony couvre bien la nuit du 2 au 3 septembre, meme si vous quittez la chambre avant l'aube.",
-        "Plafonds conseilles: tee-shirt ou top 35 MYR, chemise ou blouse 60 MYR, pantalon, jean ou robe 90 MYR. Au-dessus, comparer avant d'acheter.",
-        "A KWC, demander le prix a l'unite et le prix pour 2 ou 3 pieces; certains tarifs de gros exigent plusieurs articles.",
-        "Essayer les vetements: les tailles asiatiques peuvent etre plus petites. Verifier tissu, coutures, fermeture et conditions d'echange.",
-        "Eviter les fausses marques et garder les recus. Fixer une enveloppe shopping avant de partir.",
+        "Budget séparé: maximum 200 MYR pour les vêtements homme et 200 MYR pour les vêtements femme.",
+        "Prix maximum: tee-shirt ou top 35 MYR; chemise ou blouse 60 MYR; pantalon, jean ou robe 90 MYR. Au-dessus, ne pas acheter sans nouvelle comparaison.",
+        "À KWC, montrer au vendeur: 'Retail price for one piece?' puis 'Best price for two?'. Certains prix de gros exigent plusieurs pièces.",
+        "Tailles asiatiques souvent plus petites: essayer ou mesurer largeur, taille et longueur. Vérifier tissu, coutures, fermeture et conditions d'échange.",
+        "À Sungei Wang, commencer au Lower Ground et monter étage par étage pour ne pas tourner en rond.",
+        "Éviter les fausses marques, garder les reçus et contrôler le poids des bagages avant de repartir.",
         "Garder veste legere et accessoires sommeil en cabine."
       ],
       "toiletStops": [
         {
           "label": "KWC Fashion Wholesale",
           "query": "toilets KWC Fashion Wholesale Kuala Lumpur",
-          "note": "Pause pratique pendant le principal bloc shopping."
+          "note": "Pause avant le déjeuner et le départ vers Sungei Wang."
         },
         {
           "label": "Sungei Wang Plaza",
           "query": "toilets Sungei Wang Plaza Kuala Lumpur",
-          "note": "Dernier repere avant le retour a l'hotel."
+          "note": "Repérer les sanitaires sur le plan du centre dès l'arrivée."
         },
         {
           "label": "KL Sentral avant KLIA Ekspres",
@@ -3181,8 +3206,13 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Plafond shopping conseille pour 2",
-          "myr": 400,
+          "label": "Plafond vêtements homme",
+          "myr": 200,
+          "kind": "estimate"
+        },
+        {
+          "label": "Plafond vêtements femme",
+          "myr": 200,
           "kind": "estimate"
         },
         {
@@ -3194,75 +3224,103 @@ export const tripData: TripData = {
       "visitCards": [
         {
           "name": "KWC Fashion Wholesale",
-          "timing": "10h00-19h00 le mercredi; prevoir 3h environ",
-          "ticket": "Entree libre; achats selon budget",
-          "gettingThere": "Grab ou station Hang Tuah puis 5 minutes a pied",
-          "whyGo": "Arret principal pour comparer vetements homme et femme dans plus de 800 boutiques de mode."
+          "timing": "10h00 -> 13h00",
+          "ticket": "Entrée libre; demander le prix retail à l'unité",
+          "gettingThere": "Grab depuis The Colony ou Hang Tuah puis 5 minutes à pied",
+          "whyGo": "Vêtements neufs à prix grossiste. Commencer par l'homme, puis la femme, et comparer 3 boutiques par catégorie."
         },
         {
-          "name": "Sungei Wang Plaza",
-          "timing": "10h00-22h00; visite courte en fin d'apres-midi",
-          "ticket": "Entree libre; ne garder que les boutiques independantes",
-          "gettingThere": "Monorail Hang Tuah -> Bukit Bintang",
-          "whyGo": "Bon complement pour les petits magasins, sans perdre du temps dans les enseignes internationales."
+          "name": "QQ Outlet - niveau Lower Ground, lot LG152",
+          "timing": "Premier arrêt à Sungei Wang",
+          "ticket": "Vêtements femme neufs; appliquer les plafonds de prix",
+          "gettingThere": "Entrer dans Sungei Wang puis descendre au Lower Ground, zone orange",
+          "whyGo": "Boutique femme clairement identifiée dans l'annuaire officiel, sans parcourir tout le centre."
+        },
+        {
+          "name": "REFASH puis Thrifted! - niveaux 1 et 2",
+          "timing": "14h30 -> 15h30",
+          "ticket": "Seconde main; inspecter l'état et essayer",
+          "gettingThere": "REFASH lot CHF-2 au 1er, puis Thrifted! lots S067/S068/S070 au 2e",
+          "whyGo": "Deux arrêts rapides pour les vêtements femme et unisexes d'occasion à prix potentiellement bas."
+        },
+        {
+          "name": "2nd Market - niveau 3",
+          "timing": "15h30 -> 16h15",
+          "ticket": "Seconde main homme et femme",
+          "gettingThere": "Niveau 3, lots T084A et 079/080",
+          "whyGo": "Sélection casual et streetwear pour les deux, utile pour tee-shirts, chemises, jeans et vestes légères."
+        },
+        {
+          "name": "2nd STREET - niveau 4, lot E50",
+          "timing": "16h15 -> 17h15",
+          "ticket": "Seconde main; comparer avec les achats déjà trouvés",
+          "gettingThere": "Monter directement au 4e étage, lot E50",
+          "whyGo": "Dernier magasin du parcours pour homme et femme; ne prendre que ce qui reste moins cher que KWC et la France."
         },
         {
           "name": "KL Sentral -> KLIA",
-          "timing": "3h avant le vol international",
+          "timing": "Départ de l'hôtel vers 21h45",
           "ticket": "RM55/adulte observe",
           "gettingThere": "KLIA Ekspres",
-          "whyGo": "Sortir proprement de Kuala Lumpur sans risque de circulation."
-        },
-        {
-          "name": "Vol retour",
-          "timing": "Soiree / nuit",
-          "ticket": "Inclus dans le budget long-courrier",
-          "gettingThere": "Terminal selon compagnie",
-          "whyGo": "Fermeture logistique du voyage."
+          "whyGo": "Arriver à KLIA avec environ 3 heures de marge avant le vol de 02h15."
         }
       ],
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "09h30 -> 12h00",
-          "visit": "Jalan TAR puis debut de KWC Fashion Wholesale",
-          "address": "Jalan Tuanku Abdul Rahman puis No. 2, Jalan Gelugor, Pudu",
-          "metro": "Marche depuis l'hotel vers Jalan TAR, puis monorail ou Grab vers Hang Tuah / KWC.",
-          "taxi": "Grab direct vers KWC apres Jalan TAR si vous avez deja des sacs.",
+          "time": "09h30 -> 13h00",
+          "visit": "KWC Fashion Wholesale - neuf homme puis femme",
+          "address": "No. 2, Jalan Gelugor, Pudu, 55200 Kuala Lumpur",
+          "metro": "Monorail jusqu'à Hang Tuah puis environ 5 minutes à pied.",
+          "taxi": "Option simple: Grab depuis The Colony vers KWC pour arriver à l'ouverture de 10h00.",
           "visitCost": "Libre",
-          "eat": "Petit-dej simple pres de Jalan TAR.",
-          "foodAddress": "Jalan TAR / Chow Kit",
+          "eat": "Petit-déjeuner avant le départ.",
+          "foodAddress": "Autour de The Colony",
           "foodCost": "45 MYR pour 2",
-          "drink": "Cafe et eau.",
-          "note": "Jalan TAR sert de premier comparatif; garder le plus gros du budget pour KWC."
+          "drink": "Eau à garder dans le sac.",
+          "note": "À l'accueil, demander les étages 'menswear, womenswear, retail single pieces'. Homme 10h00-11h30, femme 11h30-13h00. Comparer 3 boutiques avant chaque achat."
+        },
+        {
+          "period": "Repas du midi",
+          "time": "13h00 -> 13h45",
+          "visit": "Déjeuner et point budget à KWC",
+          "address": "KWC Fashion Wholesale, Pudu",
+          "metro": "Rester dans le centre commercial.",
+          "taxi": "Aucun trajet pendant la pause.",
+          "visitCost": "Libre",
+          "eat": "Déjeuner simple, puis compter les dépenses homme et femme séparément.",
+          "foodAddress": "KWC Fashion Wholesale",
+          "foodCost": "75 MYR pour 2",
+          "drink": "Eau ou boisson fraîche.",
+          "note": "Ne pas dépasser 100 MYR par personne à cette étape afin de garder du budget pour les boutiques d'occasion."
         },
         {
           "period": "Apres-midi",
-          "time": "12h00 -> 18h00",
-          "visit": "KWC Fashion Wholesale puis Sungei Wang Plaza",
-          "address": "KWC, Pudu -> Sungei Wang, Bukit Bintang",
-          "metro": "KWC est pres de Hang Tuah; monorail jusqu'a Bukit Bintang pour Sungei Wang.",
-          "taxi": "Grab retour vers The Colony vers 17h30-18h00 avec les achats.",
+          "time": "14h00 -> 17h30",
+          "visit": "Sungei Wang - parcours étage par étage",
+          "address": "Sungei Wang Plaza, Jalan Sultan Ismail, Bukit Bintang",
+          "metro": "Monorail Hang Tuah -> Bukit Bintang, puis passerelle directe vers Sungei Wang.",
+          "taxi": "Avec les sacs, Grab KWC -> Sungei Wang est plus simple; retour hôtel en Grab à 17h30.",
           "visitCost": "Libre",
-          "eat": "Dejeuner simple a KWC avant de reprendre les achats.",
-          "foodAddress": "KWC Fashion Wholesale",
-          "foodCost": "75 MYR pour 2",
-          "drink": "Eau; garder de l'energie pour le vol.",
-          "note": "Priorite a KWC. Sungei Wang est un complement, a supprimer si les achats sont deja termines ou si vous etes fatigues."
+          "eat": "Pas de second repas prévu; petite boisson si nécessaire.",
+          "foodAddress": "Sungei Wang Plaza",
+          "foodCost": "0 MYR hors boisson",
+          "drink": "Eau ou boisson fraîche.",
+          "note": "Ordre exact: QQ Outlet LG152 au Lower Ground; REFASH CHF-2 au 1er; Thrifted! S067/S068/S070 au 2e; 2nd Market T084A et 079/080 au 3e; 2nd STREET E50 au 4e. Départ impératif à 17h30."
         },
         {
           "period": "Soir / diner",
-          "time": "18h00 -> 23h30",
-          "visit": "Hotel, valises, diner puis KLIA Ekspres",
+          "time": "18h00 -> 23h15",
+          "visit": "Hôtel, tri des achats, dîner puis KLIA",
           "address": "The Colony -> KL Sentral -> KLIA",
-          "metro": "MRT ou Grab vers KL Sentral, puis KLIA Ekspres.",
-          "taxi": "Retour hotel en Grab, puis Grab vers KL Sentral avec les valises.",
+          "metro": "KLIA Ekspres depuis KL Sentral après récupération des valises.",
+          "taxi": "Grab Sungei Wang -> hôtel vers 17h30, puis Grab hôtel -> KL Sentral vers 21h45.",
           "visitCost": "KLIA Ekspres: 110 MYR pour 2",
-          "eat": "Diner tot pres de l'hotel, puis snack leger a KLIA si besoin.",
-          "foodAddress": "Autour de The Colony / KLIA",
+          "eat": "Dîner vers 19h00 près de l'hôtel, puis snack léger à KLIA si besoin.",
+          "foodAddress": "Autour de The Colony",
           "foodCost": "80 MYR pour 2",
           "drink": "Eau pour le vol.",
-          "note": "Fin du shopping a 18h00 maximum. Quitter l'hotel vers 22h00 pour le vol Kuala Lumpur -> Geneve du jeudi 3 septembre a 02h15."
+          "note": "18h00-19h00: trier et peser les achats. 19h00-20h00: dîner. 20h00-21h30: douche, valises et repos. Départ hôtel vers 21h45 pour le vol du jeudi 3 septembre à 02h15."
         }
       ]
     },
