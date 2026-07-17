@@ -13,7 +13,6 @@ import {
   Route,
   Sparkles,
   Sun,
-  Utensils,
   Wallet,
 } from "lucide-react";
 import { tripData } from "./data/malaysiaData";
@@ -207,50 +206,6 @@ function useLiveWeather() {
   }, []);
 
   return { weather, loading, error, refresh };
-}
-
-function cheapFoodIdeas(day: Day) {
-  const fromPlan = (day.ultraPlan || [])
-    .filter((part) => part.eat || part.foodAddress)
-    .map((part) => `${part.period}: ${part.eat} (${part.foodAddress}) - ${formatCostText(part.foodCost)}`);
-
-  const key = cityKey(day.city);
-  const cityIdeas: Record<string, string[]> = {
-    kuala: [
-      "Lot 10 Hutong (Bukit Bintang): food court climatise, viser noodles, rice plates ou char kway teow; enveloppe midi 45 a 55 MYR pour 2.",
-      "Nasi Lemak Wanjo (Kampung Baru): bon repere local pour nasi lemak, surtout sur une journee Chow Kit / Kampung Baru.",
-      "Petaling Street / Pasar Seni: kopitiam, chicken rice ou noodles avant Central Market, plus economique qu'un cafe touristique.",
-      "Jalan Alor Food Street: utile le soir si vous voulez du choix facile; viser satay, noodles, ailes de poulet et jus frais.",
-      "Malaysia Food Village by Yong Kee (Four Seasons / KLCC): option food court pratique si vous terminez autour de KLCC.",
-    ],
-    langkawi: [
-      "Tomato Nasi Kandar (Cenang): repere simple pour nasi kandar, roti et plats rapides sans exploser le budget.",
-      "Nasi Campur Kak Yan: bon choix midi si vous passez en voiture/scooter, assiettes locales et budget facile sous 55 MYR pour 2.",
-      "Amani Cafeteria / warungs de Cenang: nasi campur ou plat du jour local, meilleur rapport prix que les restos de plage.",
-      "Langkawi Night Market: choisir le marche du soir selon le jour et la zone; souvent le meilleur plan pour diner pas cher.",
-      "Wonderland Food Store (Kuah): option connue pour seafood simple, logique les jours Kuah / Eagle Square.",
-      "Warungs de Pantai Cenang / Pantai Tengah: preferer les petites tables locales aux restaurants de front de mer trop touristiques.",
-      "Pantai Cenang / Pantai Tengah: warungs et petites tables de plage avant les restaurants trop touristiques.",
-      "Pasar malam si le marché de nuit tombe dans la bonne zone: idéal pour dîner très bon marché à deux.",
-      "Kuah: souvent plus local et moins cher que le front de mer de Cenang.",
-    ],
-    ipoh: [
-      "Sin Yoon Loong ou Nam Heong: white coffee, kaya toast et oeufs mollets, parfait le matin dans Old Town.",
-      "Thean Chun + Kong Heng: kai si hor fun, chee cheong fun, caramel custard et popiah; tres logique les jours Old Town.",
-      "Yee Fatt Tea Shop ou Kedai Kopi Keng Nam: noodles, rice plates ou dim sum simple, bon cadrage midi autour de 45 a 55 MYR pour 2.",
-      "Lou Wong ou Onn Kee: bean sprout chicken si vous voulez un diner Ipoh classique sans chercher longtemps.",
-      "Funny Mountain Soya Beancurd: pause dessert rapide et pas chere apres une balade dans le centre.",
-      "Old Town: kopitiam, white coffee, toast kaya et nouilles, parfait pour petit budget.",
-      "Chercher les adresses de chicken rice ou dim sum tôt, avant la grosse chaleur et les files.",
-      "Éviter de multiplier les cafés design dans Concubine Lane si l'objectif est de rester économique.",
-    ],
-    transit: [
-      "En transit, manger simple à KL Sentral, KLIA ou autour de la gare plutôt que de rajouter un détour.",
-      "Prévoir eau et snack avant train/ferry/vol pour éviter les achats chers de dernière minute.",
-    ],
-  };
-
-  return [...fromPlan.slice(0, 4), ...(cityIdeas[key] || cityIdeas.transit)].slice(0, 7);
 }
 
 const daySlots = {
@@ -839,17 +794,6 @@ function DayCard({
             </article>
           ) : null}
 
-          <article className="rounded-2xl border border-amber-300/25 bg-amber-300/[0.08] p-4">
-            <div className="mb-3 flex items-center gap-2">
-              <Utensils className="h-5 w-5 text-amber-200" />
-              <h4 className="font-display text-xl font-bold text-white">Astuces et endroits pour manger pas cher</h4>
-            </div>
-            <ul className="grid gap-2 pl-4 text-sm leading-6 text-slate-300 md:grid-cols-2">
-              {cheapFoodIdeas(day).map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-          </article>
         </div>
       )}
     </article>
