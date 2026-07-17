@@ -694,9 +694,9 @@ export const tripData: TripData = {
       "note": "Repere officiel observe pour SkyGlide adulte a RM16."
     },
     {
-      "title": "Kilim Geoforest Park - official mangrove tour",
-      "url": "https://kilimgeoforestpark.com/kilim-mangrove-tour/",
-      "note": "Tour prive publie a RM400 par bateau pour 2h; budget corrige en consequence."
+      "title": "LangkawiGoTours - Kilim Geoforest mangrove tour",
+      "url": "https://www.langkawigotours.com/langkawi-mangrove-tour/",
+      "note": "Formule partagee 2h affichee a RM89/personne, minimum 2 personnes, disponible samedi et dimanche; budget retenu: RM178 pour 2."
     },
     {
       "title": "Kota Mahsuri - Plan a Visit",
@@ -1761,7 +1761,7 @@ export const tripData: TripData = {
           "label": "Milieu de journee",
           "title": "Tour mangroves Kilim",
           "bullets": [
-            "Compter 3 a 4h selon formule.",
+            "Compter 2h pour la formule partagee du week-end.",
             "Dejeuner simple apres le tour avant d'aller vers la plage."
           ]
         },
@@ -1799,8 +1799,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Tour mangroves Kilim prive 2h (bateau)",
-          "myr": 400,
+          "label": "Tour mangroves Kilim partage 2h",
+          "myr": 178,
           "kind": "official"
         },
         {
@@ -1822,8 +1822,8 @@ export const tripData: TripData = {
       "visitCards": [
         {
           "name": "Kilim Geoforest",
-          "timing": "3h a 4h",
-          "ticket": "Tour prive officiel 2h: RM400/bateau; partage possible moins cher selon agence",
+          "timing": "2h, depart partage week-end",
+          "ticket": "Formule partagee: RM89/personne, minimum 2 personnes, soit RM178 pour 2",
           "gettingThere": "Scooter, Grab ou taxi prive",
           "whyGo": "Voir une autre Langkawi: eau, mangroves et relief karstique."
         },
@@ -1850,12 +1850,12 @@ export const tripData: TripData = {
           "address": "Kilim Geoforest Park, Langkawi",
           "metro": "Sans objet.",
           "taxi": "Scooter, Grab ou taxi reserve.",
-          "visitCost": "Tour prive officiel 2h: 400 MYR par bateau",
+          "visitCost": "Tour partage 2h: 89 MYR par personne, soit 178 MYR pour 2",
           "eat": "Petit-dej avant depart.",
           "foodAddress": "Cenang / Kilim",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau, cafe, boisson froide.",
-          "note": "Le tour doit etre clair et pas trop charge."
+          "note": "Prendre la formule partagee de 2h le dimanche si elle est encore disponible; confirmer l'horaire, le point de depart, les arrets inclus et les frais a payer sur place."
         },
         {
           "period": "Apres-midi",
