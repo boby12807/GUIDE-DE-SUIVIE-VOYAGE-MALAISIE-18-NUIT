@@ -769,14 +769,22 @@ function DayCard({
                     <span className="text-xs font-bold text-slate-400">{part.displayTime}</span>
                   </div>
                   <h5 className="text-lg font-black text-white">{part.visit}</h5>
+                  <dl className="mt-3 grid gap-x-4 gap-y-2 border-y border-white/10 py-3 sm:grid-cols-2">
+                    <div>
+                      <dt className="text-[0.68rem] font-black uppercase tracking-widest text-amber-300">Activité / transport</dt>
+                      <dd className="mt-1 text-sm font-bold leading-6 text-slate-100">{formatCostText(part.visitCost)}</dd>
+                    </div>
+                    <div>
+                      <dt className="text-[0.68rem] font-black uppercase tracking-widest text-amber-300">Repas pour 2</dt>
+                      <dd className="mt-1 text-sm font-bold leading-6 text-slate-100">{formatCostText(part.foodCost)}</dd>
+                    </div>
+                  </dl>
                   <ul className="mt-3 grid gap-2 text-sm leading-6 text-slate-300">
                     <li><strong className="text-slate-100">Adresse :</strong> {part.address}</li>
                     <li><strong className="text-slate-100">Accès :</strong> {part.metro}</li>
                     <li><strong className="text-slate-100">Option confort :</strong> {part.taxi}</li>
                     <li><strong className="text-slate-100">Manger :</strong> {part.eat}</li>
-                    <li><strong className="text-slate-100">Budget visite :</strong> {formatCostText(part.visitCost)}</li>
-                    <li><strong className="text-slate-100">Budget repas :</strong> {formatCostText(part.foodCost)}</li>
-                    <li><strong className="text-slate-100">Note :</strong> {part.note}</li>
+                    <li className="border-l-2 border-amber-300/70 pl-3"><strong className="text-amber-200">Note :</strong> {part.note}</li>
                   </ul>
                   <a
                     className="mt-4 inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-black text-cyan-100"
@@ -791,12 +799,6 @@ function DayCard({
               ))}
             </div>
           </section>
-
-          <div className="grid gap-4 lg:grid-cols-3">
-            <InfoBox title="Visites importantes" lines={day.visitCards.map((visit) => `${visit.name} - ${visit.whyGo}`)} />
-            <InfoBox title="Astuces du jour" lines={day.tips} />
-            <InfoBox title="Budget utile" lines={day.budget.filter((item) => item.myr > 0).map((item) => `${item.label}: ${formatBoth(item.myr)}`)} />
-          </div>
 
           {day.toiletStops?.length ? (
             <article className="rounded-2xl border border-cyan-300/25 bg-cyan-300/[0.08] p-4">
