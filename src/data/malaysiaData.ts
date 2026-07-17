@@ -3097,7 +3097,7 @@ export const tripData: TripData = {
       "slug": "jour-17",
       "dayLabel": "Jour 17",
       "dateLabel": "Mercredi 2 septembre 2026",
-      "city": "Kuala Lumpur -> vol retour",
+      "city": "Shopping à Kuala Lumpur",
       "overnight": "The Colony By Infinitum KLCC - Aura Suites jusqu'au depart tardif vers KLIA",
       "highlight": "Journee shopping economique: Jalan TAR, KWC Fashion Wholesale et Sungei Wang, puis retour a l'hotel avant le vol du 3 septembre a 02h15.",
       "transportSummary": "Marche + Grab / monorail + KLIA Ekspres + vol",
