@@ -3186,7 +3186,7 @@ export const tripData: TripData = {
         {
           "label": "KLIA depart international",
           "query": "toilets near KLIA international departures",
-          "note": "Dernier repere fiable avant controles, repas et embarquement."
+          "note": "Dernier repere pratique a KLIA avant le vol."
         }
       ],
       "budget": [
