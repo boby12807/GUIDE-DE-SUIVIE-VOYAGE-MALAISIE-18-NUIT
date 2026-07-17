@@ -13,7 +13,10 @@ import {
   Route,
   Sparkles,
   Sun,
+  Sunrise,
+  Sunset,
   Wallet,
+  X,
 } from "lucide-react";
 import { tripData } from "./data/malaysiaData";
 import type { TripPlanPart } from "./data/malaysiaData";
@@ -29,6 +32,11 @@ type WeatherData = {
   wind: number;
   code: number;
   time: string;
+};
+
+type SunTimes = {
+  sunrise: string;
+  sunset: string;
 };
 
 type DisplayPart = TripPlanPart & {
@@ -79,7 +87,7 @@ function formatBothForTwo(myr: number) {
 }
 
 function isAccommodationBudget(label: string) {
-  return /nuit|hotel|hôtel|robertson|colony|horizon|rebungan|logement|airbnb/i.test(label);
+  return /nuit|hotel|hôtel|robertson|colony|horizon|rebungan|airbnb/i.test(label);
 }
 
 function dayActivityBudget(day: Day) {
@@ -110,6 +118,85 @@ function mapUrl(query: string) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
+function mapsDirectionsUrl(origin: string | undefined, destination: string) {
+  if (!origin) return mapUrl(destination);
+  return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&travelmode=transit`;
+}
+
+function stayAddressForDay(day: Day) {
+  const overnight = day.overnight.toLowerCase();
+  if (day.id >= 2 && day.id <= 4 && overnight.includes("robertson")) return "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur";
+  if (overnight.includes("colony")) return "The Colony By Infinitum KLCC - Aura Suites, Kuala Lumpur";
+  if (overnight.includes("rebungan")) return "Rebungan Resort Langkawi";
+  if (overnight.includes("horizon")) return "Horizon Inn Ipoh";
+  return undefined;
+}
+
+function routeOriginForPart(day: Day, parts: DisplayPart[], index: number) {
+  if (index > 0) return parts[index - 1].address || parts[index - 1].visit;
+  return stayAddressForDay(day);
+}
+
+function dateForDay(day: Day) {
+  const matches = [...day.dateLabel.matchAll(/(\d{1,2})\s+(aout|août|septembre)\s+(\d{4})/gi)];
+  const match = matches[matches.length - 1];
+  if (!match) return "";
+  const month = /septembre/i.test(match[2]) ? "09" : "08";
+  return `${match[3]}-${month}-${match[1].padStart(2, "0")}`;
+}
+
+function useSunTimes(day: Day) {
+  const [times, setTimes] = useState<SunTimes | null>(null);
+
+  useEffect(() => {
+    const location = weatherLocations.find((item) => item.label === weatherKeyForDay(day)) || weatherLocations[0];
+    const date = dateForDay(day);
+    if (!date) return;
+
+    const controller = new AbortController();
+    fetch(`https://api.sunrise-sunset.org/json?lat=${location.lat}&lng=${location.lon}&date=${date}&formatted=0`, {
+      signal: controller.signal,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status !== "OK") return;
+        const format = (value: string) =>
+          new Intl.DateTimeFormat("fr-FR", {
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+            timeZone: "Asia/Kuala_Lumpur",
+          }).format(new Date(value));
+        setTimes({ sunrise: format(data.results.sunrise), sunset: format(data.results.sunset) });
+      })
+      .catch(() => undefined);
+
+    return () => controller.abort();
+  }, [day]);
+
+  return times;
+}
+
+function fatigueForDay(day: Day, parts: DisplayPart[]) {
+  const text = `${day.highlight} ${day.transportSummary} ${parts.map((part) => part.visit).join(" ")}`.toLowerCase();
+  const demandingTravel = /vol|ferry|train|ets|transfert|aeroport|aéroport|mangrove|randonn/.test(text);
+  if (demandingTravel || parts.length >= 5) return { label: "Intense", color: "text-rose-200" };
+  if (parts.length >= 4 || /excursion|temple|cable|skycab/.test(text)) return { label: "Moyenne", color: "text-amber-200" };
+  return { label: "Tranquille", color: "text-emerald-200" };
+}
+
+function travelTimeToNext(day: Day, part: DisplayPart, nextPart?: DisplayPart) {
+  if (!nextPart) return null;
+  const text = `${part.metro} ${part.taxi} ${nextPart.address}`.toLowerCase();
+  if (/vol|aeroport|aéroport|ferry|train|ets/.test(text)) return "45 à 90 min selon l'embarquement";
+  if (part.address && nextPart.address && part.address === nextPart.address) return "5 à 10 min à pied";
+  const city = cityKey(day.city);
+  if (city === "kuala") return "15 à 30 min en MRT ou Grab";
+  if (city === "langkawi") return "15 à 25 min en Grab ou scooter";
+  if (city === "ipoh") return "10 à 20 min en Grab";
+  return "20 à 40 min selon la circulation";
+}
+
 function parseNumber(value: string) {
   return Number(value.replace(",", "."));
 }
@@ -117,7 +204,6 @@ function parseNumber(value: string) {
 function formatCostText(text?: string) {
   if (!text) return "A ajuster sur place";
 
-  let output = text;
   const alreadyForTwo = /pour\s*2/i.test(text);
   const adultMatch = text.match(/(?:RM|MYR)?\s*(\d+(?:[,.]\d+)?)\s*(?:MYR|RM)?\s*\/\s*(?:adulte|pers|personne)/i);
   const rangeAdultMatch = text.match(/(\d+(?:[,.]\d+)?)\s*(?:a|à|-)\s*(\d+(?:[,.]\d+)?)\s*MYR\s*\/\s*(?:adulte|pers|personne)/i);
@@ -128,29 +214,30 @@ function formatCostText(text?: string) {
   if (rangeAdultMatch) {
     const min = parseNumber(rangeAdultMatch[1]) * 2;
     const max = parseNumber(rangeAdultMatch[2]) * 2;
-    return `${text} - soit ${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`;
+    return `${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`;
   }
 
   if (adultMatch && !alreadyForTwo) {
-    return `${text} - soit ${formatBothForTwo(parseNumber(adultMatch[1]) * 2)}`;
+    return formatBothForTwo(parseNumber(adultMatch[1]) * 2);
   }
 
   if (rangeForTwoMatch) {
     const min = parseNumber(rangeForTwoMatch[1]);
     const max = parseNumber(rangeForTwoMatch[2]);
-    return `${text} - environ ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)}`;
+    return `${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`;
   }
 
   if (forTwoMatch) {
-    return `${text} - soit ${formatEurFromMyr(parseNumber(forTwoMatch[1]))}`;
+    return formatBothForTwo(parseNumber(forTwoMatch[1]));
   }
 
   if (simpleMyrMatch && !/libre|clos/i.test(text)) {
-    const value = parseNumber(simpleMyrMatch[1]);
-    output = alreadyForTwo ? `${text} - soit ${formatEurFromMyr(value)}` : `${text} - repere ${formatBothForTwo(value)}`;
+    return formatBothForTwo(parseNumber(simpleMyrMatch[1]));
   }
 
-  return output;
+  if (/libre|gratuit|clos/i.test(text)) return formatBothForTwo(0);
+
+  return text;
 }
 
 function weatherLabel(code: number) {
@@ -686,6 +773,23 @@ function DayCard({
 }) {
   const parts = buildDayParts(day);
   const contentRef = useRef<HTMLDivElement>(null);
+  const sunTimes = useSunTimes(day);
+  const fatigue = fatigueForDay(day, parts);
+  const [completedParts, setCompletedParts] = useState<Record<string, boolean>>(() => {
+    try {
+      return JSON.parse(localStorage.getItem("malaisie-activites-faites") || "{}");
+    } catch {
+      return {};
+    }
+  });
+
+  const toggleCompletedPart = (id: string) => {
+    setCompletedParts((current) => {
+      const next = { ...current, [id]: !current[id] };
+      localStorage.setItem("malaisie-activites-faites", JSON.stringify(next));
+      return next;
+    });
+  };
 
   const handleToggle = () => {
     const wasOpen = open;
@@ -718,24 +822,58 @@ function DayCard({
 
       {open && (
         <div className="space-y-5 border-t border-white/10 p-5">
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             <MiniFact icon={BedDouble} label="Nuit" value={day.overnight} />
             <MiniFact icon={Car} label="Transport" value={day.transportSummary} />
             <MiniFact icon={Euro} label="Total jour" value={formatBoth(dayTotal(day))} />
+            <MiniFact icon={Route} label="Niveau de fatigue" value={fatigue.label} valueClassName={fatigue.color} />
           </div>
+
+          <article className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-amber-300/20 bg-amber-300/[0.07] px-4 py-3 text-sm">
+            <span className="font-black text-amber-100">Soleil à {weatherKeyForDay(day)}</span>
+            {sunTimes ? (
+              <>
+                <span className="inline-flex items-center gap-2 text-slate-200"><Sunrise className="h-4 w-4 text-amber-300" /> Lever {sunTimes.sunrise}</span>
+                <span className="inline-flex items-center gap-2 text-slate-200"><Sunset className="h-4 w-4 text-orange-300" /> Coucher {sunTimes.sunset}</span>
+              </>
+            ) : (
+              <span className="text-slate-400">Chargement des horaires...</span>
+            )}
+          </article>
 
           <section className="rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.06] p-4">
             <h4 className="font-display mb-3 text-xl font-bold text-white">Déroulement de la journée</h4>
             <div className="grid gap-3 lg:grid-cols-2">
-              {parts.map((part, index) => (
-                <article key={`${part.displayPeriod}-${part.visit}-${index}`} className="rounded-xl border border-white/10 bg-slate-950/45 p-4">
+              {parts.map((part, index) => {
+                const activityId = `${day.slug}-${index}`;
+                const done = Boolean(completedParts[activityId]);
+                const nextTravel = travelTimeToNext(day, part, parts[index + 1]);
+                const routeOrigin = routeOriginForPart(day, parts, index);
+                return (
+                <article key={`${part.displayPeriod}-${part.visit}-${index}`} className={`rounded-xl border p-4 transition ${done ? "border-emerald-300/40 bg-emerald-950/30" : "border-white/10 bg-slate-950/45"}`}>
                   <div className="mb-2 flex items-center justify-between gap-3">
                     <span className="rounded-full bg-amber-300 px-3 py-1 text-[0.68rem] font-black uppercase tracking-widest text-slate-950">
                       {part.displayPeriod}
                     </span>
-                    <span className="text-xs font-bold text-slate-400">{part.displayTime}</span>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-bold text-slate-400">{part.displayTime}</span>
+                      <button
+                        type="button"
+                        onClick={() => toggleCompletedPart(activityId)}
+                        className={`inline-flex h-8 w-8 items-center justify-center rounded-lg border transition ${done ? "border-emerald-300 bg-emerald-300 text-slate-950" : "border-white/20 bg-white/5 text-slate-300 hover:border-emerald-300"}`}
+                        title={done ? "Activité faite — cliquer pour annuler" : "Marquer cette activité comme faite"}
+                        aria-label={done ? "Activité faite" : "Marquer comme faite"}
+                      >
+                        <X className="h-4 w-4" />
+                      </button>
+                    </div>
                   </div>
-                  <h5 className="text-lg font-black text-white">{part.visit}</h5>
+                  <div className="flex min-w-0 flex-col gap-2">
+                    <h5 className={`text-lg font-black leading-snug ${done ? "text-emerald-100 line-through decoration-emerald-300/70" : "text-white"}`}>{part.visit}</h5>
+                    <span className="inline-flex w-fit max-w-full rounded-lg border border-amber-300/30 bg-amber-300/10 px-3 py-2 text-xs font-black leading-5 text-amber-100">
+                      Pour 2 : {formatCostText(part.visitCost)}
+                    </span>
+                  </div>
                   <dl className="mt-3 grid gap-x-4 gap-y-2 border-y border-white/10 py-3 sm:grid-cols-2">
                     <div>
                       <dt className="text-[0.68rem] font-black uppercase tracking-widest text-amber-300">Activité / transport</dt>
@@ -753,46 +891,36 @@ function DayCard({
                     <li><strong className="text-slate-100">Manger :</strong> {part.eat}</li>
                     <li className="border-l-2 border-amber-300/70 pl-3"><strong className="text-amber-200">Note :</strong> {part.note}</li>
                   </ul>
-                  <a
-                    className="mt-4 inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-black text-cyan-100"
-                    href={mapUrl(part.address || part.visit)}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <MapPin className="h-4 w-4" />
-                    Ouvrir dans Maps
-                  </a>
+                  {nextTravel && (
+                    <p className="mt-3 rounded-lg border border-violet-300/20 bg-violet-300/10 px-3 py-2 text-xs font-bold text-violet-100">
+                      Vers l'activité suivante : environ {nextTravel}
+                    </p>
+                  )}
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <a
+                      className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-black text-cyan-100 transition hover:bg-cyan-300/20"
+                      href={mapsDirectionsUrl(routeOrigin, part.address || part.visit)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <MapPin className="h-4 w-4" />
+                      Maps visite
+                    </a>
+                    <a
+                      className="inline-flex items-center gap-2 rounded-xl border border-violet-300/30 bg-violet-300/10 px-3 py-2 text-xs font-black text-violet-100 transition hover:bg-violet-300/20"
+                      href={mapUrl(`toilettes publiques près de ${part.address || part.visit}`)}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <MapPin className="h-4 w-4" />
+                      Maps toilettes
+                    </a>
+                  </div>
                 </article>
-              ))}
+                );
+              })}
             </div>
           </section>
-
-          {day.toiletStops?.length ? (
-            <article className="rounded-2xl border border-cyan-300/25 bg-cyan-300/[0.08] p-4">
-              <div className="mb-3 flex items-center gap-2">
-                <MapPin className="h-5 w-5 text-cyan-200" />
-                <h4 className="font-display text-xl font-bold text-white">Toilettes proches</h4>
-              </div>
-              <div className="grid gap-3 md:grid-cols-2">
-                {day.toiletStops.map((stop) => (
-                  <a
-                    key={`${day.slug}-${stop.label}`}
-                    className="rounded-xl border border-white/10 bg-slate-950/45 p-4 transition hover:border-cyan-300/50 hover:bg-cyan-300/10"
-                    href={mapUrl(stop.query)}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <span className="flex items-center gap-2 text-sm font-black text-cyan-100">
-                      <MapPin className="h-4 w-4" />
-                      {stop.label}
-                    </span>
-                    <span className="mt-2 block text-sm leading-6 text-slate-300">{stop.note}</span>
-                    <span className="mt-3 inline-flex text-xs font-black uppercase tracking-widest text-cyan-200">Ouvrir Maps</span>
-                  </a>
-                ))}
-              </div>
-            </article>
-          ) : null}
 
         </div>
       )}
@@ -800,13 +928,13 @@ function DayCard({
   );
 }
 
-function MiniFact({ icon: Icon, label, value }: { icon: typeof BedDouble; label: string; value: string }) {
+function MiniFact({ icon: Icon, label, value, valueClassName = "text-slate-100" }: { icon: typeof BedDouble; label: string; value: string; valueClassName?: string }) {
   return (
     <div className="flex gap-3 rounded-xl border border-white/10 bg-slate-950/45 p-4">
       <Icon className="mt-1 h-5 w-5 shrink-0 text-amber-300" />
       <div>
         <span className="text-[0.68rem] font-black uppercase tracking-widest text-slate-500">{label}</span>
-        <strong className="block text-sm leading-6 text-slate-100">{value}</strong>
+        <strong className={`block text-sm leading-6 ${valueClassName}`}>{value}</strong>
       </div>
     </div>
   );
