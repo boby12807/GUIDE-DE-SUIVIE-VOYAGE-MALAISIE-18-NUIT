@@ -809,8 +809,8 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Vol au départ de Genève puis arrivée à Kuala Lumpur en fin d'après-midi, avec installation douce.",
       "transportSummary": "Vol international (Genève) + KLIA Ekspres + Grab",
-      "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
-      "photoAlt": "Skyline de Kuala Lumpur au debut du voyage",
+      "photo": "assets/photos/days/jour-01-arrivee-kuala-lumpur.png",
+      "photoAlt": "Skyline de Kuala Lumpur au crépuscule pour l'arrivée du voyage",
       "deepDive": "Ce jour sert de sas: sortir proprement de l'aeroport, recuperer une SIM, manger simple et poser les sacs sans ajouter de grosse visite.",
       "segments": [
         {
@@ -963,8 +963,8 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Foret urbaine et jardins Perdana pour lancer KL sans se disperser ni payer une visite trop chere.",
       "transportSummary": "Monorail/MRT + Grab",
-      "photo": "assets/photos/visits/kampung-baru.jpg",
-      "photoAlt": "Vegetation luxuriante au KL Forest Eco Park et jardins Perdana",
+      "photo": "assets/photos/days/jour-02-foret-urbaine-kl.png",
+      "photoAlt": "Passerelle au cœur de la végétation luxuriante du KL Forest Eco Park",
       "deepDive": "Beaucoup de vert, une visite forte et un temple photogenique: la journee installe KL tout en restant simple.",
       "segments": [
         {
@@ -1126,8 +1126,8 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "KL Tower le matin, Aquaria KLCC au frais l'apres-midi, puis Petronas / KLCC et spectacle Lake Symphony le soir.",
       "transportSummary": "Monorail/LRT + marche KLCC + Grab ponctuel",
-      "photo": "assets/photos/visits/bukit-bintang.jpg",
-      "photoAlt": "Aquarium et poissons a Aquaria KLCC",
+      "photo": "assets/photos/days/jour-03-petronas-lake-symphony.png",
+      "photoAlt": "Tours Petronas et fontaines de Lake Symphony au crépuscule",
       "deepDive": "Journee construite avec les classiques de la video: vue haute sur la ville, aquarium, KLCC/Petronas et spectacle des jets d'eau Lake Symphony. Tout reste proche du logement pour eviter les grands trajets deux jours de suite.",
       "segments": [
         {
@@ -1307,8 +1307,8 @@ export const tripData: TripData = {
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Batu Caves le matin, puis Chinatown / Petaling Street et Central Market en apres-midi souple.",
       "transportSummary": "KTM/MRT + marche + Grab ponctuel",
-      "photo": "assets/photos/thean-hou.jpg",
-      "photoAlt": "Escaliers colores de Batu Caves",
+      "photo": "assets/photos/days/jour-04-batu-caves.png",
+      "photoAlt": "Statue dorée et escaliers colorés de Batu Caves",
       "deepDive": "Cette journee garde Batu Caves en premier, car c'est le deplacement le plus long et la chaleur monte vite. L'apres-midi revient vers Chinatown, Petaling Street et Central Market: plus facile, plus urbain, et simple a couper si vous devez preparer Langkawi.",
       "segments": [
         {
@@ -1466,8 +1466,8 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Vol court vers Langkawi, depot des affaires a l'hotel, recuperation du scooter, puis premiere plage.",
       "transportSummary": "Grab + vol AirAsia + scooter/Grab",
-      "photo": "assets/photos/visits/eagle-square.jpg",
-      "photoAlt": "Bord de plage a Pantai Cenang",
+      "photo": "assets/photos/days/jour-05-plage-langkawi.png",
+      "photoAlt": "Plage tropicale de Langkawi au coucher du soleil",
       "deepDive": "Le changement de rythme doit rester respirable: aeroport, depot des affaires au Rebungan Resort Langkawi, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
       "segments": [
         {
@@ -1601,8 +1601,8 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "SkyCab, SkyBridge, Telaga Tujuh et boucle scooter cote ouest: une vraie journee Langkawi.",
       "transportSummary": "Scooter toute la journee",
-      "photo": "assets/photos/visits/eagle-square.jpg",
-      "photoAlt": "Relief et ciel de Langkawi",
+      "photo": "assets/photos/days/jour-06-skybridge-langkawi.png",
+      "photoAlt": "SkyBridge et téléphérique au-dessus des reliefs de Langkawi",
       "deepDive": "Avec le scooter deja recupere, cette journee devient une boucle complete mais logique: SkyCab/SkyBridge le matin, cascade Telaga Tujuh juste a cote, puis Pantai Kok ou Telaga Harbour avant un retour simple vers Cenang.",
       "segments": [
         {
@@ -1745,8 +1745,8 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Kilim Geoforest le matin, plage a Tanjung Rhu l'apres-midi, puis Kuah / Eagle Square en option du soir.",
       "transportSummary": "Scooter + bateau",
-      "photo": "assets/photos/visits/eagle-square.jpg",
-      "photoAlt": "Plage tropicale a Langkawi",
+      "photo": "assets/photos/days/jour-07-kilim-geoforest.png",
+      "photoAlt": "Bateau au milieu des mangroves et falaises de Kilim Geoforest",
       "deepDive": "La journee garde le gros morceau nature le matin avec Kilim Geoforest, puis bascule en recuperation plage. Avec le scooter, Tanjung Rhu est logique apres Kilim; Kuah et Eagle Square peuvent se faire en debut de soiree seulement si vous avez encore l'energie de rouler.",
       "segments": [
         {
@@ -1896,8 +1896,8 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Laman Padi, Kota Mahsuri et temps plage: culture locale sans surcharger.",
       "transportSummary": "Scooter ou Grab",
-      "photo": "assets/photos/visits/eagle-square.jpg",
-      "photoAlt": "Ambiance insulaire a Langkawi",
+      "photo": "assets/photos/days/jour-08-rizieres-langkawi.png",
+      "photoAlt": "Rizières et maison traditionnelle dans la campagne de Langkawi",
       "deepDive": "Cette journee ajoute une touche locale a Langkawi sans redevenir une course aux attractions.",
       "segments": [
         {
@@ -2016,8 +2016,8 @@ export const tripData: TripData = {
       "overnight": "Rebungan Resort Langkawi",
       "highlight": "Craft Complex, route nord et sacs: derniere journee Langkawi sans sprint.",
       "transportSummary": "Scooter ou taxi prive",
-      "photo": "assets/photos/visits/eagle-square.jpg",
-      "photoAlt": "Repere de Langkawi avant la bascule",
+      "photo": "assets/photos/days/jour-09-artisanat-langkawi.png",
+      "photoAlt": "Pavillon d'artisanat traditionnel dans un jardin tropical de Langkawi",
       "deepDive": "Une derniere boucle d'ile, puis retour avec de l'avance pour verifier ferry, ETS, passeports et sacs.",
       "segments": [
         {
@@ -2151,8 +2151,8 @@ export const tripData: TripData = {
       "overnight": "The Horizon Ipoh By Iconique Espace",
       "highlight": "Bascule ferry + taxi vers Arau + ETS vers Ipoh, avec soiree douce en Old Town.",
       "transportSummary": "Grab + ferry + taxi/Grab + ETS",
-      "photo": "assets/photos/visits/tasik-cermin.jpg",
-      "photoAlt": "Foret et falaises calcaires autour de Tasik Cermin a Ipoh",
+      "photo": "assets/photos/days/jour-10-train-vers-ipoh.png",
+      "photoAlt": "Train ETS traversant les paysages calcaires en direction d'Ipoh",
       "deepDive": "C'est le jour logistique le plus sensible. Il faut verifier ferry et ETS ensemble, puis garder la soiree Ipoh tres simple.",
       "segments": [
         {
@@ -2278,8 +2278,8 @@ export const tripData: TripData = {
       "overnight": "The Horizon Ipoh By Iconique Espace",
       "highlight": "Tasik Cermin, un seul temple a Gunung Rapat, puis retour Old Town.",
       "transportSummary": "Grab uniquement",
-      "photo": "assets/photos/visits/tasik-cermin.jpg",
-      "photoAlt": "Tasik Cermin et ses falaises calcaires",
+      "photo": "assets/photos/days/jour-11-tasik-cermin.png",
+      "photoAlt": "Reflets des falaises tropicales sur le lac Tasik Cermin",
       "deepDive": "Un secteur sud, un lac fort, un temple maximum, puis retour definitif au centre: c'est clair et sans repetition.",
       "segments": [
         {
@@ -2417,8 +2417,8 @@ export const tripData: TripData = {
       "overnight": "The Horizon Ipoh By Iconique Espace",
       "highlight": "Gua Tempurung le matin; Kellie's Castle seulement si le timing reste bon, sinon retour Ipoh.",
       "transportSummary": "Grab longue distance",
-      "photo": "assets/photos/visits/kellies-castle.jpg",
-      "photoAlt": "Facade de Kellie's Castle",
+      "photo": "assets/photos/days/jour-12-gua-tempurung.png",
+      "photoAlt": "Formations rocheuses et passerelle éclairée dans Gua Tempurung",
       "deepDive": "La seule vraie journee exterieure d'Ipoh: elle marche si vous anticipez le retour Grab et refusez un troisieme stop.",
       "segments": [
         {
@@ -2542,8 +2542,8 @@ export const tripData: TripData = {
       "overnight": "The Horizon Ipoh By Iconique Espace",
       "highlight": "Birch Memorial, Han Chin si envie, Kong Heng et Gunung Lang en option.",
       "transportSummary": "Marche + Grab court",
-      "photo": "assets/photos/visits/birch-clock-tower.jpg",
-      "photoAlt": "Birch Memorial Clock Tower a Ipoh",
+      "photo": "assets/photos/days/jour-13-patrimoine-ipoh.png",
+      "photoAlt": "Tour historique et architecture coloniale dans le centre d'Ipoh",
       "deepDive": "Finir Ipoh par le centre et une option nature courte, sans relancer une grosse sortie.",
       "segments": [
         {
