@@ -64,7 +64,6 @@ export type TripData = {
   citySummaries: Record<string, unknown>[];
   accommodations: Record<string, any>[];
   media: Record<string, any>;
-  bookingChecklist: string[];
   practicalBlocks: Record<string, any>[];
   ultraBriefing: Record<string, any>[];
   stageDeepDives: Record<string, any>[];
@@ -392,21 +391,6 @@ export const tripData: TripData = {
       }
     ]
   },
-  "bookingChecklist": [
-    "Vols long-courriers Genève -> Kuala Lumpur: 1 489 EUR pour 2 (environ 6 940 MYR) via Saudi Arabian Airlines + Parking et péage (Genève): 150 EUR (699 MYR).",
-    "Vérifier les vols Saudia et les correspondances dans l'application à J-7, J-2 et le jour du départ; ne partir vers l'aéroport que si les segments sont confirmés.",
-    "Airbnb The Robertson, 2 Jalan Robertson, hôte Tiang Sin, réservé pour les 4 premières nuits (225 EUR, départ le 21 août à 12h00) + The Colony By Infinitum KLCC noté pour les 2 premières nuits finales (100 EUR); ajouter ou confirmer la nuit du 2 au 3 septembre pour le vol de 02h15.",
-    "Rebungan Resort Langkawi (Chambre Lits Jumeaux de Luxe) réservé pour le 21 -> 26 aout: 159 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
-    "The Horizon Ipoh By Iconique Espace (Studio) réservé pour le 26 -> 31 aout: 212 EUR pour 5 nuits (taxes incluses, annulation gratuite).",
-    "Vol AirAsia Kuala Lumpur -> Langkawi avec bagages inclus dans le prix final, pas seulement le tarif d'appel.",
-    "Ferry Kuah -> Kuala Perlis et ETS Arau -> Ipoh a reverifier ensemble avant achat.",
-    "Train ETS Ipoh -> Kuala Lumpur a reserver des que les billets ouvrent.",
-    "Hebergements en quartiers valides, avec point critique a verifier: chambre disponible la nuit du 2 au 3 septembre avant le vol de 02h15.",
-    "Scooter seulement avec permis moto catégorie A, permis international et assurance couvrant le deux-roues; sinon prévoir Grab/taxi. Vérifier casque, freins, pneus et faire des photos au départ.",
-    "Le 25 aout est un jour ferie national et le 31 aout est Hari Merdeka: anticiper fermetures, affluence et billets ETS.",
-    "Passeports en bon état et valables au moins 6 mois après la fin du séjour, billets retour et confirmations de logement accessibles hors ligne.",
-    "Prevoir un plan pluie pour Langkawi: SkyCab et sorties bateau dependent beaucoup de la meteo."
-  ],
   "practicalBlocks": [
     {
       "title": "Transports sur place",
