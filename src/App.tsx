@@ -3,10 +3,8 @@ import {
   BedDouble,
   Calendar,
   Car,
-  CheckCircle2,
   ChevronDown,
   ChevronUp,
-  ClipboardCheck,
   CloudSun,
   Euro,
   MapPin,
@@ -21,7 +19,7 @@ import {
 import { tripData } from "./data/malaysiaData";
 import type { TripPlanPart } from "./data/malaysiaData";
 
-type Section = "itinerary" | "budget" | "hotels" | "checklist";
+type Section = "itinerary" | "budget" | "hotels";
 type Day = (typeof tripData.days)[number];
 type Accommodation = (typeof tripData.accommodations)[number];
 type WeatherData = {
@@ -49,7 +47,6 @@ const sectionItems: { id: Section; label: string; icon: typeof Route }[] = [
   { id: "itinerary", label: "Journees", icon: Calendar },
   { id: "budget", label: "Budget", icon: Wallet },
   { id: "hotels", label: "Hotels", icon: BedDouble },
-  { id: "checklist", label: "Checklist", icon: ClipboardCheck },
 ];
 
 const cityFilters = [
@@ -464,33 +461,11 @@ function classifyBudget(label: string) {
   return "Marges";
 }
 
-function useLocalChecklist(items: readonly string[]) {
-  const [checked, setChecked] = useState<Record<string, boolean>>(() => {
-    try {
-      return JSON.parse(localStorage.getItem("malaisie-checklist") || "{}");
-    } catch {
-      return {};
-    }
-  });
-
-  const toggle = (id: string) => {
-    setChecked((current) => {
-      const next = { ...current, [id]: !current[id] };
-      localStorage.setItem("malaisie-checklist", JSON.stringify(next));
-      return next;
-    });
-  };
-
-  const count = items.filter((_, index) => checked[`item-${index}`]).length;
-  return { checked, toggle, count };
-}
-
 export default function App() {
   const [activeSection, setActiveSection] = useState<Section>("itinerary");
   const [filter, setFilter] = useState("all");
   const [expandedDay, setExpandedDay] = useState<number>(1);
   const [sunMode, setSunMode] = useState(false);
-  const checklist = useLocalChecklist(tripData.bookingChecklist);
   const liveWeather = useLiveWeather();
 
   const stats = useMemo(() => {
@@ -518,8 +493,6 @@ export default function App() {
     if (filter === "all") return tripData.days;
     return tripData.days.filter((day) => cityKey(day.city) === filter);
   }, [filter]);
-
-  const progress = Math.round((checklist.count / tripData.bookingChecklist.length) * 100);
 
   return (
     <main className={sunMode ? "sun-mode min-h-screen bg-white text-slate-950" : "min-h-screen text-slate-100"}>
@@ -582,7 +555,7 @@ export default function App() {
             {tripData.meta.title} · {tripData.meta.travelWindow}
           </h2>
           <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
-            Parcours, journées détaillées, budget, hôtels et checklist sont regroupés dans une
+            Parcours, journées détaillées, budget et hôtels sont regroupés dans une
             interface unique. Le déroulement de chaque journée reprend les données déjà préparées
             pour Kuala Lumpur, Langkawi, Ipoh et les transits.
           </p>
@@ -616,7 +589,6 @@ export default function App() {
         )}
         {activeSection === "budget" && <Budget stats={stats} />}
         {activeSection === "hotels" && <Hotels accommodations={tripData.accommodations} />}
-        {activeSection === "checklist" && <Checklist checked={checklist.checked} toggle={checklist.toggle} count={checklist.count} progress={progress} />}
       </section>
 
       <footer className="border-t border-white/10 px-4 py-8 text-sm text-slate-400">
@@ -1064,56 +1036,6 @@ function Hotels({ accommodations }: { accommodations: readonly Accommodation[] }
             </div>
           </article>
         ))}
-      </div>
-    </div>
-  );
-}
-
-function Checklist({
-  checked,
-  toggle,
-  count,
-  progress,
-}: {
-  checked: Record<string, boolean>;
-  toggle: (id: string) => void;
-  count: number;
-  progress: number;
-}) {
-  return (
-    <div className="space-y-5">
-      <PanelTitle eyebrow="Préparation" title="À réserver, vérifier et préparer" text="Les coches sont sauvegardées sur cet ordinateur." />
-      <article className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
-        <div className="mb-4 flex flex-col justify-between gap-3 md:flex-row md:items-center">
-          <div>
-            <p className="text-xs font-black uppercase tracking-widest text-emerald-300">Progression globale</p>
-            <h3 className="font-display text-3xl font-bold text-white">{count} / {tripData.bookingChecklist.length}</h3>
-          </div>
-          <strong className="text-amber-200">{progress}% accomplis</strong>
-        </div>
-        <div className="h-3 overflow-hidden rounded-full bg-white/10">
-          <div className="h-full rounded-full bg-emerald-300" style={{ width: `${progress}%` }} />
-        </div>
-      </article>
-
-      <div className="grid gap-3 md:grid-cols-2">
-        {tripData.bookingChecklist.map((item, index) => {
-          const id = `item-${index}`;
-          const done = checked[id];
-          return (
-            <button
-              key={item}
-              type="button"
-              onClick={() => toggle(id)}
-              className={`flex items-start gap-3 rounded-2xl border p-4 text-left transition ${
-                done ? "border-emerald-300/50 bg-emerald-300/10" : "border-white/10 bg-white/[0.06]"
-              }`}
-            >
-              <CheckCircle2 className={`mt-0.5 h-5 w-5 shrink-0 ${done ? "text-emerald-300" : "text-slate-500"}`} />
-              <span className={`text-sm leading-6 ${done ? "text-slate-400 line-through" : "text-slate-200"}`}>{item}</span>
-            </button>
-          );
-        })}
       </div>
     </div>
   );
