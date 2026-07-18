@@ -2688,8 +2688,8 @@ export const tripData: TripData = {
       "overnight": "The Horizon Ipoh By Iconique Espace",
       "highlight": "Journee ajoutee a Ipoh: marche du dimanche, cafes, heritage et vraie respiration avant l'ETS.",
       "transportSummary": "Marche + Grab court",
-      "photo": "assets/photos/visits/tasik-cermin.jpg",
-      "photoAlt": "Foret et falaises calcaires autour de Tasik Cermin a Ipoh",
+      "photo": "assets/photos/days/jour-14-marche-ipoh.png",
+      "photoAlt": "Marché matinal et façades historiques dans les rues d'Ipoh",
       "deepDive": "Cette journee supplementaire enleve de la pression a la fin du voyage: Ipoh respire mieux, et KL final reste plus court mais plus propre.",
       "segments": [
         {
@@ -2829,8 +2829,8 @@ export const tripData: TripData = {
       "overnight": "The Colony By Infinitum KLCC - Aura Suites",
       "highlight": "Retour simple vers Kuala Lumpur en ETS, installation à l'hôtel The Colony KLCC pour fermer le séjour et soirée très légère.",
       "transportSummary": "Grab + ETS + Grab",
-      "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
-      "photoAlt": "Retour sur Kuala Lumpur",
+      "photo": "assets/photos/days/jour-15-retour-kuala-lumpur.png",
+      "photoAlt": "Train ETS arrivant à Kuala Lumpur devant la skyline au coucher du soleil",
       "deepDive": "Le 31 aout devient la bascule Ipoh -> KL: on garde le benefice du jour ajoute a Ipoh et on reduit Kuala Lumpur final sans fragiliser le retour.",
       "segments": [
         {
@@ -2967,8 +2967,8 @@ export const tripData: TripData = {
       "overnight": "The Colony By Infinitum KLCC - Aura Suites",
       "highlight": "Merdeka Square, Masjid Negara et Islamic Arts Museum pour une boucle patrimoine claire.",
       "transportSummary": "Metro + marche + Grab ponctuel",
-      "photo": "assets/photos/visits/masjid-negara.jpg",
-      "photoAlt": "Architecture de la Mosquee nationale",
+      "photo": "assets/photos/days/jour-16-masjid-negara.png",
+      "photoAlt": "Mosquée nationale de Malaisie et son bassin au soleil du matin",
       "deepDive": "Derniere vraie journee patrimoine a KL: une seule grande boucle suffit, sans ajouter un deuxieme musee.",
       "segments": [
         {
@@ -3116,8 +3116,8 @@ export const tripData: TripData = {
       "overnight": "The Colony By Infinitum KLCC - Aura Suites",
       "highlight": "Deux centres seulement: KWC pour les vêtements neufs à prix grossiste, puis Sungei Wang pour les outlets et l'occasion homme et femme.",
       "transportSummary": "Grab + monorail pour le parcours shopping",
-      "photo": "assets/photos/visits/bukit-bintang.jpg",
-      "photoAlt": "Boutiques et stands de shopping a Kuala Lumpur",
+      "photo": "assets/photos/days/jour-17-shopping-kuala-lumpur.png",
+      "photoAlt": "Galerie commerçante et boutiques de vêtements à Kuala Lumpur",
       "deepDive": "Parcours volontairement simple: comparer d'abord le neuf à KWC, puis terminer par cinq boutiques précises à Sungei Wang. Aucun détour par Pavilion ou Suria KLCC. Acheter seulement si le prix est nettement inférieur à la France et si la taille a été vérifiée.",
       "segments": [
         {
@@ -3306,8 +3306,8 @@ export const tripData: TripData = {
       "overnight": "Maison",
       "highlight": "Départ de l'hôtel le 2 septembre à 21h45, KLIA Ekspres, vol à 02h15 puis atterrissage à Genève le 3 septembre à 14h35.",
       "transportSummary": "Grab + KLIA Ekspres + vol retour + voiture",
-      "photo": "assets/photos/visits/geneve.jpg",
-      "photoAlt": "Retour a Genève",
+      "photo": "assets/photos/days/jour-18-retour-geneve.png",
+      "photoAlt": "Avion approchant Genève au lever du soleil devant les Alpes",
       "deepDive": "Le site garde ce jour pour respecter les vraies dates du retour et ne rien programmer d'important.",
       "segments": [
         {
