@@ -128,9 +128,9 @@ export const tripData: TripData = {
       "name": "Langkawi",
       "nights": "5 nuits",
       "vibe": "Bloc ile actif: plage, cable car, mangroves, artisanat et routes faciles, avec une marge meteo assumee.",
-      "stay": "Rebungan Resort Langkawi du 21 au 26 aout 2026, base ile pour les 5 nuits.",
+      "stay": "Airbnb Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang, du 21 au 26 aout 2026, base ile pour les 5 nuits.",
       "move": "Scooter uniquement avec permis moto valable, permis international et assurance confirmée; sinon Grab et taxi privé.",
-      "budgetHint": "Rebungan Resort Langkawi: 159 EUR pour 5 nuits, soit 31.8 EUR / nuit et environ 148 MYR / nuit.",
+      "budgetHint": "Airbnb Assana Serviced Suites: 364,69 EUR payes pour 5 nuits, soit 72,94 EUR / nuit et environ 339 MYR / nuit.",
       "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Plage de Langkawi et palmiers"
     },
@@ -155,6 +155,7 @@ export const tripData: TripData = {
       "nights": "4 nuits",
       "price": "225 EUR au total",
       "priceMyr": "Environ 1 048 MYR au total, soit 262 MYR / nuit",
+      "budgetMyr": 1048,
       "link": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Vue sur la skyline de Kuala Lumpur depuis une piscine en hauteur",
@@ -191,6 +192,7 @@ export const tripData: TripData = {
       "nights": "3 nuits",
       "price": "100 EUR pour les 2 nuits confirmées + nuit du 2 au 3 septembre à ajouter/confirmer",
       "priceMyr": "Environ 464 MYR pour les 2 nuits confirmées; total à recalculer avec la nuit du 2 au 3 septembre",
+      "budgetMyr": 464,
       "link": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Piscine à débordement sur le toit avec vue spectaculaire sur les tours Petronas",
@@ -217,32 +219,33 @@ export const tripData: TripData = {
       ]
     },
     {
-      "id": "langkawi-rebungan-resort",
+      "id": "langkawi-assana-serviced-suites",
       "city": "Langkawi",
-      "name": "Rebungan Resort Langkawi",
-      "subtitle": "Chambre Lits Jumeaux de Luxe - base simple pour 5 nuits sur l'ile.",
+      "name": "Airbnb Assana Serviced Suites",
+      "subtitle": "Appartement Airbnb a Tropicana Cenang - base pour 5 nuits pres de Pantai Cenang.",
       "dates": "21 aout 2026 -> 26 aout 2026",
       "nights": "5 nuits",
-      "price": "159 EUR au total",
-      "priceMyr": "Environ 741 MYR au total, soit 148 MYR / nuit",
-      "link": "https://www.booking.com/searchresults.fr.html?ss=Rebungan+Resort+Langkawi",
+      "price": "364,69 EUR payes au total",
+      "priceMyr": "Environ 1 696 MYR au total, soit 339 MYR / nuit",
+      "budgetMyr": 1696,
+      "link": "https://www.google.com/maps/search/?api=1&query=Assana%20Serviced%20Suites%2C%20Tropicana%20Cenang%2C%20Jalan%20Pantai%20Chenang%2C%20Langkawi",
       "photo": "assets/photos/visits/eagle-square.jpg",
       "photoAlt": "Plage de Langkawi et palmiers",
-      "host": "Rebungan Resort Langkawi",
-      "rating": "Note Booking a reverifier avant paiement final",
-      "capacity": "Chambre pour 2 adultes, configuration lits jumeaux selon reservation.",
-      "checkInOut": "Arrivee et depart a confirmer dans la reservation Booking.",
-      "cancellation": "Annulation gratuite indiquee dans le plan initial, a reconfirmer dans Booking.",
-      "area": "Base ile pour rayonner vers Cenang, SkyCab, Kilim, Kuah et le nord.",
-      "route": "Depuis l'aeroport de Langkawi: Grab vers le resort, puis location du scooter pour toute la durée du séjour sur l'île.",
+      "host": "Jnc",
+      "rating": "Reservation Airbnb; note non visible sur la capture fournie",
+      "capacity": "Appartement avec espace nuit et coin salon; capacite et literie a relire dans Airbnb.",
+      "checkInOut": "Depart le mercredi 26 aout a 11h00; heure d'arrivee a confirmer dans Airbnb.",
+      "cancellation": "Selon les conditions de la reservation Airbnb.",
+      "area": "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang, pres de Pantai Cenang.",
+      "route": "Depuis l'aeroport de Langkawi: Grab vers Assana Serviced Suites, puis recuperation du scooter a Pantai Cenang.",
       "highlights": [
-        "Bloc coherent avec le budget final: 159 EUR pour 5 nuits, soit environ 148 MYR par nuit.",
+        "Montant paye: 364,69 EUR pour 5 nuits, soit 72,94 EUR par nuit.",
         "Couvre toutes les nuits Langkawi du 21 au 26 aout.",
         "Permet de garder SkyCab, Kilim, Cenang et Kuah dans une logique de sorties simples.",
-        "Option nettement moins chere que l'ancienne option de logement laissee dans le fichier."
+        "Appartement avec coin salon et kitchenette visible sur la capture fournie."
       ],
       "watchouts": [
-        "Relire taxes, caution, frais et conditions d'annulation avant paiement final.",
+        "Verifier dans Airbnb si une caution ou des frais locaux restent dus sur place.",
         "Confirmer l'heure d'arrivee du 21 aout apres le vol KL -> Langkawi.",
         "Prevoir Grab/taxi si la meteo rend le scooter peu confortable."
       ],
@@ -263,6 +266,7 @@ export const tripData: TripData = {
       "nights": "5 nuits",
       "price": "212 EUR au total",
       "priceMyr": "Environ 988 MYR au total, soit 198 MYR / nuit",
+      "budgetMyr": 988,
       "link": "https://www.booking.com/searchresults.fr.html?ss=The+Horizon+Ipoh+By+Iconique+Espace",
       "photo": "assets/photos/visits/tasik-cermin.jpg",
       "photoAlt": "Infinity pool rooftop avec vue sur les montagnes à Ipoh",
@@ -789,9 +793,9 @@ export const tripData: TripData = {
       "note": "Studio noté pour les 2 premières nuits finales à Kuala Lumpur, du 31 août au 2 septembre 2026 (100 EUR); nuit du 2 au 3 septembre à ajouter ou confirmer pour le vol de 02h15."
     },
     {
-      "title": "Booking - Rebungan Resort Langkawi",
-      "url": "https://www.booking.com/searchresults.fr.html?ss=Rebungan+Resort+Langkawi",
-      "note": "Chambre Lits Jumeaux de Luxe réservée pour Langkawi du 21 au 26 aout 2026: 159 EUR pour 5 nuits."
+      "title": "Airbnb - Assana Serviced Suites Langkawi",
+      "url": "https://www.google.com/maps/search/?api=1&query=Assana%20Serviced%20Suites%2C%20Tropicana%20Cenang%2C%20Jalan%20Pantai%20Chenang%2C%20Langkawi",
+      "note": "Appartement Airbnb chez Jnc pour Langkawi du 21 au 26 aout 2026; depart le 26 aout a 11h00. Montant paye: 364,69 EUR pour 5 nuits."
     },
     {
       "title": "Booking - The Horizon Ipoh By Iconique Espace",
@@ -1463,12 +1467,12 @@ export const tripData: TripData = {
       "dayLabel": "Jour 5",
       "dateLabel": "Vendredi 21 aout 2026",
       "city": "Kuala Lumpur -> Langkawi",
-      "overnight": "Rebungan Resort Langkawi",
+      "overnight": "Airbnb Assana Serviced Suites",
       "highlight": "Vol court vers Langkawi, depot des affaires a l'hotel, recuperation du scooter, puis premiere plage.",
       "transportSummary": "Grab + vol AirAsia + scooter/Grab",
       "photo": "assets/photos/days/jour-05-plage-langkawi.png",
       "photoAlt": "Plage tropicale de Langkawi au coucher du soleil",
-      "deepDive": "Le changement de rythme doit rester respirable: aeroport, depot des affaires au Rebungan Resort Langkawi, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
+      "deepDive": "Le changement de rythme doit rester respirable: aeroport, depot des affaires a l'Airbnb Assana Serviced Suites, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
       "segments": [
         {
           "label": "Matin",
@@ -1482,7 +1486,7 @@ export const tripData: TripData = {
           "label": "Apres-midi",
           "title": "Depot hotel puis scooter",
           "bullets": [
-            "Aller d'abord au Rebungan Resort Langkawi pour poser les affaires.",
+            "Aller d'abord a l'Airbnb Assana Serviced Suites pour poser les affaires.",
             "Ensuite recuperer le scooter chez Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah.",
             "Faire photos/video du scooter avant depart: rayures, compteur, pneus, freins, casque et niveau d'essence."
           ]
@@ -1498,20 +1502,15 @@ export const tripData: TripData = {
       ],
       "access": {
         "metro": "A KL, Grab jusqu'a KLIA2 avec les sacs.",
-        "taxi": "A Langkawi: Grab aeroport -> Rebungan Resort pour poser les sacs, puis Grab court vers Langkawi Paradise Enterprise si le scooter n'est pas livre a l'hotel."
+        "taxi": "A Langkawi: Grab aeroport -> Assana Serviced Suites pour poser les sacs, puis Grab court vers Langkawi Paradise Enterprise si le scooter n'est pas livre au logement."
       },
       "tips": [
         "Loueur retenu: Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah; bon volume d'avis positifs, environ 4,8/5 avec plus de 160 avis Google selon Wanderlog.",
-        "Contacter le loueur avant l'arrivee pour confirmer disponibilite, prix, caution, permis demande et possibilite de livraison au Rebungan Resort.",
+        "Contacter le loueur avant l'arrivee pour confirmer disponibilite, prix, caution, permis demande et possibilite de livraison a Assana Serviced Suites.",
         "Verifier freins, pneus, casque, photos et caution du scooter.",
         "Ne pas conduire de nuit si vous ne le sentez pas."
       ],
       "budget": [
-        {
-          "label": "Nuit Rebungan Resort Langkawi",
-          "myr": 148,
-          "kind": "estimate"
-        },
         {
           "label": "Vol KL -> Langkawi (2 adultes, bagages prudents)",
           "myr": 260,
@@ -1550,7 +1549,7 @@ export const tripData: TripData = {
           "name": "Langkawi Paradise Enterprise",
           "timing": "Apres depot des affaires a l'hotel",
           "ticket": "Scooter a confirmer avant arrivee; prix/caution selon modele",
-          "gettingThere": "Grab depuis Rebungan Resort ou livraison a l'hotel si le loueur accepte",
+          "gettingThere": "Grab depuis Assana Serviced Suites ou livraison au logement si le loueur accepte",
           "whyGo": "Loueur a Pantai Cenang avec beaucoup d'avis positifs, pratique pour demarrer les 5 nuits sur l'ile."
         },
         {
@@ -1580,7 +1579,7 @@ export const tripData: TripData = {
           "period": "Apres-midi",
           "time": "14h00 -> 18h00",
           "visit": "Depot hotel, recuperation scooter, puis Pantai Cenang",
-          "address": "Rebungan Resort Langkawi -> Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah -> Pantai Cenang",
+          "address": "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang -> Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah -> Pantai Cenang",
           "metro": "Aucun transport lourd.",
           "taxi": "Grab aeroport -> hotel, puis Grab court vers le loueur si le scooter n'est pas livre.",
           "visitCost": "75 MYR pour 2",
@@ -1598,7 +1597,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 6",
       "dateLabel": "Samedi 22 aout 2026",
       "city": "Langkawi",
-      "overnight": "Rebungan Resort Langkawi",
+      "overnight": "Airbnb Assana Serviced Suites",
       "highlight": "SkyCab, SkyBridge, Telaga Tujuh et boucle scooter cote ouest: une vraie journee Langkawi.",
       "transportSummary": "Scooter toute la journee",
       "photo": "assets/photos/days/jour-06-skybridge-langkawi.png",
@@ -1640,11 +1639,6 @@ export const tripData: TripData = {
         "Telaga Tujuh demande des marches: bonnes chaussures, eau et rythme tranquille."
       ],
       "budget": [
-        {
-          "label": "Nuit Rebungan Resort Langkawi",
-          "myr": 148,
-          "kind": "estimate"
-        },
         {
           "label": "SkyCab / SkyBridge / SkyGlide (2 adultes)",
           "myr": 178,
@@ -1724,7 +1718,7 @@ export const tripData: TripData = {
           "period": "Soir",
           "time": "18h00 -> 21h00",
           "visit": "Retour Cenang / diner simple",
-          "address": "Pantai Cenang ou proche Rebungan Resort Langkawi",
+          "address": "Pantai Cenang ou proche Assana Serviced Suites",
           "metro": "Sans objet.",
           "taxi": "Retour scooter avant nuit noire si possible.",
           "visitCost": "0 MYR pour 2",
@@ -1742,12 +1736,12 @@ export const tripData: TripData = {
       "dayLabel": "Jour 7",
       "dateLabel": "Dimanche 23 aout 2026",
       "city": "Langkawi",
-      "overnight": "Rebungan Resort Langkawi",
-      "highlight": "Kilim Geoforest le matin, plage a Tanjung Rhu l'apres-midi, puis Kuah / Eagle Square en option du soir.",
+      "overnight": "Airbnb Assana Serviced Suites",
+      "highlight": "Kilim Geoforest le matin puis plage a Tanjung Rhu: une journee entierement regroupee dans le nord de l'ile.",
       "transportSummary": "Scooter + bateau",
       "photo": "assets/photos/days/jour-07-kilim-geoforest.png",
       "photoAlt": "Bateau au milieu des mangroves et falaises de Kilim Geoforest",
-      "deepDive": "La journee garde le gros morceau nature le matin avec Kilim Geoforest, puis bascule en recuperation plage. Avec le scooter, Tanjung Rhu est logique apres Kilim; Kuah et Eagle Square peuvent se faire en debut de soiree seulement si vous avez encore l'energie de rouler.",
+      "deepDive": "Depuis Assana Serviced Suites, partir directement vers le nord-est pour Kilim Geoforest, puis rejoindre Tanjung Rhu toute proche. Kuah est retire de cette journee pour eviter une grande boucle nord-est -> sud-est -> Cenang.",
       "segments": [
         {
           "label": "Matin",
@@ -1775,10 +1769,10 @@ export const tripData: TripData = {
         },
         {
           "label": "Soir",
-          "title": "Kuah / Eagle Square",
+          "title": "Retour direct a Cenang",
           "bullets": [
-            "Option du soir: Dataran Lang pour les photos et diner simple a Kuah.",
-            "A faire seulement si la conduite retour en scooter vous semble confortable."
+            "Revenir directement depuis Tanjung Rhu avant la nuit.",
+            "Diner pres de l'Airbnb pour eviter une boucle supplementaire."
           ]
         }
       ],
@@ -1789,15 +1783,10 @@ export const tripData: TripData = {
       "tips": [
         "Prevoir cash et protection etanche.",
         "Si la mer est agitee, enlever les options annexes.",
-        "Tanjung Rhu est le choix logique apres Kilim; si vous voulez moins rouler, rentrer directement vers Cenang.",
-        "Kuah / Eagle Square le soir est optionnel: ne pas forcer si fatigue, pluie ou route de nuit inconfortable."
+        "Tanjung Rhu est le choix logique apres Kilim; les deux visites restent dans le meme secteur nord.",
+        "Kuah / Eagle Square est reporte au Jour 8 apres Kota Mahsuri, dans une direction plus coherente."
       ],
       "budget": [
-        {
-          "label": "Nuit Rebungan Resort Langkawi",
-          "myr": 148,
-          "kind": "estimate"
-        },
         {
           "label": "Tour mangroves Kilim partage 2h",
           "myr": 178,
@@ -1834,13 +1823,6 @@ export const tripData: TripData = {
           "gettingThere": "Scooter depuis Kilim, puis Kuah ou retour Cenang selon fatigue",
           "whyGo": "Faire une vraie pause plage apres la matinee mangroves, sans rajouter une visite urbaine."
         },
-        {
-          "name": "Kuah et Eagle Square",
-          "timing": "Debut de soiree optionnel",
-          "ticket": "Libre",
-          "gettingThere": "Scooter depuis Tanjung Rhu ou retour direct si fatigue",
-          "whyGo": "Ajouter le repere photo de Langkawi et un diner simple a Kuah sans prendre l'apres-midi plage."
-        }
       ],
       "ultraPlan": [
         {
@@ -1869,21 +1851,21 @@ export const tripData: TripData = {
           "foodAddress": "Kilim / Tanjung Rhu",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau, noix de coco ou boisson fraiche.",
-          "note": "Objectif repos: plage, baignade, puis decision simple: Kuah si vous etes frais, retour Cenang sinon."
+          "note": "Objectif repos: plage et baignade, puis retour direct a Cenang avant la nuit."
         },
         {
           "period": "Soir",
           "time": "18h15 -> 20h30",
-          "visit": "Kuah / Eagle Square",
-          "address": "Dataran Lang, Kuah",
+          "visit": "Retour direct a Cenang et diner pres du logement",
+          "address": "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang",
           "metro": "Sans objet.",
-          "taxi": "Scooter si vous etes a l'aise; sinon annuler ce bloc ou rentrer en Grab.",
+          "taxi": "Scooter vers Cenang avant la nuit; Grab en plan B si pluie ou fatigue.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Diner simple a Kuah: nasi campur, roti, noodles ou seafood raisonnable.",
-          "foodAddress": "Kuah",
+          "eat": "Diner simple a Cenang: nasi campur, roti, noodles ou seafood raisonnable.",
+          "foodAddress": "Pantai Cenang",
           "foodCost": "85 MYR pour 2",
           "drink": "Eau ou boisson fraiche avant le retour.",
-          "note": "Bloc optionnel: photo courte a Eagle Square, diner, puis retour sans trainer tard."
+          "note": "Le retour direct evite le detour par Kuah et une longue conduite nocturne."
         }
       ]
     },
@@ -1893,12 +1875,12 @@ export const tripData: TripData = {
       "dayLabel": "Jour 8",
       "dateLabel": "Lundi 24 aout 2026",
       "city": "Langkawi",
-      "overnight": "Rebungan Resort Langkawi",
-      "highlight": "Laman Padi, Kota Mahsuri et temps plage: culture locale sans surcharger.",
+      "overnight": "Airbnb Assana Serviced Suites",
+      "highlight": "Laman Padi pres du logement, puis Kota Mahsuri et Eagle Square dans une progression vers le sud-est.",
       "transportSummary": "Scooter ou Grab",
       "photo": "assets/photos/days/jour-08-rizieres-langkawi.png",
       "photoAlt": "Rizières et maison traditionnelle dans la campagne de Langkawi",
-      "deepDive": "Cette journee ajoute une touche locale a Langkawi sans redevenir une course aux attractions.",
+      "deepDive": "La matinee commence tout pres de l'Airbnb a Laman Padi. La route continue ensuite vers Kota Mahsuri au centre, puis Kuah et Eagle Square au sud-est, avant un retour direct vers Cenang.",
       "segments": [
         {
           "label": "Matin",
@@ -1910,17 +1892,17 @@ export const tripData: TripData = {
         },
         {
           "label": "Apres-midi",
-          "title": "Kota Mahsuri",
+          "title": "Kota Mahsuri puis Eagle Square",
           "bullets": [
-            "Route centrale de l'ile.",
-            "Ticket a reverifier selon formule."
+            "Rejoindre Kota Mahsuri par la route centrale de l'ile.",
+            "Continuer dans la meme direction vers Kuah et Eagle Square."
           ]
         },
         {
           "label": "Soir",
-          "title": "Retour plage",
+          "title": "Retour direct depuis Kuah",
           "bullets": [
-            "Sunset facile.",
+            "Revenir a Cenang sans repasser par le nord.",
             "Diner proche du logement."
           ]
         }
@@ -1934,11 +1916,6 @@ export const tripData: TripData = {
         "Gardez une vraie pause plage."
       ],
       "budget": [
-        {
-          "label": "Nuit Rebungan Resort Langkawi",
-          "myr": 148,
-          "kind": "estimate"
-        },
         {
           "label": "Laman Padi / Kota Mahsuri (2 adultes)",
           "myr": 90,
@@ -1974,6 +1951,13 @@ export const tripData: TripData = {
           "ticket": "Kota Mahsuri: RM20/adulte international, theatre RM25/adulte",
           "gettingThere": "Scooter ou Grab vers le centre de l'ile",
           "whyGo": "Un stop legende/patrimoine pour varier Langkawi."
+        },
+        {
+          "name": "Eagle Square / Dataran Lang",
+          "timing": "45 min a 1h",
+          "ticket": "Libre",
+          "gettingThere": "Continuer vers Kuah apres Kota Mahsuri",
+          "whyGo": "Le grand repere photo de Langkawi s'integre ici sans detour vers le nord."
         }
       ],
       "ultraPlan": [
@@ -1993,17 +1977,17 @@ export const tripData: TripData = {
         },
         {
           "period": "Apres-midi",
-          "time": "13h30 -> 16h30",
-          "visit": "Kota Mahsuri",
-          "address": "Kota Mahsuri, Langkawi",
+          "time": "13h30 -> 18h00",
+          "visit": "Kota Mahsuri puis Eagle Square",
+          "address": "Kota Mahsuri, Langkawi -> Dataran Lang, Kuah",
           "metro": "Sans objet.",
-          "taxi": "Scooter ou Grab.",
+          "taxi": "Scooter ou taxi: Cenang -> Kota Mahsuri -> Kuah -> Cenang.",
           "visitCost": "40 MYR pour 2",
           "eat": "Repas local avant la route: Nasi Campur Kak Yan ou warung proche de Cenang selon timing.",
-          "foodAddress": "Route centrale de Langkawi",
+          "foodAddress": "Route centrale de Langkawi ou Kuah",
           "foodCost": "55 MYR pour 2",
           "drink": "Boisson fraiche.",
-          "note": "Visite courte apres le repas, puis retour plage/logement sans ajouter d'autres stops."
+          "note": "Cette progression evite de placer Kuah apres Kilim et Tanjung Rhu. Retour direct a Cenang apres Eagle Square."
         }
       ]
     },
@@ -2013,12 +1997,12 @@ export const tripData: TripData = {
       "dayLabel": "Jour 9",
       "dateLabel": "Mardi 25 aout 2026",
       "city": "Langkawi",
-      "overnight": "Rebungan Resort Langkawi",
-      "highlight": "Craft Complex, route nord et sacs: derniere journee Langkawi sans sprint.",
+      "overnight": "Airbnb Assana Serviced Suites",
+      "highlight": "Craft Complex et Black Sand Beach sur une meme boucle nord-ouest, puis retour pour les sacs.",
       "transportSummary": "Scooter ou taxi prive",
       "photo": "assets/photos/days/jour-09-artisanat-langkawi.png",
       "photoAlt": "Pavillon d'artisanat traditionnel dans un jardin tropical de Langkawi",
-      "deepDive": "Une derniere boucle d'ile, puis retour avec de l'avance pour verifier ferry, ETS, passeports et sacs.",
+      "deepDive": "Depuis Cenang, la derniere boucle monte vers le Langkawi Craft Complex puis redescend par Black Sand Beach. Tanjung Rhu n'est pas repete, puisqu'il est deja prevu apres Kilim.",
       "segments": [
         {
           "label": "Matin",
@@ -2030,10 +2014,10 @@ export const tripData: TripData = {
         },
         {
           "label": "Apres-midi",
-          "title": "Route nord ou plage",
+          "title": "Black Sand Beach puis retour",
           "bullets": [
-            "Tanjung Rhu si meteo correcte.",
-            "Sinon pause Cenang et preparation depart."
+            "Courte pause a Pantai Pasir Hitam apres le Craft Complex.",
+            "Redescendre ensuite vers Cenang pour preparer le depart."
           ]
         },
         {
@@ -2055,11 +2039,6 @@ export const tripData: TripData = {
         "Rendre le scooter ce soir si le depart du lendemain est matinal."
       ],
       "budget": [
-        {
-          "label": "Nuit Rebungan Resort Langkawi",
-          "myr": 148,
-          "kind": "estimate"
-        },
         {
           "label": "Craft Complex / petites visites",
           "myr": 40,
@@ -2090,11 +2069,11 @@ export const tripData: TripData = {
           "whyGo": "Une vraie visite artisanat si vous voulez encore bouger."
         },
         {
-          "name": "Route nord / Tanjung Rhu",
+          "name": "Black Sand Beach / Pantai Pasir Hitam",
           "timing": "2h souples",
           "ticket": "Libre",
-          "gettingThere": "Scooter ou taxi prive",
-          "whyGo": "Finir Langkawi par une boucle douce plutot qu'une journee vide."
+          "gettingThere": "Quelques minutes depuis le Craft Complex, puis retour vers Cenang",
+          "whyGo": "Completer la boucle nord-ouest sans refaire Tanjung Rhu."
         }
       ],
       "ultraPlan": [
@@ -2115,13 +2094,13 @@ export const tripData: TripData = {
         {
           "period": "Apres-midi",
           "time": "13h30 -> 16h30",
-          "visit": "Route nord douce ou plage Cenang",
-          "address": "Tanjung Rhu / Pantai Cenang, Langkawi",
+          "visit": "Black Sand Beach puis retour a Cenang",
+          "address": "Pantai Pasir Hitam, Langkawi -> Pantai Cenang",
           "metro": "Sans objet.",
           "taxi": "Scooter ou taxi prive, retour logement avant 17h.",
           "visitCost": "0 MYR pour 2",
           "eat": "Repas local simple ou snack de plage: warung, roti ou nasi campur selon la zone.",
-          "foodAddress": "Tanjung Rhu / Pantai Cenang",
+          "foodAddress": "Pantai Pasir Hitam / Pantai Cenang",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau, noix de coco ou jus frais.",
           "note": "Bloc souple: plage si la meteo est bonne, sinon pause Cenang et sacs sans courir."
