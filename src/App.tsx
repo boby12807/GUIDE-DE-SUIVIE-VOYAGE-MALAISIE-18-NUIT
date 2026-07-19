@@ -25,6 +25,7 @@ type Accommodation = (typeof tripData.accommodations)[number];
 type WeatherData = {
   label: string;
   temp: number;
+  apparent: number;
   humidity: number;
   rain: number;
   wind: number;
@@ -259,7 +260,7 @@ function useLiveWeather() {
           const params = new URLSearchParams({
             latitude: String(loc.lat),
             longitude: String(loc.lon),
-            current: "temperature_2m,relative_humidity_2m,rain,weather_code,wind_speed_10m",
+            current: "temperature_2m,apparent_temperature,relative_humidity_2m,rain,weather_code,wind_speed_10m",
             timezone: "auto",
           });
           const response = await fetch(`https://api.open-meteo.com/v1/forecast?${params.toString()}`);
@@ -268,6 +269,7 @@ function useLiveWeather() {
           return {
             label: loc.label,
             temp: Number(json.current?.temperature_2m ?? 0),
+            apparent: Number(json.current?.apparent_temperature ?? json.current?.temperature_2m ?? 0),
             humidity: Number(json.current?.relative_humidity_2m ?? 0),
             rain: Number(json.current?.rain ?? 0),
             wind: Number(json.current?.wind_speed_10m ?? 0),
@@ -587,6 +589,8 @@ export default function App() {
             days={filteredDays}
             expandedDay={expandedDay}
             setExpandedDay={setExpandedDay}
+            weather={liveWeather.weather}
+            weatherLoading={liveWeather.loading}
           />
         )}
         {activeSection === "budget" && <Budget stats={stats} />}
@@ -652,7 +656,8 @@ function WeatherPanel({
               </div>
               <div className="text-right">
                 <strong className="font-display block text-xl text-cyan-100">{Math.round(item.temp)}°C</strong>
-                <span className="text-xs text-slate-400">{Math.round(item.wind)} km/h</span>
+                <span className="block text-xs font-bold text-amber-200">Ressenti {Math.round(item.apparent)}°C</span>
+                <span className="text-xs text-slate-400">Vent {Math.round(item.wind)} km/h</span>
               </div>
             </div>
           ))}
@@ -689,12 +694,16 @@ function Itinerary({
   days,
   expandedDay,
   setExpandedDay,
+  weather,
+  weatherLoading,
 }: {
   filter: string;
   setFilter: (value: string) => void;
   days: readonly Day[];
   expandedDay: number;
   setExpandedDay: (value: number) => void;
+  weather: WeatherData[];
+  weatherLoading: boolean;
 }) {
   return (
     <div className="space-y-5">
@@ -722,12 +731,15 @@ function Itinerary({
       <div className="grid gap-5">
         {days.map((day) => {
           const open = expandedDay === day.id;
+          const dayWeather = weather.find((item) => item.label === weatherKeyForDay(day));
           return (
             <DayCard
               key={day.id}
               day={day}
               open={open}
               onToggle={() => setExpandedDay(open ? 0 : day.id)}
+              weather={dayWeather}
+              weatherLoading={weatherLoading}
             />
           );
         })}
@@ -740,10 +752,14 @@ function DayCard({
   day,
   open,
   onToggle,
+  weather,
+  weatherLoading,
 }: {
   day: Day;
   open: boolean;
   onToggle: () => void;
+  weather?: WeatherData;
+  weatherLoading: boolean;
 }) {
   const parts = buildDayParts(day);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -813,6 +829,9 @@ function DayCard({
             ) : (
               <span className="text-slate-400">Chargement des horaires...</span>
             )}
+            <span className="inline-flex items-center gap-2 font-bold text-amber-100">
+              <Sun className="h-4 w-4 text-amber-300" /> Ressenti {weather ? `${Math.round(weather.apparent)}°C` : weatherLoading ? "..." : "indisponible"}
+            </span>
           </article>
 
           <section className="rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.06] p-4">
@@ -952,7 +971,8 @@ function DayWeather({
             <span className="block text-[0.68rem] font-black uppercase tracking-widest text-slate-400">
               Température live
             </span>
-            <strong className="font-display text-3xl text-cyan-100">{Math.round(weather.temp)}°C</strong>
+            <strong className="font-display block text-3xl text-cyan-100">{Math.round(weather.temp)}°C</strong>
+            <span className="text-sm font-bold text-amber-200">Ressenti {Math.round(weather.apparent)}°C</span>
           </div>
         )}
       </div>
