@@ -117,9 +117,9 @@ export const tripData: TripData = {
       "name": "Kuala Lumpur",
       "nights": "4 nuits a l'aller + 3 nuits a la fin",
       "vibe": "Base urbaine tres simple pour alterner metro, temples, musees, quartiers vivants et fermeture sans stress avant le vol retour.",
-      "stay": "4 premières nuits : Airbnb The Robertson, 2 Jalan Robertson, du 17 au 21 août. Fin de voyage : The Colony By Infinitum KLCC - Aura Suites du 31 août au 3 septembre, car le vol retour part le 3 septembre à 02h15.",
+      "stay": "Airbnb The Robertson, 2 Jalan Robertson, pour les deux séjours: du 17 au 21 août puis du 31 août au 3 septembre, avec départ vers l'aéroport le 2 septembre au soir.",
       "move": "MRT/LRT quand la station est proche, Grab pour les temples et les transferts avec bagages.",
-      "budgetHint": "Airbnb The Robertson: 225 EUR / environ 1 048 MYR pour 4 nuits (262 MYR / nuit). Retour à The Colony KLCC : 100 EUR / environ 464 MYR pour 2 nuits confirmées; ajouter ou confirmer la nuit du 2 au 3 septembre.",
+      "budgetHint": "Airbnb The Robertson: 225 EUR pour les 4 premières nuits, puis 146 EUR pour les 3 nuits finales, soit environ 680 MYR pour le séjour du 31 août au 3 septembre.",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
       "photoAlt": "Vue sur la skyline de Kuala Lumpur"
     },
@@ -183,38 +183,40 @@ export const tripData: TripData = {
       ]
     },
     {
-      "id": "kl-final-colony",
+      "id": "kl-final-robertson",
       "city": "Kuala Lumpur",
-      "name": "The Colony By Infinitum KLCC - Aura Suites",
-      "subtitle": "Studio avec lit queen size et balcon - Résidence 4 étoiles avec rooftop infinity pool",
+      "name": "Airbnb The Robertson Kuala Lumpur - séjour final",
+      "subtitle": "Même Airbnb The Robertson que lors du premier séjour, à 2 Jalan Robertson.",
       "dates": "31 aout 2026 -> 3 septembre 2026",
       "nights": "3 nuits",
-      "price": "100 EUR pour les 2 nuits confirmées + nuit du 2 au 3 septembre à ajouter/confirmer",
-      "priceMyr": "Environ 464 MYR pour les 2 nuits confirmées; total à recalculer avec la nuit du 2 au 3 septembre",
-      "budgetMyr": 464,
-      "link": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
+      "price": "146 EUR payés au total",
+      "priceMyr": "Environ 680 MYR au total, soit 227 MYR / nuit",
+      "budgetMyr": 680,
+      "link": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
       "photo": "assets/photos/accommodations/kl-arrival-airbnb.jpg",
-      "photoAlt": "Piscine à débordement sur le toit avec vue spectaculaire sur les tours Petronas",
-      "host": "Aura Suites Staff",
-      "rating": "9,1 / 10 Excellent (127 avis sur Booking)",
-      "capacity": "Studio, 1 lit queen size, 1 salle de bain, balcon",
-      "checkInOut": "Arrivée à partir de 15h00, départ avant 12h00 (à confirmer)",
-      "cancellation": "Non remboursable, prépaiement en ligne",
-      "area": "Jalan Dewan Sultan Sulaiman, Kuala Lumpur - Emplacement central",
-      "route": "Depuis la gare de KL Sentral (après l'ETS Ipoh -> KL) : Grab vers l'hôtel. Pour le retour : Grab ou KLIA Ekspres via KL Sentral.",
+      "photoAlt": "Vue sur la skyline de Kuala Lumpur depuis une piscine en hauteur",
+      "host": "Tiang Sin",
+      "rating": "Réservation Airbnb confirmée; note non visible sur la capture fournie",
+      "capacity": "Même appartement 1 chambre avec balcon que lors du premier séjour.",
+      "checkInOut": "Arrivée le 31 août; départ du logement le 2 septembre vers 21h45 pour le vol du 3 septembre à 02h15.",
+      "cancellation": "Selon les conditions de la réservation Airbnb.",
+      "area": "2, Jalan Robertson, Kuala Lumpur - secteur Bukit Bintang / Jalan Pudu",
+      "route": "Depuis KL Sentral après l'ETS Ipoh -> Kuala Lumpur: Grab vers 2 Jalan Robertson. Pour le retour: Grab vers KL Sentral puis KLIA Ekspres, ou Grab direct vers KLIA.",
       "highlights": [
-        "Les 2 premières nuits finales sont notées à 100 EUR; la nuit du 2 au 3 septembre doit être ajoutée ou confirmée.",
-        "Superbe piscine à débordement sur le toit avec vue panoramique sur les tours jumelles Petronas.",
-        "Hébergement classé 9,1/10 (Excellent) avec balcon privé.",
-        "Situation centrale très pratique pour boucler les valises et faire les derniers achats."
+        "Les 3 nuits finales sont confirmées et payées 146 EUR au total.",
+        "Même adresse que lors du premier séjour: aucun nouveau quartier à apprendre.",
+        "Adresse centrale proche de Jalan Alor, Bukit Bintang et Chinatown.",
+        "Appartement avec balcon et accès simple en Grab depuis KL Sentral."
       ],
       "watchouts": [
-        "Tarif Booking non remboursable."
+        "Relire dans Airbnb le numéro d'unité et les consignes d'arrivée du second séjour.",
+        "Prévenir l'hôte du départ anticipé le 2 septembre vers 21h45."
       ],
       "usedForDays": [
         15,
         16,
-        17
+        17,
+        18
       ]
     },
     {
@@ -772,9 +774,9 @@ export const tripData: TripData = {
       "note": "Appartement 1 chambre avec balcon, hôte Tiang Sin, réservé du 17 au 21 août 2026 à 2, Jalan Robertson (225 EUR dans le budget)."
     },
     {
-      "title": "Booking - The Colony By Infinitum KLCC - Aura Suites",
-      "url": "https://www.booking.com/searchresults.fr.html?ss=The+Colony+By+Infinitum+KLCC+-+Aura+Suites",
-      "note": "Studio noté pour les 2 premières nuits finales à Kuala Lumpur, du 31 août au 2 septembre 2026 (100 EUR); nuit du 2 au 3 septembre à ajouter ou confirmer pour le vol de 02h15."
+      "title": "Airbnb - The Robertson Kuala Lumpur - séjour final",
+      "url": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
+      "note": "Même Airbnb que lors du premier séjour, réservé du 31 août au 3 septembre 2026 pour 146 EUR les 3 nuits. Départ vers l'aéroport le 2 septembre au soir."
     },
     {
       "title": "Airbnb - Assana Serviced Suites Langkawi",
@@ -2817,8 +2819,8 @@ export const tripData: TripData = {
       "dayLabel": "Jour 15",
       "dateLabel": "Lundi 31 aout 2026",
       "city": "Ipoh -> Kuala Lumpur",
-      "overnight": "The Colony By Infinitum KLCC - Aura Suites",
-      "highlight": "Retour simple vers Kuala Lumpur en ETS, installation à l'hôtel The Colony KLCC pour fermer le séjour et soirée très légère.",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
+      "highlight": "Retour simple vers Kuala Lumpur en ETS, réinstallation au même Airbnb The Robertson et soirée très légère.",
       "transportSummary": "Grab + ETS + Grab",
       "photo": "assets/photos/days/jour-15-retour-kuala-lumpur.png",
       "photoAlt": "Train ETS arrivant à Kuala Lumpur devant la skyline au coucher du soleil",
@@ -2834,9 +2836,9 @@ export const tripData: TripData = {
         },
         {
           "label": "Apres-midi",
-          "title": "KL Sentral -> The Colony KLCC",
+          "title": "KL Sentral -> Airbnb The Robertson",
           "bullets": [
-            "Grab vers le logement final The Colony KLCC.",
+            "Grab vers le logement final Airbnb The Robertson, 2 Jalan Robertson.",
             "Check-in, pause, lessive ou cafe."
           ]
         },
@@ -2870,15 +2872,15 @@ export const tripData: TripData = {
           "note": "Repere important a l'arrivee avec les sacs."
         },
         {
-          "label": "The Colony KLCC / logement",
-          "query": "toilets near The Colony By Infinitum KLCC Kuala Lumpur",
+          "label": "Airbnb The Robertson / logement",
+          "query": "toilets near The Robertson Kuala Lumpur",
           "note": "Point proche du logement final."
         }
       ],
       "budget": [
         {
-          "label": "Nuit The Colony KLCC",
-          "myr": 232,
+          "label": "Nuit Airbnb The Robertson",
+          "myr": 227,
           "kind": "estimate"
         },
         {
@@ -2911,9 +2913,9 @@ export const tripData: TripData = {
           "whyGo": "Le retour le plus propre vers KL."
         },
         {
-          "name": "The Colony By Infinitum KLCC - Aura Suites",
+          "name": "Airbnb The Robertson Kuala Lumpur",
           "timing": "Apres-midi souple",
-          "ticket": "100 EUR / environ 464 MYR pour 2 nuits confirmées; ajouter ou confirmer la nuit du 2 au 3 septembre",
+          "ticket": "146 EUR payés pour 3 nuits, soit environ 680 MYR au total",
           "gettingThere": "Grab depuis KL Sentral",
           "whyGo": "Base simple pour fermer le voyage."
         }
@@ -2937,7 +2939,7 @@ export const tripData: TripData = {
           "period": "Apres-midi",
           "time": "13h30 -> 17h00",
           "visit": "Reinstallation a KL",
-          "address": "The Colony By Infinitum KLCC - Aura Suites",
+          "address": "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
           "metro": "MRT possible selon sacs.",
           "taxi": "Grab KL Sentral -> logement.",
           "visitCost": "55 MYR pour 2",
@@ -2955,7 +2957,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 16",
       "dateLabel": "Mardi 1 septembre 2026",
       "city": "Kuala Lumpur",
-      "overnight": "The Colony By Infinitum KLCC - Aura Suites",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Merdeka Square, Masjid Negara et Islamic Arts Museum pour une boucle patrimoine claire.",
       "transportSummary": "Metro + marche + Grab ponctuel",
       "photo": "assets/photos/days/jour-16-masjid-negara.png",
@@ -3014,8 +3016,8 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "Nuit The Colony KLCC",
-          "myr": 232,
+          "label": "Nuit Airbnb The Robertson",
+          "myr": 227,
           "kind": "estimate"
         },
         {
@@ -3104,7 +3106,7 @@ export const tripData: TripData = {
       "dayLabel": "Jour 17",
       "dateLabel": "Mercredi 2 septembre 2026",
       "city": "Shopping à Kuala Lumpur",
-      "overnight": "The Colony By Infinitum KLCC - Aura Suites",
+      "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Deux centres seulement: KWC pour les vêtements neufs à prix grossiste, puis Sungei Wang pour les outlets et l'occasion homme et femme.",
       "transportSummary": "Grab + monorail pour le parcours shopping",
       "photo": "assets/photos/days/jour-17-shopping-kuala-lumpur.png",
@@ -3149,7 +3151,7 @@ export const tripData: TripData = {
         "taxi": "Option la plus simple avec les achats: Grab hôtel -> KWC, Grab KWC -> Sungei Wang, puis Grab Sungei Wang -> hôtel."
       },
       "tips": [
-        "Point critique: verifier que The Colony couvre bien la nuit du 2 au 3 septembre, meme si vous quittez la chambre avant l'aube.",
+        "Les 3 nuits du 31 août au 3 septembre sont confirmées à The Robertson pour 146 EUR; prévenir l'hôte du départ le 2 septembre vers 21h45.",
         "Budget séparé: maximum 200 MYR pour les vêtements homme et 200 MYR pour les vêtements femme.",
         "Prix maximum: tee-shirt ou top 35 MYR; chemise ou blouse 60 MYR; pantalon, jean ou robe 90 MYR. Au-dessus, ne pas acheter sans nouvelle comparaison.",
         "À KWC, montrer au vendeur: 'Retail price for one piece?' puis 'Best price for two?'. Certains prix de gros exigent plusieurs pièces.",
@@ -3197,7 +3199,7 @@ export const tripData: TripData = {
           "name": "KWC Fashion Wholesale",
           "timing": "10h00 -> 13h00",
           "ticket": "Entrée libre; demander le prix retail à l'unité",
-          "gettingThere": "Grab depuis The Colony ou Hang Tuah puis 5 minutes à pied",
+          "gettingThere": "Grab depuis The Robertson ou trajet via Hang Tuah puis 5 minutes à pied",
           "whyGo": "Vêtements neufs à prix grossiste. Commencer par l'homme, puis la femme, et comparer 3 boutiques par catégorie."
         },
         {
@@ -3236,10 +3238,10 @@ export const tripData: TripData = {
           "visit": "KWC Fashion Wholesale - neuf homme puis femme",
           "address": "No. 2, Jalan Gelugor, Pudu, 55200 Kuala Lumpur",
           "metro": "Monorail jusqu'à Hang Tuah puis environ 5 minutes à pied.",
-          "taxi": "Option simple: Grab depuis The Colony vers KWC pour arriver à l'ouverture de 10h00.",
+          "taxi": "Option simple: Grab depuis The Robertson vers KWC pour arriver à l'ouverture de 10h00.",
           "visitCost": "0 MYR pour 2",
           "eat": "Petit-déjeuner avant le départ.",
-          "foodAddress": "Autour de The Colony",
+          "foodAddress": "Autour de The Robertson",
           "foodCost": "45 MYR pour 2",
           "drink": "Eau à garder dans le sac.",
           "note": "À l'accueil, demander les étages 'menswear, womenswear, retail single pieces'. Homme 10h00-11h30, femme 11h30-13h00. Comparer 3 boutiques avant chaque achat."
@@ -3276,12 +3278,12 @@ export const tripData: TripData = {
           "period": "Soir / diner",
           "time": "18h00 -> 21h30",
           "visit": "Hôtel, tri des achats, dîner et repos",
-          "address": "The Colony By Infinitum KLCC - Aura Suites",
+          "address": "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
           "metro": "Aucun trajet prévu après le retour à l'hôtel.",
           "taxi": "Grab Sungei Wang -> hôtel vers 17h30.",
           "visitCost": "45 MYR pour 2",
           "eat": "Dîner vers 19h00 près de l'hôtel.",
-          "foodAddress": "Autour de The Colony",
+          "foodAddress": "Autour de The Robertson",
           "foodCost": "80 MYR pour 2",
           "drink": "Eau ou boisson fraîche.",
           "note": "18h00-19h00: trier et peser les achats. 19h00-20h00: dîner. 20h00-21h30: douche, valises et repos. La journée shopping se termine ici."
@@ -3303,7 +3305,7 @@ export const tripData: TripData = {
       "segments": [
         {
           "label": "Nuit du 2 au 3 septembre",
-          "title": "The Colony, KL Sentral puis KLIA",
+          "title": "The Robertson, KL Sentral puis KLIA",
           "bullets": [
             "Quitter l'hôtel le 2 septembre vers 21h45 et rejoindre KL Sentral en Grab.",
             "Prendre le KLIA Ekspres puis le vol retour du 3 septembre à 02h15."
@@ -3335,8 +3337,8 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Grab The Colony -> KL Sentral, puis KLIA Ekspres jusqu'à l'aéroport.",
-        "taxi": "Option confort: Grab direct de The Colony à KLIA si les bagages rendent le changement difficile."
+        "metro": "Grab The Robertson -> KL Sentral, puis KLIA Ekspres jusqu'à l'aéroport.",
+        "taxi": "Option confort: Grab direct de The Robertson à KLIA si les bagages rendent le changement difficile."
       },
       "tips": [
         "Ne rien programmer d'important le jour du retour."
@@ -3372,7 +3374,7 @@ export const tripData: TripData = {
       ],
       "visitCards": [
         {
-          "name": "The Colony -> KL Sentral -> KLIA",
+          "name": "The Robertson -> KL Sentral -> KLIA",
           "timing": "Départ de l'hôtel le 2 septembre vers 21h45",
           "ticket": "KLIA Ekspres: RM55 par adulte",
           "gettingThere": "Grab jusqu'à KL Sentral, puis KLIA Ekspres",
@@ -3391,7 +3393,7 @@ export const tripData: TripData = {
           "period": "Nuit du 2 au 3",
           "time": "21h45 le 2 sept. -> 02h15 le 3 sept.",
           "visit": "Départ de l'hôtel, KLIA et vol retour",
-          "address": "The Colony -> KL Sentral -> KLIA",
+          "address": "Airbnb The Robertson, 2 Jalan Robertson -> KL Sentral -> KLIA",
           "metro": "KLIA Ekspres depuis KL Sentral.",
           "taxi": "Grab de l'hôtel vers KL Sentral à 21h45; option confort: Grab direct jusqu'à KLIA.",
           "visitCost": "135 MYR pour 2",
