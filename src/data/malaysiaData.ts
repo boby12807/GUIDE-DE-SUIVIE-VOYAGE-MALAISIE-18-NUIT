@@ -1452,11 +1452,11 @@ export const tripData: TripData = {
       "dateLabel": "Vendredi 21 aout 2026",
       "city": "Kuala Lumpur -> Langkawi",
       "overnight": "Airbnb Assana Serviced Suites",
-      "highlight": "Vol court vers Langkawi, depot des affaires a l'hotel, recuperation du scooter, puis premiere plage.",
+      "highlight": "Vol reserve vers Langkawi pour 113 EUR avec option bagage en soute de 20 kg, puis installation a l'Airbnb et premiere plage.",
       "transportSummary": "Grab + vol AirAsia + scooter/Grab",
       "photo": "assets/photos/days/jour-05-plage-langkawi.png",
       "photoAlt": "Plage tropicale de Langkawi au coucher du soleil",
-      "deepDive": "Le changement de rythme doit rester respirable: aeroport, depot des affaires a l'Airbnb Assana Serviced Suites, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
+      "deepDive": "Le vol Kuala Lumpur -> Langkawi est reserve pour 113 EUR au total avec une option de 20 kg de bagage en soute. A l'arrivee: depot des affaires a l'Airbnb Assana Serviced Suites, recuperation du scooter chez Langkawi Paradise Enterprise, puis plage douce sans grosse boucle le premier soir.",
       "segments": [
         {
           "label": "Matin",
@@ -1489,6 +1489,8 @@ export const tripData: TripData = {
         "taxi": "A Langkawi: Grab aeroport -> Assana Serviced Suites pour poser les sacs, puis Grab court vers Langkawi Paradise Enterprise si le scooter n'est pas livre au logement."
       },
       "tips": [
+        "Vol Kuala Lumpur -> Langkawi confirme: 113 EUR au total avec 20 kg de bagage en soute inclus dans la reservation.",
+        "Verifier sur la confirmation si les 20 kg sont attribues a un seul passager ou repartis entre les deux billets.",
         "Loueur retenu: Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah; bon volume d'avis positifs, environ 4,8/5 avec plus de 160 avis Google selon Wanderlog.",
         "Contacter le loueur avant l'arrivee pour confirmer disponibilite, prix, caution, permis demande et possibilite de livraison a Assana Serviced Suites.",
         "Verifier freins, pneus, casque, photos et caution du scooter.",
@@ -1496,9 +1498,9 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "Vol KL -> Langkawi (2 adultes, bagages prudents)",
-          "myr": 260,
-          "kind": "estimate"
+          "label": "Vol KL -> Langkawi reserve avec bagage 20 kg",
+          "myr": 527,
+          "kind": "official"
         },
         {
           "label": "Grab vers KLIA2",
@@ -1525,7 +1527,7 @@ export const tripData: TripData = {
         {
           "name": "Vol KL -> Langkawi",
           "timing": "55 min de vol",
-          "ticket": "Prevoir bagages et frais AirAsia",
+          "ticket": "Reserve: 113 EUR au total avec option bagage en soute de 20 kg",
           "gettingThere": "KLIA2 puis aeroport de Langkawi",
           "whyGo": "La bascule la plus nette du bloc urbain au bloc ile."
         },
@@ -1552,7 +1554,7 @@ export const tripData: TripData = {
           "address": "KLIA2 -> Langkawi International Airport",
           "metro": "Pas utile avec les sacs.",
           "taxi": "Grab logement -> KLIA2.",
-          "visitCost": "260 MYR pour 2",
+          "visitCost": "113 EUR payes, environ 527 MYR, avec option bagage en soute de 20 kg",
           "eat": "Petit-dej aeroport ou snack.",
           "foodAddress": "KLIA2",
           "foodCost": "55 MYR pour 2",
