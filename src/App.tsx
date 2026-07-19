@@ -84,7 +84,7 @@ function formatBothForTwo(myr: number) {
 }
 
 function isAccommodationBudget(label: string) {
-  return /nuit|hotel|hôtel|robertson|colony|horizon|assana|airbnb/i.test(label);
+  return /nuit|hotel|hôtel|robertson|horizon|assana|airbnb/i.test(label);
 }
 
 function dayActivityBudget(day: Day) {
@@ -122,8 +122,7 @@ function mapsDirectionsUrl(origin: string | undefined, destination: string) {
 
 function stayAddressForDay(day: Day) {
   const overnight = day.overnight.toLowerCase();
-  if (day.id >= 2 && day.id <= 4 && overnight.includes("robertson")) return "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur";
-  if (overnight.includes("colony")) return "The Colony By Infinitum KLCC - Aura Suites, Kuala Lumpur";
+  if (overnight.includes("robertson")) return "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur";
   if (overnight.includes("assana")) return "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang, Langkawi";
   if (overnight.includes("horizon")) return "Horizon Inn Ipoh";
   return undefined;
