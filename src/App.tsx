@@ -1032,9 +1032,20 @@ function Hotels({ accommodations }: { accommodations: readonly Accommodation[] }
               <div className="mt-5 grid gap-4 md:grid-cols-2">
                 <InfoBox title="Points forts" lines={hotel.highlights} />
                 <InfoBox title="À vérifier" lines={hotel.watchouts} />
+                <div className="md:col-span-2">
+                  <InfoBox
+                    title="Adresse et accès"
+                    lines={[
+                      `Adresse : ${hotel.area}`,
+                      `Hôte : ${hotel.host}`,
+                      `Arrivée / départ : ${hotel.checkInOut}`,
+                      hotel.route,
+                    ]}
+                  />
+                </div>
               </div>
               <a className="mt-5 inline-flex rounded-xl bg-amber-300 px-4 py-3 text-sm font-black text-slate-950" href={hotel.link} target="_blank" rel="noreferrer">
-                Ouvrir la fiche réservation
+                Ouvrir l'adresse / la réservation
               </a>
             </div>
           </article>
