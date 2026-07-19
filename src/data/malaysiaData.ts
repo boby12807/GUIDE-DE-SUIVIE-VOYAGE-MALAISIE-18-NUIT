@@ -2112,45 +2112,57 @@ export const tripData: TripData = {
       "dateLabel": "Mercredi 26 aout 2026",
       "city": "Langkawi -> Ipoh",
       "overnight": "The Horizon Ipoh By Iconique Espace",
-      "highlight": "Bascule ferry + taxi vers Arau + ETS vers Ipoh, avec soiree douce en Old Town.",
+      "highlight": "Depart de l'Airbnb a 09h15, ferry rapide de 11h00 vers Kuala Perlis, ETS Arau -> Ipoh a 14h07 et arrivee a 16h37.",
       "transportSummary": "Grab + ferry + taxi/Grab + ETS",
       "photo": "assets/photos/days/jour-10-train-vers-ipoh.png",
       "photoAlt": "Train ETS traversant les paysages calcaires en direction d'Ipoh",
-      "deepDive": "C'est le jour logistique le plus sensible. Il faut verifier ferry et ETS ensemble, puis garder la soiree Ipoh tres simple.",
+      "deepDive": "Journee verrouillee autour de deux reservations: ferry rapide passagers Kuah -> Kuala Perlis a 11h00, puis ETS Arau -> Ipoh a 14h07. Depuis Assana Serviced Suites, commander le Grab a 09h00 et quitter la residence au plus tard a 09h15 pour etre a Kuah Jetty vers 09h45-10h00.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Kuah Jetty",
+          "title": "09h15 - Depart de l'Airbnb",
           "bullets": [
-            "Check-out tot.",
-            "Arriver idealement 1h avant le ferry avec passeports et QR codes."
+            "07h30: reveil, douche, petit-dejeuner et fermeture definitive des sacs.",
+            "09h00: commander le Grab; 09h15 au plus tard: quitter Assana Serviced Suites.",
+            "09h45-10h00: arriver a Kuah Jetty avec passeports et billet electronique."
+          ]
+        },
+        {
+          "label": "Fin de matinee",
+          "title": "11h00 - Ferry rapide vers Kuala Perlis",
+          "bullets": [
+            "Embarquement termine en avance; ne pas choisir le RoRo ni Kuala Kedah.",
+            "Arrivee estimee a Kuala Perlis vers 12h15 apres environ 1h15 de traversee."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "Kuala Perlis -> Arau -> Ipoh",
+          "title": "14h07 - Train Arau vers Ipoh",
           "bullets": [
-            "Taxi/Grab direct jusqu'a Arau.",
-            "ETS a confirmer selon horaires ouverts."
+            "12h20-12h35: sortir du terminal et prendre immediatement un Grab/taxi vers KTM Arau.",
+            "13h00-13h15: arrivee visee a la gare, pause toilettes/snack puis embarquement.",
+            "14h07: depart ETS; 16h37: arrivee prevue a Ipoh."
           ]
         },
         {
           "label": "Soir",
           "title": "Old Town Ipoh",
           "bullets": [
-            "Grab gare -> logement.",
+            "Vers 16h50: Grab gare d'Ipoh -> The Horizon Ipoh.",
+            "Vers 17h10: installation au logement.",
             "White coffee, diner simple et petite marche."
           ]
         }
       ],
       "access": {
         "metro": "Pas de metro utile sur cette bascule.",
-        "taxi": "Grab/taxi a Langkawi, taxi/Grab Kuala Perlis -> Arau, Grab gare d'Ipoh -> Old Town."
+        "taxi": "Grab Assana Serviced Suites -> Kuah Jetty; taxi/Grab Kuala Perlis -> KTM Arau; Grab gare d'Ipoh -> The Horizon Ipoh."
       },
       "tips": [
-        "Reverifier les horaires reels ferry + ETS avant achat.",
-        "Être dans le terminal de Kuah une heure avant le ferry et conserver au moins deux heures entre l'arrivée théorique à Kuala Perlis et le départ de l'ETS à Arau.",
-        "Garder l'ETS de secours si le ferry glisse.",
+        "Reservations retenues: ferry rapide passagers de 11h00 vers Kuala Perlis et ETS de 14h07 depuis Arau.",
+        "Etre a Kuah Jetty entre 09h45 et 10h00: la compagnie demande une presence au moins une heure avant le depart.",
+        "A Kuala Perlis, ne pas chercher une gare ferroviaire: prendre directement un taxi/Grab vers KTM Arau, a environ 18-20 km.",
+        "Garder les passeports, billets ferry/ETS, adresses et QR codes accessibles hors ligne.",
         "Aucune grosse visite prevue ce soir."
       ],
       "budget": [
@@ -2161,8 +2173,8 @@ export const tripData: TripData = {
         },
         {
           "label": "Ferry Langkawi -> Kuala Perlis (2 adultes)",
-          "myr": 70,
-          "kind": "estimate"
+          "myr": 90,
+          "kind": "official"
         },
         {
           "label": "ETS Arau -> Ipoh (2 adultes)",
@@ -2188,47 +2200,61 @@ export const tripData: TripData = {
       "visitCards": [
         {
           "name": "Ferry Kuah -> Kuala Perlis",
-          "timing": "Depart du matin a viser",
-          "ticket": "Tarif et disponibilite a reverifier",
-          "gettingThere": "Grab ou scooter rendu avant Kuah Jetty",
-          "whyGo": "La sortie la plus lisible de Langkawi vers le train."
+          "timing": "Depart 11h00; arrivee estimee 12h15",
+          "ticket": "Billet adulte non-MyKad: 45 MYR par personne, soit 90 MYR pour 2",
+          "gettingThere": "Grab commande a 09h00 depuis Assana Serviced Suites; depart au plus tard a 09h15",
+          "whyGo": "Ferry rapide passagers vers Kuala Perlis, pas le RoRo et pas Kuala Kedah."
         },
         {
           "name": "Arau -> Ipoh en ETS",
-          "timing": "Horaire cible a confirmer",
+          "timing": "Depart 14h07; arrivee Ipoh 16h37",
           "ticket": "Cadre prudent: 150 MYR pour 2",
-          "gettingThere": "Taxi/Grab depuis Kuala Perlis",
+          "gettingThere": "Taxi/Grab immediat depuis le terminal ferry de Kuala Perlis; arrivee visee a KTM Arau vers 13h00-13h15",
           "whyGo": "Le train rend la seconde moitie du jour plus propre qu'un long bus."
         }
       ],
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "07h00 -> 11h30",
-          "visit": "Kuah Jetty puis ferry",
-          "address": "Kuah Jetty -> Kuala Perlis",
+          "time": "07h30 -> 10h45",
+          "visit": "Preparation, check-out et trajet vers Kuah Jetty",
+          "address": "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang -> Kuah Jetty",
           "metro": "Sans objet.",
-          "taxi": "Grab jusqu'au jetty si scooter rendu.",
-          "visitCost": "70 MYR pour 2",
-          "eat": "Petit-dej leger avant depart.",
-          "foodAddress": "Kuah Jetty",
+          "taxi": "Commander le Grab a 09h00; quitter la residence a 09h15 au plus tard; trajet estime 25 a 35 min.",
+          "visitCost": "Grab inclus dans l'enveloppe transports",
+          "eat": "Petit-dejeuner leger a la residence ou pres de Cenang avant 08h30.",
+          "foodAddress": "Assana Serviced Suites / Pantai Cenang",
           "foodCost": "45 MYR pour 2",
           "drink": "Cafe ou eau pendant l'attente.",
-          "note": "Arriver 1h avant avec passeports et QR codes."
+          "note": "Controle final avant de partir: passeports, billet ferry, billet ETS, telephones charges, sacs fermes et adresse KTM Arau en favori. Arriver au jetty entre 09h45 et 10h00."
         },
         {
-          "period": "Apres-midi",
-          "time": "13h30 -> 18h00",
-          "visit": "Kuala Perlis -> Arau -> Ipoh",
-          "address": "Kuala Perlis Jetty -> KTM Arau -> Ipoh",
+          "period": "Traversee / correspondance",
+          "time": "11h00 -> 14h00",
+          "visit": "Ferry Kuah -> Kuala Perlis puis taxi vers KTM Arau",
+          "address": "Kuah Jetty -> Kuala Perlis Ferry Terminal -> Arau KTM Railway Station",
           "metro": "Sans objet.",
-          "taxi": "Taxi/Grab direct jusqu'a Arau puis Grab final a Ipoh.",
-          "visitCost": "240 MYR pour 2",
-          "eat": "Repas court en transit: nasi kandar, roti ou rice plate simple; garder snacks et eau pour le train.",
-          "foodAddress": "Arau station / Ipoh",
+          "taxi": "Arrivee ferry estimee a 12h15; sortir puis prendre immediatement un Grab/taxi vers Arau. Arrivee visee a la gare entre 13h00 et 13h15.",
+          "visitCost": "Ferry 90 MYR pour 2 + taxi/Grab selon disponibilite",
+          "eat": "Snack rapide et eau a Kuala Perlis ou a la gare d'Arau; ne pas s'eloigner de la gare.",
+          "foodAddress": "Kuala Perlis Ferry Terminal / KTM Arau",
           "foodCost": "55 MYR pour 2",
           "drink": "White coffee de reprise a Ipoh.",
-          "note": "Le gain du jour est la marge, pas la performance."
+          "note": "Le train ne part pas de Kuala Perlis. Destination obligatoire du taxi: Arau KTM Railway Station. Etre sur le quai avant 13h45."
+        },
+        {
+          "period": "Apres-midi / soir",
+          "time": "14h07 -> 20h30",
+          "visit": "ETS Arau -> Ipoh, installation et diner",
+          "address": "Arau KTM Railway Station -> Ipoh Railway Station -> The Horizon Ipoh By Iconique Espace",
+          "metro": "ETS direct jusqu'a Ipoh.",
+          "taxi": "Arrivee a Ipoh a 16h37, puis Grab vers The Horizon Ipoh vers 16h50.",
+          "visitCost": "ETS estime a 150 MYR pour 2 + Grab final",
+          "eat": "Diner simple apres l'installation; white coffee ou repas local si vous avez encore de l'energie.",
+          "foodAddress": "The Horizon Ipoh / Old Town Ipoh",
+          "foodCost": "80 MYR pour 2",
+          "drink": "Eau dans le train puis white coffee a Ipoh.",
+          "note": "Arrivee Ipoh 16h37, installation vers 17h10. Pas de grande visite ce soir: douche, diner, courte marche et repos."
         }
       ]
     },
