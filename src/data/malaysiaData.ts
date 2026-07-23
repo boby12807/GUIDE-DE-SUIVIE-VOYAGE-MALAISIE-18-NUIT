@@ -540,7 +540,7 @@ export const tripData: TripData = {
       "details": [
         "SkyCab se decide avec le ciel du matin: sommet couvert = on bascule plage, craft, Laman Padi ou repos.",
         "Kilim et le nord doivent se faire avec un horaire clair, pas en improvisation tardive.",
-        "Le logement cote Tanjung Rhu donne du calme, mais impose d'assumer les distances vers Cenang."
+        "Le logement a Assana Serviced Suites, pres de Pantai Cenang, facilite les plages, les restaurants et les departs en Grab ou scooter."
       ],
       "planB": "Si pluie durable: massage, cafe, duty free, repas long et inversion avec une journee plage plus tard."
     },
@@ -562,7 +562,7 @@ export const tripData: TripData = {
       "role": "Fermeture simple avant le vol retour.",
       "rhythm": "Encore une vraie journee patrimoine, puis achats, valises, dernier diner et sortie aeroport avec marge.",
       "details": [
-        "Garder une base KLCC deja reperee reduit les surprises et rend la fin plus calme.",
+        "Revenir au meme Airbnb The Robertson, a 2 Jalan Robertson, reduit les surprises et rend la fin plus calme.",
         "Merdeka, Masjid Negara et IAMM suffisent pour une derniere vraie boucle de visite.",
         "Les deux derniers jours ne doivent pas etre remplis: ils servent a rentrer proprement."
       ],
@@ -862,8 +862,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Parking et péage (Genève)",
-          "myr": 699,
+          "label": "Parking Genève",
+          "myr": 466,
           "kind": "estimate"
         },
         {
@@ -983,7 +983,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Raja Chulan ou Dang Wangi pour approcher le parc.",
+        "metro": "Depuis The Robertson, marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction Titiwangsa et descendre a Bukit Nanas. Pour Perdana, reprendre le monorail jusqu'a Bukit Bintang, puis le MRT Kajang direction Kwasa Damansara jusqu'a Muzium Negara.",
         "taxi": "Grab conseille entre Forest Eco Park, Perdana Gardens et le logement."
       },
       "tips": [
@@ -1064,17 +1064,31 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
+          "period": "Petit-dejeuner",
+          "time": "07h15 -> 07h45",
+          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
+          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+          "metro": "Aucun transport: descendre directement au restaurant de la residence.",
+          "taxi": "Aucun Grab necessaire.",
+          "visitCost": "0 MYR pour 2",
+          "eat": "Prendre le petit-dejeuner avant toute visite.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Cafe, the et eau avant la marche.",
+          "note": "Manger en premier, puis remonter chercher les sacs si necessaire avant de partir."
+        },
+        {
           "period": "Matin",
-          "time": "07h30 -> 10h30",
+          "time": "08h00 -> 10h30",
           "visit": "KL Forest Eco Park",
           "address": "Jalan Raja Chulan, Kuala Lumpur",
-          "metro": "Depuis The Robertson: marcher vers Hang Tuah / Plaza Rakyat selon chaleur, puis monorail vers Raja Chulan ou Bukit Nanas.",
+          "metro": "Marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction Titiwangsa et descendre a Bukit Nanas, puis marcher environ 12 a 15 minutes jusqu'a l'entree de KL Forest Eco Park.",
           "taxi": "Grab direct depuis 2 Jalan Robertson vers KL Forest Eco Park si chaleur: environ 12 a 18 MYR.",
           "visitCost": "80 MYR pour 2",
-          "eat": "Petit-dej avant depart dans le quartier.",
-          "foodAddress": "Bukit Bintang / Chow Kit",
-          "foodCost": "45 MYR pour 2",
-          "drink": "Cafe et eau avant la marche.",
+          "eat": "Petit-dejeuner deja pris a The Robertson.",
+          "foodAddress": "Sans repas pendant la visite",
+          "foodCost": "0 MYR",
+          "drink": "Garder une bouteille d'eau.",
           "note": "Faire le vert en premier protege la journee de la chaleur."
         },
         {
@@ -1082,7 +1096,7 @@ export const tripData: TripData = {
           "time": "13h30 -> 16h00",
           "visit": "Perdana Botanical Gardens + Orchid Garden",
           "address": "Perdana Botanical Garden, Kuala Lumpur",
-          "metro": "Peu pratique en transport lourd.",
+          "metro": "Depuis Bukit Nanas, prendre le monorail direction KL Sentral jusqu'a Bukit Bintang. Suivre la correspondance vers le MRT Kajang, direction Kwasa Damansara, et descendre a Muzium Negara; finir a pied vers Perdana Botanical Gardens.",
           "taxi": "Grab direct depuis le parc forestier.",
           "visitCost": "0 MYR pour 2",
           "eat": "Lunch local simple avant Perdana: Lot 10 Hutong, food court proche Bukit Bintang ou kopitiam sur le trajet.",
@@ -1096,7 +1110,7 @@ export const tripData: TripData = {
           "time": "19h30 -> 21h30",
           "visit": "Diner simple + piscine/logement",
           "address": "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Retour simple selon fatigue.",
+          "metro": "Depuis Muzium Negara, prendre le MRT Kajang direction Kajang jusqu'a Merdeka, puis marcher environ 10 minutes jusqu'a The Robertson.",
           "taxi": "Grab Perdana Gardens -> logement.",
           "visitCost": "0 MYR pour 2",
           "eat": "Diner simple le soir pres du logement, Lot 10 Hutong ou Jalan Alor.",
@@ -1154,7 +1168,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Monorail Raja Chulan / Bukit Nanas pour KL Tower, puis LRT ou marche vers KLCC selon chaleur.",
+        "metro": "Depuis The Robertson, marcher jusqu'a Hang Tuah, prendre le monorail direction Titiwangsa et descendre a Bukit Nanas pour KL Tower. Bukit Bintang et KLCC se rejoignent ensuite en monorail, a pied et par la passerelle couverte.",
         "taxi": "Grab court utile entre KL Tower, Bukit Bintang et KLCC si humidite ou pluie."
       },
       "tips": [
@@ -1231,17 +1245,31 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
+          "period": "Petit-dejeuner",
+          "time": "07h45 -> 08h15",
+          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
+          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+          "metro": "Aucun transport: le restaurant se trouve dans la residence.",
+          "taxi": "Aucun Grab necessaire.",
+          "visitCost": "0 MYR pour 2",
+          "eat": "Petit-dejeuner complet avant KL Tower.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "35 MYR pour 2",
+          "drink": "Cafe, the et eau.",
+          "note": "Manger avant de commencer la journee, puis partir a pied vers Hang Tuah."
+        },
+        {
           "period": "Matin",
           "time": "08h30 -> 11h00",
           "visit": "KL Tower / Menara Kuala Lumpur",
           "address": "2 Jalan Punchak, Kuala Lumpur",
-          "metro": "Depuis The Robertson: rejoindre Hang Tuah / Raja Chulan, puis marche courte vers KL Tower si la chaleur reste correcte.",
+          "metro": "Marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction Titiwangsa et descendre a Bukit Nanas, puis marcher 12 a 15 minutes jusqu'a KL Tower; la fin du trajet monte.",
           "taxi": "Grab direct depuis 2 Jalan Robertson si vous voulez eviter la montee.",
           "visitCost": "98 MYR pour 2",
-          "eat": "Petit-dej simple avant depart ou cafe proche KL Tower.",
-          "foodAddress": "Hotel / KL Tower",
-          "foodCost": "35 MYR pour 2",
-          "drink": "Eau, cafe ou boisson fraiche.",
+          "eat": "Petit-dejeuner deja pris a The Robertson.",
+          "foodAddress": "Sans repas pendant la visite",
+          "foodCost": "0 MYR",
+          "drink": "Eau ou boisson fraiche.",
           "note": "Vue le matin avant chaleur et nuages de fin de journee."
         },
         {
@@ -1249,7 +1277,7 @@ export const tripData: TripData = {
           "time": "12h30 -> 13h30",
           "visit": "Lot 10 Hutong / Bukit Bintang",
           "address": "Lot 10 Hutong, Bukit Bintang",
-          "metro": "Monorail Bukit Bintang ou Grab court depuis KL Tower.",
+          "metro": "Revenir a Bukit Nanas, puis prendre le monorail direction KL Sentral et descendre a Bukit Bintang. Lot 10 se trouve a la sortie de la station.",
           "taxi": "Grab court si chaleur.",
           "visitCost": "0 MYR pour 2",
           "eat": "Char kway teow, noodles, rice plate ou chicken rice au food court.",
@@ -1263,7 +1291,7 @@ export const tripData: TripData = {
           "time": "14h00 -> 18h00",
           "visit": "Aquaria KLCC + KLCC Park / Petronas",
           "address": "Kuala Lumpur Convention Centre / KLCC Park",
-          "metro": "MRT/LRT vers KLCC ou Grab court depuis Bukit Bintang.",
+          "metro": "Depuis Lot 10, marcher vers Pavilion puis suivre la passerelle couverte Pavilion-KLCC jusqu'au Convention Centre et Aquaria; aucun changement de metro n'est necessaire.",
           "taxi": "Grab court si pluie ou fatigue.",
           "visitCost": "160 MYR pour 2",
           "eat": "Pause ou boisson a Suria KLCC; diner cale apres le spectacle.",
@@ -1277,7 +1305,7 @@ export const tripData: TripData = {
           "time": "19h30 -> 21h30",
           "visit": "Lake Symphony / spectacle jets d'eau KLCC",
           "address": "Esplanade, Suria KLCC / KLCC Park",
-          "metro": "A pied depuis KLCC ou retour simple via LRT KLCC.",
+          "metro": "Pour rentrer: station LRT KLCC, ligne Kelana Jaya direction Putra Heights jusqu'a Pasar Seni; correspondance MRT Kajang direction Kajang, une station jusqu'a Merdeka, puis 10 minutes a pied vers The Robertson.",
           "taxi": "Grab court au retour si pluie, fatigue ou forte affluence.",
           "visitCost": "0 MYR pour 2",
           "eat": "Diner simple a Suria KLCC avant/apres le show, ou Jalan Alor si vous voulez prolonger.",
@@ -1327,7 +1355,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "KTM Komuter jusqu'a Batu Caves via KL Sentral; retour possible vers Pasar Seni pour Chinatown / Central Market.",
+        "metro": "Marcher jusqu'a Hang Tuah, prendre le monorail direction KL Sentral, puis le KTM Komuter ligne Batu Caves-Pulau Sebang jusqu'au terminus Batu Caves. Au retour, descendre a la gare Kuala Lumpur pour rejoindre Pasar Seni et Chinatown a pied.",
         "taxi": "Grab possible hotel -> Batu Caves le matin, puis Grab ou MRT/KTM selon fatigue au retour."
       },
       "tips": [
@@ -1404,16 +1432,30 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
+          "period": "Petit-dejeuner",
+          "time": "06h45 -> 07h15",
+          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
+          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+          "metro": "Aucun transport: le restaurant se trouve dans la residence.",
+          "taxi": "Aucun Grab necessaire.",
+          "visitCost": "0 MYR pour 2",
+          "eat": "Petit-dejeuner avant le long trajet vers Batu Caves.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Cafe, the et eau; remplir les bouteilles avant de partir.",
+          "note": "Manger des l'ouverture, puis rejoindre Hang Tuah sans perdre de temps."
+        },
+        {
           "period": "Matin",
           "time": "07h30 -> 11h30",
           "visit": "Batu Caves",
           "address": "Gombak, Batu Caves, Selangor",
-          "metro": "Depuis The Robertson: rejoindre KL Sentral, puis KTM Komuter direct vers Batu Caves si vous voulez eviter le trafic.",
+          "metro": "Marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction KL Sentral jusqu'au terminus, puis suivre les panneaux KTM Komuter et prendre la ligne Batu Caves-Pulau Sebang direction Batu Caves jusqu'au terminus.",
           "taxi": "Grab tot depuis 2 Jalan Robertson vers Batu Caves possible; retour en Grab si chaleur.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dej simple avant depart ou roti / boisson pres de Batu Caves.",
-          "foodAddress": "Hotel / Batu Caves",
-          "foodCost": "45 MYR pour 2",
+          "eat": "Petit-dejeuner deja pris a The Robertson; roti ou boisson seulement si besoin.",
+          "foodAddress": "Batu Caves",
+          "foodCost": "0 MYR hors boisson",
           "drink": "Eau avant les marches.",
           "note": "Visite a faire en premier: long deplacement, escaliers et chaleur."
         },
@@ -1422,7 +1464,7 @@ export const tripData: TripData = {
           "time": "13h00 -> 16h00",
           "visit": "Chinatown / Petaling Street / Central Market",
           "address": "Petaling Street / Central Market, Kuala Lumpur",
-          "metro": "Retour via KL Sentral puis MRT Pasar Seni si l'energie suit.",
+          "metro": "Prendre le KTM Komuter depuis Batu Caves direction Pulau Sebang et descendre a la gare Kuala Lumpur, puis marcher environ 10 minutes vers Pasar Seni, Central Market et Petaling Street.",
           "taxi": "Grab Batu Caves -> Pasar Seni si vous voulez simplifier.",
           "visitCost": "0 MYR pour 2",
           "eat": "Lunch local simple autour de Petaling Street: chicken rice, noodles ou kopitiam.",
@@ -1436,7 +1478,7 @@ export const tripData: TripData = {
           "time": "19h30 -> 21h30",
           "visit": "Diner proche + preparation Langkawi",
           "address": "Airbnb The Robertson / Bukit Bintang",
-          "metro": "Monorail ou Grab selon fatigue.",
+          "metro": "Depuis Pasar Seni, prendre le MRT Kajang direction Kajang jusqu'a Merdeka, puis marcher environ 10 minutes jusqu'a The Robertson.",
           "taxi": "Grab court au retour si pluie.",
           "visitCost": "0 MYR pour 2",
           "eat": "Diner simple proche logement ou Jalan Alor si vous voulez une derniere ambiance street food.",
@@ -2990,7 +3032,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Pasar Seni, Masjid Negara et secteur musee se gerent bien avec metro + marche.",
+        "metro": "Depuis The Robertson, marcher jusqu'a Plaza Rakyat et prendre le LRT Ampang/Sri Petaling direction Sentul Timur jusqu'a Masjid Jamek pour Dataran Merdeka. Retour possible par le MRT depuis Muzium Negara jusqu'a Merdeka.",
         "taxi": "Grab seulement si chaleur ou fatigue cassent la boucle."
       },
       "tips": [
@@ -3071,17 +3113,31 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
+          "period": "Petit-dejeuner",
+          "time": "07h45 -> 08h15",
+          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
+          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+          "metro": "Aucun transport: le restaurant se trouve dans la residence.",
+          "taxi": "Aucun Grab necessaire.",
+          "visitCost": "0 MYR pour 2",
+          "eat": "Petit-dejeuner avant la boucle patrimoine.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "55 MYR pour 2",
+          "drink": "Cafe, the et eau.",
+          "note": "Manger au debut de la journee, puis rejoindre Plaza Rakyat a pied."
+        },
+        {
           "period": "Matin",
           "time": "08h30 -> 11h30",
           "visit": "Merdeka Square",
           "address": "Dataran Merdeka, Kuala Lumpur",
-          "metro": "MRT / LRT puis marche.",
+          "metro": "Marcher environ 10 minutes jusqu'a Plaza Rakyat. Prendre le LRT Ampang/Sri Petaling direction Sentul Timur et descendre a Masjid Jamek, puis marcher 5 a 8 minutes jusqu'a Dataran Merdeka.",
           "taxi": "Grab si depart direct hotel.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dej ou cafe dans le secteur heritage.",
-          "foodAddress": "Centre heritage",
-          "foodCost": "55 MYR pour 2",
-          "drink": "Cafe / eau.",
+          "eat": "Petit-dejeuner deja pris a The Robertson.",
+          "foodAddress": "Sans repas pendant la visite",
+          "foodCost": "0 MYR",
+          "drink": "Garder une bouteille d'eau.",
           "note": "Commencer par la grande place."
         },
         {
@@ -3089,7 +3145,7 @@ export const tripData: TripData = {
           "time": "13h30 -> 16h30",
           "visit": "Masjid Negara + IAMM",
           "address": "Jalan Perdana, Kuala Lumpur",
-          "metro": "Marche logique depuis Merdeka.",
+          "metro": "Depuis Dataran Merdeka, marcher vers Masjid Jamek et prendre le LRT Kelana Jaya direction Putra Heights jusqu'a Pasar Seni, puis marcher 12 a 15 minutes vers Masjid Negara et l'IAMM. Retour: rejoindre MRT Muzium Negara, direction Kajang jusqu'a Merdeka, puis marcher vers The Robertson.",
           "taxi": "Grab court si besoin.",
           "visitCost": "40 MYR pour 2",
           "eat": "Lunch heritage simple: kopitiam autour de Pasar Seni / Masjid Negara avant le musee.",
@@ -3147,7 +3203,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "KWC est à environ 5 minutes à pied de Hang Tuah. Pour Sungei Wang: monorail Hang Tuah -> Bukit Bintang, puis accès par la passerelle.",
+        "metro": "Depuis The Robertson, KWC se rejoint directement à pied en 12 à 15 minutes via Hang Tuah. Pour Sungei Wang: monorail Hang Tuah direction Titiwangsa jusqu'à Bukit Bintang, puis accès par la passerelle.",
         "taxi": "Option la plus simple avec les achats: Grab hôtel -> KWC, Grab KWC -> Sungei Wang, puis Grab Sungei Wang -> hôtel."
       },
       "tips": [
@@ -3233,16 +3289,30 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
+          "period": "Petit-déjeuner",
+          "time": "08h30 -> 09h15",
+          "visit": "Petit-déjeuner au restaurant en bas de The Robertson",
+          "address": "Rez-de-chaussée de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+          "metro": "Aucun transport: le restaurant se trouve dans la résidence.",
+          "taxi": "Aucun Grab nécessaire.",
+          "visitCost": "0 MYR pour 2",
+          "eat": "Petit-déjeuner avant de commencer les achats.",
+          "foodAddress": "Restaurant au rez-de-chaussée de The Robertson",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Café, thé et eau.",
+          "note": "Manger en premier, puis partir à pied vers KWC."
+        },
+        {
           "period": "Matin",
           "time": "09h30 -> 13h00",
           "visit": "KWC Fashion Wholesale - neuf homme puis femme",
           "address": "No. 2, Jalan Gelugor, Pudu, 55200 Kuala Lumpur",
-          "metro": "Monorail jusqu'à Hang Tuah puis environ 5 minutes à pied.",
+          "metro": "Depuis The Robertson, marcher directement vers Hang Tuah puis KWC: environ 12 à 15 minutes au total. Il n'est pas utile de prendre le monorail pour ce premier trajet.",
           "taxi": "Option simple: Grab depuis The Robertson vers KWC pour arriver à l'ouverture de 10h00.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Petit-déjeuner avant le départ.",
-          "foodAddress": "Autour de The Robertson",
-          "foodCost": "45 MYR pour 2",
+          "eat": "Petit-déjeuner déjà pris à The Robertson.",
+          "foodAddress": "Sans repas pendant les achats du matin",
+          "foodCost": "0 MYR",
           "drink": "Eau à garder dans le sac.",
           "note": "À l'accueil, demander les étages 'menswear, womenswear, retail single pieces'. Homme 10h00-11h30, femme 11h30-13h00. Comparer 3 boutiques avant chaque achat."
         },
@@ -3265,7 +3335,7 @@ export const tripData: TripData = {
           "time": "14h00 -> 17h30",
           "visit": "Sungei Wang - parcours étage par étage",
           "address": "Sungei Wang Plaza, Jalan Sultan Ismail, Bukit Bintang",
-          "metro": "Monorail Hang Tuah -> Bukit Bintang, puis passerelle directe vers Sungei Wang.",
+          "metro": "Revenir à Hang Tuah, prendre le monorail direction Titiwangsa et descendre à Bukit Bintang après Imbi; suivre la passerelle vers Sungei Wang.",
           "taxi": "Avec les sacs, Grab KWC -> Sungei Wang est plus simple; retour hôtel en Grab à 17h30.",
           "visitCost": "0 MYR pour 2",
           "eat": "Pas de second repas prévu; petite boisson si nécessaire.",
@@ -3279,7 +3349,7 @@ export const tripData: TripData = {
           "time": "18h00 -> 21h30",
           "visit": "Hôtel, tri des achats, dîner et repos",
           "address": "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun trajet prévu après le retour à l'hôtel.",
+          "metro": "Depuis Bukit Bintang, prendre le monorail direction KL Sentral jusqu'à Hang Tuah, puis marcher 8 à 10 minutes jusqu'à The Robertson. Avec plusieurs sacs, garder Grab comme option confort.",
           "taxi": "Grab Sungei Wang -> hôtel vers 17h30.",
           "visitCost": "45 MYR pour 2",
           "eat": "Dîner vers 19h00 près de l'hôtel.",
