@@ -798,7 +798,7 @@ export const tripData: TripData = {
       "city": "Genève -> Kuala Lumpur",
       "overnight": "Airbnb The Robertson Kuala Lumpur",
       "highlight": "Vol au départ de Genève puis arrivée à Kuala Lumpur en fin d'après-midi, avec installation douce.",
-      "transportSummary": "Vol international (Genève) + KLIA Ekspres + Grab",
+      "transportSummary": "Vol international + comparaison Grab / taxi officiel depuis KLIA",
       "photo": "assets/photos/days/jour-01-arrivee-kuala-lumpur.png",
       "photoAlt": "Skyline de Kuala Lumpur au crépuscule pour l'arrivée du voyage",
       "deepDive": "Ce jour sert de sas: sortir proprement de l'aeroport, recuperer une SIM, manger simple et poser les sacs sans ajouter de grosse visite.",
@@ -817,7 +817,9 @@ export const tripData: TripData = {
           "title": "Arrivee a KL",
           "bullets": [
             "Atterrissage à 16h50.",
-            "SIM, retrait de cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers l'Airbnb au 2, Jalan Robertson."
+            "Après la SIM et le retrait de cash, comparer le prix du Grab avec celui du taxi officiel au comptoir.",
+            "Choisir le moins cher uniquement si le prix total, péages inclus, ne dépasse pas 22 € jusqu'à The Robertson.",
+            "Si les deux dépassent 22 €, prendre le KLIA Ekspres jusqu'à KL Sentral, puis un petit Grab vers le logement."
           ]
         },
         {
@@ -830,13 +832,14 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Parcours conseille: départ de Genève, arrivée KLIA, SIM / cash, KLIA Ekspres jusqu'a KL Sentral, puis Grab vers 2, Jalan Robertson.",
-        "taxi": "Option confort: Grab direct KLIA -> logement si vous etes tres charges ou trop fatigues, plus simple mais nettement plus cher."
+        "metro": "Solution de secours si Grab et taxi dépassent 22 € : KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
+        "taxi": "À KLIA, comparer l'application Grab et le tarif du taxi officiel au comptoir. Prendre le moins cher si le total avec péages ne dépasse pas 22 €."
       },
       "tips": [
         "Ne programme rien de culturel ce premier jour reel.",
         "Garde billets et adresse du logement accessibles hors ligne.",
-        "Retire un peu de cash des l'aeroport pour les petites depenses."
+        "Retire un peu de cash des l'aeroport pour les petites depenses.",
+        "Refuse les chauffeurs qui démarchent dans le terminal : utilise seulement Grab ou le comptoir officiel des taxis."
       ],
       "toiletStops": [
         {
@@ -872,13 +875,8 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "KLIA Ekspres (2 adultes)",
-          "myr": 110,
-          "kind": "official"
-        },
-        {
-          "label": "Grab KL Sentral -> logement",
-          "myr": 30,
+          "label": "Transfert KLIA -> The Robertson, Grab ou taxi officiel (plafond 22 €)",
+          "myr": 103,
           "kind": "estimate"
         },
         {
@@ -899,11 +897,11 @@ export const tripData: TripData = {
       ],
       "visitCards": [
         {
-          "name": "KLIA -> KL Sentral",
+          "name": "KLIA -> The Robertson",
           "timing": "17 aout fin d'après-midi",
-          "ticket": "RM55/adulte observe",
-          "gettingThere": "KLIA Ekspres jusqu'a KL Sentral, puis Grab vers 2, Jalan Robertson",
-          "whyGo": "La sortie la plus fiable apres un long-courrier, avec un seul changement avant le logement."
+          "ticket": "Comparer Grab et taxi officiel : maximum 22 € au total, péages inclus",
+          "gettingThere": "Trajet direct avec l'option la moins chère. Si le plafond est dépassé : KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
+          "whyGo": "Un trajet direct est le plus simple après le long-courrier, à condition de respecter le plafond fixé."
         },
         {
           "name": "Airbnb The Robertson Kuala Lumpur",
@@ -919,25 +917,25 @@ export const tripData: TripData = {
           "time": "16h50 -> 19h00",
           "visit": "KLIA, SIM et transfert",
           "address": "Kuala Lumpur International Airport, Sepang",
-          "metro": "KLIA Ekspres: KLIA -> KL Sentral, puis Grab KL Sentral -> 2, Jalan Robertson.",
-          "taxi": "Alternative directe: Grab KLIA -> logement si les sacs ou la fatigue rendent le train penible.",
-          "visitCost": "140 MYR pour 2",
-          "eat": "Snack ou repas rapide a KL Sentral.",
-          "foodAddress": "KLIA / KL Sentral",
+          "metro": "Solution de secours si les trajets directs dépassent 22 € : KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
+          "taxi": "Comparer Grab avec le taxi officiel au comptoir et choisir le moins cher, avec un maximum de 22 € péages inclus.",
+          "visitCost": "Plafond 22 €, environ 103 MYR pour 2",
+          "eat": "Snack à l'aéroport ou repas simple près de The Robertson.",
+          "foodAddress": "KLIA / secteur The Robertson",
           "foodCost": "40 MYR pour 2",
           "drink": "Eau + boisson froide.",
-          "note": "Parcours simple: aeroport -> KL Sentral -> logement. Ne pas ajouter de visite avant d'avoir pose les sacs."
+          "note": "Utiliser uniquement Grab ou le comptoir officiel. Vérifier que les péages sont compris dans le prix annoncé et refuser tout démarchage dans le terminal."
         },
         {
           "period": "Soir",
           "time": "Installation et repas",
           "visit": "Airbnb The Robertson Kuala Lumpur",
           "address": "2, Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun besoin si vous venez avec les sacs.",
-          "taxi": "Grab depuis KL Sentral.",
-          "visitCost": "30 MYR pour 2",
+          "metro": "Aucun transport supplémentaire après l'arrivée au logement.",
+          "taxi": "Arrivée directement devant The Robertson avec le Grab ou le taxi choisi à KLIA.",
+          "visitCost": "0 MYR pour 2, transfert déjà compté",
           "eat": "Repas simple proche du logement.",
-          "foodAddress": "Secteur logement / KL Sentral selon fatigue",
+          "foodAddress": "Secteur The Robertson",
           "foodCost": "50 MYR pour 2",
           "drink": "Teh tarik, eau ou jus frais.",
           "note": "Ne pas charger cette journee, c'est ce qui protege la suite."
