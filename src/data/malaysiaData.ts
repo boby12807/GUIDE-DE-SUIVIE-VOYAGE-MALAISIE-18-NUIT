@@ -1064,20 +1064,6 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
-          "period": "Petit-dejeuner",
-          "time": "07h15 -> 07h45",
-          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
-          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun transport: descendre directement au restaurant de la residence.",
-          "taxi": "Aucun Grab necessaire.",
-          "visitCost": "0 MYR pour 2",
-          "eat": "Prendre le petit-dejeuner avant toute visite.",
-          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
-          "foodCost": "45 MYR pour 2",
-          "drink": "Cafe, the et eau avant la marche.",
-          "note": "Manger en premier, puis remonter chercher les sacs si necessaire avant de partir."
-        },
-        {
           "period": "Matin",
           "time": "08h00 -> 10h30",
           "visit": "KL Forest Eco Park",
@@ -1085,10 +1071,10 @@ export const tripData: TripData = {
           "metro": "Marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction Titiwangsa et descendre a Bukit Nanas, puis marcher environ 12 a 15 minutes jusqu'a l'entree de KL Forest Eco Park.",
           "taxi": "Grab direct depuis 2 Jalan Robertson vers KL Forest Eco Park si chaleur: environ 12 a 18 MYR.",
           "visitCost": "80 MYR pour 2",
-          "eat": "Petit-dejeuner deja pris a The Robertson.",
-          "foodAddress": "Sans repas pendant la visite",
-          "foodCost": "0 MYR",
-          "drink": "Garder une bouteille d'eau.",
+          "eat": "Avant de partir: petit-dejeuner au restaurant en bas de The Robertson.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Cafe, the et eau; garder une bouteille d'eau.",
           "note": "Faire le vert en premier protege la journee de la chaleur."
         },
         {
@@ -1245,20 +1231,6 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
-          "period": "Petit-dejeuner",
-          "time": "07h45 -> 08h15",
-          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
-          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun transport: le restaurant se trouve dans la residence.",
-          "taxi": "Aucun Grab necessaire.",
-          "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dejeuner complet avant KL Tower.",
-          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
-          "foodCost": "35 MYR pour 2",
-          "drink": "Cafe, the et eau.",
-          "note": "Manger avant de commencer la journee, puis partir a pied vers Hang Tuah."
-        },
-        {
           "period": "Matin",
           "time": "08h30 -> 11h00",
           "visit": "KL Tower / Menara Kuala Lumpur",
@@ -1266,10 +1238,10 @@ export const tripData: TripData = {
           "metro": "Marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction Titiwangsa et descendre a Bukit Nanas, puis marcher 12 a 15 minutes jusqu'a KL Tower; la fin du trajet monte.",
           "taxi": "Grab direct depuis 2 Jalan Robertson si vous voulez eviter la montee.",
           "visitCost": "98 MYR pour 2",
-          "eat": "Petit-dejeuner deja pris a The Robertson.",
-          "foodAddress": "Sans repas pendant la visite",
-          "foodCost": "0 MYR",
-          "drink": "Eau ou boisson fraiche.",
+          "eat": "Avant de partir: petit-dejeuner au restaurant en bas de The Robertson.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "35 MYR pour 2",
+          "drink": "Cafe, the et eau; emporter de l'eau pour la visite.",
           "note": "Vue le matin avant chaleur et nuages de fin de journee."
         },
         {
@@ -1432,20 +1404,6 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
-          "period": "Petit-dejeuner",
-          "time": "06h45 -> 07h15",
-          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
-          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun transport: le restaurant se trouve dans la residence.",
-          "taxi": "Aucun Grab necessaire.",
-          "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dejeuner avant le long trajet vers Batu Caves.",
-          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
-          "foodCost": "45 MYR pour 2",
-          "drink": "Cafe, the et eau; remplir les bouteilles avant de partir.",
-          "note": "Manger des l'ouverture, puis rejoindre Hang Tuah sans perdre de temps."
-        },
-        {
           "period": "Matin",
           "time": "07h30 -> 11h30",
           "visit": "Batu Caves",
@@ -1453,10 +1411,10 @@ export const tripData: TripData = {
           "metro": "Marcher 8 a 10 minutes jusqu'a Hang Tuah. Prendre le monorail direction KL Sentral jusqu'au terminus, puis suivre les panneaux KTM Komuter et prendre la ligne Batu Caves-Pulau Sebang direction Batu Caves jusqu'au terminus.",
           "taxi": "Grab tot depuis 2 Jalan Robertson vers Batu Caves possible; retour en Grab si chaleur.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dejeuner deja pris a The Robertson; roti ou boisson seulement si besoin.",
-          "foodAddress": "Batu Caves",
-          "foodCost": "0 MYR hors boisson",
-          "drink": "Eau avant les marches.",
+          "eat": "Avant de partir: petit-dejeuner au restaurant en bas de The Robertson; roti ou boisson a Batu Caves seulement si besoin.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Cafe, the et eau; remplir les bouteilles avant les marches.",
           "note": "Visite a faire en premier: long deplacement, escaliers et chaleur."
         },
         {
@@ -3113,20 +3071,6 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
-          "period": "Petit-dejeuner",
-          "time": "07h45 -> 08h15",
-          "visit": "Petit-dejeuner au restaurant en bas de The Robertson",
-          "address": "Rez-de-chaussee de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun transport: le restaurant se trouve dans la residence.",
-          "taxi": "Aucun Grab necessaire.",
-          "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dejeuner avant la boucle patrimoine.",
-          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
-          "foodCost": "55 MYR pour 2",
-          "drink": "Cafe, the et eau.",
-          "note": "Manger au debut de la journee, puis rejoindre Plaza Rakyat a pied."
-        },
-        {
           "period": "Matin",
           "time": "08h30 -> 11h30",
           "visit": "Merdeka Square",
@@ -3134,10 +3078,10 @@ export const tripData: TripData = {
           "metro": "Marcher environ 10 minutes jusqu'a Plaza Rakyat. Prendre le LRT Ampang/Sri Petaling direction Sentul Timur et descendre a Masjid Jamek, puis marcher 5 a 8 minutes jusqu'a Dataran Merdeka.",
           "taxi": "Grab si depart direct hotel.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Petit-dejeuner deja pris a The Robertson.",
-          "foodAddress": "Sans repas pendant la visite",
-          "foodCost": "0 MYR",
-          "drink": "Garder une bouteille d'eau.",
+          "eat": "Avant de partir: petit-dejeuner au restaurant en bas de The Robertson.",
+          "foodAddress": "Restaurant au rez-de-chaussee de The Robertson",
+          "foodCost": "55 MYR pour 2",
+          "drink": "Cafe, the et eau; garder une bouteille d'eau.",
           "note": "Commencer par la grande place."
         },
         {
@@ -3289,20 +3233,6 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
-          "period": "Petit-déjeuner",
-          "time": "08h30 -> 09h15",
-          "visit": "Petit-déjeuner au restaurant en bas de The Robertson",
-          "address": "Rez-de-chaussée de The Robertson, 2 Jalan Robertson, Kuala Lumpur",
-          "metro": "Aucun transport: le restaurant se trouve dans la résidence.",
-          "taxi": "Aucun Grab nécessaire.",
-          "visitCost": "0 MYR pour 2",
-          "eat": "Petit-déjeuner avant de commencer les achats.",
-          "foodAddress": "Restaurant au rez-de-chaussée de The Robertson",
-          "foodCost": "45 MYR pour 2",
-          "drink": "Café, thé et eau.",
-          "note": "Manger en premier, puis partir à pied vers KWC."
-        },
-        {
           "period": "Matin",
           "time": "09h30 -> 13h00",
           "visit": "KWC Fashion Wholesale - neuf homme puis femme",
@@ -3310,10 +3240,10 @@ export const tripData: TripData = {
           "metro": "Depuis The Robertson, marcher directement vers Hang Tuah puis KWC: environ 12 à 15 minutes au total. Il n'est pas utile de prendre le monorail pour ce premier trajet.",
           "taxi": "Option simple: Grab depuis The Robertson vers KWC pour arriver à l'ouverture de 10h00.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Petit-déjeuner déjà pris à The Robertson.",
-          "foodAddress": "Sans repas pendant les achats du matin",
-          "foodCost": "0 MYR",
-          "drink": "Eau à garder dans le sac.",
+          "eat": "Avant de partir: petit-déjeuner au restaurant en bas de The Robertson.",
+          "foodAddress": "Restaurant au rez-de-chaussée de The Robertson",
+          "foodCost": "45 MYR pour 2",
+          "drink": "Café, thé et eau; garder une bouteille dans le sac.",
           "note": "À l'accueil, demander les étages 'menswear, womenswear, retail single pieces'. Homme 10h00-11h30, femme 11h30-13h00. Comparer 3 boutiques avant chaque achat."
         },
         {
