@@ -295,7 +295,6 @@ function useLiveWeather() {
 
 const daySlots = {
   night: { label: "Nuit / depart", time: "", order: 0 },
-  breakfast: { label: "Petit-dejeuner", time: "07h30 -> 08h15", order: 0.5 },
   morning: { label: "Matin", time: "09h00 -> 12h30", order: 1 },
   lunch: { label: "Repas du midi", time: "12h30 -> 13h30", order: 2 },
   afternoon: { label: "Apres-midi", time: "13h30 -> 18h00", order: 3 },
@@ -305,7 +304,6 @@ const daySlots = {
 function slotForPart(part: TripPlanPart, index: number) {
   const text = `${part.period} ${part.time} ${part.visit}`.toLowerCase();
   if (/nuit du/.test(text)) return daySlots.night;
-  if (/petit-dejeuner|petit-déjeuner|breakfast/.test(text)) return daySlots.breakfast;
   if (/soir|diner|dîner|dernier repas|dinner/.test(text)) return daySlots.dinner;
   if (/apres|après|plage|check-in|installation|cafe|pause|retour calme/.test(text)) return daySlots.afternoon;
   if (/midi|lunch|dejeuner|déjeuner|repas/.test(text)) return daySlots.lunch;
@@ -316,7 +314,6 @@ function slotForPart(part: TripPlanPart, index: number) {
 function displaySlotForPart(part: TripPlanPart, index: number) {
   const text = `${part.period} ${part.time} ${part.visit}`.toLowerCase();
   if (/nuit du/.test(text)) return daySlots.night;
-  if (/petit-dejeuner|petit-déjeuner|breakfast/.test(text)) return daySlots.breakfast;
   if (/diner|d..ner|dernier repas|dinner|sacs|billets|valises|cloture|preparation du lendemain|soir/.test(text)) {
     return daySlots.dinner;
   }
