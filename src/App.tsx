@@ -1,12 +1,14 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   BedDouble,
+  BookOpen,
   Calendar,
   Car,
   ChevronDown,
   ChevronUp,
   CloudSun,
   Euro,
+  ExternalLink,
   MapPin,
   Route,
   Sparkles,
@@ -19,9 +21,10 @@ import {
 import { tripData } from "./data/malaysiaData";
 import type { TripPlanPart } from "./data/malaysiaData";
 
-type Section = "itinerary" | "budget" | "hotels";
+type Section = "itinerary" | "budget" | "hotels" | "sources";
 type Day = (typeof tripData.days)[number];
 type Accommodation = (typeof tripData.accommodations)[number];
+type TripSource = (typeof tripData.sources)[number];
 type WeatherData = {
   label: string;
   temp: number;
@@ -48,6 +51,7 @@ const sectionItems: { id: Section; label: string; icon: typeof Route }[] = [
   { id: "itinerary", label: "Journees", icon: Calendar },
   { id: "budget", label: "Budget", icon: Wallet },
   { id: "hotels", label: "Hotels", icon: BedDouble },
+  { id: "sources", label: "Sources", icon: BookOpen },
 ];
 
 const cityFilters = [
@@ -85,7 +89,7 @@ function formatBothForTwo(myr: number) {
 }
 
 function isAccommodationBudget(label: string) {
-  return /nuit|hotel|hôtel|robertson|horizon|assana|airbnb/i.test(label);
+  return /\bnuit\b/i.test(label);
 }
 
 function dayActivityBudget(day: Day) {
@@ -98,6 +102,7 @@ function dayTotal(day: Day) {
 
 function cityKey(city: string) {
   const value = city.toLowerCase();
+  if (value.includes("->") || value.includes("→")) return "transit";
   if (value.includes("langkawi")) return "langkawi";
   if (value.includes("ipoh")) return "ipoh";
   if (value.includes("kuala") || value.includes("kl")) return "kuala";
@@ -105,6 +110,7 @@ function cityKey(city: string) {
 }
 
 function weatherKeyForDay(day: Day) {
+  if (day.id === 18) return undefined;
   const value = `${day.city} ${day.highlight} ${day.overnight}`.toLowerCase();
   if (value.includes("langkawi")) return "Langkawi";
   if (value.includes("ipoh")) return "Ipoh";
@@ -116,22 +122,56 @@ function mapUrl(query: string) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
+function routeStops(value: string) {
+  return value.split(/\s*(?:->|→)\s*/).map((stop) => stop.trim()).filter(Boolean);
+}
+
 function mapsDirectionsUrl(origin: string | undefined, destination: string) {
   if (!origin) return mapUrl(destination);
-  return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(destination)}&travelmode=transit`;
+  const stops = routeStops(destination);
+  const finalDestination = stops.at(-1) || destination;
+  const waypoints = stops.slice(0, -1);
+  const waypointQuery = waypoints.length ? `&waypoints=${encodeURIComponent(waypoints.join("|"))}` : "";
+  return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(origin)}&destination=${encodeURIComponent(finalDestination)}${waypointQuery}`;
 }
 
 function stayAddressForDay(day: Day) {
   const overnight = day.overnight.toLowerCase();
   if (overnight.includes("robertson")) return "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur";
   if (overnight.includes("assana")) return "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang, Langkawi";
-  if (overnight.includes("horizon")) return "Horizon Inn Ipoh";
+  if (overnight.includes("horizon")) return "The Horizon Ipoh By Iconique Espace, Lebuhraya Fair Park, Ipoh";
   return undefined;
 }
 
+const transitDepartureOrigins: Partial<Record<number, string>> = {
+  5: "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+  10: "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang, Langkawi",
+  15: "The Horizon Ipoh By Iconique Espace, Lebuhraya Fair Park, Ipoh",
+  18: "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
+};
+
+const transitFirstMapTargets: Partial<Record<number, string>> = {
+  1: "Geneva Airport",
+  5: "KLIA2",
+  10: "Kuah Jetty, Langkawi",
+  15: "Ipoh Railway Station",
+  18: "KL Sentral",
+};
+
 function routeOriginForPart(day: Day, parts: DisplayPart[], index: number) {
-  if (index > 0) return parts[index - 1].address || parts[index - 1].visit;
+  if (index > 0) {
+    const previous = parts[index - 1].address || parts[index - 1].visit;
+    return routeStops(previous).at(-1) || previous;
+  }
+  if (cityKey(day.city) === "transit") return transitDepartureOrigins[day.id];
   return stayAddressForDay(day);
+}
+
+function mapDestinationForPart(day: Day, part: DisplayPart, index: number) {
+  if (index === 0 && cityKey(day.city) === "transit") {
+    return transitFirstMapTargets[day.id] || part.address || part.visit;
+  }
+  return part.address || part.visit;
 }
 
 function dateForDay(day: Day) {
@@ -146,7 +186,12 @@ function useSunTimes(day: Day) {
   const [times, setTimes] = useState<SunTimes | null>(null);
 
   useEffect(() => {
-    const location = weatherLocations.find((item) => item.label === weatherKeyForDay(day)) || weatherLocations[0];
+    const weatherKey = weatherKeyForDay(day);
+    if (!weatherKey) {
+      setTimes(null);
+      return;
+    }
+    const location = weatherLocations.find((item) => item.label === weatherKey) || weatherLocations[0];
     const date = dateForDay(day);
     if (!date) return;
 
@@ -184,8 +229,9 @@ function fatigueForDay(day: Day, parts: DisplayPart[]) {
 
 function travelTimeToNext(day: Day, part: DisplayPart, nextPart?: DisplayPart) {
   if (!nextPart) return null;
-  const text = `${part.metro} ${part.taxi} ${nextPart.address}`.toLowerCase();
+  const text = `${part.address} ${part.metro} ${part.taxi} ${nextPart.address}`.toLowerCase();
   if (/vol|aeroport|aéroport|ferry|train|ets/.test(text)) return "45 à 90 min selon l'embarquement";
+  if (/durian perangin/.test(text) && /pantai kok/.test(text)) return "35 à 45 min en scooter ou voiture";
   if (part.address && nextPart.address && part.address === nextPart.address) return "5 à 10 min à pied";
   const city = cityKey(day.city);
   if (city === "kuala") return "15 à 30 min en MRT ou Grab";
@@ -201,6 +247,10 @@ function parseNumber(value: string) {
 function formatCostText(text?: string) {
   if (!text) return "A ajuster sur place";
 
+  const replaceCost = (match: RegExpMatchArray, replacement: string) => {
+    const start = match.index ?? 0;
+    return `${text.slice(0, start)}${replacement}${text.slice(start + match[0].length)}`.trim();
+  };
   const alreadyForTwo = /pour\s*2/i.test(text);
   const adultMatch = text.match(/(?:RM|MYR)?\s*(\d+(?:[,.]\d+)?)\s*(?:MYR|RM)?\s*\/\s*(?:adulte|pers|personne)/i);
   const rangeAdultMatch = text.match(/(\d+(?:[,.]\d+)?)\s*(?:a|à|-)\s*(\d+(?:[,.]\d+)?)\s*MYR\s*\/\s*(?:adulte|pers|personne)/i);
@@ -211,25 +261,25 @@ function formatCostText(text?: string) {
   if (rangeAdultMatch) {
     const min = parseNumber(rangeAdultMatch[1]) * 2;
     const max = parseNumber(rangeAdultMatch[2]) * 2;
-    return `${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`;
+    return replaceCost(rangeAdultMatch, `${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`);
   }
 
   if (adultMatch && !alreadyForTwo) {
-    return formatBothForTwo(parseNumber(adultMatch[1]) * 2);
+    return replaceCost(adultMatch, formatBothForTwo(parseNumber(adultMatch[1]) * 2));
   }
 
   if (rangeForTwoMatch) {
     const min = parseNumber(rangeForTwoMatch[1]);
     const max = parseNumber(rangeForTwoMatch[2]);
-    return `${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`;
+    return replaceCost(rangeForTwoMatch, `${formatMyr(min)} a ${formatMyr(max)} / ${formatEurFromMyr(min)} a ${formatEurFromMyr(max)} pour 2`);
   }
 
   if (forTwoMatch) {
-    return formatBothForTwo(parseNumber(forTwoMatch[1]));
+    return replaceCost(forTwoMatch, formatBothForTwo(parseNumber(forTwoMatch[1])));
   }
 
   if (simpleMyrMatch && !/libre|clos/i.test(text)) {
-    return formatBothForTwo(parseNumber(simpleMyrMatch[1]));
+    return replaceCost(simpleMyrMatch, formatBothForTwo(parseNumber(simpleMyrMatch[1])));
   }
 
   if (/libre|gratuit|clos/i.test(text)) return formatBothForTwo(0);
@@ -447,7 +497,10 @@ function downloadJson() {
 
 function classifyBudget(label: string) {
   const text = label.toLowerCase();
-  if (/vol|parking|péage|peage|aeroport|airport|train|grab|transport|ferry|taxi|klia|ets/.test(text)) {
+  if (/plafond vêtements|plafond vetements|shopping/.test(text)) {
+    return "Shopping";
+  }
+  if (/vol|parking|péage|peage|aeroport|airport|train|grab|transport|transfert|scooter|ferry|taxi|klia|ets/.test(text)) {
     return "Transports";
   }
   if (isAccommodationBudget(label)) {
@@ -456,7 +509,7 @@ function classifyBudget(label: string) {
   if (/repas|boisson|snack|cafe|déjeuner|diner|food|manger/.test(text)) {
     return "Repas";
   }
-  if (/bird|skycab|geoforest|musee|temple|billet|entree|visite|mangrove|payar/.test(text)) {
+  if (/bird|skycab|geoforest|musee|temple|billet|entree|visite|mangrove|payar|tower|aquaria|forest|laman|kota|mahsuri|cascade|tasik|gua|kellie|gunung|memory lane/.test(text)) {
     return "Visites";
   }
   return "Marges";
@@ -595,6 +648,7 @@ export default function App() {
         )}
         {activeSection === "budget" && <Budget stats={stats} />}
         {activeSection === "hotels" && <Hotels accommodations={tripData.accommodations} />}
+        {activeSection === "sources" && <Sources sources={tripData.sources} />}
       </section>
 
       <footer className="border-t border-white/10 px-4 py-8 text-sm text-slate-400">
@@ -764,6 +818,7 @@ function DayCard({
   const parts = buildDayParts(day);
   const contentRef = useRef<HTMLDivElement>(null);
   const sunTimes = useSunTimes(day);
+  const weatherLocation = weatherKeyForDay(day);
   const fatigue = fatigueForDay(day, parts);
   const [completedParts, setCompletedParts] = useState<Record<string, boolean>>(() => {
     try {
@@ -775,7 +830,14 @@ function DayCard({
 
   const toggleCompletedPart = (id: string) => {
     setCompletedParts((current) => {
-      const next = { ...current, [id]: !current[id] };
+      let stored: Record<string, boolean> = {};
+      try {
+        stored = JSON.parse(localStorage.getItem("malaisie-activites-faites") || "{}");
+      } catch {
+        stored = {};
+      }
+      const previousValue = stored[id] ?? current[id] ?? false;
+      const next = { ...stored, ...current, [id]: !previousValue };
       localStorage.setItem("malaisie-activites-faites", JSON.stringify(next));
       return next;
     });
@@ -794,7 +856,15 @@ function DayCard({
 
   return (
     <article ref={contentRef} className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] shadow-2xl shadow-black/20">
-      {day.photo && <img src={day.photo} alt={day.photoAlt || day.city} className="h-56 w-full object-cover" />}
+      {day.photo && (
+        <img
+          src={day.photo}
+          alt={day.photoAlt || day.city}
+          loading={day.id === 1 ? "eager" : "lazy"}
+          decoding="async"
+          className="h-56 w-full object-cover"
+        />
+      )}
       <button type="button" onClick={handleToggle} className="flex w-full flex-col gap-4 p-5 text-left md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-xs font-black uppercase tracking-widest text-amber-300">{day.dayLabel} - {day.dateLabel}</p>
@@ -819,8 +889,9 @@ function DayCard({
             <MiniFact icon={Route} label="Niveau de fatigue" value={fatigue.label} valueClassName={fatigue.color} />
           </div>
 
+          {weatherLocation && (
           <article className="flex flex-wrap items-center gap-x-6 gap-y-2 rounded-xl border border-amber-300/20 bg-amber-300/[0.07] px-4 py-3 text-sm">
-            <span className="font-black text-amber-100">Soleil à {weatherKeyForDay(day)}</span>
+            <span className="font-black text-amber-100">Soleil à {weatherLocation}</span>
             {sunTimes ? (
               <>
                 <span className="inline-flex items-center gap-2 text-slate-200"><Sunrise className="h-4 w-4 text-amber-300" /> Lever {sunTimes.sunrise}</span>
@@ -830,18 +901,23 @@ function DayCard({
               <span className="text-slate-400">Chargement des horaires...</span>
             )}
             <span className="inline-flex items-center gap-2 font-bold text-amber-100">
-              <Sun className="h-4 w-4 text-amber-300" /> Ressenti {weather ? `${Math.round(weather.apparent)}°C` : weatherLoading ? "..." : "indisponible"}
+              <Sun className="h-4 w-4 text-amber-300" /> Ressenti actuel {weather ? `${Math.round(weather.apparent)}°C` : weatherLoading ? "..." : "indisponible"}
             </span>
           </article>
+          )}
 
           <section className="rounded-2xl border border-emerald-300/15 bg-emerald-300/[0.06] p-4">
             <h4 className="font-display mb-3 text-xl font-bold text-white">Déroulement de la journée</h4>
+            <p className="mb-3 text-xs leading-5 text-slate-400">
+              Les montants par bloc sont des repères terrain. Le budget affiché en tête de journée suit les enveloppes globales et les marges prévues.
+            </p>
             <div className="grid gap-3 lg:grid-cols-2">
               {parts.map((part, index) => {
                 const activityId = `${day.slug}-${index}`;
                 const done = Boolean(completedParts[activityId]);
                 const nextTravel = travelTimeToNext(day, part, parts[index + 1]);
                 const routeOrigin = routeOriginForPart(day, parts, index);
+                const routeDestination = mapDestinationForPart(day, part, index);
                 return (
                 <article key={`${part.displayPeriod}-${part.visit}-${index}`} className={`rounded-xl border p-4 transition ${done ? "border-emerald-300/40 bg-emerald-950/30" : "border-white/10 bg-slate-950/45"}`}>
                   <div className="mb-2 flex items-center justify-between gap-3">
@@ -892,7 +968,7 @@ function DayCard({
                   <div className="mt-4 flex flex-wrap gap-2">
                     <a
                       className="inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-black text-cyan-100 transition hover:bg-cyan-300/20"
-                      href={mapsDirectionsUrl(routeOrigin, part.address || part.visit)}
+                      href={mapsDirectionsUrl(routeOrigin, routeDestination)}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -914,6 +990,18 @@ function DayCard({
               })}
             </div>
           </section>
+
+          {(day.deepDive || day.tips?.length) && (
+            <section className="grid gap-3 md:grid-cols-2">
+              {day.deepDive && (
+                <article className="rounded-2xl border border-white/10 bg-slate-950/45 p-4">
+                  <h4 className="font-display mb-2 text-lg font-bold text-white">Logique de la journée</h4>
+                  <p className="text-sm leading-6 text-slate-300">{day.deepDive}</p>
+                </article>
+              )}
+              {day.tips?.length > 0 && <InfoBox title="Conseils à retenir" lines={day.tips} />}
+            </section>
+          )}
 
         </div>
       )}
@@ -1038,7 +1126,7 @@ function Hotels({ accommodations }: { accommodations: readonly Accommodation[] }
       <div className="grid gap-5">
         {accommodations.map((hotel) => (
           <article key={hotel.name} className="grid overflow-hidden rounded-2xl border border-white/10 bg-white/[0.06] lg:grid-cols-[0.85fr_1.15fr]">
-            <img src={hotel.photo} alt={hotel.photoAlt || hotel.name} className="h-72 w-full object-cover lg:h-full" />
+            <img src={hotel.photo} alt={hotel.photoAlt || hotel.name} loading="lazy" decoding="async" className="h-72 w-full object-cover lg:h-full" />
             <div className="p-5">
               <p className="text-xs font-black uppercase tracking-widest text-emerald-300">{hotel.city} - {hotel.nights}</p>
               <h3 className="font-display mt-2 text-3xl font-bold text-white">{hotel.name}</h3>
@@ -1067,6 +1155,35 @@ function Hotels({ accommodations }: { accommodations: readonly Accommodation[] }
                 Ouvrir l'adresse / la réservation
               </a>
             </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Sources({ sources }: { sources: readonly TripSource[] }) {
+  return (
+    <div className="space-y-5">
+      <PanelTitle
+        eyebrow="Références"
+        title="Sources de vérification"
+        text="Horaires, tarifs et conditions restent susceptibles de changer. Ouvrir la source officielle avant une réservation importante."
+      />
+      <div className="grid gap-4 md:grid-cols-2">
+        {sources.map((source, index) => (
+          <article key={`${source.url}-${index}`} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
+            <h3 className="font-display text-xl font-bold text-white">{source.title}</h3>
+            <p className="mt-2 text-sm leading-6 text-slate-300">{source.note}</p>
+            <a
+              className="mt-4 inline-flex items-center gap-2 rounded-xl border border-cyan-300/30 bg-cyan-300/10 px-3 py-2 text-xs font-black text-cyan-100"
+              href={source.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Ouvrir la source
+            </a>
           </article>
         ))}
       </div>

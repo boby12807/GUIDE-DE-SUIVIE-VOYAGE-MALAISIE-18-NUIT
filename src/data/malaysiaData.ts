@@ -81,10 +81,10 @@ export const tripData: TripData = {
     "exchangeRateMyrPerEur": 4.6605,
     "exchangeRateLabel": "1 EUR = 4,6605 MYR",
     "exchangeRateDate": "3 juillet 2026",
-    "verifiedOn": "4 juillet 2026",
+    "verifiedOn": "28 juillet 2026",
     "budgetStyle": "Budgets affiches pour 2 personnes",
     "budgetLimitEur": 3750,
-    "disclaimer": "Tarifs publics, horaires et trajets reverifies le 4 juillet 2026 quand une source officielle est disponible. Les vols, logements, Grab, meteo et disponibilites restent dynamiques: verifier a nouveau avant paiement."
+    "disclaimer": "Tarifs publics, horaires et trajets reverifies le 28 juillet 2026 quand une source officielle est disponible. Les vols, logements, Grab, meteo et disponibilites restent dynamiques: verifier a nouveau avant paiement."
   },
   "route": [
     {
@@ -126,11 +126,11 @@ export const tripData: TripData = {
     {
       "name": "Langkawi",
       "nights": "5 nuits",
-      "vibe": "Bloc ile actif: plage, cable car, mangroves, artisanat et routes faciles, avec une marge meteo assumee.",
+      "vibe": "Bloc ile actif: plages, cable car, mangroves, cascades et routes faciles, avec une marge meteo assumee.",
       "stay": "Airbnb Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang, du 21 au 26 aout 2026, base ile pour les 5 nuits.",
       "move": "Scooter uniquement avec permis moto valable, permis international et assurance confirmée; sinon Grab et taxi privé.",
       "budgetHint": "Airbnb Assana Serviced Suites: 364,69 EUR payes pour 5 nuits, soit 72,94 EUR / nuit et environ 339 MYR / nuit.",
-      "photo": "assets/photos/visits/eagle-square.jpg",
+      "photo": "assets/photos/days/jour-05-plage-langkawi.png",
       "photoAlt": "Plage de Langkawi et palmiers"
     },
     {
@@ -215,8 +215,7 @@ export const tripData: TripData = {
       "usedForDays": [
         15,
         16,
-        17,
-        18
+        17
       ]
     },
     {
@@ -230,7 +229,7 @@ export const tripData: TripData = {
       "priceMyr": "Environ 1 696 MYR au total, soit 339 MYR / nuit",
       "budgetMyr": 1696,
       "link": "https://www.google.com/maps/search/?api=1&query=Assana%20Serviced%20Suites%2C%20Tropicana%20Cenang%2C%20Jalan%20Pantai%20Chenang%2C%20Langkawi",
-      "photo": "assets/photos/visits/eagle-square.jpg",
+      "photo": "assets/photos/days/jour-05-plage-langkawi.png",
       "photoAlt": "Plage de Langkawi et palmiers",
       "host": "Jnc",
       "rating": "Reservation Airbnb; note non visible sur la capture fournie",
@@ -270,7 +269,7 @@ export const tripData: TripData = {
       "budgetMyr": 988,
       "link": "https://www.booking.com/searchresults.fr.html?ss=The+Horizon+Ipoh+By+Iconique+Espace",
       "photo": "assets/photos/visits/tasik-cermin.jpg",
-      "photoAlt": "Infinity pool rooftop avec vue sur les montagnes à Ipoh",
+      "photoAlt": "Paysage de falaises calcaires illustrant le séjour à Ipoh",
       "host": "Iconique Espace Staff",
       "rating": "8,3 / 10 Très bien (219 avis sur Booking)",
       "capacity": "Studio, 1 lit queen size, 1 salle de bain",
@@ -305,7 +304,7 @@ export const tripData: TripData = {
         "label": "Kuala Lumpur"
       },
       {
-        "src": "assets/photos/visits/eagle-square.jpg",
+        "src": "assets/photos/days/jour-05-plage-langkawi.png",
         "alt": "Plage et eau turquoise a Langkawi",
         "label": "Langkawi"
       },
@@ -328,7 +327,7 @@ export const tripData: TripData = {
         "text": "La base urbaine du voyage, entre tours, forets en pleine ville et quartiers contrastes."
       },
       {
-        "src": "assets/photos/visits/eagle-square.jpg",
+        "src": "assets/photos/days/jour-05-plage-langkawi.png",
         "alt": "Plage de Langkawi",
         "title": "Langkawi",
         "text": "La respiration ile: plage, cable car, mangroves et sorties modulables selon la meteo."
@@ -357,7 +356,7 @@ export const tripData: TripData = {
       },
       {
         "title": "SkyCab et SkyBridge",
-        "src": "assets/photos/visits/eagle-square.jpg",
+        "src": "assets/photos/days/jour-06-skybridge-langkawi.png",
         "alt": "Relief et vegetation de Langkawi",
         "city": "Langkawi",
         "text": "L'image carte postale du voyage, a placer en debut de journee.",
@@ -365,7 +364,7 @@ export const tripData: TripData = {
       },
       {
         "title": "Kilim Geoforest",
-        "src": "assets/photos/visits/eagle-square.jpg",
+        "src": "assets/photos/days/jour-07-kilim-geoforest.png",
         "alt": "Paysage tropical a Langkawi",
         "city": "Langkawi",
         "text": "La sortie nature qui equilibre les plages et donne une autre lecture de l'ile.",
@@ -538,7 +537,7 @@ export const tripData: TripData = {
       "role": "Bloc ile actif, mais pilote par la meteo.",
       "rhythm": "Un gros objectif le matin, puis plage, route courte ou diner simple. Le scooter ne doit pas devenir une obligation.",
       "details": [
-        "SkyCab se decide avec le ciel du matin: sommet couvert = on bascule plage, craft, Laman Padi ou repos.",
+        "SkyCab se decide avec le ciel du matin: sommet couvert = on bascule plage, cascade, Laman Padi ou repos.",
         "Kilim et le nord doivent se faire avec un horaire clair, pas en improvisation tardive.",
         "Le logement a Assana Serviced Suites, pres de Pantai Cenang, facilite les plages, les restaurants et les departs en Grab ou scooter."
       ],
@@ -586,7 +585,7 @@ export const tripData: TripData = {
       "title": "SkyCab",
       "trigger": "Matin du Jour 6",
       "decision": "Regarder le ciel avant de partir: si le sommet est clair, monter tot; si les nuages accrochent, inverser avec plage ou visites basses.",
-      "fallback": "Reporter SkyCab au premier matin clair et garder Pantai Kok, Craft Complex ou Laman Padi en plan bas."
+      "fallback": "Reporter SkyCab au premier matin clair et garder Pantai Kok, Durian Perangin ou Laman Padi en plan bas."
     },
     {
       "title": "Kilim Geoforest",
@@ -641,7 +640,7 @@ export const tripData: TripData = {
     {
       "title": "Langkawi Ferry Line - online tickets",
       "url": "https://ticket.langkawiferryline.com/",
-      "note": "Tarifs et horaires ferry sujets a changement; budget garde RM110 pour deux vers Kuala Perlis."
+      "note": "Tarifs et horaires ferry sujets a changement; billet adulte non-MyKad observe a RM45, soit RM90 pour deux vers Kuala Perlis."
     },
     {
       "title": "KL Forest Eco Park - Malaysia.travel",
@@ -694,14 +693,24 @@ export const tripData: TripData = {
       "note": "Tarif international observe: RM20/adulte, theatre RM25/adulte."
     },
     {
+      "title": "Laman Padi Langkawi - LADA",
+      "url": "https://www.lada.gov.my/en/laman-padi/",
+      "note": "Source officielle LADA: ouverture quotidienne de 09h00 a 17h00 et entree gratuite."
+    },
+    {
+      "title": "Durian Perangin Waterfall - Naturally Langkawi",
+      "url": "https://naturallylangkawi.my/portfolio/durian-perangin-waterfall/",
+      "note": "Source touristique officielle de Langkawi: cascade accessible par des marches, avec stationnement, toilettes et espaces de repos a la base."
+    },
+    {
       "title": "Naturally Langkawi - Getting Here",
       "url": "https://naturallylangkawi.my/getting-here-2/",
       "note": "Repere pour garder la logique vols et ferries de Langkawi lisible."
     },
     {
       "title": "Malaysia Travel - Tasik Cermin",
-      "url": "https://www.malaysia.travel/explore/tasik-cermin",
-      "note": "Repere officiel pour Tasik Cermin dans le bloc Ipoh; ouverture observee 09h00-18h00."
+      "url": "https://www.malaysia.travel/index.php/explore/tasik-cermin",
+      "note": "Repere officiel pour Tasik Cermin: non-Malaisien RM12 d'entree et RM30 pour le bateau par adulte, soit RM84 pour deux avec les deux options."
     },
     {
       "title": "Malaysia Travel - Tempurung Cave",
@@ -712,6 +721,16 @@ export const tripData: TripData = {
       "title": "Malaysia Travel - Kellie's Castle",
       "url": "https://www.malaysia.travel/explore/kellie-s-castle",
       "note": "Repere officiel pour le stop heritage exterieur autour d'Ipoh."
+    },
+    {
+      "title": "Ipoh Tourism Board - Han Chin Pet Soo",
+      "url": "https://www.ipoh-city.com/attraction/Han_Chin_Pet_Soo/",
+      "note": "Reservation obligatoire jusqu'a 30 jours avant; le samedi, visites guidees a 09h30, 11h30, 13h30 et 15h30."
+    },
+    {
+      "title": "Ipoh Tourism Board - Gunung Lang Recreational Park",
+      "url": "https://www.ipoh-city.com/attraction/Gunung_Lang_Recreational_Park/",
+      "note": "Le samedi, ouverture observee de 08h00 a 18h30; barque adulte affichee a RM3."
     },
     {
       "title": "Kellie's Castle - ticketing official",
@@ -734,7 +753,7 @@ export const tripData: TripData = {
       "note": "Confirme les jours fériés nationaux du 25 et du 31 août 2026."
     },
     {
-      "title": "MET Malaysia - tendance météo mai à octobre 2026",
+      "title": "MET Malaysia - tendance météo juillet à décembre 2026",
       "url": "https://www.met.gov.my/data/climate/tinjauancuacajangkapanjang_en.pdf",
       "note": "Prévision saisonnière utilisée pour maintenir Langkawi flexible face aux pluies d'août."
     },
@@ -769,24 +788,19 @@ export const tripData: TripData = {
       "note": "Jalan Tuanku Abdul Rahman est recommandé pour les achats à bon rapport qualité-prix et les boutiques locales."
     },
     {
-      "title": "Airbnb - The Robertson Kuala Lumpur",
+      "title": "Adresse Maps - Airbnb The Robertson Kuala Lumpur",
       "url": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
-      "note": "Appartement 1 chambre avec balcon, hôte Tiang Sin, réservé du 17 au 21 août 2026 à 2, Jalan Robertson (225 EUR dans le budget)."
+      "note": "Adresse des deux réservations Airbnb confirmées: du 17 au 21 août 2026 à 225 EUR, puis du 31 août au 3 septembre 2026 à 146 EUR. Les prix proviennent des confirmations de réservation, pas de Google Maps."
     },
     {
-      "title": "Airbnb - The Robertson Kuala Lumpur - séjour final",
-      "url": "https://www.google.com/maps/search/?api=1&query=2%2C%20Jalan%20Robertson%2C%20Kuala%20Lumpur",
-      "note": "Même Airbnb que lors du premier séjour, réservé du 31 août au 3 septembre 2026 pour 146 EUR les 3 nuits. Départ vers l'aéroport le 2 septembre au soir."
-    },
-    {
-      "title": "Airbnb - Assana Serviced Suites Langkawi",
+      "title": "Adresse Maps - Assana Serviced Suites Langkawi",
       "url": "https://www.google.com/maps/search/?api=1&query=Assana%20Serviced%20Suites%2C%20Tropicana%20Cenang%2C%20Jalan%20Pantai%20Chenang%2C%20Langkawi",
-      "note": "Appartement Airbnb chez Jnc pour Langkawi du 21 au 26 aout 2026; depart le 26 aout a 11h00. Montant paye: 364,69 EUR pour 5 nuits."
+      "note": "Adresse du logement Airbnb réservé chez Jnc du 21 au 26 août 2026. Le montant de 364,69 EUR pour 5 nuits provient de la confirmation de réservation."
     },
     {
-      "title": "Booking - The Horizon Ipoh By Iconique Espace",
+      "title": "Recherche Booking - The Horizon Ipoh By Iconique Espace",
       "url": "https://www.booking.com/searchresults.fr.html?ss=The+Horizon+Ipoh+By+Iconique+Espace",
-      "note": "Studio réservé pour Ipoh du 26 au 31 aout 2026: 212 EUR pour 5 nuits."
+      "note": "Recherche de l'établissement. Le séjour du 26 au 31 août 2026 et le prix de 212 EUR pour 5 nuits proviennent de la confirmation de réservation."
     }
   ],
   "days": [
@@ -819,7 +833,7 @@ export const tripData: TripData = {
             "Atterrissage à 16h50.",
             "Après la SIM et le retrait de cash, comparer le prix du Grab avec celui du taxi officiel au comptoir.",
             "Choisir le moins cher uniquement si le prix total, péages inclus, ne dépasse pas 22 € jusqu'à The Robertson.",
-            "Si les deux dépassent 22 €, prendre le KLIA Ekspres jusqu'à KL Sentral, puis un petit Grab vers le logement."
+            "Si les deux dépassent 22 €, le KLIA Ekspres reste l'option la plus prévisible, mais pas la moins chère: RM110 pour 2 avant le petit Grab vers le logement."
           ]
         },
         {
@@ -832,7 +846,7 @@ export const tripData: TripData = {
         }
       ],
       "access": {
-        "metro": "Solution de secours si Grab et taxi dépassent 22 € : KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
+        "metro": "Option temps de trajet prévisible: KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson. Pour 2 adultes, le train coûte déjà RM110 avant le Grab.",
         "taxi": "À KLIA, comparer l'application Grab et le tarif du taxi officiel au comptoir. Prendre le moins cher si le total avec péages ne dépasse pas 22 €."
       },
       "tips": [
@@ -860,7 +874,7 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "Vols long-courriers Genève -> Kuala Lumpur (2 adultes)",
+          "label": "Vols long-courriers aller-retour Genève <-> Kuala Lumpur (2 adultes)",
           "myr": 6940,
           "kind": "estimate"
         },
@@ -899,8 +913,8 @@ export const tripData: TripData = {
         {
           "name": "KLIA -> The Robertson",
           "timing": "17 aout fin d'après-midi",
-          "ticket": "Comparer Grab et taxi officiel : maximum 22 € au total, péages inclus",
-          "gettingThere": "Trajet direct avec l'option la moins chère. Si le plafond est dépassé : KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
+          "ticket": "Comparer Grab et taxi officiel: maximum 22 € au total, péages inclus; KLIA Ekspres RM110 pour 2 avant le Grab",
+          "gettingThere": "Trajet direct si le prix reste sous le plafond; sinon choisir le KLIA Ekspres pour sa durée prévisible, en sachant qu'il coûte plus cher à deux.",
           "whyGo": "Un trajet direct est le plus simple après le long-courrier, à condition de respecter le plafond fixé."
         },
         {
@@ -913,11 +927,25 @@ export const tripData: TripData = {
       ],
       "ultraPlan": [
         {
+          "period": "Nuit du 16 au 17 aout",
+          "time": "Selon les billets confirmes",
+          "visit": "Depart de Geneve et vol vers Kuala Lumpur",
+          "address": "Aeroport de Geneve -> Kuala Lumpur International Airport",
+          "metro": "Selon votre trajet jusqu'a l'aeroport de Geneve.",
+          "taxi": "Voiture et stationnement de 20 jours deja prevus dans le budget.",
+          "visitCost": "Vols aller-retour et parking deja comptes dans le budget global",
+          "eat": "Repas selon le service a bord.",
+          "foodAddress": "En vol",
+          "foodCost": "Inclus selon la compagnie",
+          "drink": "Eau et repos pendant le trajet.",
+          "note": "Garder passeports, billets, cartes et adresse du premier logement dans une pochette accessible."
+        },
+        {
           "period": "17 aout fin d'après-midi",
           "time": "16h50 -> 19h00",
           "visit": "KLIA, SIM et transfert",
           "address": "Kuala Lumpur International Airport, Sepang",
-          "metro": "Solution de secours si les trajets directs dépassent 22 € : KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
+          "metro": "Option prévisible mais plus chère à deux: KLIA Ekspres jusqu'à KL Sentral, puis petit Grab vers 2, Jalan Robertson.",
           "taxi": "Comparer Grab avec le taxi officiel au comptoir et choisir le moins cher, avec un maximum de 22 € péages inclus.",
           "visitCost": "Plafond 22 €, environ 103 MYR pour 2",
           "eat": "Snack à l'aéroport ou repas simple près de The Robertson.",
@@ -953,7 +981,7 @@ export const tripData: TripData = {
       "transportSummary": "Monorail/MRT + Grab",
       "photo": "assets/photos/days/jour-02-foret-urbaine-kl.png",
       "photoAlt": "Passerelle au cœur de la végétation luxuriante du KL Forest Eco Park",
-      "deepDive": "Beaucoup de vert, une visite forte et un temple photogenique: la journee installe KL tout en restant simple.",
+      "deepDive": "Beaucoup de vert et deux ambiances complementaires: la foret urbaine le matin, puis les jardins de Perdana l'apres-midi, sans surcharger la premiere vraie journee.",
       "segments": [
         {
           "label": "Matin",
@@ -1000,9 +1028,9 @@ export const tripData: TripData = {
           "note": "Repere principal pour la partie jardins / pause verte."
         },
         {
-          "label": "Retour Bukit Bintang / Lot 10",
-          "query": "toilets near Lot 10 Hutong Bukit Bintang",
-          "note": "Option plus propre et facile si vous revenez manger ou faire une pause en ville."
+          "label": "Muzium Negara / NU Sentral",
+          "query": "toilets near Muzium Negara NU Sentral Kuala Lumpur",
+          "note": "Option pratique sur la route des jardins de Perdana, sans detour par Bukit Bintang."
         }
       ],
       "budget": [
@@ -1083,8 +1111,8 @@ export const tripData: TripData = {
           "metro": "Depuis Bukit Nanas, prendre le monorail direction KL Sentral jusqu'a Bukit Bintang. Suivre la correspondance vers le MRT Kajang, direction Kwasa Damansara, et descendre a Muzium Negara; finir a pied vers Perdana Botanical Gardens.",
           "taxi": "Grab direct depuis le parc forestier.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Lunch local simple avant Perdana: Lot 10 Hutong, food court proche Bukit Bintang ou kopitiam sur le trajet.",
-          "foodAddress": "Lot 10 Hutong / Bukit Bintang",
+          "eat": "Lunch local simple avant Perdana: Brickfields, NU Sentral ou kopitiam proche de Muzium Negara.",
+          "foodAddress": "Brickfields / NU Sentral / Muzium Negara",
           "foodCost": "55 MYR pour 2",
           "drink": "Boissons fraiches et pause a l'ombre.",
           "note": "On garde une vraie respiration verte sans payer une visite secondaire trop chere."
@@ -1097,8 +1125,8 @@ export const tripData: TripData = {
           "metro": "Depuis Muzium Negara, prendre le MRT Kajang direction Kajang jusqu'a Merdeka, puis marcher environ 10 minutes jusqu'a The Robertson.",
           "taxi": "Grab Perdana Gardens -> logement.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Diner simple le soir pres du logement, Lot 10 Hutong ou Jalan Alor.",
-          "foodAddress": "Bukit Bintang",
+          "eat": "Diner simple le soir pres du logement ou a Jalan Alor.",
+          "foodAddress": "The Robertson / Jalan Alor",
           "foodCost": "85 MYR pour 2",
           "drink": "Dessert ou boisson au retour.",
           "note": "Le soir reste tranquille: piscine, logement, marche courte si envie."
@@ -1490,6 +1518,7 @@ export const tripData: TripData = {
       },
       "tips": [
         "Vol Kuala Lumpur -> Langkawi confirme: 113 EUR au total avec 20 kg de bagage en soute inclus dans la reservation.",
+        "Ajouter dans les telephones l'heure exacte et le numero du vol: le programme du jour doit suivre la confirmation AirAsia.",
         "Verifier sur la confirmation si les 20 kg sont attribues a un seul passager ou repartis entre les deux billets.",
         "Loueur retenu: Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah; bon volume d'avis positifs, environ 4,8/5 avec plus de 160 avis Google selon Wanderlog.",
         "Contacter le loueur avant l'arrivee pour confirmer disponibilite, prix, caution, permis demande et possibilite de livraison a Assana Serviced Suites.",
@@ -1549,7 +1578,7 @@ export const tripData: TripData = {
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "08h00 -> 12h00",
+          "time": "Selon l'horaire du vol reserve",
           "visit": "KLIA2 puis vol Langkawi",
           "address": "KLIA2 -> Langkawi International Airport",
           "metro": "Pas utile avec les sacs.",
@@ -1563,7 +1592,7 @@ export const tripData: TripData = {
         },
         {
           "period": "Apres-midi",
-          "time": "14h00 -> 18h00",
+          "time": "Apres l'arrivee -> fin d'apres-midi",
           "visit": "Depot hotel, recuperation scooter, puis Pantai Cenang",
           "address": "Assana Serviced Suites, Tropicana Cenang, Jalan Pantai Chenang -> Langkawi Paradise Enterprise, Pantai Cenang, Kampung Lubok Buaya, 07000 Langkawi, Kedah -> Pantai Cenang",
           "metro": "Aucun transport lourd.",
@@ -1626,7 +1655,7 @@ export const tripData: TripData = {
       ],
       "budget": [
         {
-          "label": "SkyCab / SkyBridge / SkyGlide (2 adultes)",
+          "label": "SkyCab / SkyBridge (2 adultes)",
           "myr": 178,
           "kind": "estimate"
         },
@@ -1645,14 +1674,14 @@ export const tripData: TripData = {
         {
           "name": "SkyCab",
           "timing": "2h a 3h",
-          "ticket": "Tarif a reverifier selon package; base SkyCab + SkyBridge/SkyGlide, enveloppe prudente RM180 pour 2",
+          "ticket": "Base SkyCab + SkyBridge: enveloppe prudente de 178 MYR pour 2; SkyGlide vendu séparément",
           "gettingThere": "Scooter ou Grab jusqu'a Oriental Village",
           "whyGo": "La grande image carte postale de Langkawi."
         },
         {
           "name": "SkyBridge / SkyGlide",
           "timing": "30 a 45 min supplementaires",
-          "ticket": "SkyGlide adulte observe a RM16",
+          "ticket": "SkyGlide optionnel: RM16/adulte, non inclus dans l'enveloppe de 178 MYR",
           "gettingThere": "Depuis la station haute du SkyCab",
           "whyGo": "Le prolongement naturel si la meteo est bonne."
         },
@@ -1674,7 +1703,7 @@ export const tripData: TripData = {
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "08h30 -> 12h00",
+          "time": "08h30 départ / 09h30 -> 12h00 visite",
           "visit": "SkyCab et SkyBridge",
           "address": "Oriental Village, Langkawi",
           "metro": "Sans objet.",
@@ -1750,7 +1779,7 @@ export const tripData: TripData = {
           "title": "Plage Tanjung Rhu",
           "bullets": [
             "Pause plage apres les mangroves: baignade, repos, photos.",
-            "Garder de l'energie si vous voulez pousser jusqu'a Kuah ensuite."
+            "Garder de l'energie pour le retour direct vers Cenang."
           ]
         },
         {
@@ -1806,7 +1835,7 @@ export const tripData: TripData = {
           "name": "Tanjung Rhu Beach",
           "timing": "Apres-midi souple",
           "ticket": "Libre",
-          "gettingThere": "Scooter depuis Kilim, puis Kuah ou retour Cenang selon fatigue",
+          "gettingThere": "Scooter depuis Kilim, puis retour direct vers Cenang",
           "whyGo": "Faire une vraie pause plage apres la matinee mangroves, sans rajouter une visite urbaine."
         },
       ],
@@ -1899,12 +1928,13 @@ export const tripData: TripData = {
       },
       "tips": [
         "Journee modulable selon meteo.",
-        "Gardez une vraie pause plage."
+        "Gardez une vraie pause dejeuner avant de rejoindre Kota Mahsuri.",
+        "Le budget transport suppose le scooter ou des Grabs courts; demander un devis separe si vous choisissez un taxi prive pour toute la boucle."
       ],
       "budget": [
         {
           "label": "Laman Padi / Kota Mahsuri (2 adultes)",
-          "myr": 90,
+          "myr": 40,
           "kind": "estimate"
         },
         {
@@ -1927,14 +1957,14 @@ export const tripData: TripData = {
         {
           "name": "Laman Padi",
           "timing": "45 min a 1h",
-          "ticket": "Laman Padi: activites souvent 20 a 25 MYR/adulte, a verifier sur place",
+          "ticket": "Entree gratuite; ouvert tous les jours de 09h00 a 17h00 selon LADA",
           "gettingThere": "Facile depuis Cenang",
           "whyGo": "Ajouter une touche locale proche de la plage."
         },
         {
           "name": "Kota Mahsuri",
           "timing": "1h a 1h30",
-          "ticket": "Kota Mahsuri: RM20/adulte international, theatre RM25/adulte",
+          "ticket": "Kota Mahsuri: RM20/adulte international; théâtre non prévu le lundi 24 août",
           "gettingThere": "Scooter ou Grab vers le centre de l'ile",
           "whyGo": "Un stop legende/patrimoine pour varier Langkawi."
         },
@@ -1949,12 +1979,12 @@ export const tripData: TripData = {
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "09h00 -> 11h30",
+          "time": "09h00 -> 10h30",
           "visit": "Laman Padi",
           "address": "Pantai Cenang, Langkawi",
           "metro": "Sans objet.",
           "taxi": "Tres facile depuis Cenang.",
-          "visitCost": "50 MYR pour 2",
+          "visitCost": "0 MYR pour 2",
           "eat": "Petit-dej long dans votre quartier.",
           "foodAddress": "Pantai Cenang",
           "foodCost": "55 MYR pour 2",
@@ -1984,25 +2014,25 @@ export const tripData: TripData = {
       "dateLabel": "Mardi 25 aout 2026",
       "city": "Langkawi",
       "overnight": "Airbnb Assana Serviced Suites",
-      "highlight": "Craft Complex et Black Sand Beach sur une meme boucle nord-ouest, puis retour pour les sacs.",
+      "highlight": "Cascade Durian Perangin le matin, puis detente a Pantai Kok avant le retour pour les sacs.",
       "transportSummary": "Scooter ou taxi prive",
-      "photo": "assets/photos/days/jour-09-artisanat-langkawi.png",
-      "photoAlt": "Pavillon d'artisanat traditionnel dans un jardin tropical de Langkawi",
-      "deepDive": "Depuis Cenang, la derniere boucle monte vers le Langkawi Craft Complex puis redescend par Black Sand Beach. Tanjung Rhu n'est pas repete, puisqu'il est deja prevu apres Kilim.",
+      "photo": "assets/photos/days/jour-09-cascade-durian-perangin.png",
+      "photoAlt": "Cascade Durian Perangin dans la foret tropicale de Langkawi",
+      "deepDive": "La derniere journee commence par une promenade dans la foret jusqu'a la cascade Durian Perangin. L'apres-midi est reserve a Pantai Kok, une plage calme sur la cote ouest, avant le retour au logement pour preparer les sacs.",
       "segments": [
         {
           "label": "Matin",
-          "title": "Langkawi Craft Complex",
+          "title": "Cascade Durian Perangin",
           "bullets": [
-            "Visite artisanat/culture.",
-            "Bon remplacement d'une journee trop immobile."
+            "Petite promenade dans la foret tropicale jusqu'aux bassins de la cascade.",
+            "Prevoir des chaussures qui ne glissent pas et de l'eau."
           ]
         },
         {
           "label": "Apres-midi",
-          "title": "Black Sand Beach puis retour",
+          "title": "Pantai Kok puis retour",
           "bullets": [
-            "Courte pause a Pantai Pasir Hitam apres le Craft Complex.",
+            "Apres-midi baignade et detente a Pantai Kok.",
             "Redescendre ensuite vers Cenang pour preparer le depart."
           ]
         },
@@ -2022,12 +2052,13 @@ export const tripData: TripData = {
       "tips": [
         "Le 25 août 2026 est un jour férié national: vérifier les horaires et prévoir davantage d'affluence.",
         "Verifier ferry et ETS avant la veille au soir.",
-        "Rendre le scooter ce soir si le depart du lendemain est matinal."
+        "Rendre le scooter ce soir si le depart du lendemain est matinal.",
+        "Le budget de 50 MYR correspond au scooter ou a des trajets courts; un taxi prive a la demi-journee doit etre chiffre separement."
       ],
       "budget": [
         {
-          "label": "Craft Complex / petites visites",
-          "myr": 40,
+          "label": "Cascade / petites depenses",
+          "myr": 20,
           "kind": "estimate"
         },
         {
@@ -2048,48 +2079,48 @@ export const tripData: TripData = {
       ],
       "visitCards": [
         {
-          "name": "Langkawi Craft Complex",
-          "timing": "1h a 1h30",
-          "ticket": "Libre hors achats",
-          "gettingThere": "Route nord de l'ile",
-          "whyGo": "Une vraie visite artisanat si vous voulez encore bouger."
+          "name": "Durian Perangin Waterfall",
+          "timing": "1h30 a 2h",
+          "ticket": "Acces libre hors stationnement eventuel",
+          "gettingThere": "Environ 35 min depuis Pantai Cenang",
+          "whyGo": "Profiter d'une promenade facile dans la foret et d'un cadre naturel different des plages."
         },
         {
-          "name": "Black Sand Beach / Pantai Pasir Hitam",
-          "timing": "2h souples",
+          "name": "Pantai Kok",
+          "timing": "2h a 3h souples",
           "ticket": "Libre",
-          "gettingThere": "Quelques minutes depuis le Craft Complex, puis retour vers Cenang",
-          "whyGo": "Completer la boucle nord-ouest sans refaire Tanjung Rhu."
+          "gettingThere": "Environ 35 min depuis la cascade, puis retour vers Cenang",
+          "whyGo": "Profiter d'une plage calme et agreable pour la derniere apres-midi sur l'ile."
         }
       ],
       "ultraPlan": [
         {
           "period": "Matin",
           "time": "09h00 -> 12h00",
-          "visit": "Langkawi Craft Complex",
-          "address": "Teluk Yu, Langkawi",
+          "visit": "Durian Perangin Waterfall",
+          "address": "Jalan Durian Perangin, Ayer Hangat, Langkawi",
           "metro": "Sans objet.",
           "taxi": "Scooter ou taxi prive.",
-          "visitCost": "0 MYR pour 2",
+          "visitCost": "Acces libre, petite marge pour le stationnement",
           "eat": "Petit-dej simple avant de partir.",
           "foodAddress": "Cenang / route nord",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau / cafe.",
-          "note": "Bon stop pour donner de la matiere a la derniere journee ile."
+          "note": "Rester prudent sur les marches et les rochers s'ils sont mouilles."
         },
         {
           "period": "Apres-midi",
           "time": "13h30 -> 16h30",
-          "visit": "Black Sand Beach puis retour a Cenang",
-          "address": "Pantai Pasir Hitam, Langkawi -> Pantai Cenang",
+          "visit": "Pantai Kok puis retour a Cenang",
+          "address": "Pantai Kok, Langkawi -> Pantai Cenang",
           "metro": "Sans objet.",
           "taxi": "Scooter ou taxi prive, retour logement avant 17h.",
           "visitCost": "0 MYR pour 2",
           "eat": "Repas local simple ou snack de plage: warung, roti ou nasi campur selon la zone.",
-          "foodAddress": "Pantai Pasir Hitam / Pantai Cenang",
+          "foodAddress": "Pantai Kok / Pantai Cenang",
           "foodCost": "55 MYR pour 2",
           "drink": "Eau, noix de coco ou jus frais.",
-          "note": "Bloc souple: plage si la meteo est bonne, sinon pause Cenang et sacs sans courir."
+          "note": "Bloc souple: baignade et repos a Pantai Kok, puis retour a Cenang sans courir."
         },
         {
           "period": "Soir / diner",
@@ -2286,7 +2317,7 @@ export const tripData: TripData = {
           "title": "Sam Poh Tong",
           "bullets": [
             "Un seul temple suffit.",
-            "Retour ensuite vers Old Town pour lunch et cafe."
+            "Déjeuner vers 12h00 dans le secteur de Gunung Rapat, puis retour à Old Town pour le café après le temple."
           ]
         },
         {
@@ -2313,9 +2344,9 @@ export const tripData: TripData = {
           "kind": "estimate"
         },
         {
-          "label": "Tasik Cermin (2 adultes, entree + option bateau)",
-          "myr": 60,
-          "kind": "estimate"
+          "label": "Tasik Cermin (2 adultes, entree + bateau)",
+          "myr": 84,
+          "kind": "official"
         },
         {
           "label": "Temple / donations",
@@ -2342,8 +2373,8 @@ export const tripData: TripData = {
         {
           "name": "Tasik Cermin",
           "timing": "1h30 a 2h",
-          "ticket": "Ouvert 09h00-18h00; entree Non-MyKad observee RM8/adulte, bateau souvent RM25/adulte",
-          "gettingThere": "Grab direct depuis Old Town",
+          "ticket": "Non-Malaisien: RM12 d'entree + RM30 pour le bateau par adulte",
+          "gettingThere": "Grab direct depuis The Horizon Ipoh",
           "whyGo": "Le stop nature le plus net du bloc Ipoh."
         },
         {
@@ -2357,12 +2388,12 @@ export const tripData: TripData = {
       "ultraPlan": [
         {
           "period": "Matin",
-          "time": "08h30 -> 11h30",
+          "time": "08h30 départ / 09h00 -> 11h30 visite",
           "visit": "Tasik Cermin",
           "address": "Tasik Cermin, Gunung Rapat, Ipoh",
           "metro": "Sans objet.",
-          "taxi": "Grab depuis Old Town.",
-          "visitCost": "60 MYR pour 2",
+          "taxi": "Grab depuis The Horizon Ipoh.",
+          "visitCost": "84 MYR pour 2",
           "eat": "Petit-dej simple en ville.",
           "foodAddress": "Old Town Ipoh",
           "foodCost": "45 MYR pour 2",
@@ -2377,11 +2408,11 @@ export const tripData: TripData = {
           "metro": "Sans objet.",
           "taxi": "Grab court puis retour centre.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Lunch Old Town au retour: Thean Chun, Kong Heng, Nam Heong ou kopitiam simple.",
-          "foodAddress": "Old Town Ipoh",
+          "eat": "Déjeuner vers 12h00 dans le secteur de Gunung Rapat avant Sam Poh Tong.",
+          "foodAddress": "Gunung Rapat, Ipoh",
           "foodCost": "55 MYR pour 2",
           "drink": "White coffee ou boisson fraiche.",
-          "note": "Un seul temple, puis retour en ville."
+          "note": "Déjeuner avant la visite de 13h30, puis un seul temple et retour en ville pour le café."
         },
         {
           "period": "Soir / diner",
@@ -2389,7 +2420,7 @@ export const tripData: TripData = {
           "visit": "Old Town a pied + diner",
           "address": "Old Town Ipoh",
           "metro": "Sans objet.",
-          "taxi": "Marche depuis le centre.",
+          "taxi": "Petit Grab depuis The Horizon vers Old Town, marche dans le centre, puis retour en Grab.",
           "visitCost": "0 MYR pour 2",
           "eat": "Diner simple en Old Town.",
           "foodAddress": "Concubine Lane / Old Town Ipoh",
@@ -2481,14 +2512,14 @@ export const tripData: TripData = {
         {
           "name": "Gua Tempurung",
           "timing": "1h30 a 2h",
-          "ticket": "Horaires usuels 09h00-17h00; prix variable selon parcours, prevoir jusqu'a RM50/adulte etranger",
+          "ticket": "Prix variable selon parcours; budget retenu de RM30/adulte pour une visite seche simple, a confirmer avant le depart",
           "gettingThere": "Grab longue distance depuis Ipoh",
           "whyGo": "Le grand changement de decor du bloc Ipoh."
         },
         {
           "name": "Kellie's Castle optionnel",
           "timing": "1h30",
-          "ticket": "RM23/adulte etranger observe",
+          "ticket": "Forfait Castle + Japanese Village: RM28/adulte etranger, soit RM56 pour 2",
           "gettingThere": "Route logique depuis la grotte",
           "whyGo": "Bon contrepoint heritage si la grotte et les transports n'ont pas mange la marge."
         }
@@ -2535,14 +2566,14 @@ export const tripData: TripData = {
       "transportSummary": "Marche + Grab court",
       "photo": "assets/photos/days/jour-13-patrimoine-ipoh.png",
       "photoAlt": "Tour historique et architecture coloniale dans le centre d'Ipoh",
-      "deepDive": "Finir Ipoh par le centre et une option nature courte, sans relancer une grosse sortie.",
+      "deepDive": "Profiter du centre historique et garder une option nature courte, sans relancer une grosse sortie avant la derniere journee a Ipoh.",
       "segments": [
         {
           "label": "Matin",
           "title": "Birch Memorial et Kong Heng",
           "bullets": [
             "Boucle a pied.",
-            "Han Chin Pet Soo seulement si l'envie est la."
+            "Han Chin Pet Soo uniquement avec un creneau reserve."
           ]
         },
         {
@@ -2555,7 +2586,7 @@ export const tripData: TripData = {
         },
         {
           "label": "Soir",
-          "title": "Dernier soir Ipoh",
+          "title": "Diner signature a Ipoh",
           "bullets": [
             "Diner signature.",
             "Soiree facile: il reste encore une journee a Ipoh."
@@ -2564,10 +2595,11 @@ export const tripData: TripData = {
       ],
       "access": {
         "metro": "Non applicable a Ipoh.",
-        "taxi": "Tout a pied sauf Gunung Lang, qui demande un court Grab."
+        "taxi": "Petit Grab du logement vers Old Town, puis boucle a pied; Gunung Lang demande un autre Grab."
       },
       "tips": [
         "Journee respiration au coeur du bloc Ipoh.",
+        "Pour Han Chin Pet Soo, reserver jusqu'a 30 jours avant; viser le creneau du samedi a 11h30 pour l'integrer a la boucle du matin.",
         "Gunung Lang est optionnel."
       ],
       "budget": [
@@ -2608,12 +2640,12 @@ export const tripData: TripData = {
           "timing": "Debut de matinee",
           "ticket": "Libre",
           "gettingThere": "A pied dans le centre",
-          "whyGo": "Point d'ancrage simple pour finir Ipoh."
+          "whyGo": "Point d'ancrage simple pour la boucle patrimoine d'Ipoh."
         },
         {
           "name": "Han Chin Pet Soo",
           "timing": "45 min a 1h",
-          "ticket": "Ticket a verifier",
+          "ticket": "Entree sur reservation; donation bienvenue",
           "gettingThere": "A pied depuis Kong Heng",
           "whyGo": "Donner du contexte humain et minier a la ville."
         },
@@ -2632,13 +2664,13 @@ export const tripData: TripData = {
           "visit": "Birch Memorial + Kong Heng",
           "address": "Old Town, Ipoh",
           "metro": "Sans objet.",
-          "taxi": "Tout a pied dans le centre.",
+          "taxi": "Petit Grab depuis le logement, puis tout a pied dans le centre.",
           "visitCost": "0 MYR pour 2",
           "eat": "Petit-dej white coffee ou toast.",
           "foodAddress": "Old Town Ipoh",
           "foodCost": "55 MYR pour 2",
           "drink": "Cafe blanc.",
-          "note": "Finir Ipoh par son coeur heritage."
+          "note": "Si Han Chin Pet Soo vous interesse, reserver le creneau de 11h30; sinon garder la boucle heritage libre."
         },
         {
           "period": "Apres-midi",
@@ -2657,12 +2689,12 @@ export const tripData: TripData = {
         {
           "period": "Soir / diner",
           "time": "19h30 -> 21h30",
-          "visit": "Dernier diner Ipoh",
+          "visit": "Diner signature a Ipoh",
           "address": "Old Town / Heritage Lane",
           "metro": "Sans objet.",
           "taxi": "Marche.",
           "visitCost": "0 MYR pour 2",
-          "eat": "Dernier bon diner a Ipoh.",
+          "eat": "Bon diner a Ipoh.",
           "foodAddress": "Old Town Ipoh",
           "foodCost": "90 MYR pour 2",
           "drink": "Dessert ou white coffee.",
@@ -2710,7 +2742,7 @@ export const tripData: TripData = {
       ],
       "access": {
         "metro": "Non applicable a Ipoh.",
-        "taxi": "Marche pour Old Town, Grab court si vous ajoutez Gunung Lang, spa ou retour sous la pluie."
+        "taxi": "Petit Grab depuis The Horizon vers Old Town, puis marche dans le centre; Grab court pour le retour ou un spa."
       },
       "tips": [
         "Memory Lane vaut surtout le dimanche matin: garder ce bloc optionnel et verifier l'ambiance sur place.",
@@ -2748,7 +2780,7 @@ export const tripData: TripData = {
           "name": "Memory Lane / Pasar Karat",
           "timing": "Dimanche matin",
           "ticket": "Libre hors achats",
-          "gettingThere": "Marche ou Grab court depuis Old Town",
+          "gettingThere": "Petit Grab depuis The Horizon, puis marche dans Old Town",
           "whyGo": "Un stop local parfait pour utiliser le jour ajoute sans creer de fatigue."
         },
         {
@@ -2942,7 +2974,7 @@ export const tripData: TripData = {
           "taxi": "Grab KL Sentral -> logement.",
           "visitCost": "55 MYR pour 2",
           "eat": "Lunch de retour simple: KL Sentral food court, NU Sentral ou rice plate proche du logement.",
-          "foodAddress": "KLCC / autour du logement",
+          "foodAddress": "KL Sentral / NU Sentral / The Robertson",
           "foodCost": "55 MYR pour 2",
           "drink": "Boisson climatisee.",
           "note": "Ne relancez pas une grosse visite aujourd'hui."
@@ -3057,13 +3089,13 @@ export const tripData: TripData = {
           "timing": "45 min a 1h",
           "ticket": "Libre; horaires visiteurs non-musulmans a verifier le jour meme autour des prieres",
           "gettingThere": "A pied ou Grab court",
-          "whyGo": "Architecture claire et respiration avant le musee."
+          "whyGo": "Architecture claire à découvrir au créneau visiteurs confirmé, après le musée si les prières ferment l'accès à la mi-journée."
         },
         {
           "name": "Islamic Arts Museum Malaysia",
           "timing": "1h30 a 2h",
           "ticket": "RM20/adulte observe",
-          "gettingThere": "A pied depuis la mosquee",
+          "gettingThere": "À pied depuis Masjid Negara ou directement depuis Pasar Seni",
           "whyGo": "La pause culturelle dense du bloc final KL."
         }
       ],
@@ -3085,7 +3117,7 @@ export const tripData: TripData = {
         {
           "period": "Apres-midi",
           "time": "13h30 -> 16h30",
-          "visit": "Masjid Negara + IAMM",
+          "visit": "IAMM puis Masjid Negara",
           "address": "Jalan Perdana, Kuala Lumpur",
           "metro": "Depuis Dataran Merdeka, marcher vers Masjid Jamek et prendre le LRT Kelana Jaya direction Putra Heights jusqu'a Pasar Seni, puis marcher 12 a 15 minutes vers Masjid Negara et l'IAMM. Retour: rejoindre MRT Muzium Negara, direction Kajang jusqu'a Merdeka, puis marcher vers The Robertson.",
           "taxi": "Grab court si besoin.",
@@ -3094,7 +3126,7 @@ export const tripData: TripData = {
           "foodAddress": "Secteur Masjid Negara / IAMM",
           "foodCost": "55 MYR pour 2",
           "drink": "Boisson fraiche avant le musee.",
-          "note": "Une seule grande boucle patrimoine."
+          "note": "Commencer par l'IAMM vers 13h30, puis rejoindre Masjid Negara uniquement au créneau visiteurs confirmé du jour."
         }
       ]
     },
@@ -3139,8 +3171,8 @@ export const tripData: TripData = {
           "label": "Soir",
           "title": "Retour à l'hôtel, tri des achats et dîner",
           "bullets": [
-            "Peser et ranger les achats, puis terminer les valises.",
-            "Dîner près de l'hôtel, se doucher et se reposer."
+            "Peser et ranger les achats, puis terminer les valises avant 20h45.",
+            "Dîner près de l'hôtel et être prêts une heure avant le départ vers l'aéroport."
           ]
         }
       ],
@@ -3274,7 +3306,7 @@ export const tripData: TripData = {
         },
         {
           "period": "Soir / diner",
-          "time": "18h00 -> 21h30",
+          "time": "18h00 -> 20h45",
           "visit": "Hôtel, tri des achats, dîner et repos",
           "address": "Airbnb The Robertson, 2 Jalan Robertson, Kuala Lumpur",
           "metro": "Depuis Bukit Bintang, prendre le monorail direction KL Sentral jusqu'à Hang Tuah, puis marcher 8 à 10 minutes jusqu'à The Robertson. Avec plusieurs sacs, garder Grab comme option confort.",
@@ -3284,7 +3316,7 @@ export const tripData: TripData = {
           "foodAddress": "Autour de The Robertson",
           "foodCost": "80 MYR pour 2",
           "drink": "Eau ou boisson fraîche.",
-          "note": "18h00-19h00: trier et peser les achats. 19h00-20h00: dîner. 20h00-21h30: douche, valises et repos. La journée shopping se termine ici."
+          "note": "18h00-19h00: trier et peser les achats. 19h00-20h00: dîner. 20h00-20h45: douche et contrôles finaux. Tout doit être prêt à 20h45 pour le départ vers KLIA à 21h45."
         }
       ]
     },
