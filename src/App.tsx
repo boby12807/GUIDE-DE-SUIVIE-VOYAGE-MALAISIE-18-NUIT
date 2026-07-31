@@ -100,6 +100,12 @@ function dayTotal(day: Day) {
   return dayActivityBudget(day).reduce((sum, item) => sum + item.myr, 0);
 }
 
+function dayOnSiteTotal(day: Day) {
+  return dayActivityBudget(day)
+    .filter((item) => item.kind !== "paid")
+    .reduce((sum, item) => sum + item.myr, 0);
+}
+
 function cityKey(city: string) {
   const value = city.toLowerCase();
   if (value.includes("->") || value.includes("→")) return "transit";
@@ -500,356 +506,16 @@ function classifyBudget(label: string) {
   if (/plafond vêtements|plafond vetements|shopping/.test(text)) {
     return "Shopping";
   }
+  if (/sim|esim|telephone|téléphone|telecom/.test(text)) {
+    return "Telecom";
+  }
   if (/vol|parking|péage|peage|aeroport|airport|train|grab|transport|transfert|scooter|ferry|taxi|klia|ets/.test(text)) {
     return "Transports";
   }
   if (isAccommodationBudget(label)) {
     return "Hotels";
   }
-  if (/repas|boisson|snack|cafe|déjeuner|diner|food|manger/.test(text)) {
-    return "Repas";
-  }
-  if (/bird|skycab|geoforest|musee|temple|billet|entree|visite|mangrove|payar|tower|aquaria|forest|laman|kota|mahsuri|cascade|tasik|gua|kellie|gunung|memory lane/.test(text)) {
-    return "Visites";
-  }
-  return "Marges";
-}
-
-export default function App() {
-  const [activeSection, setActiveSection] = useState<Section>("itinerary");
-  const [filter, setFilter] = useState("all");
-  const [expandedDay, setExpandedDay] = useState<number>(1);
-  const [sunMode, setSunMode] = useState(false);
-  const liveWeather = useLiveWeather();
-
-  const stats = useMemo(() => {
-    const activitiesMyr = tripData.days.reduce((sum, day) => sum + dayTotal(day), 0);
-    const accommodationsMyr = tripData.accommodations.reduce((sum, accommodation) => sum + (accommodation.budgetMyr || 0), 0);
-    const totalMyr = activitiesMyr + accommodationsMyr;
-    const activityBudgets = tripData.days.flatMap((day) => dayActivityBudget(day));
-    const officialLines = activityBudgets.filter((line) => line.kind === "official").length;
-    const categories = tripData.days
-      .flatMap((day) => dayActivityBudget(day))
-      .reduce<Record<string, number>>((acc, item) => {
-        const key = classifyBudget(item.label);
-        acc[key] = (acc[key] || 0) + item.myr;
-        return acc;
-      }, {});
-    categories.Hotels = accommodationsMyr;
-
-    return {
-      totalMyr,
-      totalEur: eurFromMyr(totalMyr),
-      officialLines,
-      categories,
-      averagePerDay: totalMyr / tripData.days.length,
-    };
-  }, []);
-
-  const filteredDays = useMemo(() => {
-    if (filter === "all") return tripData.days;
-    return tripData.days.filter((day) => cityKey(day.city) === filter);
-  }, [filter]);
-
-  return (
-    <main className={sunMode ? "sun-mode min-h-screen bg-white text-slate-950" : "min-h-screen text-slate-100"}>
-      <header className="no-print sticky top-0 z-50 border-b border-white/10 bg-slate-950/82 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-3 lg:flex-row lg:items-center lg:justify-between">
-          <button
-            type="button"
-            onClick={() => setActiveSection("itinerary")}
-            className="flex items-center gap-3 text-left"
-          >
-            <div className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-emerald-400 to-amber-300 text-sm font-black text-slate-950">
-              MY
-            </div>
-            <div>
-              <h1 className="font-display text-xl font-bold leading-tight">{tripData.meta.title}</h1>
-              <p className="text-xs font-semibold text-slate-400">{tripData.meta.travelWindow}</p>
-            </div>
-          </button>
-
-          <nav className="flex gap-2 overflow-x-auto pb-1 lg:justify-end">
-            {sectionItems.map((item) => {
-              const Icon = item.icon;
-              const selected = activeSection === item.id;
-              return (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setActiveSection(item.id)}
-                  className={`flex shrink-0 items-center gap-2 rounded-xl border px-3 py-2 text-xs font-extrabold transition ${
-                    selected
-                      ? "border-amber-300 bg-amber-300 text-slate-950"
-                      : "border-white/10 bg-white/5 text-slate-200 hover:border-amber-300/50"
-                  }`}
-                >
-                  <Icon className="h-4 w-4" />
-                  {item.label}
-                </button>
-              );
-            })}
-            <button
-              type="button"
-              onClick={() => setSunMode((value) => !value)}
-              className="flex shrink-0 items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs font-extrabold text-slate-200"
-              title="Mode plein soleil"
-            >
-              <Sun className="h-4 w-4" />
-              Soleil
-            </button>
-          </nav>
-        </div>
-      </header>
-
-      <section className="mx-auto grid max-w-7xl gap-3 px-4 py-3">
-        <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-emerald-950 via-slate-950 to-slate-900 p-4 shadow-2xl shadow-black/25">
-          <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-emerald-300/20 bg-emerald-300/10 px-3 py-1 text-[0.68rem] font-black uppercase tracking-widest text-emerald-200">
-            <Sparkles className="h-3.5 w-3.5" />
-            Carnet terrain
-          </p>
-          <h2 className="font-display text-2xl font-bold leading-tight text-white md:text-3xl">
-            {tripData.meta.title} · {tripData.meta.travelWindow}
-          </h2>
-          <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
-            Parcours, journées détaillées, budget et hôtels sont regroupés dans une
-            interface unique. Le déroulement de chaque journée reprend les données déjà préparées
-            pour Kuala Lumpur, Langkawi, Ipoh et les transits.
-          </p>
-          <div className="mt-3 flex flex-wrap gap-2">
-            <button className="rounded-xl bg-amber-300 px-3 py-2 text-xs font-black text-slate-950" onClick={() => setActiveSection("itinerary")}>
-              Ouvrir les journées
-            </button>
-            <button className="rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-xs font-black text-white" onClick={() => setActiveSection("budget")}>
-              Budget
-            </button>
-          </div>
-        </div>
-
-        <WeatherPanel
-          weather={liveWeather.weather}
-          loading={liveWeather.loading}
-          error={liveWeather.error}
-          refresh={liveWeather.refresh}
-        />
-      </section>
-
-      <section className="mx-auto max-w-7xl px-4 pb-12">
-        {activeSection === "itinerary" && (
-          <Itinerary
-            filter={filter}
-            setFilter={setFilter}
-            days={filteredDays}
-            expandedDay={expandedDay}
-            setExpandedDay={setExpandedDay}
-            weather={liveWeather.weather}
-            weatherLoading={liveWeather.loading}
-          />
-        )}
-        {activeSection === "budget" && <Budget stats={stats} />}
-        {activeSection === "hotels" && <Hotels accommodations={tripData.accommodations} />}
-        {activeSection === "sources" && <Sources sources={tripData.sources} />}
-      </section>
-
-      <footer className="border-t border-white/10 px-4 py-8 text-sm text-slate-400">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-3 md:flex-row">
-          <div>
-            <strong className="font-display block text-base text-white">Malaisie 2026</strong>
-            <span>{tripData.meta.subtitle}</span>
-          </div>
-          <div className="text-left md:text-right">
-            <p>{tripData.meta.exchangeRateLabel} ({tripData.meta.exchangeRateDate})</p>
-            <p>Cadre vérifié le {tripData.meta.verifiedOn}</p>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
-}
-
-function WeatherPanel({
-  weather,
-  loading,
-  error,
-  refresh,
-}: {
-  weather: WeatherData[];
-  loading: boolean;
-  error: string | null;
-  refresh: () => void;
-}) {
-  return (
-    <article className="rounded-2xl border border-cyan-300/20 bg-cyan-300/[0.08] p-4">
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <CloudSun className="h-5 w-5 text-cyan-200" />
-          <div>
-            <p className="text-[0.68rem] font-black uppercase tracking-widest text-cyan-200">Météo actuelle en direct</p>
-            <h3 className="font-display text-lg font-bold text-white">Malaisie maintenant</h3>
-          </div>
-        </div>
-        <button
-          type="button"
-          onClick={refresh}
-          className="rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-xs font-black text-white"
-        >
-          Actualiser
-        </button>
-      </div>
-      {loading && <p className="text-sm text-slate-300">Chargement de la météo live...</p>}
-      {error && <p className="text-sm text-rose-200">Météo indisponible: {error}</p>}
-      {!loading && !error && (
-        <div className="grid gap-2">
-          {weather.map((item) => (
-            <div key={item.label} className="grid grid-cols-[1fr_auto] gap-3 rounded-xl border border-white/10 bg-slate-950/45 p-3">
-              <div>
-                <strong className="block text-sm text-white">{item.label}</strong>
-                <span className="text-xs text-slate-400">
-                  {weatherLabel(item.code)} · humidité {Math.round(item.humidity)}% · pluie {item.rain} mm
-                </span>
-              </div>
-              <div className="text-right">
-                <strong className="font-display block text-xl text-cyan-100">{Math.round(item.temp)}°C</strong>
-                <span className="block text-xs font-bold text-amber-200">Ressenti {Math.round(item.apparent)}°C</span>
-                <span className="text-xs text-slate-400">Vent {Math.round(item.wind)} km/h</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      )}
-    </article>
-  );
-}
-
-function Stat({ label, value }: { label: string; value: string }) {
-  return (
-    <article className="rounded-2xl border border-white/10 bg-slate-950/50 p-4">
-      <p className="text-[0.68rem] font-black uppercase tracking-widest text-amber-200">{label}</p>
-      <strong className="font-display mt-1 block text-xl text-white">{value}</strong>
-    </article>
-  );
-}
-
-function PanelTitle({ eyebrow, title, text }: { eyebrow: string; title: string; text?: string }) {
-  return (
-    <div className="mb-5 flex flex-col justify-between gap-3 md:flex-row md:items-end">
-      <div>
-        <p className="mb-2 text-xs font-black uppercase tracking-widest text-amber-300">{eyebrow}</p>
-        <h2 className="font-display text-3xl font-bold text-white md:text-4xl">{title}</h2>
-      </div>
-      {text && <p className="max-w-2xl text-sm leading-6 text-slate-400">{text}</p>}
-    </div>
-  );
-}
-
-function Itinerary({
-  filter,
-  setFilter,
-  days,
-  expandedDay,
-  setExpandedDay,
-  weather,
-  weatherLoading,
-}: {
-  filter: string;
-  setFilter: (value: string) => void;
-  days: readonly Day[];
-  expandedDay: number;
-  setExpandedDay: (value: number) => void;
-  weather: WeatherData[];
-  weatherLoading: boolean;
-}) {
-  return (
-    <div className="space-y-5">
-      <PanelTitle
-        eyebrow="Jour par jour"
-        title="Le déroulement des journées"
-        text="Chaque journée s'ouvre comme dans un vrai carnet de route: photo, budget, transports, matin/midi/soir, liens Maps et conseils."
-      />
-
-      <div className="no-print flex gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.05] p-2">
-        {cityFilters.map((item) => (
-          <button
-            key={item.id}
-            type="button"
-            onClick={() => setFilter(item.id)}
-            className={`shrink-0 rounded-xl px-3 py-2 text-xs font-black ${
-              filter === item.id ? "bg-amber-300 text-slate-950" : "bg-white/5 text-slate-200"
-            }`}
-          >
-            {item.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="grid gap-5">
-        {days.map((day) => {
-          const open = expandedDay === day.id;
-          const dayWeather = weather.find((item) => item.label === weatherKeyForDay(day));
-          return (
-            <DayCard
-              key={day.id}
-              day={day}
-              open={open}
-              onToggle={() => setExpandedDay(open ? 0 : day.id)}
-              weather={dayWeather}
-              weatherLoading={weatherLoading}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
-function DayCard({
-  day,
-  open,
-  onToggle,
-  weather,
-  weatherLoading,
-}: {
-  day: Day;
-  open: boolean;
-  onToggle: () => void;
-  weather?: WeatherData;
-  weatherLoading: boolean;
-}) {
-  const parts = buildDayParts(day);
-  const contentRef = useRef<HTMLDivElement>(null);
-  const sunTimes = useSunTimes(day);
-  const weatherLocation = weatherKeyForDay(day);
-  const fatigue = fatigueForDay(day, parts);
-  const [completedParts, setCompletedParts] = useState<Record<string, boolean>>(() => {
-    try {
-      return JSON.parse(localStorage.getItem("malaisie-activites-faites") || "{}");
-    } catch {
-      return {};
-    }
-  });
-
-  const toggleCompletedPart = (id: string) => {
-    setCompletedParts((current) => {
-      let stored: Record<string, boolean> = {};
-      try {
-        stored = JSON.parse(localStorage.getItem("malaisie-activites-faites") || "{}");
-      } catch {
-        stored = {};
-      }
-      const previousValue = stored[id] ?? current[id] ?? false;
-      const next = { ...stored, ...current, [id]: !previousValue };
-      localStorage.setItem("malaisie-activites-faites", JSON.stringify(next));
-      return next;
-    });
-  };
-
-  const handleToggle = () => {
-    const wasOpen = open;
-    onToggle();
-    if (!wasOpen) {
-      // Scroll vers le contenu déroulé après l'animation
-      setTimeout(() => {
-        contentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (/repas|boisson|snack|cafe|déjeuner|diner…3351 tokens truncated…ontentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
       }, 80);
     }
   };
@@ -873,8 +539,8 @@ function DayCard({
         </div>
         <div className="flex shrink-0 items-center gap-3">
           <div className="rounded-xl border border-white/10 bg-slate-950/50 px-3 py-2 text-right">
-            <span className="block text-[0.68rem] font-black uppercase text-slate-400">Budget pour 2</span>
-            <strong className="font-display text-lg text-white">{formatBoth(dayTotal(day))}</strong>
+            <span className="block text-[0.68rem] font-black uppercase text-slate-400">Sur place pour 2</span>
+            <strong className="font-display text-lg text-white">{formatBoth(dayOnSiteTotal(day))}</strong>
           </div>
           {open ? <ChevronUp className="h-5 w-5 text-amber-300" /> : <ChevronDown className="h-5 w-5 text-amber-300" />}
         </div>
@@ -885,7 +551,7 @@ function DayCard({
           <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
             <MiniFact icon={BedDouble} label="Nuit" value={day.overnight} />
             <MiniFact icon={Car} label="Transport" value={day.transportSummary} />
-            <MiniFact icon={Euro} label="Total jour" value={formatBoth(dayTotal(day))} />
+            <MiniFact icon={Euro} label="Sur place ce jour" value={formatBoth(dayOnSiteTotal(day))} />
             <MiniFact icon={Route} label="Niveau de fatigue" value={fatigue.label} valueClassName={fatigue.color} />
           </div>
 
@@ -1079,7 +745,7 @@ function InfoBox({ title, lines }: { title: string; lines: readonly string[] }) 
   );
 }
 
-function Budget({ stats }: { stats: { totalMyr: number; categories: Record<string, number>; averagePerDay: number } }) {
+function Budget({ stats }: { stats: { totalMyr: number; prepaidMyr: number; onSiteMyr: number; categories: Record<string, number>; averagePerDay: number } }) {
   const target = tripData.meta.budgetLimitEur;
   const current = Math.round(eurFromMyr(stats.totalMyr));
   const delta = current - target;
@@ -1087,21 +753,39 @@ function Budget({ stats }: { stats: { totalMyr: number; categories: Record<strin
   return (
     <div className="space-y-5">
       <PanelTitle eyebrow="Budget" title="Cadre budgetaire complet" text={tripData.meta.disclaimer} />
-      <div className="grid gap-4 lg:grid-cols-3">
-        <article className="rounded-2xl border border-amber-300/30 bg-amber-300/10 p-5 lg:col-span-2">
-          <p className="text-xs font-black uppercase tracking-widest text-amber-200">Total estime actuel</p>
-          <h3 className="font-display mt-2 text-5xl font-bold text-white">{current.toLocaleString("fr-FR")} €</h3>
-          <p className="mt-3 text-sm text-slate-300">
-            Objectif indiqué: {target.toLocaleString("fr-FR")} €. Écart actuel: {delta > 0 ? "+" : ""}{delta.toLocaleString("fr-FR")} €.
-          </p>
+      <div className="grid gap-4 lg:grid-cols-4">
+        <article className="rounded-2xl border border-emerald-300/30 bg-emerald-300/10 p-5 lg:col-span-2">
+          <p className="text-xs font-black uppercase tracking-widest text-emerald-200">Reste a payer sur place pour 2</p>
+          <h3 className="font-display mt-2 text-5xl font-bold text-white">{formatBoth(stats.onSiteMyr)}</h3>
+          <p className="mt-3 text-sm text-slate-300">Repas, transports locaux, activites, shopping plafonne et marges inclus.</p>
         </article>
         <article className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
-          <p className="text-xs font-black uppercase tracking-widest text-emerald-300">Moyenne par jour</p>
-          <h3 className="font-display mt-2 text-3xl font-bold text-white">{formatBoth(stats.averagePerDay)}</h3>
-          <p className="mt-3 text-sm text-slate-400">{tripData.meta.budgetStyle}</p>
+          <p className="text-xs font-black uppercase tracking-widest text-cyan-200">Deja paye</p>
+          <h3 className="font-display mt-2 text-3xl font-bold text-white">{formatBoth(stats.prepaidMyr)}</h3>
+          <p className="mt-3 text-sm text-slate-400">Vols, parking et logements confirmes.</p>
+        </article>
+        <article className="rounded-2xl border border-amber-300/30 bg-amber-300/10 p-5">
+          <p className="text-xs font-black uppercase tracking-widest text-amber-200">Cout total du voyage</p>
+          <h3 className="font-display mt-2 text-3xl font-bold text-white">{current.toLocaleString("fr-FR")} €</h3>
+          <p className="mt-3 text-sm text-slate-300">
+            Objectif: {target.toLocaleString("fr-FR")} €. Ecart: {delta > 0 ? "+" : ""}{delta.toLocaleString("fr-FR")} €.
+          </p>
         </article>
       </div>
 
+      <div className="grid gap-4 lg:grid-cols-3">
+        <article className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
+          <p className="text-xs font-black uppercase tracking-widest text-emerald-300">Moyenne sur place par jour</p>
+          <h3 className="font-display mt-2 text-3xl font-bold text-white">{formatBoth(stats.averagePerDay)}</h3>
+          <p className="mt-3 text-sm text-slate-400">{tripData.meta.budgetStyle}</p>
+        </article>
+        <article className="rounded-2xl border border-white/10 bg-white/[0.06] p-5 lg:col-span-2">
+          <p className="text-xs font-black uppercase tracking-widest text-cyan-200">Lecture du budget</p>
+          <p className="mt-3 text-sm leading-6 text-slate-300">Les montants journaliers affichent maintenant uniquement ce qui reste a payer en Malaisie. Les billets et achats deja regles restent visibles dans le detail des lignes, sans gonfler votre enveloppe sur place.</p>
+        </article>
+      </div>
+
+      <h3 className="font-display text-2xl font-bold text-white">Repartition du reste a payer sur place</h3>
       <div className="grid gap-4 lg:grid-cols-2">
         {Object.entries(stats.categories).map(([label, value]) => (
           <article key={label} className="rounded-2xl border border-white/10 bg-white/[0.06] p-5">
@@ -1110,7 +794,7 @@ function Budget({ stats }: { stats: { totalMyr: number; categories: Record<strin
               <strong className="text-amber-200">{formatBoth(value)}</strong>
             </div>
             <div className="h-3 overflow-hidden rounded-full bg-white/10">
-              <div className="h-full rounded-full bg-emerald-300" style={{ width: `${Math.max(8, (value / stats.totalMyr) * 100)}%` }} />
+              <div className="h-full rounded-full bg-emerald-300" style={{ width: `${Math.max(8, (value / stats.onSiteMyr) * 100)}%` }} />
             </div>
           </article>
         ))}
@@ -1190,3 +874,4 @@ function Sources({ sources }: { sources: readonly TripSource[] }) {
     </div>
   );
 }
+
